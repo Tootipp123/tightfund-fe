@@ -10,7 +10,7 @@ export default function Footer() {
   const subscribeToNewsletter = useMutation(
     (email: string) => createNewsletterSub(email),
     {
-      onSuccess: async (res) => {
+      onSuccess: async (res: any) => {
         setEmail("");
       },
       onError: (err: any) => {

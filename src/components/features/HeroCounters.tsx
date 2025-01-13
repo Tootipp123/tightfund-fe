@@ -11,8 +11,8 @@ export default function HeroCounters() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
 
-  const searchHero = (search) => {
-    const res = HERO_COUNTERS.filter((res) => res.name.toLowerCase().includes(search))
+  const searchHero = (search: any) => {
+    const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
     setSearchResults(res)
   }
 
@@ -67,7 +67,7 @@ export default function HeroCounters() {
                 <div className="py-5 border-t border-[#383852]">
                   <h2 className="dark:text-neutral-100 capitalize font-bold text-md">Top Counter Picks:</h2>
                   <div className="mt-2">
-                    {hero.counterPicks.map((counter, counterKey) => (
+                    {hero.counterPicks.map((counter: any, counterKey: any) => (
                       <div key={counterKey} className="flex gap-4 mt-3">
                         <div className="w-[45px] h-[45px] relative overflow-hidden">
                           <Image src={counter.image} alt={counter.name} width={45} height={45} className="rounded-md" />
@@ -104,7 +104,7 @@ export default function HeroCounters() {
                         <div>
                           <h2 className="dark:text-neutral-100 capitalize font-bold text-md mb-2">Good Pair With:</h2>
                           <div className="flex flex-wrap items-center gap-7">
-                            {hero.goodPairWith.map((counter, counterKey) => (
+                            {hero.goodPairWith.map((counter: any, counterKey: any) => (
                               <div key={counterKey} className="flex items-center gap-3">
                                 <Image src={counter.image} alt={counter.name} width={45} height={45} className="rounded-md" />
                                 <h2 className="dark:text-neutral-100 capitalize font-semibold text-md m-0 p-0">

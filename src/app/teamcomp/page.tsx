@@ -107,7 +107,7 @@ export default function TeamCompCounters() {
                 <div className="flex gap-5 items-center">
                   <h5 className="text-white w-[80px]">Vanguards:</h5>
                   <div className="flex gap-2">
-                    {team.suggestedHeroes.tanks.map((tank, tankIdx) => (
+                    {team.suggestedHeroes.tanks.map((tank: any, tankIdx: any) => (
                       <div key={tankIdx}>
                         <Image src={tank} alt={tank} width={70} height={70} className="rounded-md" />
                       </div>
@@ -117,7 +117,7 @@ export default function TeamCompCounters() {
                 <div className="flex gap-5 items-center mt-4">
                   <h5 className="text-white w-[80px]">Duelists:</h5>
                   <div className="flex gap-2">
-                    {team.suggestedHeroes.duels.map((tank, tankIdx) => (
+                    {team.suggestedHeroes.duels.map((tank: any, tankIdx: any) => (
                       <div key={tankIdx}>
                         <Image src={tank} alt={tank} width={70} height={70} className="rounded-md" />
                       </div>
@@ -127,7 +127,7 @@ export default function TeamCompCounters() {
                 <div className="flex gap-5 items-center mt-4">
                   <h5 className="text-white w-[80px]">Strategists:</h5>
                   <div className="flex gap-2">
-                    {team.suggestedHeroes.strats.map((tank, tankIdx) => (
+                    {team.suggestedHeroes.strats.map((tank: any, tankIdx: any) => (
                       <div key={tankIdx}>
                         <Image src={tank} alt={tank} width={70} height={70} className="rounded-md" />
                       </div>
