@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
-  description: "Discover the Best YouTube Niches",
+  description: "Marvel Rival's Hero Counter Quick Guide",
 };
 
 export default function RootLayout({

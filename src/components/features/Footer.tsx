@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-full px-4 md:px-0 md:w-[1200px] mx-auto flex justify-between pb-[50px]">
-        <p className="dark:text-neutral-400">© 2024 YT Niche</p>
+        <p className="dark:text-neutral-400">© 2025 Peak Rivals</p>
       </div>
     </footer>
   );

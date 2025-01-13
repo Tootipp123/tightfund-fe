@@ -1,12 +1,10 @@
 "use client";
 
-import { createGuestApi } from "@/app/api/Guest";
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useMutation } from "react-query";
-import NicheDetailsModal from "./NicheDetailsModal";
 import { LuSearch } from "react-icons/lu";
 
 export default function HeroCounters() {
