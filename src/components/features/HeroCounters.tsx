@@ -1,6 +1,6 @@
 "use client";
 
-import React from "React"
+import React from "react"
 import { createGuestApi } from "@/app/api/Guest";
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
