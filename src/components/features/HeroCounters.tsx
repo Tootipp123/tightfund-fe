@@ -83,6 +83,7 @@ export default function HeroCounters() {
         </div>
       </header>
 
+      {/* new */}
       <section className="mt-[100px]">
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 px-2">
           <p className="dark:text-neutral-200 font-semibold">
