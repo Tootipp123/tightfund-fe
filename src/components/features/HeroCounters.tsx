@@ -10,10 +10,54 @@ import { LuSearch } from "react-icons/lu";
 export default function HeroCounters() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
+  const [filters, setFilters] = useState([
+    {
+      category: "All Heroes",
+      active: true
+    },
+    {
+      category: "Vanguard",
+      active: false
+    },
+    {
+      category: "Duelist",
+      active: false
+    },
+    {
+      category: "Strategist",
+      active: false
+    },
+    {
+      category: "In Meta",
+      active: false
+    }
+  ])
 
   const searchHero = (search: any) => {
     const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
     setSearchResults(res)
+  }
+
+  const setFilter = (selected: any) => {
+    const newFilters = filters.map((item: any) => {
+      if(item.category === selected) {
+        item.active = true;
+        return item;
+      }
+      item.active = false;
+      return item;
+    })
+    setFilters(newFilters)
+
+    if(selected === "All Heroes") {
+      setSearchResults(HERO_COUNTERS)
+    } else if (selected === "In Meta") {
+      const metaList = HERO_COUNTERS.filter((res: any) => res.meta)
+      setSearchResults(metaList)
+    } else {
+      const vangList = HERO_COUNTERS.filter((res: any) => res.role === selected)
+      setSearchResults(vangList)
+    }
   }
 
   return (
@@ -40,10 +84,22 @@ export default function HeroCounters() {
       </header>
 
       <section className="mt-[100px]">
-        <div className="flex justify-between mb-5 px-2">
+        <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 px-2">
           <p className="dark:text-neutral-200 font-semibold">
             Update as of {new Date().toDateString()} - Season 1
           </p>
+          <div className="flex items-center gap-5">
+            {filters.map((filter: any, idx: any) => (
+              <div 
+                onClick={() => {
+                  setFilter(filter.category)
+                }}
+                className={`${filter.active ? "text-white font-bold" : "text-neutral-400"} text-xs lg:text-[14px] cursor-pointer`} key={idx}
+              >
+                {filter.category}
+              </div>
+            ))}
+          </div>
         </div>
         <div className="w-full flex flex-col md:flex-row md:flex-wrap gap-5">
           <div className="w-full flex flex-col md:flex-row md:flex-wrap gap-5">

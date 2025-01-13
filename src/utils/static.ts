@@ -350,6 +350,7 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
     name: "Cloak & Dagger",
     role: "Strategist",
+    meta: true,
     counterPicks: [
       {
         image:
@@ -590,6 +591,7 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
     name: "Luna Snow",
     role: "Strategist",
+    meta: true,
     counterPicks: [
       {
         image:
@@ -919,6 +921,7 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
     name: "Hulk",
     role: "Vanguard",
+    meta: true,
     counterPicks: [
       {
         image:
@@ -1158,6 +1161,7 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
     name: "Captain America",
     role: "Vanguard",
+    meta: true,
     counterPicks: [
       {
         image:
@@ -2250,6 +2254,7 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
     name: "Doctor Strange",
     role: "Vanguard",
+    meta: true,
     counterPicks: [
       {
         image:
@@ -2308,6 +2313,7 @@ export const HERO_COUNTERS = [
     name: "Invisible Woman",
     role: "Strategist",
     new: true,
+    meta: true,
     counterPicks: [
       {
         image:
