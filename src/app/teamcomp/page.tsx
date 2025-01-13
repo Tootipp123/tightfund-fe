@@ -96,7 +96,7 @@ export default function TeamCompCounters() {
           <h1 className="text-center font-bold text-3xl text-white">Team Composition</h1>
           <p className="text-center md:px-[150px] text-[#A0A0AF] mt-3">A guide for your starting lineup in every competitive game mode. Remember, there is no perfect lineup. Always assess the enemy team composition and adjust heroes as needed.</p>
           <div className="flex gap-5 flex-wrap mt-[60px]">
-            {TEAM_COMP.map((team, index) => (
+            {TEAM_COMP.map((team: any, index: any) => (
               <div
                 key={index}
                 className="w-full md:w-[49%] rounded-lg p-6 bg-[#292937] cursor-pointer"

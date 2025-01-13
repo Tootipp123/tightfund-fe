@@ -87,7 +87,7 @@ export default function HeroCounters() {
                         <div>
                           <h2 className="dark:text-neutral-100 capitalize font-bold text-md mb-2">Great Against:</h2>
                           <div className="flex flex-wrap items-center gap-7">
-                            {hero.goodAgainst.map((counter, counterKey) => (
+                            {hero.goodAgainst.map((counter: any, counterKey: any) => (
                               <div key={counterKey} className="flex items-center gap-3">
                                 <Image src={counter.image} alt={counter.name} width={45} height={45} className="rounded-md" />
                                 <h2 className="dark:text-neutral-100 capitalize font-semibold text-md m-0 p-0">
