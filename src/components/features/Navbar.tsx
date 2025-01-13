@@ -4,8 +4,11 @@ import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import Button from "../ui/Button";
 import { FaDiscord } from "react-icons/fa";
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+  const currentPath = usePathname();
+
   return (
     <nav className="bg-[#1B1B29] w-full border-b dark:border-neutral-700">
       <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto py-3 flex justify-between">
@@ -20,10 +23,10 @@ export default function Navbar() {
               </div>
             </div>
           </Link>
-          <Link href="/" className="dark:text-neutral-200 text-xs md:text-sm">
+          <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "dark:text-neutral-200"} text-xs md:text-sm`}>
             Hero Counters
           </Link>
-          <Link href="/teamcomp" className="dark:text-neutral-200 text-xs md:text-sm">
+          <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "dark:text-neutral-200"} text-xs md:text-sm`}>
             Team Compositions
           </Link>
         </div>
