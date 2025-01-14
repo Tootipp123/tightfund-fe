@@ -62,12 +62,12 @@ export default function HeroCounters() {
 
   return (
     <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px]">
-      <header className="pt-[100px] relative">
-        <h1 className="text-3xl dark:text-neutral-100 relative px-[50px] md:px-[300px] font-black text-center">
+      <header className="pt-[40px] md:pt-[100px] relative">
+        <h1 className="text-2xl md:text-3xl dark:text-neutral-100 relative px-[0px] md:px-[300px] font-black text-center">
           Discover the Top Hero Counters in Marvel Rivals
         </h1>
         <div className="w-full mt-7">
-          <div className="w-[40%] h-[50px] mt-4 mx-auto flex justify-center rounded-md dark:border-neutral-700 dark:border flex items-center dark:text-neutral-200 rounded-md px-4">
+          <div className="w-[90%] md:w-[40%] h-[50px] mt-4 mx-auto flex justify-center rounded-md dark:border-neutral-700 dark:border flex items-center dark:text-neutral-200 rounded-md px-4">
             <LuSearch className="text-[#A0A0AF]"/>
             <input
               type="text"
@@ -84,7 +84,7 @@ export default function HeroCounters() {
       </header>
 
       {/* new */}
-      <section className="mt-[100px]">
+      <section className="mt-[40px] md:mt-[100px]">
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 px-2">
           <p className="dark:text-neutral-200 font-semibold">
             Update as of {new Date().toDateString()} - Season 1

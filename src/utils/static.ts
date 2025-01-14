@@ -8,47 +8,35 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
-        name: "Iron Fist",
-        description: "He can burst Storm in mid-air and make her ineffective.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description:
+          "He can land multiple consistent damage to her in a safe distance, forcing her to retreat.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
-        description: "She can deal massive damage to her in a safe distance.",
+        description: "Her long-range attacks can be a pain to Storm's low mobility in the air.",
       },
       {
         name: "Luna Snow",
-        description: "Her ultimate ability can counter Storm's ultimate.",
+        description: "Her ultimate ability can block Storm's ultimate.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
-        name: "Hawkeye",
-        description: "He can pressure her in a safe distance.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
-        name: "Venom",
-        description: "He can jump straight to Storm and put pressure on her.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        name: "Iron Fist",
+        description: "He can surprise and burst Storm in mid-air and make her ineffective.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         description:
-          "Her mobility and burst damage can force storm to disengage.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
-        name: "Punisher",
-        description:
-          "He can land multiple consistent damage to her in a safe distance.",
+          "She can surprise Storm from behind, while her burst damage can force Storm to disengage.",
       },
     ],
     goodAgainst: [
@@ -103,7 +91,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         description:
-          "He can one hit combo Iron Man in mid air with Venom's suit expulsion skill.",
+          "He can one-hit combo Iron Man in mid air with Venom's Suit Expulsion skill.",
       },
       {
         image:
@@ -2031,7 +2019,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         description:
-          "She can surprise her with combinations and assasinate her easily.",
+          "She can surprise her with combinations and assasinate her from unexpected angles.",
       },
       {
         image:
@@ -2082,21 +2070,21 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         description:
-          "His swinging mobility can quickly close the distance and land combinations to her.",
+          "His swinging mobility can quickly close the distance and land combinations to him.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         description:
-          "She can surprise her with combinations and assasinate her easily.",
+          "She can surprise him with combinations and assasinate him easily.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
         name: "Black Panther",
         description:
-          "He can land multiple combinations to him and force him to retreat.",
+          "He can flank and pressure Adam from unexpected angles due to Adam's low mobility.",
       },
       {
         image:
@@ -2146,14 +2134,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         description:
-          "Although Spider-Man can't kill him with a single combination, his swinging mobility can quickly close the distance and make him focus on him.",
+          "Although Spider-Man can't kill him with a single combination, his swinging mobility can quickly close the distance and pressure him.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
         name: "Wolverine",
         description:
-          "His mobility and close-range damage make him a natural counter.",
+          "His ability to quickly close the distance and deal close-range damage make him a natural counter.",
       },
       {
         image:
@@ -2282,7 +2270,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
         name: "Hulk",
         description:
-          "His Radioactive Lockdown prevents ultimate usage, while World Breaker grabs Strange out of the air.",
+          "His Radioactive Lockdown prevents his ultimate, while World Breaker can grab Strange out of the air.",
       },
     ],
     goodAgainst: [
@@ -2313,7 +2301,6 @@ export const HERO_COUNTERS = [
     name: "Invisible Woman",
     role: "Strategist",
     new: true,
-    meta: true,
     counterPicks: [
       {
         image:

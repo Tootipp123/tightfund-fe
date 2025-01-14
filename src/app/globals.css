@@ -8,6 +8,10 @@ select:focus {
   outline: none;
 }
 
+body {
+  background-color: #1B1B29;
+}
+
 .gradient-border {
   background: red;
   background-image: linear-gradient(

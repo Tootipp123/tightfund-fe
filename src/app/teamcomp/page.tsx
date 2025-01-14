@@ -8,7 +8,7 @@ export default function TeamCompCounters() {
     {
       name: "Convoy Defense",
       difficulty: 5,
-      description: "If you're on convoy defense, your team should mostly rely on long-range attacks and consistent damage output that can pressure the enemy and prevent them to push forward.",
+      description: "When defending a convoy, your team should rely on long-range attacks and consistent damage output that can pressure the enemy and prevent them from pushing forward.",
       weakness: "",
       suggestedHeroes: {
         tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp"],
@@ -24,7 +24,7 @@ export default function TeamCompCounters() {
     {
       name: "Convoy Offense",
       difficulty: 5,
-      description: "This game mode relies on divers who can pressure the defender's backline so your allies can be able to push forward.",
+      description: "his game mode relies on divers who can pressure the defenders' backline, allowing your allies to push forward.",
       weakness: "",
       suggestedHeroes: {
         tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp"],
@@ -92,7 +92,7 @@ export default function TeamCompCounters() {
     <div>
       <Navbar />
       <main className="dark:bg-[#1B1B29] bg-white min-h-[100vh]">
-        <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px] py-[80px]">
+        <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px] pt-[40px]">
           <h1 className="text-center font-bold text-3xl text-white">Team Composition</h1>
           <p className="text-center md:px-[150px] text-[#A0A0AF] mt-3">A guide for your starting lineup in every competitive game mode. Remember, there is no perfect lineup. Always assess the enemy team composition and adjust heroes as needed.</p>
           <div className="flex gap-5 flex-wrap mt-[60px]">
