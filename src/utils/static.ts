@@ -1444,8 +1444,8 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-        name: "Hela",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        name: "Hawkeye",
         description:
           "He can instantly kill Spider-Man with 2-3 shots before Spider-Man even has a chance to dive.",
       },
