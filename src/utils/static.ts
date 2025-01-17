@@ -1297,9 +1297,9 @@ export const HERO_COUNTERS = [
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
+        name: "Moon Knight",
         description:
-          "He can easily destroy Loki's clones and pressure him from the backline.",
+          "He can easily destroy Loki's clones and prevent him from getting his preferred position.",
       },
       {
         image:
