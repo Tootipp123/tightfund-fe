@@ -1412,7 +1412,7 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
     name: "Spider-Man",
-    role: "Strategist",
+    role: "Duelist",
     counterPicks: [
       {
         image:
@@ -1426,7 +1426,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
         name: "Iron Fist",
         description:
-          "He's stronger against him in one-on-one combat, and can chase him down using double jumps.",
+          "He's stronger against him in one-on-one combat, and can chase him in the air using double jumps.",
       },
       {
         image:
@@ -2138,10 +2138,10 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        name: "Psylocke",
         description:
-          "Although Spider-Man can't kill him with a single combination, his swinging mobility can quickly close the distance and pressure him.",
+          "She can land surprise attacks at different angles, and can easily avoid his combos with dashes and invisibility.",
       },
       {
         image:
@@ -2180,9 +2180,17 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-        name: "Luna Snow",
-        description: "",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        description:
+          "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        description:
+          "",
       },
     ],
     weakness: "qrqwr",
