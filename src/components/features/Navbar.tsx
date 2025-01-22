@@ -32,7 +32,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex items-center">
-            <a href="https://discord.gg/Aq2uKzmU" target="_blank">
+            <a href="https://discord.gg/8xc3a7cCSg" target="_blank">
               <Button
                 className="bg-[#4C66FF] w-full"
               >
