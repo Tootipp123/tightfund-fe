@@ -25,7 +25,7 @@ export default function Homepage() {
   return (
     <div>
       <Navbar />
-      <main className="dark:bg-[#1B1B29] bg-white min-h-[100vh]">
+      <main className="bg-[#1B1B29] min-h-[100vh]">
         <HeroCounters />
       </main>
       <Footer />

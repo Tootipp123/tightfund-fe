@@ -35,6 +35,7 @@ export default function HeroCounters() {
 
   const searchHero = (search: any) => {
     const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
+    console.log("search result: ", res)
     setSearchResults(res)
   }
 

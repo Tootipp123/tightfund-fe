@@ -2461,7 +2461,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
         name: "Magneto",
         description:
-          "Metallic Curtain negates Star-Lord's damage output. While Metal Bulwark can help allies to block incoming damage.",
+          "Metallic Curtain negates Star-Lord's damage output, while Metal Bulwark can shield allies from incoming damage.",
       },
       {
         image:
