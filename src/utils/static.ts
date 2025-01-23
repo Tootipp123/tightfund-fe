@@ -167,6 +167,138 @@ export const HERO_COUNTERS = [
   },
   {
     image:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+    name: "Invisible Woman",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
+    role: "Strategist",
+    new: true,
+    counterPicks: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        name: "Magik",
+        description:
+          "Magik's durability and mobility can pressure her and force her to retreat rather than healing allies.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        name: "Psylocke",
+        description:
+          "Her mobility and quick damage output can burst her before she can even use any abilities.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        name: "Moon Knight",
+        description:
+          "With great positioning, he can pressure her with Crescent Dart.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        description:
+          "His high mobility can close the distance and force her to use abilities and reposition.",
+      },
+    ],
+    goodAgainst: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        name: "Black Panther",
+        description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Hulk",
+        description: "High burst damage while maintaing safe distance.",
+      },
+    ],
+    weakness: "qrqwr",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736686183/Rivals/mr_fantastic_rh931l.png",
+    name: "Mr. Fantastic",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
+    role: "Duelist",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
+    new: true,
+    counterPicks: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        description:
+          "Even though Mr. Fantastic can block Storm's ultimate with Reflexive Rubber, she can still deal massive damage to him using Goddess Boost.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description:
+          "His Culling Turret ability can melt down Mr. Fantastic's hp before he can even get value.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        name: "Iron Man",
+        description:
+          "Even though Mr. Fantastic can block Iron Man's ultimate with Reflexive Rubber, his flight abilities and consistent damage output can still overwhelm him.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        name: "Hawkeye",
+        description: "He can pressure Mr. Fantastic from a safe distance.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        name: "Hela",
+        description:
+          "Similar to Hawkeye, she can pressure Mr. Fantastic from a safe distance.",
+      },
+    ],
+    goodAgainst: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        description: "High burst damage while maintaing safe distance.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Hulk",
+        description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        name: "Black Panther",
+        description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+        name: "Squirrel Girl",
+        description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        description: "",
+      },
+    ],
+    weakness: "qrqwr",
+  },
+  {
+    image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
     name: "Venom",
     role: "Vanguard",
@@ -2369,138 +2501,6 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
-        description: "",
-      },
-    ],
-    weakness: "qrqwr",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
-    name: "Invisible Woman",
-    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
-    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
-    role: "Strategist",
-    new: true,
-    counterPicks: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
-        name: "Magik",
-        description:
-          "Magik's durability and mobility can pressure her and force her to retreat rather than healing allies.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
-        name: "Psylocke",
-        description:
-          "Her mobility and quick damage output can burst her before she can even use any abilities.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
-        name: "Moon Knight",
-        description:
-          "With great positioning, he can pressure her with Crescent Dart.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
-        description:
-          "His high mobility can close the distance and force her to use abilities and reposition.",
-      },
-    ],
-    goodAgainst: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
-        description: "",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-        name: "Hulk",
-        description: "High burst damage while maintaing safe distance.",
-      },
-    ],
-    weakness: "qrqwr",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736686183/Rivals/mr_fantastic_rh931l.png",
-    name: "Mr. Fantastic",
-    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
-    role: "Duelist",
-    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
-    new: true,
-    counterPicks: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
-        name: "Storm",
-        description:
-          "Even though Mr. Fantastic can block Storm's ultimate with Reflexive Rubber, she can still deal massive damage to him using Goddess Boost.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
-        name: "Punisher",
-        description:
-          "His Culling Turret ability can melt down Mr. Fantastic's hp before he can even get value.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
-        name: "Iron Man",
-        description:
-          "Even though Mr. Fantastic can block Iron Man's ultimate with Reflexive Rubber, his flight abilities and consistent damage output can still overwhelm him.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
-        name: "Hawkeye",
-        description: "He can pressure Mr. Fantastic from a safe distance.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-        name: "Hela",
-        description:
-          "Similar to Hawkeye, she can pressure Mr. Fantastic from a safe distance.",
-      },
-    ],
-    goodAgainst: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
-        name: "Peni Parker",
-        description: "High burst damage while maintaing safe distance.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-        name: "Hulk",
-        description: "",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
-        description: "",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
-        name: "Squirrel Girl",
-        description: "",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
         description: "",
       },
     ],
