@@ -186,7 +186,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         description:
-          "Her Goddess Boost ability can can pressure Venom if he attempts to dive.",
+          "Her Goddess Boost ability can pressure Venom if he attempts to dive.",
       },
       {
         image:
