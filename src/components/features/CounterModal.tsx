@@ -46,7 +46,7 @@ export default function CounterModal({
         onClick={() => !persist && onClose()}
       ></div>
       <div
-        className={`w-[90%] md:w-[900px] z-[700] dark:bg-neutral-800 bg-white rounded-md shadow-lg fixed top-0 right-0 h-full`}
+        className={`w-[85%] md:w-[900px] z-[700] overflow-auto dark:bg-neutral-800 bg-white rounded-md shadow-lg fixed top-0 right-0 h-full`}
       >
         <div className="flex p-7 items-center gap-4 pb-5 w-full">
           <Image src={hero?.image} alt={hero?.name} width={70} height={70} className="rounded-md" />

@@ -91,12 +91,12 @@ export default function HeroCountersv2() {
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row md:flex-wrap gap-5">
-          <div className="w-full flex flex-row flex-wrap gap-6 md:gap-9">
+          <div className="w-full flex flex-row items-center justify-center flex-wrap gap-6 md:gap-9">
             {searchResults.map((hero: any, index: number) => (
               <div
               onClick={() => setSelectedHero(hero)}
               key={index}
-              className="w-[29%] md:w-[14%] pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
+              className="w-[27%] md:w-[14%] pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
             >
               {/* Unskewed Content */}
               <div className="transform skew-y-3 h-full">
