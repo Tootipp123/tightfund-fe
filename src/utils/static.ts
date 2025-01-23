@@ -66,12 +66,6 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
       },
-      {
-        name: "Hulk",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-      },
     ],
     weakness: "qrqwr",
   },
@@ -2427,20 +2421,8 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
-        name: "Storm",
-        description: "",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-        name: "Iron Man",
-        description: "High burst damage while maintaing safe distance.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-        name: "Hela",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Hulk",
         description: "High burst damage while maintaing safe distance.",
       },
     ],
