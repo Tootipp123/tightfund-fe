@@ -96,9 +96,8 @@ export default function HeroCountersv2() {
               <div
               onClick={() => setSelectedHero(hero)}
               key={index}
-              className="w-[27%] md:w-[14%] pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
+              className="w-[27%] md:w-[14%] hover:opacity-50 pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
             >
-              {/* Unskewed Content */}
               <div className="transform skew-y-3 h-full">
                 <div className="m-auto -mt-8">
                   <Image
