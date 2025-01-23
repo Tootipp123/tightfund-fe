@@ -23,7 +23,7 @@ export default function TeamCompCounters() {
     },
     {
       name: "The Season 1 Meta Lineup",
-      bestFor: "Convoy Offense",
+      bestFor: "Convoy Offense & Capture",
       difficulty: 5,
       description: "",
       strengths: "This team composition is well-balanced, it can dive easily with Hulk and Wolverine, defend backline with Iron Man and Doctor Strange, and help the divers with these OP meta healers.",
@@ -50,6 +50,22 @@ export default function TeamCompCounters() {
           tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp"],
           duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp"],
           strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp"]
+        },
+      ],
+    },
+    {
+      name: "The Poke Lineup",
+      bestFor: "Convoy Offense",
+      difficulty: 5,
+      description: "",
+      strengths: "This team composition relies on the accuracy of duelist heroes to deal damage. They excel at maintaining distance against aggressive teams.",
+      weaknesses: "They might struggle against team compositions that can quickly close the distance and eliminate airborne heroes like the divers team composition.",
+      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737638974/rivals%20v2/divers_1_xlqbms.png",
+      lineups: [
+        {
+          tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp"],
+          duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp"],
+          strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp"]
         },
       ],
     },
