@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#1B1B29] w-full border-b dark:border-neutral-700">
+      <nav className="bg-[#1B1B29] w-full border-b border-neutral-700">
         <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto py-3 flex justify-between">
           <div className="flex items-center gap-1 md:gap-5">
             <Link href="/">
@@ -19,15 +19,15 @@ export default function Navbar() {
                 <div className="bg-red-500 text-white font-black px-1">
                   PEAK
                 </div>
-                <div className="font-bold text-lg dark:text-white mr-7 cursor-pointer">
+                <div className="font-bold text-lg text-white mr-7 cursor-pointer">
                   RIVALS
                 </div>
               </div>
             </Link>
-            <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "dark:text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Hero Counters
             </Link>
-            <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "dark:text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Team Compositions
             </Link>
           </div>
@@ -43,11 +43,11 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="flex gap-5 md:hidden border-b px-3 py-3 bg-[#1B1B29] w-full border-b dark:border-neutral-700">
-        <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "dark:text-neutral-200"} text-xs md:text-sm`}>
+      <div className="flex gap-5 md:hidden border-b px-3 py-3 bg-[#1B1B29] w-full border-b border-neutral-700">
+        <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "text-neutral-200"} text-xs md:text-sm`}>
           Hero Counters
         </Link>
-        <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "dark:text-neutral-200"} text-xs md:text-sm`}>
+        <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "text-neutral-200"} text-xs md:text-sm`}>
           Team Compositions
         </Link>
       </div>

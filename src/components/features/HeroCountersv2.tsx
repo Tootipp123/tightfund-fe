@@ -66,7 +66,7 @@ export default function HeroCountersv2() {
   return (
     <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px]">
       <header className="pt-[40px] md:pt-[100px] relative">
-        <h1 className="text-2xl md:text-3xl dark:text-neutral-100 relative px-[0px] md:px-[300px] font-black text-center">
+        <h1 className="text-2xl md:text-3xl text-neutral-100 relative px-[0px] md:px-[300px] font-black text-center">
           Select a Hero To Counter
         </h1>
       </header>
@@ -74,7 +74,7 @@ export default function HeroCountersv2() {
       {/* new */}
       <section className="mt-[40px] md:mt-[100px]">
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 px-2">
-          <p className="text-center mt-4 dark:text-neutral-200 font-semibold">
+          <p className="text-center mt-4 text-neutral-200 font-semibold">
             Updated meta as of {new Date().toDateString()} - Season 1
           </p>
           <div className="flex items-center gap-5">

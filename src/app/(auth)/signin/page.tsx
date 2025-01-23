@@ -81,7 +81,7 @@ export default function SignupPage() {
         <div className="flex md:flex-row flex-col items-center justify-between w-full min-h-[90vh]">
           <section className="md:px-[100px] px-5 m-auto">
             <div className="w-full md:w-[400px]">
-              <h3 className="dark:text-neutral-200 md:mt-4 text-2xl font-semibold text-center">
+              <h3 className="text-neutral-200 md:mt-4 text-2xl font-semibold text-center">
                 Sign in to Peak Rivals
               </h3>
               <div className="my-5">
@@ -98,7 +98,7 @@ export default function SignupPage() {
                 </button>
               </div>
               <div className="gap-2 mt-5 text-center">
-                <p className="dark:text-neutral-300 text-neutral-700 font-light md:text-md text-sm">
+                <p className="text-neutral-300 font-light md:text-md text-sm">
                   By joining, you agree to our
                   <b
                     onClick={() => setShowTermsAndConditionsModal(true)}
@@ -115,15 +115,15 @@ export default function SignupPage() {
 
       {showTermsAndConditionsModal && (
         <Modal onClose={() => setShowTermsAndConditionsModal(false)}>
-          <div className="w-[90%] h-[550px] md:w-[500px] md:h-[700px] border dark:border-neutral-800 dark:bg-neutral-950 bg-white p-7 overflow-auto m-auto">
-            <h1 className="dark:text-neutral-200 text-xl font-bold">
+          <div className="w-[90%] h-[550px] md:w-[500px] md:h-[700px] border border-neutral-800 bg-neutral-950 bg-white p-7 overflow-auto m-auto">
+            <h1 className="text-neutral-200 text-xl font-bold">
               PRIVACY POLICY
             </h1>
             <section className="mt-10">
-              <h2 className="dark:text-neutral-200 font-semibold text-xl">
+              <h2 className="text-neutral-200 font-semibold text-xl">
                 User Data Privacy
               </h2>
-              <p className="dark:text-neutral-200 text-md font-light mt-3">
+              <p className="text-neutral-200 text-md font-light mt-3">
                 We respect your privacy, and we are committed to protecting any
                 personal information you provide to us. We do not store or
                 retain your personal data, including but not limited to your

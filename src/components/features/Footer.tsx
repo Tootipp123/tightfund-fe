@@ -26,13 +26,13 @@ export default function Footer() {
           <div className="bg-red-500 text-white font-black px-1">
             PEAK
           </div>
-          <div className="font-bold text-lg dark:text-white mr-7 cursor-pointer">
+          <div className="font-bold text-lg text-white mr-7 cursor-pointer">
             RIVALS
           </div>
         </div>
       </div>
       <div className="w-full px-4 md:px-0 md:w-[1200px] mx-auto flex justify-between pb-[50px]">
-        <p className="dark:text-neutral-400">© 2025 Peak Rivals</p>
+        <p className="text-neutral-400">© 2025 Peak Rivals</p>
       </div>
     </footer>
   );

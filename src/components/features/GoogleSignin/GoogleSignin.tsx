@@ -1,5 +1,6 @@
 "use client";
 
+// @ts-ignore
 import { loginGoogle } from "@/app/api/User";
 import Button from "@/components/ui/Button";
 import { signIn, useSession } from "next-auth/react";
