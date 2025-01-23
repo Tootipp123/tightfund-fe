@@ -2450,4 +2450,73 @@ export const HERO_COUNTERS = [
     ],
     weakness: "qrqwr",
   },
+  {
+    image:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+    name: "Star-Lord",
+    role: "Duelist",
+    counterPicks: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        name: "Magneto",
+        description:
+          "Metallic Curtain negates Star-Lord's damage output. While Metal Bulwark can help allies to block incoming damage.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        name: "Luna",
+        description:
+          "Her ultimate can completely block Star-Lord's attacks and ultimate.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        description:
+          "His shield negates Star-Lord's damage output, while his crowd control can also help allies to avoid his attacks.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        name: "Hawkeye",
+        description:
+          "One headshot can force him to retreat or eliminate him entirely from a safe distance.",
+      },
+    ],
+    goodAgainst: [
+      {
+        name: "Black Panther",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+      },
+      {
+        name: "Iron Man",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+      },
+      {
+        name: "Groot",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+      },
+      {
+        name: "Moon Knight",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+      },
+      {
+        name: "Iron Fist",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+      },
+    ],
+    weakness: "qrqwr",
+  },
 ];
