@@ -2,6 +2,8 @@ export const HERO_COUNTERS = [
   {
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/storm_jan4ge.png",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/storm_jan4ge.png",
     name: "Storm",
     role: "Duelist",
     meta: true,
@@ -77,7 +79,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
     name: "Iron Man",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_man_wtebxq.png",
     role: "Duelist",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619436/rivals%20v2/ironmannew_eadtkr.png",
     counterPicks: [
       {
         image:
@@ -172,6 +176,8 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
     name: "Venom",
     role: "Vanguard",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607173/rivals%20v2/venom_lu4wjv.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607173/rivals%20v2/venom_lu4wjv.png",
     meta: true,
     counterPicks: [
       {
@@ -241,6 +247,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
     name: "Black Panther",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619435/rivals%20v2/bpnew_xzsr2r.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bp_lyq0v1.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -337,6 +345,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
     name: "Cloak & Dagger",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/cnd_ivfbce.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/cnd_ivfbce.png",
     role: "Strategist",
     meta: true,
     counterPicks: [
@@ -413,7 +423,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
     name: "Groot",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/groot_xxhfud.png",
     role: "Vanguard",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/groot_xxhfud.png",
     counterPicks: [
       {
         image:
@@ -498,6 +510,8 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
     name: "Hela",
     role: "Duelist",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/hela_lluyca.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/hela_lluyca.png",
     counterPicks: [
       {
         image:
@@ -578,6 +592,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
     name: "Luna Snow",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/luna_s8dvx4.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/luna_s8dvx4.png",
     role: "Strategist",
     meta: true,
     counterPicks: [
@@ -658,6 +674,8 @@ export const HERO_COUNTERS = [
   {
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/magik_t6cemu.png",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/magik_t6cemu.png",
     name: "Magik",
     role: "Duelist",
     counterPicks: [
@@ -732,7 +750,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
     name: "Iron Fist",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/iron_fist_uxavml.png",
     role: "Duelist",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_fist_uxavml.png",
     counterPicks: [
       {
         image:
@@ -819,7 +839,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
     name: "Peni Parker",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/peni_wdcktf.png",
     role: "Vanguard",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/peni_wdcktf.png",
     counterPicks: [
       {
         image:
@@ -908,7 +930,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
     name: "Hulk",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/hulk_i6rxrq.png",
     role: "Vanguard",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/hulk_i6rxrq.png",
     meta: true,
     counterPicks: [
       {
@@ -983,6 +1007,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
     name: "Hawkeye",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/hawkeye_yybihp.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/hawkeye_yybihp.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1057,6 +1083,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
     name: "Psylocke",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/psy_feub8t.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/psy_feub8t.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1148,7 +1176,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
     name: "Captain America",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/cap_j99m6o.png",
     role: "Vanguard",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/cap_j99m6o.png",
     meta: true,
     counterPicks: [
       {
@@ -1217,6 +1247,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
     name: "Moon Knight",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619034/rivals%20v2/mk-new_1_tcgzik.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/moon_knight_lxkm3i.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1292,6 +1324,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
     name: "Loki",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/loki_qeoeyh.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/loki_qeoeyh.png",
     role: "Strategist",
     counterPicks: [
       {
@@ -1354,7 +1388,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
     name: "Mantis",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mantis_xhldqc.png",
     role: "Strategist",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mantis_xhldqc.png",
     meta: true,
     counterPicks: [
       {
@@ -1412,6 +1448,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
     name: "Spider-Man",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/spidey_bti4dq.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/spidey_bti4dq.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1495,6 +1533,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
     name: "Rocket Racoon",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619035/rivals%20v2/rocket-new_1_raqc7g.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/rocket_g4v6nw.png",
     role: "Strategist",
     counterPicks: [
       {
@@ -1509,21 +1549,21 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
         name: "Black Panther",
         description:
-          "He can pressure Rocket and make him focus on escaping him instead of healing allies.",
+          "He can pressure Rocket and make him focus on escaping instead of healing allies.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         description:
-          "With his flight abilities, he can pressure Rocket and deal massive damage to him.",
+          "With his flight abilities, he can pressure Rocket and deal massive damage to him from above.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         description:
-          "She can flank easily at the back with invisibility, and deal consistent damage to Rocket.",
+          "She can flank easily at the back with invisibility, forcing him to escape instead of healing allies.",
       },
       {
         image:
@@ -1554,6 +1594,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
     name: "Wolverine",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607173/rivals%20v2/wolvie_j9xibh.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607173/rivals%20v2/wolvie_j9xibh.png",
     role: "Duelist",
     meta: true,
     counterPicks: [
@@ -1620,6 +1662,8 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
     name: "Thor",
     role: "Vanguard",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607172/rivals%20v2/thor_lhhqwi.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607172/rivals%20v2/thor_lhhqwi.png",
     counterPicks: [
       {
         image:
@@ -1688,6 +1732,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
     name: "Squirrel Girl",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/squi_yo6cgm.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/squi_yo6cgm.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1750,6 +1796,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
     name: "Namor",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/namor_acnpav.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/namor_acnpav.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1807,7 +1855,7 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
         name: "Magik",
         description: "",
       },
@@ -1818,6 +1866,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
     name: "The Punisher",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/punisher_g8ytdf.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/punisher_g8ytdf.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -1888,6 +1938,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
     name: "Jeff",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/jeff_wadppv.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/jeff_wadppv.png",
     role: "Strategist",
     counterPicks: [
       {
@@ -1957,6 +2009,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
     name: "Scarlet Witch",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/scar_xspbho.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/scar_xspbho.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -2019,7 +2073,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
     name: "Black Widow",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/btw_pnokvx.png",
     role: "Duelist",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/btw_pnokvx.png",
     counterPicks: [
       {
         image:
@@ -2070,6 +2126,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
     name: "Adam Warlock",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/adam_w2m9ek.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/adam_w2m9ek.png",
     role: "Strategist",
     counterPicks: [
       {
@@ -2134,6 +2192,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
     name: "Winter Soldier",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/bucky_tdwc4f.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bucky_tdwc4f.png",
     role: "Duelist",
     counterPicks: [
       {
@@ -2199,6 +2259,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
     name: "Magneto",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/magneto_wbantn.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/magneto_wbantn.png",
     role: "Vanguard",
     counterPicks: [
       {
@@ -2256,6 +2318,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
     name: "Doctor Strange",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607172/rivals%20v2/strange_t4560m.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607172/rivals%20v2/strange_t4560m.png",
     role: "Vanguard",
     meta: true,
     counterPicks: [
@@ -2314,6 +2378,8 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
     name: "Invisible Woman",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
     role: "Strategist",
     new: true,
     counterPicks: [
@@ -2378,7 +2444,9 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736686183/Rivals/mr_fantastic_rh931l.png",
     name: "Mr. Fantastic",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
     role: "Duelist",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
     new: true,
     counterPicks: [
       {
@@ -2455,6 +2523,8 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
     name: "Star-Lord",
     role: "Duelist",
+    tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/star_du9q4c.png",
+    fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/star_du9q4c.png",
     counterPicks: [
       {
         image:

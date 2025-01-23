@@ -6,6 +6,7 @@ import Navbar from "@/components/features/Navbar";
 import { useState } from "react";
 import { useMutation } from "react-query";
 import HeroCounters from "./HeroCounters";
+import HeroCountersv2 from "./HeroCountersv2";
 
 export default function Homepage() {
   const [email, setEmail] = useState<string>("");
@@ -26,7 +27,8 @@ export default function Homepage() {
     <div>
       <Navbar />
       <main className="bg-[#1B1B29] min-h-[100vh]">
-        <HeroCounters />
+        {/* <HeroCounters /> */}
+        <HeroCountersv2 />
       </main>
       <Footer />
     </div>
