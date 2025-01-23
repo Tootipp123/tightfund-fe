@@ -54,34 +54,34 @@ export default function TeamCompCounters() {
       ],
     },
     {
-      name: "The Poke Lineup",
-      bestFor: "Convoy Defense",
-      difficulty: 5,
-      description: "",
-      strengths: "This team composition relies on the accuracy of duelist heroes to deal damage. They excel at maintaining distance against aggressive teams.",
-      weaknesses: "They might struggle against team compositions that can quickly close the distance and eliminate airborne heroes like the divers team composition.",
-      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737638974/rivals%20v2/divers_1_xlqbms.png",
-      lineups: [
-        {
-          tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp"],
-          duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp"],
-          strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp"]
-        },
-      ],
-    },
-    {
       name: "The Healers Meta",
       bestFor: "Convoy Defense & Capture",
       difficulty: 5,
       description: "",
       strengths: "This team relies on the strategist heroes' consistent healing and positioning. With two meta duelists and a consistent tank, this team excels at sustaining team health and defending against enemy attacks.",
       weaknesses: "They will have issues against tanky flankers that can force the healers to retreat and not focus on healing allies.",
-      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737638974/rivals%20v2/divers_1_xlqbms.png",
+      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737641878/rivals%20v2/healers_gd1bqj.png",
       lineups: [
         {
           tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp"],
           duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp"],
           strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp"]
+        },
+      ],
+    },
+    {
+      name: "The Poke Lineup",
+      bestFor: "Convoy Defense",
+      difficulty: 5,
+      description: "",
+      strengths: "This team composition relies on the accuracy of duelist heroes to deal damage. They excel at maintaining distance against aggressive teams.",
+      weaknesses: "They might struggle against team compositions that can quickly close the distance and eliminate airborne heroes like the divers team composition.",
+      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737641880/rivals%20v2/poke_awy8dx.png",
+      lineups: [
+        {
+          tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp"],
+          duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp"],
+          strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp"]
         },
       ],
     },
