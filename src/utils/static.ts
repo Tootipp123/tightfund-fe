@@ -940,12 +940,12 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         description:
-          "He can melt hulk's hp from above while being unreachable.",
+          "He can pressure Hulk from above using his Unibeam ability, preventing Hulk from diving onto the back line.",
       },
       {
         name: "Storm",
         description:
-          "She can melt hulk's hp from above while being unreachable.",
+          "Her Goddess Boost and consistent damage output can force Hulk to retreat.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
       },
@@ -954,19 +954,13 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         description:
-          "He can pressure from different angles while maintaining consistent damage output.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
-        name: "Psylocke",
-        description: "She can easily put damage to hulk and outmanuever him.",
+          "He can melt Hulk's hp with his consistent DPS and force him to retreat.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
         name: "Thor",
-        description: "He can push him away of his position.",
+        description: "He can pressure and push him away of his position.",
       },
       {
         image:
