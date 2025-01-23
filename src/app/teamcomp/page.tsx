@@ -55,7 +55,7 @@ export default function TeamCompCounters() {
     },
     {
       name: "The Poke Lineup",
-      bestFor: "Convoy Offense",
+      bestFor: "Convoy Defense",
       difficulty: 5,
       description: "",
       strengths: "This team composition relies on the accuracy of duelist heroes to deal damage. They excel at maintaining distance against aggressive teams.",
