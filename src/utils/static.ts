@@ -1095,18 +1095,6 @@ export const HERO_COUNTERS = [
         description: "She can shut him down by making him sleep.",
       },
       {
-        name: "Doctor Strange",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
-      },
-      {
-        name: "Groot",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
-      },
-      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
         name: "Luna Snow",
@@ -1119,6 +1107,18 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+      },
+      {
+        name: "Doctor Strange",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+      },
+      {
+        name: "Groot",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
       },
       {
         name: "Adam Warlock",
@@ -1243,7 +1243,7 @@ export const HERO_COUNTERS = [
         name: "Venom",
         description: "Venom is too mobile and tanky for Psylocke to handle.",
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
       },
       {
         name: "Luna Snow",

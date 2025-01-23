@@ -9,6 +9,7 @@ interface ButtonProps {
   children: ReactNode;
   className?: string;
   disabled?: boolean;
+  loading?: boolean;
   id?: string;
   onClick?: () => void;
 }
@@ -18,7 +19,7 @@ const buttonVariants: Record<string, string> = {
   secondary:
     "dark:bg-gray-900 bg-gray-100 dark:border-gray-800 border dark:text-gray-200 text-[#222]",
   tertiary:
-    "dark:bg-gray-900 dark:border-gray-800 border dark:text-gray-200 text-[#222]",
+    "bg-transparent border border-neutral-600 text-gray-200 text-[#222]",
 };
 
 const buttonSizes: Record<string, string> = {
@@ -30,7 +31,7 @@ const buttonSizes: Record<string, string> = {
 export default function Button({
   variant = "primary",
   size = "medium",
-  // loading = false,
+  loading = false,
   startIcon,
   endIcon,
   id,
