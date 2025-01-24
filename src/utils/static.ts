@@ -980,6 +980,13 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        description:
+          "Her Normal attacks and Bolt Rush ability are more than enough to reduce Peni's HP instantly. She can also destroy nests and mines easily.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         description:
@@ -994,13 +1001,6 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
-        description:
-          "Swings helps him avoid traps while pressuring the backline.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
         name: "Doctor Strange",
         description:
@@ -1010,7 +1010,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
         name: "Groot",
-        description: "Long arms can destroy spider nests and mines easily.",
+        description: "His normal attacks can destroy spider nests and mines from a safe position.",
       },
       {
         image:
@@ -1516,6 +1516,12 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
       },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        description: ""
+      }
     ],
     weakness: "qrqwr",
   },
