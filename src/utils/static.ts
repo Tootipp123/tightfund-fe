@@ -746,7 +746,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
         description:
-          "He can rush forward and pressure her, since Luna has limited mobility.",
+          "He can rush forward and pressure her, since Luna has limited mobility. And his shield can block her freezing ability.",
       },
       {
         image:
