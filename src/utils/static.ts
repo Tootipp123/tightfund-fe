@@ -737,24 +737,16 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+        name: "Scarlet Witch",
+        description: "Her ultimate ability can pierce through Luna Snow's ultimate.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
         description:
-          "He can rush forward and pressure her in front, since Luna has limited mobility.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
-        name: "Venom",
-        description:
-          "You can dive straight in front of Hela and put pressure on her.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-        name: "Luna Snow",
-        description:
-          "You can also pick Luna for your team to gain a defensive ult.",
+          "He can rush forward and pressure her, since Luna has limited mobility.",
       },
       {
         image:
@@ -771,16 +763,11 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
       },
       {
-        name: "Hela",
-        description: "",
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-      },
-      {
-        name: "Hawkeye",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        name: "Star-Lord",
+        description:
+          "",
       },
       {
         image:

@@ -85,6 +85,22 @@ export default function TeamCompCounters() {
         },
       ],
     },
+    {
+      name: "The Balanced Lineup",
+      bestFor: "Capture",
+      difficulty: 5,
+      description: "",
+      strengths: "This team composition relies on the accuracy of duelist heroes to deal damage. They excel at maintaining distance against aggressive teams.",
+      weaknesses: "They might struggle against team compositions that can quickly close the distance and eliminate airborne heroes like the divers team composition.",
+      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737641880/rivals%20v2/poke_awy8dx.png",
+      lineups: [
+        {
+          tanks: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp"],
+          duels: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp"],
+          strats: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp", "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp"]
+        },
+      ],
+    },
   ]
 
   // const TEAM_COMP = [
