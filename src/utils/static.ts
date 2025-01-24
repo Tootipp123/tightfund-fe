@@ -692,6 +692,15 @@ export const HERO_COUNTERS = [
         description: "His mischief abilities can slow down Hela's playstyle.",
       },
     ],
+    evenMatchups: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        name: "Hawkeye",
+        description:
+          "His range and vision control can force her to play defensively.",
+      },
+    ],
     goodAgainst: [
       {
         name: "Iron Man",
@@ -2172,6 +2181,12 @@ export const HERO_COUNTERS = [
         description: "",
       },
       {
+        name: "Luna Snow",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+      },
+      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
@@ -2230,12 +2245,6 @@ export const HERO_COUNTERS = [
       },
     ],
     goodAgainst: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
-        name: "Groot",
-        description: "",
-      },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
