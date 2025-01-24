@@ -81,7 +81,7 @@ export default function CounterModal({
             <div>
               {hero.goodAgainst.length ? (
                 <div>
-                  <h2 className="dark:text-neutral-100 capitalize font-bold text-md mb-2">Great Against:</h2>
+                  <h2 className="dark:text-neutral-100 capitalize font-bold text-md mb-2">Good Against:</h2>
                   <div className="flex flex-wrap items-center gap-7">
                     {hero.goodAgainst.map((counter: any, counterKey: any) => (
                       <div key={counterKey} className="flex items-center gap-3">
