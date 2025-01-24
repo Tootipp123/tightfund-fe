@@ -1381,6 +1381,7 @@ export const HERO_COUNTERS = [
     image:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
     name: "Moon Knight",
+    meta: true,
     tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619034/rivals%20v2/mk-new_1_tcgzik.png",
     fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/moon_knight_lxkm3i.png",
     role: "Duelist",
@@ -1756,9 +1757,26 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        description: "His spawns can pressure Wolverine from flanking the back line.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        description: "Her spider nests and mines can disrupt Wolverine from reaching the front line.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         description: "She is unreachable and can punish Wolverine if he dives.",
+      },
+      {
+        image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        name: "Invisible Woman",
+        description: "She can push Wolverine out of position if he tries to engage."
       },
       {
         image:
@@ -1781,13 +1799,6 @@ export const HERO_COUNTERS = [
         description:
           "He can outmaneuver Wolverine and annoy him with his combos and swings.",
       },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
-        name: "Venom",
-        description:
-          "Venom's mobility can easily escape if Wolverine decides to focus on him.",
-      },
     ],
     goodAgainst: [
       {
@@ -1795,6 +1806,13 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
         name: "Groot",
         description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        description:
+          "",
       },
       {
         image:
