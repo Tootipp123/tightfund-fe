@@ -1774,11 +1774,6 @@ export const HERO_COUNTERS = [
         description: "She is unreachable and can punish Wolverine if he dives.",
       },
       {
-        image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
-        name: "Invisible Woman",
-        description: "She can push Wolverine out of position if he tries to engage."
-      },
-      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
         name: "Luna Snow",
@@ -2352,13 +2347,6 @@ export const HERO_COUNTERS = [
         name: "Psylocke",
         description:
           "She can land surprise attacks at different angles, and can easily avoid his combos with dashes and invisibility.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
-        name: "Wolverine",
-        description:
-          "His ability to quickly close the distance and deal close-range damage make him a natural counter.",
       },
       {
         image:
