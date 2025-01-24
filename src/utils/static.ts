@@ -344,6 +344,13 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        description:
+          "",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
         name: "Rocket Racoon",
         description: "",
@@ -410,21 +417,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
         name: "Namor",
         description:
-          "He can disrupt Black Panther from engaging the enemy backline using the octopus.",
+          "He can disrupt Black Panther from engaging the enemy backline using his spawns.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
         name: "Cloak & Dagger",
         description:
-          "She can disrupt him by blinding him with Terror cape ability.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-        name: "Luna Snow",
-        description:
-          "She can prevent Black Panther from flanking the back line by stunning him and activating her ult.",
+          "She's the best strategist to counter Black Panther. All of her abilities makes him ineffective in the game.",
       },
     ],
     goodAgainst: [
@@ -441,10 +441,10 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
       },
       {
-        name: "Loki",
+        name: "Doctor Strange",
         description: "",
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
       },
       {
         name: "Hawkeye",
@@ -453,16 +453,16 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
       },
       {
-        name: "Groot",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
-      },
-      {
         name: "Punisher",
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+      },
+      {
+        name: "Winter Soldier",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
       },
     ],
     weakness: "qrqwr",
@@ -887,7 +887,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
         name: "Namor",
         description:
-          "He can disrupt him from engaging the enemy backline using the octopus.",
+          "He can disrupt him from engaging the enemy backline using his spawns.",
       },
       {
         image:
@@ -1237,7 +1237,7 @@ export const HERO_COUNTERS = [
       {
         name: "Namor",
         description:
-          "He can defend the backline with octopus if Psylocke tries to flank.",
+          "He can defend the backline with spawns if Psylocke tries to flank.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
       },
@@ -1591,7 +1591,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
         name: "Namor",
         description:
-          "His octopus disrupts Spider-Man's ability to pressure the backline.",
+          "His spawns disrupts Spider-Man's ability to pressure the backline.",
       },
       {
         image:
@@ -2064,7 +2064,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
         name: "Magneto",
         description:
-          "His shield can block any of his attacks, making him ineffective in front.",
+          "His shield and bubbles can block his normal attacks, making him ineffective pressuring the front line.",
       },
     ],
     goodAgainst: [

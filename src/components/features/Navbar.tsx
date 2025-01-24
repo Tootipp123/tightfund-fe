@@ -27,7 +27,7 @@ export default function Navbar() {
             <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Hero Counters
             </Link>
-            <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            <Link href="/team-compositions" className={`${currentPath === "/team-compositions" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Team Compositions
             </Link>
           </div>
