@@ -15,9 +15,18 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const ogImage = {
+  images: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737792113/favicon_ku3rrz.png"]
+}
+
 export const metadata: Metadata = {
   title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
   description: "Marvel Rival's Hero Counter Quick Guide",
+  openGraph: {
+    ...ogImage,
+    title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
+    description: "Marvel Rival's Hero Counter Quick Guide",
+  }
 };
 
 export default function RootLayout({
