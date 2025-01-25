@@ -7,11 +7,18 @@ import { useEffect, useState } from "react";
 import { useMutation } from "react-query";
 import { LuSearch } from "react-icons/lu";
 import CounterModal from "./CounterModal";
+import AutoComplete from "../ui/AutoComplete";
 
 export default function HeroCountersv2() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
   const [selectedHero, setSelectedHero] = useState<any>(null);
+  const [tierFilter, setTierFilter] = useState<any>(
+    {
+      name: "All Tiers",
+      value: "ALL"
+    }
+  );
   const [filters, setFilters] = useState([
     {
       category: "All Heroes",
@@ -29,17 +36,53 @@ export default function HeroCountersv2() {
       category: "Strategist",
       active: false
     },
+    // {
+    //   category: "In Meta",
+    //   active: false
+    // }
+  ]);
+
+  const tierFilters: any = [
     {
-      category: "In Meta",
-      active: false
-    }
-  ])
+      name: "All Tiers",
+      value: "ALL"
+    },
+    {
+      name: "S Tier - In Meta",
+      value: "S"
+    },
+    {
+      name: "A Tier - Very Good",
+      value: "A"
+    },
+    {
+      name: "B Tier - Good",
+      value: "B"
+    },
+    {
+      name: "C Tier - Average",
+      value: "C"
+    },
+    {
+      name: "D Tier - Not worth it",
+      value: "D"
+    },
+  ]
 
   const searchHero = (search: any) => {
     const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
     console.log("search result: ", res)
     setSearchResults(res)
   }
+
+  useEffect(() => {
+    if (tierFilter?.value && tierFilter.value === "ALL") {
+      setSearchResults(HERO_COUNTERS)
+    } else if (tierFilter?.value) {
+      const res = HERO_COUNTERS.filter((res: any) => res.tier === tierFilter.value)
+      setSearchResults(res)
+    }
+  }, [tierFilter]);
 
   const setFilter = (selected: any) => {
     const newFilters = filters.map((item: any) => {
@@ -88,16 +131,22 @@ export default function HeroCountersv2() {
                 {filter.category}
               </div>
             ))}
+            <AutoComplete
+              placeholder="Select a filter"
+              onChange={(item: any) => setTierFilter(item)}
+              value={tierFilter}
+              items={tierFilters}
+            />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row md:flex-wrap gap-5">
           <div className="w-full flex flex-row items-center justify-center flex-wrap gap-6 md:gap-9">
             {searchResults.map((hero: any, index: number) => (
               <div
-              onClick={() => setSelectedHero(hero)}
-              key={index}
-              className="w-[27%] md:w-[14%] hover:opacity-50 pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
-            >
+                onClick={() => setSelectedHero(hero)}
+                key={index}
+                className="w-[27%] md:w-[14%] hover:opacity-50 pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
+              >
               <div className="transform skew-y-3 h-full">
                 <div className="m-auto -mt-8">
                   <Image
