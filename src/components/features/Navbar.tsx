@@ -30,9 +30,9 @@ export default function Navbar() {
             <Link href="/team-compositions" className={`${currentPath === "/team-compositions" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Team Compositions
             </Link>
-            <Link href="/map-specific-heroes" className={`${currentPath === "/map-specific-heroes" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            {/* <Link href="/map-specific-heroes" className={`${currentPath === "/map-specific-heroes" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
               Map-Specific Heroes
-            </Link>
+            </Link> */}
           </div>
           <div className="flex items-center">
             <a href="https://discord.gg/8xc3a7cCSg" target="_blank">

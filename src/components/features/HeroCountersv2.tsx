@@ -13,6 +13,7 @@ export default function HeroCountersv2() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
   const [selectedHero, setSelectedHero] = useState<any>(null);
+  const [selectedHeroCategory, setSelectedHeroCategory] = useState<string>("All Heroes");
   const [tierFilter, setTierFilter] = useState<any>(
     {
       name: "All Tiers",
@@ -35,11 +36,7 @@ export default function HeroCountersv2() {
     {
       category: "Strategist",
       active: false
-    },
-    // {
-    //   category: "In Meta",
-    //   active: false
-    // }
+    }
   ]);
 
   const tierFilters: any = [
@@ -69,22 +66,33 @@ export default function HeroCountersv2() {
     },
   ]
 
-  const searchHero = (search: any) => {
-    const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
-    console.log("search result: ", res)
-    setSearchResults(res)
-  }
+  // const searchHero = (search: any) => {
+  //   const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
+  //   console.log("search result: ", res)
+  //   setSearchResults(res)
+  // }
 
   useEffect(() => {
-    if (tierFilter?.value && tierFilter.value === "ALL") {
-      setSearchResults(HERO_COUNTERS)
-    } else if (tierFilter?.value) {
+    if (tierFilter && tierFilter?.value !== "ALL" && selectedHeroCategory !== "All Heroes") {
+      const res = HERO_COUNTERS.filter((res: any) => res.tier === tierFilter.value && res.role === selectedHeroCategory)
+      setSearchResults(res)
+    } else if (tierFilter && tierFilter?.value === "ALL" && selectedHeroCategory !== "All Heroes") {
+      const res = HERO_COUNTERS.filter((res: any) => res.role === selectedHeroCategory)
+      setSearchResults(res)
+    } else if (tierFilter && tierFilter?.value !== "ALL" && selectedHeroCategory === "All Heroes") {
       const res = HERO_COUNTERS.filter((res: any) => res.tier === tierFilter.value)
       setSearchResults(res)
+    } else if (!tierFilter && selectedHeroCategory !== "All Heroes") {
+      const res = HERO_COUNTERS.filter((res: any) => res.role === selectedHeroCategory)
+      setSearchResults(res)
+    } else {
+      setSearchResults(HERO_COUNTERS)
     }
-  }, [tierFilter]);
+  }, [tierFilter, selectedHeroCategory]);
 
   const setFilter = (selected: any) => {
+    setSelectedHeroCategory(selected);
+
     const newFilters = filters.map((item: any) => {
       if(item.category === selected) {
         item.active = true;
@@ -92,18 +100,18 @@ export default function HeroCountersv2() {
       }
       item.active = false;
       return item;
-    })
+    });
     setFilters(newFilters)
 
-    if(selected === "All Heroes") {
-      setSearchResults(HERO_COUNTERS)
-    } else if (selected === "In Meta") {
-      const metaList = HERO_COUNTERS.filter((res: any) => res.meta)
-      setSearchResults(metaList)
-    } else {
-      const vangList = HERO_COUNTERS.filter((res: any) => res.role === selected)
-      setSearchResults(vangList)
-    }
+    // if(selected === "All Heroes") {
+    //   setSearchResults(HERO_COUNTERS)
+    // } else if (selected === "In Meta") {
+    //   const metaList = HERO_COUNTERS.filter((res: any) => res.meta)
+    //   setSearchResults(metaList)
+    // } else {
+    //   const vangList = HERO_COUNTERS.filter((res: any) => res.role === selected)
+    //   setSearchResults(vangList)
+    // }
   }
 
   return (
@@ -131,6 +139,12 @@ export default function HeroCountersv2() {
                 {filter.category}
               </div>
             ))}
+            {/* <AutoComplete
+              placeholder="Select a filter"
+              onChange={(item: any) => setSelectedHeroCategory(item)}
+              value={selectedHeroCategory}
+              items={filters}
+            /> */}
             <AutoComplete
               placeholder="Select a filter"
               onChange={(item: any) => setTierFilter(item)}

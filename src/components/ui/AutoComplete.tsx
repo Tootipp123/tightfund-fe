@@ -103,7 +103,7 @@ function AutoComplete({
               <li
                 key={index}
                 onClick={() => handleClickDropdownItem(item)}
-                className="relative bg-[#1B1B29] hover:bg-neutral-700 cursor-pointer select-none py-2 px-4" id="headlessui-combobox-option-:rm:" role="option" tabIndex={-1} data-headlessui-state=""
+                className={`${item.name === inputValue?.name ? "bg-[#2e2e42]": "bg-[#1B1B29]"} relative hover:bg-[#2e2e42] cursor-pointer select-none py-2 px-4`} id="headlessui-combobox-option-:rm:" role="option" tabIndex={-1}
               >
                 <span className="text-neutral-50 block truncate font-normal">
                   {item.name}
@@ -125,18 +125,18 @@ function AutoComplete({
       <div
         className={`bg-[#2e2e42] rounded-md relative w-full overflow-hidden cursor-default overflow-hidden bg-transparent text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm`}
       >
-        <input
+        <div
           onClick={() => handleOpenDropdown()}
-          onChange={(e: any) => setInputValue(e.target.value)}
-          placeholder={placeholder}
-          type={type}
-          required={required}
-          value={inputValue?.name}
+          // onChange={(e: any) => setInputValue(e.target.value)}
+          // placeholder={placeholder}
+          // type={type}
+          // required={required}
+          // value={inputValue?.name}
           className={`
-          h-[45px] pl-4 z-[0] cursor-pointer bg-[#2e2e42] text-neutral-100 relative text-sm rounded-lg focus:gray-300 focus:gray-300 block w-full p-2.5 placeholder-gray-400`} 
+          w-[180px] pl-4 z-[0] cursor-pointer bg-[#2e2e42] text-neutral-100 relative text-sm rounded-lg focus:gray-300 focus:gray-300 block w-full p-2.5 placeholder-gray-400`} 
           role="combobox"
           aria-expanded="false"
-        />
+        >{inputValue?.name}</div>
         {startIcon && (
           <span className="absolute inset-y-0 left-3 flex items-center">
             {/* @ts-ignore */}
