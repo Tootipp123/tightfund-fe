@@ -42,3 +42,11 @@ body {
   display:inline-block;
   transform: skew(20deg);
 } */
+
+.custom-ul {
+  color: white;
+}
+
+.custom-ul > li {
+  margin-top: 25px;
+}

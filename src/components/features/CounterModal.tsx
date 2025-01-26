@@ -77,6 +77,21 @@ export default function CounterModal({
               </div>
             ))}
           </div>
+          {hero?.howToCounter && (
+            <div className="mt-6 border-t py-5 border-[#383852]">
+              <div>
+                <h4 className="text-neutral-50 font-bold text-xl">How To Counter</h4>
+                <p className="text-neutral-200">This is the preferred position to counter Iron Fist in the back line.</p>
+                <div className="flex gap-5 items-center">
+                  <Image src={hero?.howToCounter?.image} alt="How to counter" width={600} height={300} className="mt-5"/>
+                  <div>
+                    <h4 className="text-neutral-50 font-bold text-lg">Scenarios:</h4>
+                    <div dangerouslySetInnerHTML={{__html: hero?.howToCounter?.description}}></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          )}
           <div className="mt-5 py-5 border-t border-[#383852]">
             <div>
               {hero.goodAgainst.length ? (

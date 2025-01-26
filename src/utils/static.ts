@@ -947,6 +947,17 @@ export const HERO_COUNTERS = [
           "Iron Fist won't be able to land damage inside Loki's Regeneration Domain.",
       },
     ],
+    howToCounter: {
+      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737875032/Rivals%20positioning/iron-fist-backline_ltc29z.png",
+      description: `<ul class="custom-ul">
+                      <li>
+                        <span>1. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis, she can easily make him sleep and ping <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm to kill him afterwards.</span>
+                      </li>
+                      <li>
+                        <span>2. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm, <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis will be able to see him and make him sleep while healing <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm.</span>
+                      </li>
+                    </ul>`
+    },
     goodAgainst: [
       {
         name: "Iron Man",
