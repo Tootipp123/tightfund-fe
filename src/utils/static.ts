@@ -584,7 +584,7 @@ export const HERO_COUNTERS = [
       },
       {
         name: "Wolverine",
-        description: "He can easily catch groot ",
+        description: "He can easily catch Groot and focus on him due to his low mobility.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
       },
