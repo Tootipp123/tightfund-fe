@@ -123,7 +123,7 @@ function AutoComplete({
   return (
     <div className={`autocomplete-field overflow-hidden bg-transparent`} key={key}>
       <div
-        className={`bg-[#2e2e42] rounded-md relative w-full overflow-hidden cursor-default overflow-hidden bg-transparent text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm`}
+        className={`bg-[#2e2e42] w-[180px] rounded-md relative overflow-hidden cursor-default overflow-hidden bg-transparent text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm`}
       >
         <div
           onClick={() => handleOpenDropdown()}
