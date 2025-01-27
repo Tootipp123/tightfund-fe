@@ -42,6 +42,20 @@ export const HERO_COUNTERS = [
           "She can surprise Storm from behind, while her burst damage can force Storm to disengage.",
       },
     ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Wolverine",
+        description: "In tight areas of a map, he can catch Storm easily due to her low mobility in the air.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Spider-Man",
+        description: "He can burst Storm in mid air with the help of Venom's Suit Expulsion skill.",
+      },
+    ],
     goodAgainst: [
       {
         name: "Black Panther",
@@ -484,6 +498,12 @@ export const HERO_COUNTERS = [
     meta: true,
     counterPicks: [
       {
+        name: "Magneto",
+        description: "His ultimate can pierce through Cloak and Dagger's ultimate. You just need to time his ult and use it when she stops her dashes.",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+      },
+      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
         name: "Magik",
@@ -518,12 +538,6 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-      },
-      {
-        name: "Magneto",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
       },
       {
         name: "Venom",
