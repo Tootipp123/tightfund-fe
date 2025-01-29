@@ -2531,6 +2531,13 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        name: "Wolverine",
+        description:
+          "His claws can pierce through Strange's shield. Additionaly, he can catch strange mid air if he uses Cloak of Levitation.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
         name: "Winter Soldier",
         description:
