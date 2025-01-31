@@ -930,6 +930,13 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        name: "Invisible Woman",
+        description:
+          "With her Close Quarter Combat combo, or even her simple Agile Strike + Force Physics — Sue can effectively flake off an Iron Fist. Her Force Physics is also doubled whenever he uses his Harmony Recovery (E).",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
         name: "Peni Parker",
         description: "Her spider nest and mines can prevent him from diving.",
@@ -1288,6 +1295,13 @@ export const HERO_COUNTERS = [
         description: "Venom is too mobile and tanky for Psylocke to handle.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        name: "Invisible Woman",
+        description:
+          "Sue’s invisibility exempts her from being in the line of sight for Psylocke’s Dance of the Butterfly (Q). The healing rate of Invisible Boundary (Q) also outheals the damage done by Psylocke’s ultimate. ",
       },
       {
         name: "Luna Snow",
@@ -1827,6 +1841,12 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         description: "She is unreachable and can punish Wolverine if he dives.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        name: "Invisible Woman",
+        description: "Force Physics can take Wolverine out of his leaps and dashes, which is roughly the entire point of his kit. If there is any time to be saving Force Physics, it's to specifically counter the Wolverine in the enemy team as its cooldown is shorter than his Feral Leap.",
       },
       {
         image:
