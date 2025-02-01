@@ -8,6 +8,50 @@ export const HERO_COUNTERS = [
     role: "Duelist",
     meta: true,
     tier: "S",
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        descriptions: [
+          "In situations where Storm's Goddess Boost (E) is on cooldown, this is an opportunity for Spidey to catch her mid-air and deliver critical damage or a quick kill.",
+          "With the help of Venom's Suit Expulsion skill, Spidey can delete Storm with a single combination."
+        ]
+      },
+      {
+        name: "Star-Lord",
+        image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        descriptions: [
+          "In situations where Storm is high up in the air, Star-Lord can exploit her vulnerable position. With her out of sight from her Strategists, she's unlikely to receive healing and leave her exposed to your attacks.",
+          "When Star-Lord’s ultimate is charged and Storm is far from her Strategists’ defensive ult on the ground, it will be a guaranteed kill."
+        ],
+      },
+      {
+        name: "Doctor Strange",
+        descriptions: [
+          "In situations where Storm is high up in the air, Strange can activate his Cloak of Levitation (Shift) and chase her, having the perfect opportunity for an instant kill.",
+          "In situations where Storm gets caught up with Strange's ultimate, it will be over without a well-timed defensive ult from her Strategist.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+      },
+      {
+        name: "Black Panther",
+        descriptions: [
+          "Most of the time, Storm counters Tchalla easily. But in tight areas where Storm is vulnerable to his Spear and dashes, if he can land a perfect combo (Double spear + Double dash), it's a guaranteed kill.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp"
+      },
+      {
+        name: "Winter Soldier",
+        descriptions: [
+          "With great timing, Winter Soldier can catch Storm in mid-air with Bionic hook (Right click). Followed by Trooper’s Fist (E) and a flurry of normal attacks, and it's over for her.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+      },
+    ],
     counterPicks: [
       {
         image:
@@ -40,20 +84,6 @@ export const HERO_COUNTERS = [
         name: "Psylocke",
         description:
           "She can surprise Storm from behind, while her burst damage can force Storm to disengage.",
-      },
-    ],
-    situationalCounters: [
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-        name: "Wolverine",
-        description: "In tight areas of a map, he can catch Storm easily due to her low mobility in the air.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-        name: "Spider-Man",
-        description: "He can burst Storm in mid air with the help of Venom's Suit Expulsion skill.",
       },
     ],
     goodAgainst: [
@@ -92,6 +122,57 @@ export const HERO_COUNTERS = [
     role: "Duelist",
     tier: "A",
     tallImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619436/rivals%20v2/ironmannew_eadtkr.png",
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        descriptions: [
+          "If Iron Man gets into the area of Storm's Goddess Boost ability (E), he will be at a struggle to match her damage output.",
+          "In tight spaces where Iron Man can’t fly high in the air, Storm can activate her ultimate on Iron Man's spot and kill him easily.",
+        ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        name: "Magik",
+        descriptions: [
+          "In tight spaces where Iron Man can’t fly high in the air, Magik can pressure him with her normal attacks, forcing him to use his Hyper-Velocity ability (Shift) to retreat.",
+        ]
+      },
+      {
+        name: "Black Panther",
+        descriptions: [
+          "Most of the time, Iron Man counters Tchalla easily. But in tight spaces where Iron Man is vulnerable to his Spear and dashes, if he can land a perfect combo (Double spear + Double dash), it's a guaranteed kill.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp"
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        descriptions: [
+          "Strange can protect his team against Iron Man's normal attacks with his shield. It can also block Iron Man's ultimate if he's in the right position and timing.",
+        ]
+      },
+      {
+        name: "Wolverine",
+        descriptions: [
+          "If he's flying near the ground, it's a perfect time for Wolverine to flank and catch him off guard.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp"
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        name: "Loki",
+        descriptions: [
+          "While Iron Man is a natural counter to Loki and his clones, Loki can have an advantage if he copies Iron Man and utilize his ultimate.",
+        ]
+      },
+    ],
     counterPicks: [
       {
         image:
@@ -102,10 +183,24 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description:
+          "He can pressure Iron Man while maintaining consistent damage output, and force him to retreat.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        name: "Psylocke",
+        description:
+          "Her mobility and quick damage output can burst Iron Man before he can even escape.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         description:
-          "He can one-hit combo Iron Man in mid air with Venom's Suit Expulsion skill.",
+          "He can be a pain to deal in the air with or without the Venom's Suit Expulsion skill.",
       },
       {
         image:
@@ -122,23 +217,9 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
-        name: "Punisher",
-        description:
-          "He can pressure Iron Man while maintaining consistent damage output.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
         name: "Iron Fist",
         description: "He can get behind and solo kill Iron Man in mid air.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
-        name: "Loki",
-        description:
-          "He can have an advantage if he copies Iron Man and utilize his ultimate.",
       },
     ],
     goodAgainst: [
@@ -147,12 +228,6 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-      },
-      {
-        name: "Magik",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
       },
       {
         name: "Black Panther",
@@ -171,12 +246,6 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
-      },
-      {
-        name: "Wolverine",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
       },
     ],
     weakness: "qrqwr",

@@ -128,17 +128,19 @@ export default function HeroCountersv2() {
           <p className="text-center mt-4 text-neutral-200 font-semibold">
             Updated meta as of {new Date().toDateString()} - Season 1
           </p>
-          <div className="flex items-center gap-5">
-            {filters.map((filter: any, idx: any) => (
-              <div 
-                onClick={() => {
-                  setFilter(filter.category)
-                }}
-                className={`${filter.active ? "text-white font-bold" : "text-neutral-400"} text-xs lg:text-[14px] cursor-pointer`} key={idx}
-              >
-                {filter.category}
-              </div>
-            ))}
+          <div className="flex flex-col md:flex-row items-center gap-5">
+            <div className="flex flex-row items-center gap-5">
+              {filters.map((filter: any, idx: any) => (
+                <div 
+                  onClick={() => {
+                    setFilter(filter.category)
+                  }}
+                  className={`${filter.active ? "text-white font-bold" : "text-neutral-400"} text-xs lg:text-[14px] cursor-pointer`} key={idx}
+                >
+                  {filter.category}
+                </div>
+              ))}
+            </div>
             {/* <AutoComplete
               placeholder="Select a filter"
               onChange={(item: any) => setSelectedHeroCategory(item)}

@@ -5,6 +5,7 @@ import Footer from "@/components/features/Footer";
 import Navbar from "@/components/features/Navbar";
 import { useState } from "react";
 import { useMutation } from "react-query";
+import AffiliateFooter from "./AffiliateFooter";
 import HeroCounters from "./HeroCounters";
 import HeroCountersv2 from "./HeroCountersv2";
 
@@ -30,6 +31,7 @@ export default function Homepage() {
         {/* <HeroCounters /> */}
         <HeroCountersv2 />
       </main>
+      {/* <AffiliateFooter /> */}
       <Footer />
     </div>
   );
