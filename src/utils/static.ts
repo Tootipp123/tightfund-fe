@@ -29,7 +29,7 @@ export const HERO_COUNTERS = [
       {
         name: "Doctor Strange",
         descriptions: [
-          "In situations where Storm is high up in the air, Strange can activate his Cloak of Levitation (Shift) and chase her, having the perfect opportunity for an instant kill.",
+          "In situations where Storm is high up in the air, Strange can activate his Cloak of Levitation (LShift) and chase her, having the perfect opportunity for an instant kill.",
           "In situations where Storm gets caught up with Strange's ultimate, it will be over without a well-timed defensive ult from her Strategist.",
         ],
         image:
@@ -137,7 +137,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
         name: "Magik",
         descriptions: [
-          "In tight spaces where Iron Man can’t fly high in the air, Magik can pressure him with her normal attacks, forcing him to use his Hyper-Velocity ability (Shift) to retreat.",
+          "In tight spaces where Iron Man can’t fly high in the air, Magik can pressure him with her normal attacks, forcing him to use his Hyper-Velocity ability (LShift) to retreat.",
         ]
       },
       {
@@ -510,10 +510,45 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        name: "Loki",
+        description:
+          "His lamp and clone swapping abilities can prevent Black Panther from killing him instantly.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
         name: "Cloak & Dagger",
         description:
           "She's the best strategist to counter Black Panther. All of her abilities makes him ineffective in the game.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        name: "Magneto",
+        descriptions: [
+          "Magneto can block T'Challa's spear with his Metallic Curtain (LShift).",
+          "In situations where Black Panther tries to target Magneto's allies, he can give them Metal Bulwark (E), preventing T'Challa from eliminating them with spears and dashes."
+        ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        descriptions: [
+          "Punisher's Culling Turret ability (E) can prevent T'Challa from flanking successfully. And T’Challa will find it hard to eliminate Punisher quickly, as the turret's health boost protects him from instant death.",
+        ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        name: "Psylocke",
+        descriptions: [
+          "Psylocke can outmaneuver Black Panther with her Psi-Blade Dashes (LShift) if he tries to target her.",
+          "Psylocke can hunt T'Challa with her invisibility, and find where he's hiding before he tries to target her allies, forcing him to use his Spirit Rend (LShift) and make him unable to get in a position again for 8 seconds."
+        ]
       },
     ],
     goodAgainst: [
