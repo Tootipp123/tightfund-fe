@@ -88,18 +88,6 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        name: "Black Panther",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-      },
-      {
-        name: "Magik",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
-      },
-      {
         name: "Groot",
         description: "",
         image:
@@ -110,6 +98,18 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+      },
+      {
+        name: "Black Panther",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+      },
+      {
+        name: "Magik",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
       },
     ],
     weakness: "qrqwr",
@@ -1068,17 +1068,17 @@ export const HERO_COUNTERS = [
           "Iron Fist won't be able to land damage inside Loki's Regeneration Domain.",
       },
     ],
-    howToCounter: {
-      image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737875032/Rivals%20positioning/iron-fist-backline_ltc29z.png",
-      description: `<ul class="custom-ul">
-                      <li>
-                        <span>1. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis, she can easily make him sleep and ping <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm to kill him afterwards.</span>
-                      </li>
-                      <li>
-                        <span>2. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm, <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis will be able to see him and make him sleep while healing <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm.</span>
-                      </li>
-                    </ul>`
-    },
+    // howToCounter: {
+    //   image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737875032/Rivals%20positioning/iron-fist-backline_ltc29z.png",
+    //   description: `<ul class="custom-ul">
+    //                   <li>
+    //                     <span>1. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis, she can easily make him sleep and ping <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm to kill him afterwards.</span>
+    //                   </li>
+    //                   <li>
+    //                     <span>2. If <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/iron-fist-red_brrfvh.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Iron Fist decides to engage to <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm, <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/mantis-blue_met7dl.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Mantis will be able to see him and make him sleep while healing <img src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737873939/Rivals%20positioning/storm-blue_pz6buu.png" width="30" height="30" style="display: inline-block; vertical-align: middle;"/> Storm.</span>
+    //                   </li>
+    //                 </ul>`
+    // },
     goodAgainst: [
       {
         name: "Iron Man",
@@ -2243,14 +2243,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
         name: "Magik",
         description:
-          "She can flank at the back and surprise him with her abilities.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
-        name: "Magneto",
-        description:
-          "His shield and bubbles can block his normal attacks, making him ineffective pressuring the front line.",
+          "She can flank at the back and target him with her abilities.",
       },
     ],
     situationalCounters: [
@@ -2278,6 +2271,13 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         description: "",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        description:
+          "",
       },
       {
         image:
