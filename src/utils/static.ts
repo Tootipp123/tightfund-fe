@@ -128,7 +128,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         descriptions: [
-          "If Iron Man gets into the area of Storm's Goddess Boost ability (E), he will be at a struggle to match her damage output.",
+          "If Iron Man gets into the area of Storm's Goddess Boost ability (E), he will struggle to match her damage output.",
           "In tight spaces where Iron Man can’t fly high in the air, Storm can activate her ultimate on Iron Man's spot and kill him easily.",
         ]
       },
