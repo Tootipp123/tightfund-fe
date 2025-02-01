@@ -1214,7 +1214,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         description:
-          "He can pressure Hulk from above using his Unibeam ability, preventing Hulk from diving onto the back line.",
+          "He can pressure Hulk from above using his Unibeam ability, preventing him from diving onto the back line.",
       },
       {
         name: "Storm",
@@ -1234,19 +1234,42 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
         name: "Thor",
-        description: "He can pressure and push him away of his position.",
+        description: "Thor can pressure and push Hulk away out of his position.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+        "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        descriptions: [
+          "Peni Parker's Spider nests and mines can prevent Hulk from engaging the front lines and other areas.",
+        ],
+      },
+      {
+        image:
+        "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        name: "Wolverine",
+        descriptions: [
+          "Wolverine can dismantle Hulk with flurry of attacks if he tries to engage the back line.",
+          "Wolverine's ultimate ability Last Stand (E) is simply a counter to Hulk.",
+        ],
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
         name: "Mantis",
-        description: "She can shut him down by making him sleep.",
+        descriptions: [
+          "If Hulk doesn't have his bubble, Mantis can shut him down with her sleeping ability (LShift)."
+        ],
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
         name: "Luna Snow",
-        description: "She can shut him down with her freezing abilities.",
+        descriptions: [
+          "If Hulk doesn't have his bubble, Luna Snow can simply freeze him with her Absolute Zero (E) ability."
+        ],
       },
     ],
     goodAgainst: [
@@ -1556,18 +1579,25 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
         name: "Black Panther",
         description:
-          "His mobility and burst damage can pressure Moon Knight from anywhere.",
+          "Moon Knight's Ankh can be useless to Black Panther, since he can simply dash out of its area of effect, while still dealing massive damage to him.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        name: "Iron Man",
+        description:
+          "Moon Knight's abilities are useless to unreachable heroes like Iron Man. Additionally, Iron Man can outdamage his normal attacks if he tries to target him.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         description:
-          "He can hunt down Moon Knight and kill him with a single combination.",
+          "He can hunt down Moon Knight and kill him with a single combination with our without Venom's suit expulsion skill (E).",
       },
       {
         name: "Magneto",
-        description: "His shields deny Moon Knight’s attacks.",
+        description: "His shield and Metal Bulwark simply deny Moon Knight’s attacks.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
       },
@@ -1577,6 +1607,25 @@ export const HERO_COUNTERS = [
           "She can hunt Moon Knight from behind and kill him instantly.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        name: "Magik",
+        descriptions: [
+          "With or without Moon Knight's Ankh, Magik can hunt him easily if she gets in his position.",
+          "Magik's Stepping Discs abilith (LShift), allows her to escape Moon Knight's ankh even in close range.",
+        ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        name: "Iron Fist",
+        descriptions: [
+          "Without Moon Knight's ankh, Iron Fist can burst him with flurry of normal attacks.",
+        ]
       },
     ],
     goodAgainst: [
