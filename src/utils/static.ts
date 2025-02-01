@@ -550,6 +550,14 @@ export const HERO_COUNTERS = [
           "Psylocke can hunt T'Challa with her invisibility, and find where he's hiding before he tries to target her allies, forcing him to use his Spirit Rend (LShift) and make him unable to get in a position again for 8 seconds."
         ]
       },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        name: "Mantis",
+        descriptions: [
+          "If Mantis can land her sleeping ability (LShift) perfectly while T'Challa tries to target her, her Duelists can capitalize on the opening."
+        ]
+      },
     ],
     goodAgainst: [
       {
@@ -565,22 +573,10 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
       },
       {
-        name: "Doctor Strange",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
-      },
-      {
         name: "Hawkeye",
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
-      },
-      {
-        name: "Punisher",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
       },
       {
         name: "Winter Soldier",
@@ -2237,13 +2233,6 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
-        description:
-          "He can close the gap and burst him at the back with his combinations.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
         name: "Iron Fist",
         description:
@@ -2262,6 +2251,25 @@ export const HERO_COUNTERS = [
         name: "Magneto",
         description:
           "His shield and bubbles can block his normal attacks, making him ineffective pressuring the front line.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        name: "Black Panther",
+        descriptions: [
+          "T'Challa can easily land successful spears and dashes to Punisher if he's not in his Culling Turret Mode (E).",
+        ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        descriptions: [
+          "Storm's normal attacks can be an issue if Punisher's not in his Culling Turret mode (E) or ultimate ability.",
+          "Storm's ultimate can quickly kill Punisher if he doesn't get any help from his Strategists' defensive ult.",
+        ]
       },
     ],
     goodAgainst: [
