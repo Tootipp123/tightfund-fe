@@ -1906,12 +1906,6 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
       },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
-        name: "Hawkeye",
-        description: "",
-      },
     ],
     weakness: "qrqwr",
   },
@@ -1963,12 +1957,6 @@ export const HERO_COUNTERS = [
     goodPairWith: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
-        name: "Groot",
-        description: "",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         description:
@@ -1983,8 +1971,8 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
-        name: "Peni Parker",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        name: "Groot",
         description: "",
       },
     ],
@@ -2003,6 +1991,12 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        description: "Her spider nests and mines can disrupt Wolverine from reaching the front line.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         description:
@@ -2016,12 +2010,6 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
-        name: "Peni Parker",
-        description: "Her spider nests and mines can disrupt Wolverine from reaching the front line.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         description: "She is unreachable and can punish Wolverine if he dives.",
@@ -2032,26 +2020,31 @@ export const HERO_COUNTERS = [
         name: "Invisible Woman",
         description: "Force Physics can take Wolverine out of his leaps and dashes, which is roughly the entire point of his kit. If there is any time to be saving Force Physics, it's to specifically counter the Wolverine in the enemy team as its cooldown is shorter than his Feral Leap.",
       },
+    ],
+    situationalCounters: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-        name: "Luna Snow",
-        description:
-          "Her freezing abilities prevents Wolverine from getting close.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        descriptions: [
+          "He can outmaneuver Wolverine and annoy him with his combos and swings.",
+        ]
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
         name: "Mantis",
-        description:
+        descriptions: [
           "She can use sleeping ability to prevent Wolverine from getting close.",
+        ]
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
-        description:
-          "He can outmaneuver Wolverine and annoy him with his combos and swings.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        name: "Luna Snow",
+        descriptions: [
+          "Her freezing abilities prevents Wolverine from getting close.",
+        ]
       },
     ],
     goodAgainst: [
@@ -2070,9 +2063,10 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
-        name: "Adam Warlock",
-        description: "",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        name: "Magneto",
+        description:
+          "",
       },
     ],
     weakness: "qrqwr",
