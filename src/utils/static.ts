@@ -262,13 +262,6 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
-        name: "Psylocke",
-        description:
-          "Her mobility and quick damage output can burst her before she can even use any abilities.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         description: "Punisher's ultimate can outdamage Invisible Woman's ultimate.",
@@ -282,10 +275,10 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        name: "Spider-Man",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+        name: "Squirrel Girl",
         description:
-          "His high mobility can close the distance and force her to use abilities and reposition.",
+          "Squirrel Girl can completely melt ⅓ of Guardian Shield’s health per Burst Acorn (LMB). Her Unbeatable Squirrel Tsunami (Q) passes through her Guardian Shield."
       },
     ],
     situationalCounters: [
@@ -297,19 +290,40 @@ export const HERO_COUNTERS = [
           "Magik's durability and mobility can pressure Sue and force her to retreat rather than healing allies.",
         ]
       },
-    ],
-    goodAgainst: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
-        description: "",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        name: "Spider-Man",
+        descriptions: [
+          "His high mobility can close the distance and force her to use abilities and reposition.",
+        ]
       },
+    ],
+    goodAgainst: [
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
         name: "Hulk",
         description: "High burst damage while maintaing safe distance.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        name: "Psylocke",
+        description:
+          "",
+      },
+      {
+        name: "Iron Fist",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+      },
+      {
+        name: "Wolverine",
+        description: "",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
       },
     ],
     weakness: "qrqwr",
