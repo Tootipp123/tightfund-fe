@@ -1013,14 +1013,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
         name: "Namor",
         description:
-          "He can disrupt him from engaging the enemy backline using his spawns.",
+          "Namor can disrupt Iron Fist from engaging the enemy backline using his spawns.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
         description:
-          "He's too tanky to be burst by Iron Fist. Plus he can use shield when he decides to combo.",
+          "Cap is too tanky to be burst by Iron Fist. Plus he can use shield to negate his normal attacks.",
       },
       {
         image:
