@@ -27,6 +27,14 @@ export const HERO_COUNTERS = [
         ],
       },
       {
+        name: "Winter Soldier",
+        descriptions: [
+          "With great timing, Winter Soldier can catch Storm in mid-air with Bionic hook (Right click). Followed by Trooper’s Fist (E) and a flurry of normal attacks, and it's over for her.",
+        ],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+      },
+      {
         name: "Doctor Strange",
         descriptions: [
           "In situations where Storm is high up in the air, Strange can activate his Cloak of Levitation (LShift) and chase her, having the perfect opportunity for an instant kill.",
@@ -42,14 +50,6 @@ export const HERO_COUNTERS = [
         ],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp"
-      },
-      {
-        name: "Winter Soldier",
-        descriptions: [
-          "With great timing, Winter Soldier can catch Storm in mid-air with Bionic hook (Right click). Followed by Trooper’s Fist (E) and a flurry of normal attacks, and it's over for her.",
-        ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
       },
     ],
     counterPicks: [
@@ -262,17 +262,16 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
-        name: "Magik",
-        description:
-          "Magik's durability and mobility can pressure her and force her to retreat rather than healing allies.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         description:
           "Her mobility and quick damage output can burst her before she can even use any abilities.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description: "Punisher's ultimate can outdamage Invisible Woman's ultimate.",
       },
       {
         image:
@@ -287,6 +286,16 @@ export const HERO_COUNTERS = [
         name: "Spider-Man",
         description:
           "His high mobility can close the distance and force her to use abilities and reposition.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        name: "Magik",
+        descriptions: [
+          "Magik's durability and mobility can pressure Sue and force her to retreat rather than healing allies.",
+        ]
       },
     ],
     goodAgainst: [
@@ -645,6 +654,12 @@ export const HERO_COUNTERS = [
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description: "",
       },
       {
         name: "Venom",
@@ -1784,6 +1799,12 @@ export const HERO_COUNTERS = [
         name: "Iron Man",
         description:
           "He can easily pressure Mantis from above and force her to hide.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description: "Punisher's ultimate can outdamage Mantis's ultimate.",
       },
       {
         image:
