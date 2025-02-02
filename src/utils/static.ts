@@ -473,12 +473,19 @@ export const HERO_COUNTERS = [
     fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bp_lyq0v1.png",
     role: "Duelist",
     counterPicks: [
+            {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        name: "Star-Lord",
+        description:
+          "He can land consistent DPS to T'Challa without getting hit by his spears or dashes, making him a natural counter.",
+      },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736686183/Rivals/mr_fantastic_rh931l.png",
         name: "Mr. Fantastic",
         description:
-          "His Reflexive Rubber negates Black Panther's spear and dashes.",
+          "His Reflexive Rubber negates T'Challa's spear and dashes.",
       },
       {
         image:
@@ -936,13 +943,13 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
-        description: "Magik won't be able to reach him.",
+        description: "Magik won't be able to reach him in open areas.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
-        description: "Just like Iron Man, Magik won't be able to reach her.",
+        description: "Just like Iron Man, Magik won't be able to reach her in open areas.",
       },
       {
         image:
