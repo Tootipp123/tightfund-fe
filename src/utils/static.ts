@@ -22,7 +22,7 @@ export const HERO_COUNTERS = [
         name: "Star-Lord",
         image: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         descriptions: [
-          "In situations where Storm is high up in the air, Star-Lord can exploit her vulnerable position. With her out of sight from her Strategists, she's unlikely to receive healing and leave her exposed to your attacks.",
+          "In situations where Storm is high up in the air, Star-Lord can exploit her vulnerable position. With her out of sight from her Strategists, she's unlikely to receive healing and leave her exposed to his attacks.",
           "When Star-Lord’s ultimate is charged and Storm is far from her Strategists’ defensive ult on the ground, it will be a guaranteed kill."
         ],
       },
@@ -159,7 +159,7 @@ export const HERO_COUNTERS = [
       {
         name: "Wolverine",
         descriptions: [
-          "If he's flying near the ground, it's a perfect time for Wolverine to flank and catch him off guard.",
+          "If Iron Man's flying near the ground, it's a perfect time for Wolverine to flank and catch him off guard.",
         ],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp"
@@ -1017,12 +1017,6 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
-        name: "Moon Knight",
-        description: "He can prevent him from engaging with Ancient Ankh.",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
         description:
@@ -1037,28 +1031,9 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
-        name: "Peni Parker",
-        description: "Her spider nest and mines can prevent him from diving.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
-        name: "Venom",
-        description:
-          "You can help your strategists easily when they're being flanked.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
-        name: "Luna Snow",
-        description: "Freezing ability disrupt his combos.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
-        name: "Mantis",
-        description: "Sleeping ability can disrupt his combos.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        name: "Rocket Racoon",
+        description: "Rocket can escape easily when he gets pounced by Iron Fist, making it difficult for him to be killed."
       },
       {
         image:
@@ -1066,6 +1041,59 @@ export const HERO_COUNTERS = [
         name: "Loki",
         description:
           "Iron Fist won't be able to land damage inside Loki's Regeneration Domain.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        name: "Moon Knight",
+        descriptions: [
+          "Most of the time, Iron Fist counters Moon Knight easily. However, if Moon Knight secures a good position with his Ancient Ankh (E), he can burst down Iron Fist if he decides to get in his spot and target him."
+        ],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        descriptions: [
+          "Iron Fist is a natural counter to Storm, but she can still eliminate you in a single instance if she times your last HP with Bolt Rush (Right Click) perfectly, without giving you a chance to activate your armor (Passive blue health).",
+        ],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        name: "Luna Snow",
+        descriptions: [
+          "Luna Snow's Absolute Zero (Right Click) ability will freeze him and disable his actions for a few seconds, leaving him immobile.",
+          "Luna Snow's ultimate ability can prevent Iron fist's ultimate from dealing any damage."
+        ],
+      },
+      {
+        image:
+        "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        name: "Winter Soldier",
+        descriptions: [
+          "Winter Soldier's can kill him instantly if Bionic Hook (Right Click) lands successfully + Trooper's Fist (LShift) and a few normal attacks, preventing Iron Fist from regenerating.",
+        ],
+      },
+      {
+        image:
+        "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        name: "Mantis",
+        descriptions: [
+          "Her Spore Slumber (LShift) ability will make him sleep for 3.5s if he doesn't get disrupted, leaving him immobile.",
+          "Her ultimate ability can prevent Iron fist's ultimate from dealing any damage."
+        ],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        name: "Hulk",
+        descriptions: [
+          "Hulk's Indestructible Guard (LShift) can prevent Iron Fist from targeting him, as Iron Fist will deal little to no damage against him.",
+          "Indestructible Guard (LShift) can also help allies when they're being targeted by Iron Fist. And his Radioactive Lockdown (E) can easily be casted and disable Iron Fist because he's most likely to attack in a straight angle only."
+        ],
       },
     ],
     // howToCounter: {
