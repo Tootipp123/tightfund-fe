@@ -2241,21 +2241,21 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
-        description: "He can destroy Namor's spawn with any attacks.",
+        description: "He can destroy Namor's spawn with normal attacks and pressure him at a straight angle.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         description:
-          "Her long-range attacks can destroy Namor's spawns easily.",
+          "Her normal attacks can easily destroy Namor's spawns, and in a one-on-one situation, Storm wins effortlessly with the help of Goddess Boost (E) and Bolt Rush (Right Click).",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
         name: "Venom",
         description:
-          "Venom can dive Namor and destroy his spawns while pressuring him.",
+          "Venom can dive on Namor and destroy his spawns while pressuring him.",
       },
     ],
     goodAgainst: [
@@ -2574,7 +2574,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
         name: "Black Panther",
         description:
-          "He can flank and pressure Adam from unexpected angles due to Adam's low mobility.",
+          "He can flank and pressure Adam from unexpected angles and capitalize on his low mobility.",
       },
       {
         image:
@@ -2684,12 +2684,12 @@ export const HERO_COUNTERS = [
     fullImage: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/magneto_wbantn.png",
     role: "Vanguard",
     counterPicks: [
-      {
+     {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-        name: "Black Panther",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
         description:
-          "His kinetic charge provides the speed to get around shields. Sprint Rend applies Vibranium marks, making shields break faster.",
+          "Punisher's Culling Turret (E) ability can break Magneto's shield quickly, forcing him to hide or retreat.",
       },
       {
         image:
@@ -2698,19 +2698,23 @@ export const HERO_COUNTERS = [
         description:
           "Constant damage from basic attacks chipps away at his shields, and Feast of the Abyss replenishes any health lost to Magneto's counter-attacks.",
       },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        name: "Black Panther",
+        descriptions: [
+          "His kinetic charge provides the speed to get around shields. Sprint Rend applies Vibranium marks, making shields break faster.",
+        ]
+      },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
-        description:
+        descriptions: [
           "Her Goddess Boost ability can bring down Magneto's shield easily.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
-        name: "Loki",
-        description:
-          "misdirection forces Magneto to waste shields. Focus on disrupting his positioning rather than trying to break shields directly.",
+        ]
       },
     ],
     goodAgainst: [
