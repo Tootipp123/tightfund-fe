@@ -906,9 +906,15 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        description: "Punisher's ultimate can outdamage Luna Snow's ultimate.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
-        description: "She can flank and solo-kill Luna easily.",
+        description: "Psylocke can easily flank and solo-kill Luna, while avoiding her freezing ability with dashes and invisibility.",
       },
       {
         image:
@@ -2357,6 +2363,12 @@ export const HERO_COUNTERS = [
         description:
           "She can flank at the back and target him with her abilities.",
       },
+      {
+        name: "Cloak & Dagger",
+        description: "Cloak & Dagger's ultimate completely negates Punisher's ultimate. Additionally, she can hide her allies if Punisher activates his ultimate or turret.",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+      },
     ],
     situationalCounters: [
       {
@@ -2700,6 +2712,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         descriptions: ["With good positioning, Storm can outlast Winter Soldier's damage output and pressure him. Just be careful not to get hit by his hook."],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        descriptions: [
+          "When in turret mode, Punisher can track down Psylocke even when she's not on sight."
+        ],
       },
     ],
     goodAgainst: [
