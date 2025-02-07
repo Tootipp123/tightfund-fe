@@ -1462,24 +1462,17 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         name: "Star-Lord",
         description:
-          "His mobility, evasiveness, and consistent damage can pressure Psylocke.",
+          "Star-Lord's mobility, evasiveness, and consistent damage can pressure Psylocke.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
         name: "Scarlet Witch",
-        description: "She can overwhelm Psylocke with her constant DPS.",
-      },
-      {
-        name: "Namor",
-        description:
-          "He can defend the backline with spawns if Psylocke tries to flank.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        description: "She can overwhelm Psylocke with her constant DPS while being invisible.",
       },
       {
         name: "Venom",
-        description: "Venom is too mobile and tanky for Psylocke to handle.",
+        description: "Unlike other vanguards, who can be easily punished by Psylocke's attacks, Venom is too mobile and tanky for her to handle.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
       },
@@ -1488,27 +1481,45 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
         name: "Invisible Woman",
         description:
-          "Sue’s invisibility exempts her from being in the line of sight for Psylocke’s Dance of the Butterfly (Q). The healing rate of Invisible Boundary (Q) also outheals the damage done by Psylocke’s ultimate. ",
+          "Sue’s invisibility exempts her from being in the line of sight for Psylocke’s Dance of the Butterfly (Q). The healing rate of Invisible Boundary (Q) also outheals the damage done by Psylocke’s ultimate.",
+      },
+    ],
+    situationalCounters: [
+      {
+        name: "Namor",
+        descriptions:
+          ["Namor can defend the backline with spawns and pressure Psylocke from flanking."],
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
       },
       {
         name: "Luna Snow",
-        description: "Her freezing abilities can disrupt Psylocke's movements.",
+        descriptions: [
+          "Luna Snow's ultimate ability negates Psylocke's ultimate ability.",
+        ],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
       },
       {
         name: "Mantis",
-        description: "Her sleeping abilities can shut down Psylocke.",
+        descriptions: ["Mantis's ultimate ability negates Psylocke's ultimate ability."],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
       },
     ],
     goodAgainst: [
       {
-        name: "Adam Warlock",
+        name: "Storm",
         description: "",
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        name: "Iron Man",
+        description:
+          "",
       },
       {
         name: "Groot",
@@ -1517,22 +1528,10 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
       },
       {
-        name: "Black Panther",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-      },
-      {
         name: "Jeff",
         description: "",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
-      },
-      {
-        name: "Storm",
-        description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
       },
       {
         name: "Rocket",
@@ -2669,14 +2668,38 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
-        description: "She can deal massive damage to him in long-distance.",
+        description: "Hela can deal massive damage to him from long range while staying safe from the reach of his Bionic Hook.",
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
-        name: "Thor",
-        description:
-          "Thor can escape if he decides to pull him with bionic hook.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        name: "Hawkeye",
+        description: "Similar with Hela, Hawkeye can deal massive damage to him from long range while staying safe from the reach of his Bionic Hook.",
+      },
+    ],
+    situationalCounters: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        descriptions: [
+          "Strange can block Winter Soldier's Bionic Hook with his shield. You can time the activation of the shield by simply watching his pre-hook animation.",
+          "If Winter Soldier somehow successfully hooks Strange, he can simply activate Cloak of Levitation (LShift) to escape poor positioning."
+        ],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        name: "Magneto",
+        descriptions: [
+          "Similar with Strange, Magneto can block Winter Soldier's Bionic Hook with his shield. You can time the activation of the shield by simply watching his pre-hook animation."
+        ],
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        name: "Storm",
+        descriptions: ["With good positioning, Storm can outlast Winter Soldier's damage output and pressure him. Just be careful not to get hit by his hook."],
       },
     ],
     goodAgainst: [
