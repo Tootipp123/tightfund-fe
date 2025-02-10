@@ -2031,9 +2031,10 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
-        name: "Peni Parker",
-        description: "Her spider nests and mines can disrupt Wolverine from reaching the front line.",
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        name: "Captain America",
+        description:
+          "Whenever Cap gets catched by Wolverine, he can simply dash out or sprint and use his slam to get out of danger.",
       },
       {
         image:
@@ -2085,6 +2086,14 @@ export const HERO_COUNTERS = [
         descriptions: [
           "Her freezing abilities prevents Wolverine from getting close.",
         ]
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        name: "Peni Parker",
+        descriptions: [
+          "Her spider nests and mines can disrupt Wolverine from reaching the front line."
+        ],
       },
     ],
     goodAgainst: [

@@ -91,7 +91,7 @@ function AutoComplete({
     return (
       <ul 
         ref={ref}
-        className="absolute w-[200px] z-[150] bg-[#1B1B29] border-neutral-800 border border-solid mt-1 w-[350px] overflow-auto rounded-md py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" 
+        className="absolute w-[200px] z-[150] bg-[#1B1B29] border-neutral-800 border border-solid mt-1 overflow-auto rounded-md py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" 
         aria-labelledby="headlessui-combobox-button-:R4q:" 
         role="listbox" 
         id="headlessui-combobox-options-:rl:" 
