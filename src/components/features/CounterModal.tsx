@@ -3,8 +3,8 @@
 import useMiddleware from "@/hooks/useMiddleware";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Router } from "next/router";
 import { useEffect, useRef, useState } from "react";
+
 interface Props {
   hero: any;
   onClose: () => void;
@@ -151,7 +151,7 @@ export default function CounterModal({
                       </div>
                     ))}
                     <div className="hidden md:block black-fade z-[5] relative w-full h-[50px] my-auto">
-                      <p className="text-white mb-3">Get the best experience and see all the content.</p>
+                      <p className="text-white mb-3">Become a member and get access to all the content.</p>
                       <button 
                         onClick={() => {
                           if(!accessToken) {

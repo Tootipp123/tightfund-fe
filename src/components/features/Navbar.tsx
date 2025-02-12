@@ -19,7 +19,7 @@ export default function Navbar() {
   const signOut = () => {
     window.localStorage.removeItem("accessToken");
     window.location.reload();
-  }
+  };
 
   return (
     <>
