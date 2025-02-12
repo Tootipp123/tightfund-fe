@@ -4,10 +4,22 @@ import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import Button from "../ui/Button";
 import { FaDiscord } from "react-icons/fa";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import useMiddleware from "@/hooks/useMiddleware";
+import { RiArrowDropDownFill } from "react-icons/ri";
+import { signOut } from "next-auth/react";
+import { useState } from "react";
 
 export default function Navbar() {
+  const router = useRouter();
   const currentPath = usePathname();
+  const { accessToken } = useMiddleware();
+  const [showUserMenu, setShowUserMenu] = useState(false);
+
+  const signOut = () => {
+    window.localStorage.removeItem("accessToken");
+    window.location.reload();
+  }
 
   return (
     <>
@@ -34,15 +46,37 @@ export default function Navbar() {
               Map-Specific Heroes
             </Link> */}
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <a href="https://discord.gg/8xc3a7cCSg" target="_blank">
-              <Button
-                className="bg-[#4C66FF] w-full"
-              >
-                <FaDiscord className="text-lg md:text-lg mr-2"/>
+              <Button variant="secondary">
+                <FaDiscord className="text-lg text-main-purple md:text-lg mr-2"/>
                 <p className="w-full">Join our Discord</p>
               </Button>
             </a>
+            {!accessToken ? (
+              <Button onClick={() => router.push("/signin")}>
+                <p className="w-full">Sign in</p>
+              </Button>
+            ) : (
+              <div className="relative">
+                <div 
+                  className="flex items-center cursor-pointer"
+                  onClick={() => setShowUserMenu(prev => !prev)}
+                >
+                  <div className="w-[30px] h-[30px] rounded-full bg-white"></div>
+                  <RiArrowDropDownFill className="text-lg text-white" />
+                </div>
+                {showUserMenu && (
+                  <div id="menu" className="w-[100px] bg-white rounded-md py-3 px-4 absolute">
+                    <ul className="cursor-pointer">
+                      <li onClick={() => signOut()}>
+                        Sign out
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </nav>

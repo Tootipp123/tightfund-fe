@@ -1,6 +1,9 @@
 "use client";
 
+import useMiddleware from "@/hooks/useMiddleware";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { Router } from "next/router";
 import { useEffect, useRef, useState } from "react";
 interface Props {
   hero: any;
@@ -13,8 +16,10 @@ export default function CounterModal({
   onClose,
   persist = false,
 }: Props) {
+  const router = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
+  const { accessToken } = useMiddleware();
 
   useEffect(() => {
     // Disable scrolling
@@ -67,7 +72,7 @@ export default function CounterModal({
         </div>
       </div>
     )
-  }
+  };
 
   return (
     <>
@@ -130,16 +135,35 @@ export default function CounterModal({
             <div>
               {hero.goodAgainst.length ? (
                 <div>
-                  <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">Good Against:</h2>
-                  <div className="flex flex-wrap items-center gap-7">
-                    {hero.goodAgainst.map((counter: any, counterKey: any) => (
-                      <div key={counterKey} className="flex items-center gap-3">
-                        <Image src={counter.image} alt={counter.name} width={45} height={45} className="rounded-md" />
-                        <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
-                          {counter.name}
-                        </h2>
+                  <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">Good Counter Against:</h2>
+                  <div className="relative w-full">
+                    {hero.goodAgainst.slice(0, 2).map((counter: any, counterKey: any) => (
+                      <div key={counterKey} className="flex gap-4 mt-3">
+                        <div className="w-[45px] h-[45px] relative overflow-hidden">
+                          <Image src={counter.image} alt={counter.name} width={45} height={45} className="rounded-md" />
+                        </div>
+                        <div className="pt-1">
+                          <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
+                            {counter.name}
+                          </h2>
+                          <p className="text-[#A0A0AF]">{counter.description}</p>
+                        </div>
                       </div>
                     ))}
+                    <div className="hidden md:block black-fade z-[5] relative w-full h-[50px] my-auto">
+                      <p className="text-white mb-3">Get the best experience and see all the content.</p>
+                      <button 
+                        onClick={() => {
+                          if(!accessToken) {
+                            router.push("/signin")
+                          } else {
+                            router.push("/membership")
+                          }
+                        }}
+                        className="mx-auto w-fit rounded-md px-3 py-1 bg-emerald-600 text-white font-medium">
+                        Upgrade
+                      </button>
+                    </div>
                   </div>
                 </div>
               ) : <></>}

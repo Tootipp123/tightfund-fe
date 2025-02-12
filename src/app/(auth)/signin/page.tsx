@@ -91,7 +91,7 @@ export default function SignupPage() {
                     window.location.href = process.env
                       .NEXT_PUBLIC_DISCORD_CALLBACK_URL as string;
                   }}
-                  className="rounded-md w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] bg-dark-container items-center justify-center"
+                  className="rounded-md w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >
                   <FaDiscord className="text-2xl" />
                   <span className="text-sm">Sign in with Discord</span>

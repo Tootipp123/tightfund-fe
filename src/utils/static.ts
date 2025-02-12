@@ -89,25 +89,25 @@ export const HERO_COUNTERS = [
     goodAgainst: [
       {
         name: "Groot",
-        description: "",
+        description: "Storm counters Groot in every facet of his game because she's unreachable in most areas.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
       },
       {
         name: "Peni Parker",
-        description: "",
+        description: "Storm counters Groot in every facet of his game because she's unreachable in most areas.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
       },
       {
         name: "Black Panther",
-        description: "",
+        description: "Storm counters Groot in every facet of his game because she's unreachable in most areas.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
       },
       {
         name: "Magik",
-        description: "",
+        description: "Storm counters Groot in every facet of his game because she's unreachable in most areas.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
       },
