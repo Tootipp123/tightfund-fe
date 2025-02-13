@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -11,7 +13,6 @@ export default function useMiddleware() {
     // if (!jwt) {
     //   router.push("/");
     // }
-
     setAccessToken(jwt);
   }, [router]);
 

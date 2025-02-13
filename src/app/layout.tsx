@@ -1,4 +1,6 @@
 import Providers from "@/components/features/Providers";
+import VerifyUser from "@/components/features/VerifyUser";
+import AppContextProvider from "@/store";
 import QueryProviders from "@/utils/query-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -16,8 +18,10 @@ const geistMono = localFont({
 });
 
 const ogImage = {
-  images: ["https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737792113/favicon_ku3rrz.png"]
-}
+  images: [
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737792113/favicon_ku3rrz.png",
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
     ...ogImage,
     title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
     description: "Marvel Rival's Hero Counter Quick Guide",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -40,7 +44,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <QueryProviders>
-          <Providers>{children}</Providers>
+          <Providers>
+            <AppContextProvider>
+              <VerifyUser />
+              {children}
+            </AppContextProvider>
+          </Providers>
         </QueryProviders>
       </body>
     </html>

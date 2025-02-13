@@ -1,14 +1,13 @@
 "use client";
 
+import { signupUser } from "@/api/User";
 import GoogleSignin from "@/components/features/GoogleSignin";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaDiscord } from "react-icons/fa";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { useMutation } from "react-query";
-import Button from "../../../components/ui/Button";
 import Modal from "../../../components/ui/Modal";
-import { signupUser } from "../../api/User";
 
 export default function SignupPage() {
   const router = useRouter();

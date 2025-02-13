@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedLoadingIcon from "@/components/ui/AnimatedLoadingIcon";
+import { useUserStore } from "@/store/User";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import io from "socket.io-client";
@@ -10,6 +11,7 @@ const SOCKET_URL = process.env.NEXT_PUBLIC_SERVICE_URL;
 export default function ProcessingPaymentPage() {
   const socketRef = useRef<any>(null);
   const router = useRouter();
+  const { setIsMember } = useUserStore();
 
   useEffect(() => {
     // Establish the WebSocket connection
@@ -23,7 +25,7 @@ export default function ProcessingPaymentPage() {
 
     socketRef.current.on("paymentCompleted", async (data: any) => {
       console.log("socket data: ", data);
-      localStorage.setItem("member", "true");
+      setIsMember(true);
       router.push("/payment/success");
     });
 
