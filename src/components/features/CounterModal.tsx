@@ -213,10 +213,31 @@ export default function CounterModal({
                         </div>
                       ))}
                     {!isMember && (
-                      <div className="hidden md:block black-fade z-[5] relative w-full h-[50px] my-auto">
-                        <p className="text-white mb-3">
+                      <div className="hidden md:block black-fade z-[5] pt-[30px] pb-[40px] relative w-full my-auto">
+                        <p className="text-white font-semibold mb-3">
                           Become a member and get access to all the content.
                         </p>
+                        <ul>
+                          <li className="text-neutral-200">
+                            1. Complete Good counter against
+                          </li>
+                          <li className="text-neutral-200 mt-2">
+                            2. Best maps to pick every heroes
+                          </li>
+                          <li className="text-neutral-200 mt-2">
+                            1. How to counter a hero if you have the same hero
+                          </li>
+                          <li className="text-neutral-200 mt-2">
+                            3. Best game modes to pick every hero
+                          </li>
+                          <li className="text-neutral-200 mt-2">
+                            4. Detailed explanation on how to counter heroes
+                            with team comp
+                          </li>
+                          <li className="text-neutral-200 mt-2">
+                            5. Early access to new content
+                          </li>
+                        </ul>
                         <button
                           onClick={() => {
                             if (!accessToken) {
@@ -225,7 +246,7 @@ export default function CounterModal({
                               router.push("/membership");
                             }
                           }}
-                          className="mx-auto w-fit rounded-md px-3 py-1 bg-emerald-600 text-white font-medium"
+                          className="mx-auto mt-5 w-fit rounded-md px-3 py-1 bg-emerald-600 text-white font-medium"
                         >
                           Upgrade
                         </button>

@@ -83,7 +83,7 @@ export const signupUser = async (data: NonNullable<unknown>) => {
  */
 export const logoutUser = async () => {
   const payload = {
-    url: "/user/logout",
+    url: "/v1/user/logout",
     method: "POST",
   };
 

@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import { FiMoon, FiSun } from "react-icons/fi";
-import Button from "../ui/Button";
-import { FaDiscord } from "react-icons/fa";
-import { usePathname, useRouter } from 'next/navigation';
+import { logoutUser } from "@/api/User";
 import useMiddleware from "@/hooks/useMiddleware";
-import { RiArrowDropDownFill } from "react-icons/ri";
-import { signOut } from "next-auth/react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { FaDiscord } from "react-icons/fa";
+import { RiArrowDropDownFill } from "react-icons/ri";
+import Button from "../ui/Button";
 
 export default function Navbar() {
   const router = useRouter();
@@ -16,9 +15,15 @@ export default function Navbar() {
   const { accessToken } = useMiddleware();
   const [showUserMenu, setShowUserMenu] = useState(false);
 
-  const signOut = () => {
-    window.localStorage.removeItem("accessToken");
-    window.location.reload();
+  const signOut = async () => {
+    try {
+      await logoutUser();
+    } catch (err) {
+      console.log("err: ", err);
+    } finally {
+      window.localStorage.removeItem("accessToken");
+      window.location.reload();
+    }
   };
 
   return (
@@ -36,10 +41,24 @@ export default function Navbar() {
                 </div>
               </div>
             </Link>
-            <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            <Link
+              href="/"
+              className={`${
+                currentPath === "/"
+                  ? "text-white font-bold"
+                  : "text-neutral-200"
+              } hidden md:block text-xs md:text-sm`}
+            >
               Hero Counters
             </Link>
-            <Link href="/team-compositions" className={`${currentPath === "/team-compositions" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
+            <Link
+              href="/team-compositions"
+              className={`${
+                currentPath === "/team-compositions"
+                  ? "text-white font-bold"
+                  : "text-neutral-200"
+              } hidden md:block text-xs md:text-sm`}
+            >
               Team Compositions
             </Link>
             {/* <Link href="/map-specific-heroes" className={`${currentPath === "/map-specific-heroes" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
@@ -49,7 +68,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a href="https://discord.gg/8xc3a7cCSg" target="_blank">
               <Button variant="secondary">
-                <FaDiscord className="text-lg text-main-purple md:text-lg mr-2"/>
+                <FaDiscord className="text-lg text-main-purple md:text-lg mr-2" />
                 <p className="w-full">Join our Discord</p>
               </Button>
             </a>
@@ -59,19 +78,20 @@ export default function Navbar() {
               </Button>
             ) : (
               <div className="relative">
-                <div 
+                <div
                   className="flex items-center cursor-pointer"
-                  onClick={() => setShowUserMenu(prev => !prev)}
+                  onClick={() => setShowUserMenu((prev) => !prev)}
                 >
                   <div className="w-[30px] h-[30px] rounded-full bg-white"></div>
                   <RiArrowDropDownFill className="text-lg text-white" />
                 </div>
                 {showUserMenu && (
-                  <div id="menu" className="w-[100px] bg-white rounded-md py-3 px-4 absolute">
+                  <div
+                    id="menu"
+                    className="w-[100px] bg-white rounded-md py-3 px-4 absolute"
+                  >
                     <ul className="cursor-pointer">
-                      <li onClick={() => signOut()}>
-                        Sign out
-                      </li>
+                      <li onClick={() => signOut()}>Sign out</li>
                     </ul>
                   </div>
                 )}
@@ -81,10 +101,22 @@ export default function Navbar() {
         </div>
       </nav>
       <div className="flex gap-5 md:hidden border-b px-3 py-3 bg-[#1B1B29] w-full border-b border-neutral-700">
-        <Link href="/" className={`${currentPath === "/" ? "text-white font-bold" : "text-neutral-200"} text-xs md:text-sm`}>
+        <Link
+          href="/"
+          className={`${
+            currentPath === "/" ? "text-white font-bold" : "text-neutral-200"
+          } text-xs md:text-sm`}
+        >
           Hero Counters
         </Link>
-        <Link href="/teamcomp" className={`${currentPath === "/teamcomp" ? "text-white font-bold" : "text-neutral-200"} text-xs md:text-sm`}>
+        <Link
+          href="/teamcomp"
+          className={`${
+            currentPath === "/teamcomp"
+              ? "text-white font-bold"
+              : "text-neutral-200"
+          } text-xs md:text-sm`}
+        >
           Team Compositions
         </Link>
       </div>

@@ -36,7 +36,7 @@ export default function Membership() {
             className="z-[5] bg-[#1B1B29] border rounded-lg border-neutral-700 py-8 px-10 w-fit mx-auto"
           >
             <h2 className="font-semibold text-xl text-center text-neutral-50">
-              Peak Rivals Member
+              Peak Rivals Membership
             </h2>
             <p className="text-neutral-400 text-center">$3/month or $29/year</p>
             <button
