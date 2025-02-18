@@ -10,6 +10,16 @@ export const HERO_COUNTERS = [
     role: "Duelist",
     meta: true,
     tier: "S",
+    sameHeroCounter: {
+      objective:
+        "The objective is to get your ultimate before the enemy Storm does, allowing you to gain a significant initial advantage and win a team fight. This applies to any game mode.",
+      steps: [
+        "Find a position where your strategists can see you and heal you. Otherwise, you won’t be able to win this matchup.",
+        "Pressure her by focusing on hitting her in long range. This will let you know if you have the same accuracy skills and if their healers are in position to heal their Storm. If you force her to retreat with this strategy, you have the advantage in this stage.",
+        "Look for openings to close the distance by hiding in certain areas and surprising her from an unexpected angle. This is a risky and situational move, but it can give you a significant advantage because you can deal the initial damage.",
+        "If you failed with the previous steps, you should try focusing more on farming your ultimate by attacking her tanks or strategists instead of focusing on the enemy Storm.",
+      ],
+    },
     situationalCounters: [
       {
         image:
@@ -513,6 +523,14 @@ export const HERO_COUNTERS = [
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bp_lyq0v1.png",
     role: "Duelist",
+    sameHeroCounter: {
+      objective:
+        "The objective is to pressure and disrupt the enemy back line without dying so you can create space and opportunities for your allies to win a team fight.",
+      steps: [
+        "If he's in sight, throw one spear and dash at him from a safe distance, but don't try to kill him. This will surely make him feel threatened as he's now at a disadvantage, forcing him to retreat and search for health packs. During this period, you'll gain an advantage by flanking their backline instead.",
+        "If you're in Convoy offense, the enemy BP will surely make the first move by waiting for your team to position and flank your back line. In this scenario, you must hunt him down first and do the first step.",
+      ],
+    },
     counterPicks: [
       {
         image:

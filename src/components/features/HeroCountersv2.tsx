@@ -2,69 +2,65 @@
 
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useMutation } from "react-query";
-import { LuSearch } from "react-icons/lu";
-import CounterModal from "./CounterModal";
 import AutoComplete from "../ui/AutoComplete";
+import CounterModal from "./CounterModal";
 
 export default function HeroCountersv2() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
   const [selectedHero, setSelectedHero] = useState<any>(null);
-  const [selectedHeroCategory, setSelectedHeroCategory] = useState<string>("All Heroes");
-  const [tierFilter, setTierFilter] = useState<any>(
-    {
-      name: "All Tiers",
-      value: "ALL"
-    }
-  );
+  const [selectedHeroCategory, setSelectedHeroCategory] =
+    useState<string>("All Heroes");
+  const [tierFilter, setTierFilter] = useState<any>({
+    name: "All Tiers",
+    value: "ALL",
+  });
   const [filters, setFilters] = useState([
     {
       category: "All Heroes",
-      active: true
+      active: true,
     },
     {
       category: "Vanguard",
-      active: false
+      active: false,
     },
     {
       category: "Duelist",
-      active: false
+      active: false,
     },
     {
       category: "Strategist",
-      active: false
-    }
+      active: false,
+    },
   ]);
 
   const tierFilters: any = [
     {
       name: "All Tiers",
-      value: "ALL"
+      value: "ALL",
     },
     {
       name: "S Tier - In Meta",
-      value: "S"
+      value: "S",
     },
     {
       name: "A Tier - Very Good",
-      value: "A"
+      value: "A",
     },
     {
       name: "B Tier - Good",
-      value: "B"
+      value: "B",
     },
     {
       name: "C Tier - Average",
-      value: "C"
+      value: "C",
     },
     {
       name: "D Tier - Not worth it",
-      value: "D"
+      value: "D",
     },
-  ]
+  ];
 
   // const searchHero = (search: any) => {
   //   const res = HERO_COUNTERS.filter((res: any) => res.name.toLowerCase().includes(search))
@@ -73,20 +69,41 @@ export default function HeroCountersv2() {
   // }
 
   useEffect(() => {
-    if (tierFilter && tierFilter?.value !== "ALL" && selectedHeroCategory !== "All Heroes") {
-      const res = HERO_COUNTERS.filter((res: any) => res.tier === tierFilter.value && res.role === selectedHeroCategory)
-      setSearchResults(res)
-    } else if (tierFilter && tierFilter?.value === "ALL" && selectedHeroCategory !== "All Heroes") {
-      const res = HERO_COUNTERS.filter((res: any) => res.role === selectedHeroCategory)
-      setSearchResults(res)
-    } else if (tierFilter && tierFilter?.value !== "ALL" && selectedHeroCategory === "All Heroes") {
-      const res = HERO_COUNTERS.filter((res: any) => res.tier === tierFilter.value)
-      setSearchResults(res)
+    if (
+      tierFilter &&
+      tierFilter?.value !== "ALL" &&
+      selectedHeroCategory !== "All Heroes"
+    ) {
+      const res = HERO_COUNTERS.filter(
+        (res: any) =>
+          res.tier === tierFilter.value && res.role === selectedHeroCategory
+      );
+      setSearchResults(res);
+    } else if (
+      tierFilter &&
+      tierFilter?.value === "ALL" &&
+      selectedHeroCategory !== "All Heroes"
+    ) {
+      const res = HERO_COUNTERS.filter(
+        (res: any) => res.role === selectedHeroCategory
+      );
+      setSearchResults(res);
+    } else if (
+      tierFilter &&
+      tierFilter?.value !== "ALL" &&
+      selectedHeroCategory === "All Heroes"
+    ) {
+      const res = HERO_COUNTERS.filter(
+        (res: any) => res.tier === tierFilter.value
+      );
+      setSearchResults(res);
     } else if (!tierFilter && selectedHeroCategory !== "All Heroes") {
-      const res = HERO_COUNTERS.filter((res: any) => res.role === selectedHeroCategory)
-      setSearchResults(res)
+      const res = HERO_COUNTERS.filter(
+        (res: any) => res.role === selectedHeroCategory
+      );
+      setSearchResults(res);
     } else {
-      setSearchResults(HERO_COUNTERS)
+      setSearchResults(HERO_COUNTERS);
     }
   }, [tierFilter, selectedHeroCategory]);
 
@@ -94,14 +111,14 @@ export default function HeroCountersv2() {
     setSelectedHeroCategory(selected);
 
     const newFilters = filters.map((item: any) => {
-      if(item.category === selected) {
+      if (item.category === selected) {
         item.active = true;
         return item;
       }
       item.active = false;
       return item;
     });
-    setFilters(newFilters)
+    setFilters(newFilters);
 
     // if(selected === "All Heroes") {
     //   setSearchResults(HERO_COUNTERS)
@@ -112,7 +129,7 @@ export default function HeroCountersv2() {
     //   const vangList = HERO_COUNTERS.filter((res: any) => res.role === selected)
     //   setSearchResults(vangList)
     // }
-  }
+  };
 
   return (
     <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px]">
@@ -131,11 +148,14 @@ export default function HeroCountersv2() {
           <div className="flex flex-col md:flex-row items-center gap-5">
             <div className="flex flex-row items-center gap-5">
               {filters.map((filter: any, idx: any) => (
-                <div 
+                <div
                   onClick={() => {
-                    setFilter(filter.category)
+                    setFilter(filter.category);
                   }}
-                  className={`${filter.active ? "text-white font-bold" : "text-neutral-400"} text-xs lg:text-[14px] cursor-pointer`} key={idx}
+                  className={`${
+                    filter.active ? "text-white font-bold" : "text-neutral-400"
+                  } text-xs lg:text-[14px] cursor-pointer`}
+                  key={idx}
                 >
                   {filter.category}
                 </div>
@@ -163,37 +183,37 @@ export default function HeroCountersv2() {
                 key={index}
                 className="w-[27%] md:w-[14%] hover:opacity-50 pt-6 cursor-pointer overflow-hidden relative bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-600 transform -skew-y-3"
               >
-              <div className="transform skew-y-3 h-full">
-                <div className="m-auto -mt-8">
-                  <Image
-                    src={hero?.tallImage}
-                    alt={hero.name}
-                    width={250}
-                    height={400}
-                    className="rounded-md m-auto"
-                  />
-                </div>
-                <div className="bg-[#1B1B29] w-full h-full py-2 absolute opacity-85 -mt-[75px]">
-                  <div className="px-3">
-                    <h2 className="capitalize font-bold text-white text-[18px] m-0 p-0">
-                      {hero.name}
-                    </h2>
+                <div className="transform skew-y-3 h-full">
+                  <div className="m-auto -mt-8">
+                    <Image
+                      src={hero?.tallImage}
+                      alt={hero.name}
+                      width={250}
+                      height={400}
+                      className="rounded-md m-auto"
+                    />
+                  </div>
+                  <div className="bg-[#1B1B29] w-full h-full py-2 absolute opacity-85 -mt-[75px]">
+                    <div className="px-3">
+                      <h2 className="capitalize font-bold text-white text-[18px] m-0 p-0">
+                        {hero.name}
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             ))}
           </div>
         </div>
         {selectedHero && (
-        <CounterModal
-          hero={selectedHero}
-          onClose={() => {
-            window.history.pushState(null, "", `/`);
-            setSelectedHero(null);
-          }}
-        />
-      )}
+          <CounterModal
+            hero={selectedHero}
+            onClose={() => {
+              window.history.pushState(null, "", `/`);
+              setSelectedHero(null);
+            }}
+          />
+        )}
       </section>
     </div>
   );

@@ -52,6 +52,19 @@ export default function Navbar() {
               Hero Counters
             </Link>
             <Link
+              href="/team-up-counters"
+              className={`${
+                currentPath === "/team-up-counters"
+                  ? "text-white font-bold"
+                  : "text-neutral-200"
+              } hidden md:flex text-xs md:text-sm relative items-center gap-1`}
+            >
+              <span>Team Up Counters</span>
+              <div className="bg-yellow-600 text-xs text-white px-1 w-fit rounded-sm">
+                New
+              </div>
+            </Link>
+            <Link
               href="/team-compositions"
               className={`${
                 currentPath === "/team-compositions"
