@@ -1,12 +1,66 @@
+"use client";
+
 import Footer from "@/components/features/Footer";
 import Navbar from "@/components/features/Navbar";
+import TeamupCounterModal from "@/components/features/TeamupCounterModal";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function TeamUpCounters() {
+  const [selectedTeamup, setSelectedTeamup] = useState(null);
+
   const TEAM_UPS = [
     {
       name: "Ammo Overload",
       icon: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739869138/rivals%20v2/Ammo-Overload-Icon_mxboem.webp",
+      naturalCounters: [
+        {
+          name: "Dimensional Shortcut",
+          icon: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739869138/rivals%20v2/Ammo-Overload-Icon_mxboem.webp",
+          description:
+            "This team-up's strength lies in flanking the backline and closing the distance, which can pressure Punisher, Bucky, and Rocket, as they rely on mid- to long-range combat. It’s unusual to pick these three together, but even with just two heroes from this team-up, it’s still a great matchup against the Ammo Overload team-up.",
+          heroes: [
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+              name: "Black Panther",
+            },
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+              name: "Magik",
+            },
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+              name: "Psylocke",
+            },
+          ],
+        },
+        {
+          name: "Voltaic Union",
+          icon: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739869138/rivals%20v2/Ammo-Overload-Icon_mxboem.webp",
+          description:
+            "While Punisher and Bucky can counter Storm, Cap and Thor can create space for her by diving into the backline, making Punisher, Bucky, and Rocket vulnerable to Storm's attacks. Additionally, Captain America's shield and sprinting abilities are natural counters to both Bucky and Punisher.",
+          heroes: [
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+              name: "Thor",
+            },
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+              name: "Captain America",
+            },
+            {
+              image:
+                "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+              name: "Storm",
+            },
+          ],
+        },
+      ],
       heroes: [
         {
           name: "The Punisher",
@@ -320,6 +374,7 @@ export default function TeamUpCounters() {
               <div
                 key={idx}
                 className="w-[320px] relative bg-[#c8cef0] overflow-hidden"
+                onClick={() => setSelectedTeamup(teamup)}
               >
                 <div className="flex items-center mx-auto w-[250px]">
                   {teamup.heroes.map((hero: any, heroIdx: number) => (
@@ -354,6 +409,15 @@ export default function TeamUpCounters() {
             ))}
           </div>
         </div>
+        {selectedTeamup && (
+          <TeamupCounterModal
+            teamup={selectedTeamup}
+            onClose={() => {
+              window.history.pushState(null, "", `/`);
+              setSelectedTeamup(null);
+            }}
+          />
+        )}
       </main>
       <Footer />
     </div>
