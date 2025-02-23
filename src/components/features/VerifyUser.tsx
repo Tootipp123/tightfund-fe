@@ -26,6 +26,7 @@ export default function VerifyUser() {
   useEffect(() => {
     if (profile) {
       setIsMember(profile.subscriptionId);
+      setSubscriptionId(profile.subscriptionId);
       localStorage.setItem("subscriptionId", profile.subscriptionId);
       localStorage.setItem("profileId", profile._id);
       localStorage.setItem("userId", profile.userId);

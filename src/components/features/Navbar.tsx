@@ -107,23 +107,26 @@ export default function Navbar() {
                     id="menu"
                     className="w-[180px] bg-[#1B1B29] border border-neutral-700 py-2 rounded-md absolute"
                   >
-                    <ul className="cursor-pointer text-sm text-neutral-100">
+                    <ul className="text-sm text-neutral-100">
                       {isMember ? (
                         <li
                           onClick={() => setShowCancelMembership(true)}
-                          className="py-1 px-4"
+                          className="py-1 px-4 cursor-pointer"
                         >
                           Cancel membership
                         </li>
                       ) : (
                         <li
                           onClick={() => router.push("/membership")}
-                          className="py-1 px-4"
+                          className="py-1 px-4 cursor-pointer"
                         >
                           Become a Member
                         </li>
                       )}
-                      <li onClick={() => signOut()} className="py-1 px-4">
+                      <li
+                        onClick={() => signOut()}
+                        className="py-1 px-4 cursor-pointer"
+                      >
                         Sign out
                       </li>
                     </ul>

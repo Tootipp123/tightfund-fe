@@ -1,6 +1,7 @@
 "use client";
 
 import { cancelMembershipApi } from "@/api/Membership";
+import { useUserStore } from "@/store/User";
 import { useState } from "react";
 import Button from "../ui/Button";
 
@@ -13,6 +14,7 @@ export default function CancelMembershipModal({
   onClose,
   persist = false,
 }: Props) {
+  const { subscriptionId } = useUserStore();
   const [reasons, setReasons] = useState([
     { label: "No longer need", selected: false },
     { label: "Too expensive", selected: false },
@@ -39,7 +41,16 @@ export default function CancelMembershipModal({
 
   const handleCancelMembership = async () => {
     try {
-      const res = await cancelMembershipApi();
+      let reason = "";
+      const selectedReason: any = reasons.find((r) => r.selected === true);
+
+      if (selectedReason?.label !== "Other") {
+        reason = selectedReason.label;
+      } else {
+        reason = otherReason;
+      }
+
+      const res = await cancelMembershipApi(subscriptionId, reason);
       console.log("res: ", res);
     } catch (err) {
       console.log(err);
