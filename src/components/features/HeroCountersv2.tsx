@@ -188,6 +188,7 @@ export default function HeroCountersv2() {
                     <Image
                       src={hero?.tallImage}
                       alt={hero.name}
+                      unoptimized
                       width={250}
                       height={400}
                       className="rounded-md m-auto"

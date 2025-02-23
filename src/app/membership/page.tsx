@@ -26,6 +26,7 @@ export default function Membership() {
           <div className="w-[200px] h-[200px] absolute -mt-[450px] z-[3]">
             <Image
               src={GalactaImg}
+              unoptimized
               layout="fill"
               alt="Galacta"
               objectFit="contain"

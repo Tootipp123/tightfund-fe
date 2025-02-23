@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useQuery } from "react-query";
 
 export default function VerifyUser() {
-  const { setIsMember } = useUserStore();
+  const { setIsMember, setSubscriptionId } = useUserStore();
 
   const {
     isLoading,
@@ -25,7 +25,8 @@ export default function VerifyUser() {
 
   useEffect(() => {
     if (profile) {
-      setIsMember(profile.member);
+      setIsMember(profile.subscriptionId);
+      localStorage.setItem("subscriptionId", profile.subscriptionId);
       localStorage.setItem("profileId", profile._id);
       localStorage.setItem("userId", profile.userId);
     }

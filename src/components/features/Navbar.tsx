@@ -2,18 +2,22 @@
 
 import { logoutUser } from "@/api/User";
 import useMiddleware from "@/hooks/useMiddleware";
+import { useUserStore } from "@/store/User";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaDiscord } from "react-icons/fa";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import Button from "../ui/Button";
+import CancelMembershipModal from "./CancelMembershipModal";
 
 export default function Navbar() {
   const router = useRouter();
   const currentPath = usePathname();
   const { accessToken } = useMiddleware();
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const { isMember } = useUserStore();
+  const [showCancelMembership, setShowCancelMembership] = useState(false);
 
   const signOut = async () => {
     try {
@@ -101,10 +105,27 @@ export default function Navbar() {
                 {showUserMenu && (
                   <div
                     id="menu"
-                    className="w-[100px] bg-white rounded-md py-3 px-4 absolute"
+                    className="w-[180px] bg-[#1B1B29] border border-neutral-700 py-2 rounded-md absolute"
                   >
-                    <ul className="cursor-pointer">
-                      <li onClick={() => signOut()}>Sign out</li>
+                    <ul className="cursor-pointer text-sm text-neutral-100">
+                      {isMember ? (
+                        <li
+                          onClick={() => setShowCancelMembership(true)}
+                          className="py-1 px-4"
+                        >
+                          Cancel membership
+                        </li>
+                      ) : (
+                        <li
+                          onClick={() => router.push("/membership")}
+                          className="py-1 px-4"
+                        >
+                          Become a Member
+                        </li>
+                      )}
+                      <li onClick={() => signOut()} className="py-1 px-4">
+                        Sign out
+                      </li>
                     </ul>
                   </div>
                 )}
@@ -113,6 +134,9 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+      {showCancelMembership && (
+        <CancelMembershipModal onClose={() => setShowCancelMembership(false)} />
+      )}
       <div className="flex gap-5 md:hidden border-b px-3 py-3 bg-[#1B1B29] w-full border-b border-neutral-700">
         <Link
           href="/"

@@ -11,6 +11,7 @@ export default function Paypal() {
     });
   };
 
+  // SAVE SUBSCRIPTION ID TO USER'S PROFILE DB
   const onApprove = (data: any, actions: any) => {
     console.log("Subscription approved:", data);
     // alert(`Subscription ID: ${data.subscriptionID}`);

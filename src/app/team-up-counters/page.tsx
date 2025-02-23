@@ -625,6 +625,7 @@ export default function TeamUpCounters() {
                   <div className="px-3 flex items-center gap-2">
                     <Image
                       src={teamup.icon}
+                      unoptimized
                       width={40}
                       height={40}
                       alt="teamup icon"

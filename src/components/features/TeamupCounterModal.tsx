@@ -59,6 +59,7 @@ export default function TeamupCounterModal({
                 <Image
                   src={hero.tallImage}
                   layout="fill"
+                  unoptimized
                   objectFit="cover"
                   alt={hero.name}
                 />
@@ -71,6 +72,7 @@ export default function TeamupCounterModal({
                 src={teamup.icon}
                 width={40}
                 height={40}
+                unoptimized
                 alt="teamup icon"
               />
               <h2 className="uppercase font-bold text-white text-[18px] m-0 p-0">
@@ -102,6 +104,7 @@ export default function TeamupCounterModal({
                         <Image
                           src={hero.image}
                           alt={hero.name}
+                          unoptimized
                           width={45}
                           height={45}
                           className="rounded-md"
@@ -115,6 +118,7 @@ export default function TeamupCounterModal({
                     src={teamup.icon}
                     width={30}
                     height={30}
+                    unoptimized
                     alt="teamup icon"
                   />
                   <h2 className="text-neutral-100 capitalize font-semibold text-lg m-0 p-0">

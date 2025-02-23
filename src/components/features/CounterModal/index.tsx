@@ -65,6 +65,7 @@ export default function CounterModal({
                 <Image
                   src={counter.image}
                   alt={counter.name}
+                  unoptimized
                   width={45}
                   height={45}
                   className="rounded-md"
@@ -102,6 +103,7 @@ export default function CounterModal({
           <Image
             src={hero?.image}
             alt={hero?.name}
+            unoptimized
             width={70}
             height={70}
             className="rounded-md"
@@ -136,6 +138,7 @@ export default function CounterModal({
                   <Image
                     src={counter.image}
                     alt={counter.name}
+                    unoptimized
                     width={45}
                     height={45}
                     className="rounded-md"
@@ -166,6 +169,7 @@ export default function CounterModal({
                     src={hero?.howToCounter?.image}
                     alt="How to counter"
                     width={600}
+                    unoptimized
                     height={300}
                     className="mt-5"
                   />
@@ -199,6 +203,7 @@ export default function CounterModal({
                             <Image
                               src={counter.image}
                               alt={counter.name}
+                              unoptimized
                               width={45}
                               height={45}
                               className="rounded-md"
@@ -232,6 +237,7 @@ export default function CounterModal({
                       <div key={counterKey} className="flex items-center gap-3">
                         <Image
                           src={counter.image}
+                          unoptimized
                           alt={counter.name}
                           width={45}
                           height={45}
