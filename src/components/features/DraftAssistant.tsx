@@ -47,39 +47,66 @@ export default function DraftAssistant() {
     {
       name: "Hulk",
       role: "Vanguard",
+      counterPicks: [],
     },
     {
       name: "Doctor Strange",
       role: "Vanguard",
-    },
-    {
-      name: "Iron Man",
-      role: "Duelist",
-    },
-    {
-      name: "Black Panther",
-      role: "Duelist",
+      counterPicks: [],
     },
     {
       name: "Hawkeye",
       role: "Duelist",
+      counterPicks: [],
+    },
+    {
+      name: "Cloak & Dagger",
+      role: "Strategist",
+      counterPicks: [
+        {
+          name: "Hawkeye",
+          description: "",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        },
+      ],
+    },
+    {
+      name: "Loki",
+      role: "Strategist",
+      counterPicks: [],
     },
     {
       name: "Luna",
       role: "Strategist",
+      counterPicks: [],
     },
   ]);
 
   const [vanguards, setVanguards] = useState<any>([]);
   const [duelists, setDuelists] = useState<any>([]);
+  const [strategists, setStrategists] = useState<any>([]);
 
   useEffect(() => {
     const vanguards = initCounters("Vanguard");
+    setVanguards(vanguards);
     const duelists = initCounters("Duelist");
+    setDuelists(duelists);
     const strategists = initStrategists();
+    setStrategists(strategists);
+
     console.log("vanguards: ", vanguards);
     console.log("duelists: ", duelists);
     console.log("strategists: ", strategists);
+
+    // Check if enemyLineup has exactly 3 strategists
+    const strategistCount = enemyLineup.filter(
+      (hero) => hero.role === "Strategist"
+    ).length;
+
+    if (strategistCount === 3) {
+      OneTwoThreeTeamComp(duelists);
+    }
   }, []);
 
   // init best counters to counter all enemy team
@@ -161,12 +188,17 @@ export default function DraftAssistant() {
     // strategist will always be at least 2 and more
   };
 
-  const OneTwoThreeTeamComp = () => {
+  const OneTwoThreeTeamComp = (duelists: any) => {
+    // check which duelist available is best against 3 supports
     const assessYourDuelists = () => {
-      // if the enemy has strategists,
-      // check if it's good to flank them.
-      // if enemy team has a strong flanker, return 1 duelist to defend back line. and 1 duelist to flank the enemy.
-      // else return 2 dps behind tank
+      const enemyStrats = enemyLineup.filter((e) => e.role === "Strategist");
+      const matchingDuelists = enemyStrats.flatMap((strat: any) =>
+        strat.counterPicks.filter((counter: any) =>
+          duelists.some((duelist: any) => duelist.name === counter.name)
+        )
+      );
+
+      return matchingDuelists;
     };
 
     const assessYourTank = () => {
@@ -178,6 +210,8 @@ export default function DraftAssistant() {
       // if enemy is 2-2-2 with no diver tank,
       //
     };
+
+    assessYourDuelists();
   };
 
   return <></>;
