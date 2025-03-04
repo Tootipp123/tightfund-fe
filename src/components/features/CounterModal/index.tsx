@@ -92,7 +92,7 @@ export default function CounterModal({
 
   const Sidebar = () => {
     return (
-      <div className="border-r border-neutral-700 w-full">
+      <div className="border-r border-neutral-700 w-[600px]">
         <div className="flex p-7 items-center border-b border-neutral-700 gap-4 pb-5">
           <Image
             src={hero?.image}
@@ -111,19 +111,21 @@ export default function CounterModal({
             </div>
           </div>
         </div>
-        <div className="items p-7">
+        <div className="items p-2 my-2">
           <ul>
-            <li className="text-neutral-50 font-semibold py-1 cursor-pointer">
+            <li className="text-neutral-50 font-semibold py-2 px-3 cursor-pointer bg-[#2b2b38] rounded-md">
               Natural counters
             </li>
-            <li className="text-neutral-400 py-2 cursor-pointer">
+            <li className="text-neutral-400 py-2 cursor-pointer px-3">
               Situational counters
             </li>
-            <li className="text-neutral-400 py-2 cursor-pointer">Best maps</li>
-            <li className="text-neutral-400 py-2 cursor-pointer">
+            <li className="text-neutral-400 py-2 cursor-pointer px-3">
+              Best maps
+            </li>
+            <li className="text-neutral-400 py-2 cursor-pointer px-3">
               Best game modes
             </li>
-            <li className="text-neutral-400 py-2 cursor-pointer">
+            <li className="text-neutral-400 py-2 cursor-pointer px-3">
               Counter with same hero
             </li>
           </ul>
