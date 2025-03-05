@@ -47,15 +47,73 @@ export default function DraftAssistant() {
     {
       name: "Hulk",
       role: "Vanguard",
-      counterPicks: [],
+      counterPicks: [
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+          name: "Punisher",
+          description: "",
+          role: "Duelist",
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+          name: "Winter Soldier",
+          role: "Duelist",
+          descriptions: [
+            "Winter Soldier's can kill him instantly if Bionic Hook (Right Click) lands successfully + Trooper's Fist (LShift) and a few normal attacks, preventing Iron Fist from regenerating.",
+          ],
+        },
+        {
+          name: "Cloak & Dagger",
+          role: "Strategist",
+          description: "",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        },
+      ],
     },
     {
       name: "Doctor Strange",
       role: "Vanguard",
-      counterPicks: [],
+      counterPicks: [
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+          name: "Loki",
+          role: "Strategist",
+          description: "",
+        },
+        {
+          name: "Wolverine",
+          role: "Duelist",
+          description:
+            "He can easily catch Groot and focus on him due to his low mobility.",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+          name: "Hulk",
+          role: "Vanguard",
+          descriptions: [
+            "Hulk's Indestructible Guard (LShift) can prevent Iron Fist from targeting him, as Iron Fist will deal little to no damage against him.",
+            "Indestructible Guard (LShift) can also help allies when they're being targeted by Iron Fist. And his Radioactive Lockdown (E) can easily be casted and disable Iron Fist because he's most likely to attack in a straight angle only.",
+          ],
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+          name: "Squirrel Girl",
+          role: "Duelist",
+          description:
+            "Squirrel Girl can completely melt ⅓ of Guardian Shield’s health per Burst Acorn (LMB). Her Unbeatable Squirrel Tsunami (Q) passes through her Guardian Shield.",
+        },
+      ],
     },
     {
-      name: "Hawkeye",
+      name: "Storm",
       role: "Duelist",
       counterPicks: [],
     },
@@ -64,10 +122,26 @@ export default function DraftAssistant() {
       role: "Strategist",
       counterPicks: [
         {
+          role: "Vanguard",
+          name: "Magneto",
+          description:
+            "His ultimate can pierce through Cloak and Dagger's ultimate. You just need to time his ult and use it when she stops her dashes.",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        },
+        {
           name: "Hawkeye",
+          role: "Duelist",
           description: "",
           image:
             "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        },
+        {
+          name: "Spider-Man",
+          role: "Duelist",
+          description: "",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         },
       ],
     },
@@ -95,19 +169,25 @@ export default function DraftAssistant() {
     const strategists = initStrategists();
     setStrategists(strategists);
 
-    console.log("vanguards: ", vanguards);
-    console.log("duelists: ", duelists);
-    console.log("strategists: ", strategists);
-
     // Check if enemyLineup has exactly 3 strategists
     const strategistCount = enemyLineup.filter(
       (hero) => hero.role === "Strategist"
     ).length;
 
     if (strategistCount === 3) {
-      OneTwoThreeTeamComp(duelists);
+      const bestDuelistsForEnemyStrats = ThreeStrategistComp(duelists);
+      const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
+      console.log("bestDuelists: ", bestDuelistsForEnemyStrats);
+      console.log("bestVanguards: ", bestVanguardsForEnemyStrats);
+      // - After getting the best duels and vanguards to counter 3 healers,
+      // - Choose the remaining slot to the available duelists and vanguards state
     }
   }, []);
+
+  useEffect(() => {
+    // console.log("duelists: ", duelists);
+    // console.log("strategists: ", strategists);
+  }, [duelists, strategists]);
 
   // init best counters to counter all enemy team
   const initCounters = (role: string) => {
@@ -115,39 +195,16 @@ export default function DraftAssistant() {
 
     if (role !== "Strategist") {
       allCounters = enemyLineup.flatMap((hero) =>
-        HERO_COUNTERS.filter((h) => h.name === hero.name).flatMap((h2) =>
-          h2.counterPicks.filter((cp) =>
-            HERO_COUNTERS.some((hc) => hc.name === cp.name && hc.role === role)
-          )
-        )
+        (hero.counterPicks || []).filter((cp) => cp.role === role)
       );
     } else {
       const duelsAndVanguard = enemyLineup.filter(
         (h) => h.role === "Duelist" || h.role === "Vanguard"
       );
       allCounters = duelsAndVanguard.flatMap((hero) =>
-        HERO_COUNTERS.filter((h) => h.name === hero.name).flatMap((h2) =>
-          h2.counterPicks.filter((cp) =>
-            HERO_COUNTERS.some((hc) => hc.name === cp.name && hc.role === role)
-          )
-        )
+        (hero.counterPicks || []).filter((cp) => cp.role === role)
       );
     }
-
-    // // Count occurrences of each counter pick
-    // const counterCount = allCounters.reduce((acc: any, counter: any) => {
-    //   acc[counter.name] = (acc[counter.name] || 0) + 1;
-    //   return acc;
-    // }, {});
-
-    // // Get duelists that appeared exactly twice or thrice
-    // const topCounters = Object.entries(counterCount)
-    //   .filter(([_, count]) => count === 2 || count === 3)
-    //   .map(([counter]) => counter); // Extract only the hero names
-
-    // // If no duelists match the 2-3 times condition, return all counters instead
-    // const result =
-    //   topCounters.length > 0 ? topCounters : Object.keys(counterCount);
 
     return allCounters;
   };
@@ -172,46 +229,23 @@ export default function DraftAssistant() {
     return stratCounters;
   };
 
-  // 2-2-2 team comp counter suggestion
-  const twoTwoTwoTeamComp = () => {
-    const assessYourDuelists = () => {
-      // if the enemy has strategists,
-      // if enemy team has a strong flanker, return 1 duelist to defend back line. and 1 duelist to flank the enemy.
-      // else return 2 dps behind tank
-    };
+  const ThreeStrategistComp = (counterList: any) => {
+    // check which duelist or vanguard available is best against 3 supports
+    const enemyStrats = enemyLineup.filter((e) => e.role === "Strategist");
+    const matchingCounters = enemyStrats.flatMap((strat: any) =>
+      strat.counterPicks.filter((counter: any) =>
+        counterList.some((hero: any) => hero.name === counter.name)
+      )
+    );
 
-    const assessYourTanks = () => {
-      // if the enemy has 3 strategists,
-      // return 1 tank as either hulk, captain america, or venom. Then 1 tank for shield or defense.
-    };
-
-    // strategist will always be at least 2 and more
-  };
-
-  const OneTwoThreeTeamComp = (duelists: any) => {
-    // check which duelist available is best against 3 supports
-    const assessYourDuelists = () => {
-      const enemyStrats = enemyLineup.filter((e) => e.role === "Strategist");
-      const matchingDuelists = enemyStrats.flatMap((strat: any) =>
-        strat.counterPicks.filter((counter: any) =>
-          duelists.some((duelist: any) => duelist.name === counter.name)
-        )
-      );
-
-      return matchingDuelists;
-    };
-
-    const assessYourTank = () => {
-      // Check which tank is most effective for their 2 Tanks, and 2 DPS.
-      // return tank
-    };
-
-    const assessStrategist = () => {
-      // if enemy is 2-2-2 with no diver tank,
-      //
-    };
-
-    assessYourDuelists();
+    if (matchingCounters.length > 0) {
+      // return 3 duelists to counter
+      // 1 duelist to counter their 2 tanks
+      // 1 duelist to counter supports
+      // 1 duelist to counter other duelist
+      return matchingCounters;
+    }
+    return [];
   };
 
   return <></>;
