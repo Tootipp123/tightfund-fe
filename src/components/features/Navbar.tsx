@@ -78,9 +78,16 @@ export default function Navbar() {
             >
               Team Compositions
             </Link>
-            {/* <Link href="/map-specific-heroes" className={`${currentPath === "/map-specific-heroes" ? "text-white font-bold" : "text-neutral-200"} hidden md:block text-xs md:text-sm`}>
-              Map-Specific Heroes
-            </Link> */}
+            <Link
+              href="/team-composition-counters"
+              className={`${
+                currentPath === "/map-specific-heroes"
+                  ? "text-white font-bold"
+                  : "text-neutral-200"
+              } hidden md:block text-xs md:text-sm`}
+            >
+              Team Comp Counters
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <a href="https://discord.gg/8xc3a7cCSg" target="_blank">

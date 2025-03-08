@@ -2,7 +2,7 @@
 import { HERO_COUNTERS } from "@/utils/static";
 import { useEffect, useState } from "react";
 
-export default function DraftAssistant() {
+export default function DraftAssistant({ enemyLineup }: any) {
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -43,123 +43,15 @@ export default function DraftAssistant() {
   // META TEAMCOMP ASSESSMENT (LAST PART OF THE LOGIC):
   // 1. assess if enemy team has 3 healers and counter it.
 
-  const [enemyLineup, setEnemyLineup] = useState([
-    {
-      name: "Hulk",
-      role: "Vanguard",
-      counterPicks: [
-        {
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
-          name: "Punisher",
-          description: "",
-          role: "Duelist",
-        },
-        {
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
-          name: "Winter Soldier",
-          role: "Duelist",
-          descriptions: [
-            "Winter Soldier's can kill him instantly if Bionic Hook (Right Click) lands successfully + Trooper's Fist (LShift) and a few normal attacks, preventing Iron Fist from regenerating.",
-          ],
-        },
-        {
-          name: "Cloak & Dagger",
-          role: "Strategist",
-          description: "",
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
-        },
-      ],
-    },
-    {
-      name: "Doctor Strange",
-      role: "Vanguard",
-      counterPicks: [
-        {
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
-          name: "Loki",
-          role: "Strategist",
-          description: "",
-        },
-        {
-          name: "Wolverine",
-          role: "Duelist",
-          description:
-            "He can easily catch Groot and focus on him due to his low mobility.",
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
-        },
-        {
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
-          name: "Hulk",
-          role: "Vanguard",
-          descriptions: [
-            "Hulk's Indestructible Guard (LShift) can prevent Iron Fist from targeting him, as Iron Fist will deal little to no damage against him.",
-            "Indestructible Guard (LShift) can also help allies when they're being targeted by Iron Fist. And his Radioactive Lockdown (E) can easily be casted and disable Iron Fist because he's most likely to attack in a straight angle only.",
-          ],
-        },
-        {
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
-          name: "Squirrel Girl",
-          role: "Duelist",
-          description:
-            "Squirrel Girl can completely melt ⅓ of Guardian Shield’s health per Burst Acorn (LMB). Her Unbeatable Squirrel Tsunami (Q) passes through her Guardian Shield.",
-        },
-      ],
-    },
-    {
-      name: "Storm",
-      role: "Duelist",
-      counterPicks: [],
-    },
-    {
-      name: "Cloak & Dagger",
-      role: "Strategist",
-      counterPicks: [
-        {
-          role: "Vanguard",
-          name: "Magneto",
-          description:
-            "His ultimate can pierce through Cloak and Dagger's ultimate. You just need to time his ult and use it when she stops her dashes.",
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
-        },
-        {
-          name: "Hawkeye",
-          role: "Duelist",
-          description: "",
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
-        },
-        {
-          name: "Spider-Man",
-          role: "Duelist",
-          description: "",
-          image:
-            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
-        },
-      ],
-    },
-    {
-      name: "Loki",
-      role: "Strategist",
-      counterPicks: [],
-    },
-    {
-      name: "Luna",
-      role: "Strategist",
-      counterPicks: [],
-    },
-  ]);
-
   const [vanguards, setVanguards] = useState<any>([]);
   const [duelists, setDuelists] = useState<any>([]);
   const [strategists, setStrategists] = useState<any>([]);
+
+  const [vanguardForVanguard, setVanguardForVanguard] = useState<any>({});
+  const [vanguardForStrat, setVanguardForStrat] = useState<any>({});
+  const [duelistForStrat, setDuelistForStrat] = useState<any>({});
+  const [duelistForDuelist, setDuelistForDuelist] = useState<any>({});
+  const [duelistForVanguard, setDuelistForVanguard] = useState<any>({});
 
   useEffect(() => {
     const vanguards = initCounters("Vanguard");
@@ -168,26 +60,24 @@ export default function DraftAssistant() {
     setDuelists(duelists);
     const strategists = initStrategists();
     setStrategists(strategists);
+    handleCountersForDuelsAndVanguards();
 
-    // Check if enemyLineup has exactly 3 strategists
-    const strategistCount = enemyLineup.filter(
-      (hero) => hero.role === "Strategist"
-    ).length;
+    // if (enemyHasThreeStrategists()) {
+    const bestDuelistsForEnemyStrats = ThreeStrategistComp(duelists);
+    const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
 
-    if (strategistCount === 3) {
-      const bestDuelistsForEnemyStrats = ThreeStrategistComp(duelists);
-      const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
-      console.log("bestDuelists: ", bestDuelistsForEnemyStrats);
-      console.log("bestVanguards: ", bestVanguardsForEnemyStrats);
-      // - After getting the best duels and vanguards to counter 3 healers,
-      // - Choose the remaining slot to the available duelists and vanguards state
-    }
+    const { mostFrequent: mainDuelistForStrat } = useFrequentHeroChecker(
+      bestDuelistsForEnemyStrats
+    );
+    const { mostFrequent: mainVanguardForStrats } = useFrequentHeroChecker(
+      bestVanguardsForEnemyStrats
+    );
+    setDuelistForStrat(mainDuelistForStrat);
+    setVanguardForStrat(mainVanguardForStrats);
+    // - After getting the best duels and vanguards to counter 3 healers,
+    // - Choose the remaining slot to the available duelists and vanguards state
+    // }
   }, []);
-
-  useEffect(() => {
-    // console.log("duelists: ", duelists);
-    // console.log("strategists: ", strategists);
-  }, [duelists, strategists]);
 
   // init best counters to counter all enemy team
   const initCounters = (role: string) => {
@@ -211,42 +101,176 @@ export default function DraftAssistant() {
 
   // strategists dont have 1 on 1 mechanics on the enemy team strategist so the logic is slightly different.
   const initStrategists = () => {
-    if (
-      enemyLineup.some(
-        (hero) => hero.name === "Rocket" || hero.name === "Adam Warlock"
-      )
-    ) {
-      // Step 1:
-      const strategistsWithDefUlt = HERO_COUNTERS.filter(
-        (h: any) => h?.defensiveUlt
-      );
-      return strategistsWithDefUlt;
-      // Step 2: Return all strategists that counters the enemy team Duelist or Tank
-    }
+    // if (enemyHasNoDefensiveUlt()) {
+    //   const strategistsWithDefUlt = HERO_COUNTERS.filter(
+    //     (h: any) => h?.defensiveUlt
+    //   );
+    //   return strategistsWithDefUlt;
+    // }
 
-    // Step 2: Return all strategists that counters the enemy team Duelist or Tank
-    const stratCounters = initCounters("Strategist");
-    return stratCounters;
+    if (enemyHasFlankers()) {
+      const strategistsToCounterFlank = HERO_COUNTERS.filter(
+        (h: any) =>
+          h.name === "Loki" ||
+          h.name === "Invisible Woman" ||
+          h.name === "Cloak & Dagger" ||
+          h.name === "Mantis"
+      );
+      return strategistsToCounterFlank;
+    } else {
+      // Step 2: Return all strategists that counters the enemy team Duelist or Tank
+      const stratCounters = initCounters("Strategist");
+      return stratCounters;
+    }
   };
 
+  const handleCountersForDuelsAndVanguards = () => {
+    const selectedDuelists: any = enemyLineup.filter(
+      (hero) => hero.role === "Duelist"
+    );
+    const selectedVanguards: any = enemyLineup.filter(
+      (hero) => hero.role === "Vanguard"
+    );
+    const duelistCounterPicks = selectedDuelists.flatMap((hero: any) =>
+      hero.counterPicks.filter((cp: any) => cp.role === "Duelist")
+    );
+    const vanguardCounterPicks = selectedVanguards.flatMap((hero: any) =>
+      hero.counterPicks.filter((cp: any) => cp.role === "Duelist")
+    );
+    const vanguardToVanguardCounterPicks = selectedVanguards.flatMap(
+      (hero: any) =>
+        hero.counterPicks.filter((cp: any) => cp.role === "Vanguard")
+    );
+    const { mostFrequent: mainDuelistCounter } =
+      useFrequentHeroChecker(duelistCounterPicks);
+    const { mostFrequent: mainVanguardCounter } =
+      useFrequentHeroChecker(vanguardCounterPicks);
+    const { mostFrequent: mainVanguardForVanguard } = useFrequentHeroChecker(
+      vanguardToVanguardCounterPicks
+    );
+
+    setDuelistForDuelist(mainDuelistCounter);
+    setDuelistForVanguard(mainVanguardCounter);
+    setVanguardForVanguard(mainVanguardForVanguard);
+  };
+
+  // @TASK:
+  // Check if enemy has flanker
+  // 1. Check if this lineup is good: Loki, Namor, Luna
+  // 2. Check if this lineup is good: Warlock, Starlord, Mantis
   const ThreeStrategistComp = (counterList: any) => {
     // check which duelist or vanguard available is best against 3 supports
     const enemyStrats = enemyLineup.filter((e) => e.role === "Strategist");
-    const matchingCounters = enemyStrats.flatMap((strat: any) =>
+    const countersToStrats = enemyStrats.flatMap((strat: any) =>
       strat.counterPicks.filter((counter: any) =>
         counterList.some((hero: any) => hero.name === counter.name)
       )
     );
 
-    if (matchingCounters.length > 0) {
-      // return 3 duelists to counter
+    if (countersToStrats.length > 0) {
+      // return 3 duelists
       // 1 duelist to counter their 2 tanks
       // 1 duelist to counter supports
       // 1 duelist to counter other duelist
-      return matchingCounters;
+      return countersToStrats;
     }
     return [];
   };
 
-  return <></>;
+  const constructFinalCounterComp = () => {
+    // final comp here
+    const { mostFrequent: mainStrategist, secondFrequent } =
+      useFrequentHeroChecker(strategists);
+    const mainDuelist = enemyHasThreeStrategists()
+      ? duelistForStrat
+      : duelistForDuelist;
+    const team = [
+      vanguardForVanguard,
+      vanguardForStrat,
+      mainDuelist,
+      duelistForVanguard,
+      mainStrategist,
+      secondFrequent,
+    ];
+
+    console.log("team: ", team);
+  };
+
+  const enemyHasFlankers = () => {
+    const flankersExist = enemyLineup.some(
+      (hero) =>
+        hero.name === "Black Panther" ||
+        hero.name === "Magik" ||
+        hero.name === "Psylocke"
+    );
+    return flankersExist;
+  };
+
+  const enemyHasThreeStrategists = () => {
+    const strategistCount = enemyLineup.filter(
+      (hero) => hero.role === "Strategist"
+    ).length;
+
+    return strategistCount === 3;
+  };
+
+  const enemyHasNoDefensiveUlt = () => {
+    return !enemyLineup.some(
+      (hero) =>
+        hero.name === "Cloak & Dagger" ||
+        hero.name === "Luna Snow" ||
+        hero.name === "Mantis" ||
+        hero.name === "Invisible Woman"
+    );
+  };
+
+  const useFrequentHeroChecker = (counterPicks: any) => {
+    if (counterPicks.length === 0)
+      return { mostFrequent: null, secondFrequent: null };
+
+    // Count occurrences of each strategist
+    const duelistCount = counterPicks.reduce((acc: any, duelist: any) => {
+      acc[duelist.name] = (acc[duelist.name] || 0) + 1;
+      return acc;
+    }, {});
+
+    let mostFrequent = null;
+    let secondFrequent = null;
+    let maxCount = 0;
+    let secondMaxCount = 0;
+
+    for (const duelist of counterPicks) {
+      const count = duelistCount[duelist.name];
+
+      if (count > maxCount) {
+        secondFrequent = mostFrequent;
+        secondMaxCount = maxCount;
+
+        mostFrequent = duelist;
+        maxCount = count;
+      } else if (
+        count > secondMaxCount &&
+        duelist.name !== mostFrequent?.name
+      ) {
+        secondFrequent = duelist;
+        secondMaxCount = count;
+      }
+    }
+
+    return {
+      mostFrequent,
+      secondFrequent,
+    };
+  };
+
+  return (
+    <>
+      <button
+        className="bg-blue-500"
+        onClick={() => constructFinalCounterComp()}
+      >
+        Generate
+      </button>
+    </>
+  );
 }
