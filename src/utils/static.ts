@@ -1862,6 +1862,14 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        name: "Groot",
+        role: "Vanguard",
+        description:
+          "Even though Cap can escape Groot's wall, Groot's damage output can shred Cap's HP, and he can easily reach him with his normal attacks.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
         role: "Duelist",
@@ -1883,13 +1891,6 @@ export const HERO_COUNTERS = [
           "Her consistent DPS can overwhelm him if he dives into the backline.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
-      },
-      {
-        name: "Doctor Strange",
-        role: "Vanguard",
-        description: "His Eye of Agamotto bypasses cap's shield defenses.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
       },
       {
         name: "Loki",
@@ -2646,6 +2647,14 @@ export const HERO_COUNTERS = [
     role: "Duelist",
     counterPicks: [
       {
+        name: "Moon Knight",
+        role: "Duelist",
+        description:
+          "Moon Knight's ankh can quickly destroy Namor's turret with ease while maintaining a safe distance.",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+      },
+      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
@@ -2659,22 +2668,6 @@ export const HERO_COUNTERS = [
         name: "Hawkeye",
         role: "Duelist",
         description: "Long-range burst damage while maintaing safe distance.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
-        name: "Iron Man",
-        role: "Duelist",
-        description:
-          "He can destroy Namor's spawn with normal attacks and pressure him at a straight angle.",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
-        name: "Storm",
-        role: "Duelist",
-        description:
-          "Her normal attacks can easily destroy Namor's spawns, and in a one-on-one situation, Storm wins effortlessly with the help of Goddess Boost (E) and Bolt Rush (Right Click).",
       },
       {
         image:
@@ -2730,6 +2723,14 @@ export const HERO_COUNTERS = [
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/punisher_g8ytdf.png",
     role: "Duelist",
     counterPicks: [
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        name: "Captain America",
+        role: "Vanguard",
+        description:
+          "Cap can dive into Punisher's turret and pressure him by shielding upfront. He can also negate Punisher's shotgun and other attacks.",
+      },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",

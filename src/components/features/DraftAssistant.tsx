@@ -62,8 +62,8 @@ export default function DraftAssistant({ enemyLineup }: any) {
     setStrategists(strategists);
     handleCountersForDuelsAndVanguards();
 
-    // if (enemyHasThreeStrategists()) {
-    const bestDuelistsForEnemyStrats = ThreeStrategistComp(duelists);
+    const filteredDuelists = handleFilterDuelists(duelists);
+    const bestDuelistsForEnemyStrats = ThreeStrategistComp(filteredDuelists);
     const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
 
     const { mostFrequent: mainDuelistForStrat } = useFrequentHeroChecker(
@@ -77,22 +77,22 @@ export default function DraftAssistant({ enemyLineup }: any) {
     // - After getting the best duels and vanguards to counter 3 healers,
     // - Choose the remaining slot to the available duelists and vanguards state
     // }
-  }, []);
+  }, [enemyLineup]);
 
   // init best counters to counter all enemy team
   const initCounters = (role: string) => {
     let allCounters: any = [];
 
     if (role !== "Strategist") {
-      allCounters = enemyLineup.flatMap((hero) =>
-        (hero.counterPicks || []).filter((cp) => cp.role === role)
+      allCounters = enemyLineup.flatMap((hero: any) =>
+        (hero.counterPicks || []).filter((cp: any) => cp.role === role)
       );
     } else {
       const duelsAndVanguard = enemyLineup.filter(
-        (h) => h.role === "Duelist" || h.role === "Vanguard"
+        (h: any) => h.role === "Duelist" || h.role === "Vanguard"
       );
-      allCounters = duelsAndVanguard.flatMap((hero) =>
-        (hero.counterPicks || []).filter((cp) => cp.role === role)
+      allCounters = duelsAndVanguard.flatMap((hero: any) =>
+        (hero.counterPicks || []).filter((cp: any) => cp.role === role)
       );
     }
 
@@ -101,13 +101,6 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   // strategists dont have 1 on 1 mechanics on the enemy team strategist so the logic is slightly different.
   const initStrategists = () => {
-    // if (enemyHasNoDefensiveUlt()) {
-    //   const strategistsWithDefUlt = HERO_COUNTERS.filter(
-    //     (h: any) => h?.defensiveUlt
-    //   );
-    //   return strategistsWithDefUlt;
-    // }
-
     if (enemyHasFlankers()) {
       const strategistsToCounterFlank = HERO_COUNTERS.filter(
         (h: any) =>
@@ -124,12 +117,39 @@ export default function DraftAssistant({ enemyLineup }: any) {
     }
   };
 
+  // if there are 2 auto aim heroes in the enemy team like Hawkeye, Hela
+  // Remove flying DPS heroes
+  const handleFilterDuelists = (duelists: any) => {
+    const aimHeroes = enemyLineup.filter(
+      (h: any) =>
+        h.name === "Hawkeye" ||
+        h.name === "Black Widow" ||
+        h.name === "Hela" ||
+        h.name === "Namor" ||
+        h.name === "The Punisher"
+    );
+
+    // Return true if there are two or more matches, false otherwise
+    const result = aimHeroes.length >= 2;
+
+    if (result) {
+      const filteredDuelists = duelists.filter(
+        (hero: any) =>
+          hero.name !== "Iron Man" &&
+          hero.name !== "Storm" &&
+          hero.name !== "Human Torch"
+      );
+      return filteredDuelists;
+    }
+    return duelists;
+  };
+
   const handleCountersForDuelsAndVanguards = () => {
     const selectedDuelists: any = enemyLineup.filter(
-      (hero) => hero.role === "Duelist"
+      (hero: any) => hero.role === "Duelist"
     );
     const selectedVanguards: any = enemyLineup.filter(
-      (hero) => hero.role === "Vanguard"
+      (hero: any) => hero.role === "Vanguard"
     );
     const duelistCounterPicks = selectedDuelists.flatMap((hero: any) =>
       hero.counterPicks.filter((cp: any) => cp.role === "Duelist")
@@ -141,10 +161,26 @@ export default function DraftAssistant({ enemyLineup }: any) {
       (hero: any) =>
         hero.counterPicks.filter((cp: any) => cp.role === "Vanguard")
     );
-    const { mostFrequent: mainDuelistCounter } =
-      useFrequentHeroChecker(duelistCounterPicks);
-    const { mostFrequent: mainVanguardCounter } =
-      useFrequentHeroChecker(vanguardCounterPicks);
+    const filteredDuelistsCounters = handleFilterDuelists(duelistCounterPicks);
+    const filteredVanguardCounters = handleFilterDuelists(vanguardCounterPicks);
+
+    const { mostFrequent: mainDuelistCounter } = useFrequentHeroChecker(
+      filteredDuelistsCounters
+    );
+
+    const matchingItems = filteredDuelistsCounters.filter((heroA: any) =>
+      filteredVanguardCounters.some((heroB: any) => heroA.name === heroB.name)
+    );
+
+    const filteredVanguardCountersB = filteredVanguardCounters.filter(
+      (heroB: any) =>
+        !matchingItems.some((match: any) => match.name === heroB.name)
+    );
+
+    // if a hero in filteredVanguardCounters already exists in filteredDuelistsCounters, remove it first before passing to useFrequentHerOChecker
+    const { mostFrequent: mainVanguardCounter } = useFrequentHeroChecker(
+      filteredVanguardCountersB
+    );
     const { mostFrequent: mainVanguardForVanguard } = useFrequentHeroChecker(
       vanguardToVanguardCounterPicks
     );
@@ -160,7 +196,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
   // 2. Check if this lineup is good: Warlock, Starlord, Mantis
   const ThreeStrategistComp = (counterList: any) => {
     // check which duelist or vanguard available is best against 3 supports
-    const enemyStrats = enemyLineup.filter((e) => e.role === "Strategist");
+    const enemyStrats = enemyLineup.filter((e: any) => e.role === "Strategist");
     const countersToStrats = enemyStrats.flatMap((strat: any) =>
       strat.counterPicks.filter((counter: any) =>
         counterList.some((hero: any) => hero.name === counter.name)
@@ -179,8 +215,11 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   const constructFinalCounterComp = () => {
     // final comp here
-    const { mostFrequent: mainStrategist, secondFrequent } =
-      useFrequentHeroChecker(strategists);
+    console.log("strategists: ", strategists);
+    const {
+      mostFrequent: mainStrategist,
+      secondFrequent: secondaryStrategist,
+    } = useFrequentHeroChecker(strategists);
     const mainDuelist = enemyHasThreeStrategists()
       ? duelistForStrat
       : duelistForDuelist;
@@ -190,7 +229,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
       mainDuelist,
       duelistForVanguard,
       mainStrategist,
-      secondFrequent,
+      secondaryStrategist,
     ];
 
     console.log("team: ", team);
@@ -198,7 +237,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   const enemyHasFlankers = () => {
     const flankersExist = enemyLineup.some(
-      (hero) =>
+      (hero: any) =>
         hero.name === "Black Panther" ||
         hero.name === "Magik" ||
         hero.name === "Psylocke"
@@ -208,7 +247,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   const enemyHasThreeStrategists = () => {
     const strategistCount = enemyLineup.filter(
-      (hero) => hero.role === "Strategist"
+      (hero: any) => hero.role === "Strategist"
     ).length;
 
     return strategistCount === 3;
@@ -216,7 +255,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   const enemyHasNoDefensiveUlt = () => {
     return !enemyLineup.some(
-      (hero) =>
+      (hero: any) =>
         hero.name === "Cloak & Dagger" ||
         hero.name === "Luna Snow" ||
         hero.name === "Mantis" ||
