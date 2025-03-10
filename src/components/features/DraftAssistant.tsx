@@ -42,9 +42,6 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   // META TEAMCOMP ASSESSMENT (LAST PART OF THE LOGIC):
   // 1. assess if enemy team has 3 healers and counter it.
-
-  const [vanguards, setVanguards] = useState<any>([]);
-  const [duelists, setDuelists] = useState<any>([]);
   const [strategists, setStrategists] = useState<any>([]);
 
   const [vanguardForVanguard, setVanguardForVanguard] = useState<any>({});
@@ -55,9 +52,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
 
   useEffect(() => {
     const vanguards = initCounters("Vanguard");
-    setVanguards(vanguards);
     const duelists = initCounters("Duelist");
-    setDuelists(duelists);
     const strategists = initStrategists();
     setStrategists(strategists);
     handleCountersForDuelsAndVanguards();
@@ -126,7 +121,8 @@ export default function DraftAssistant({ enemyLineup }: any) {
         h.name === "Black Widow" ||
         h.name === "Hela" ||
         h.name === "Namor" ||
-        h.name === "The Punisher"
+        h.name === "The Punisher" ||
+        h.name === "Psylocke"
     );
 
     // Return true if there are two or more matches, false otherwise
@@ -195,6 +191,17 @@ export default function DraftAssistant({ enemyLineup }: any) {
   // 1. Check if this lineup is good: Loki, Namor, Luna
   // 2. Check if this lineup is good: Warlock, Starlord, Mantis
   const ThreeStrategistComp = (counterList: any) => {
+    const counterHeroesForThreeStrats = [
+      "Groot",
+      "Venom",
+      "Magneto",
+      "Scarlet Witch",
+      "Moon Knight",
+      "Hawkeye",
+      "Squirrel Girl",
+      "Namor",
+    ];
+
     // check which duelist or vanguard available is best against 3 supports
     const enemyStrats = enemyLineup.filter((e: any) => e.role === "Strategist");
     const countersToStrats = enemyStrats.flatMap((strat: any) =>
@@ -203,12 +210,14 @@ export default function DraftAssistant({ enemyLineup }: any) {
       )
     );
 
+    const filteredCountersToStrats = countersToStrats.filter((h: any) =>
+      counterHeroesForThreeStrats.includes(h.name)
+    );
+
     if (countersToStrats.length > 0) {
-      // return 3 duelists
-      // 1 duelist to counter their 2 tanks
-      // 1 duelist to counter supports
-      // 1 duelist to counter other duelist
-      return countersToStrats;
+      return filteredCountersToStrats.length > 0
+        ? filteredCountersToStrats
+        : countersToStrats;
     }
     return [];
   };

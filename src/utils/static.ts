@@ -1009,7 +1009,7 @@ export const HERO_COUNTERS = [
         name: "Cloak & Dagger",
         role: "Strategist",
         description:
-          "Cloak and Dagger can blind Groot, making it hard for him to know where to build a wall.",
+          "Cloak and Dagger can blind Groot, making it difficult for him to determine where to build a wall. Additionally, her bubble and ultimate can block any incoming damage while inside Groot's ultimate.",
       },
     ],
     goodAgainst: [
@@ -1788,6 +1788,15 @@ export const HERO_COUNTERS = [
         ],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        name: "Punisher",
+        role: "Duelist",
+        descriptions: [
+          "When in turret mode, Punisher can track down Psylocke even when she's not on sight.",
+        ],
       },
       {
         name: "Luna Snow",
@@ -2589,6 +2598,14 @@ export const HERO_COUNTERS = [
     ],
     counterPicks: [
       {
+        name: "Groot",
+        role: "Vanguard",
+        description:
+          "Groot's walls can block Squirrel Girl's attacks, causing them to bounce off your position and your allies' positions.",
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+      },
+      {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
         name: "Captain America",
@@ -3152,15 +3169,6 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         descriptions: [
           "With good positioning, Storm can outlast Winter Soldier's damage output and pressure him. Just be careful not to get hit by his hook.",
-        ],
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
-        name: "Punisher",
-        role: "Duelist",
-        descriptions: [
-          "When in turret mode, Punisher can track down Psylocke even when she's not on sight.",
         ],
       },
     ],
