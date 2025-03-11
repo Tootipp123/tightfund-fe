@@ -2,7 +2,7 @@
 import { HERO_COUNTERS } from "@/utils/static";
 import { useEffect, useState } from "react";
 
-export default function DraftAssistant({ enemyLineup }: any) {
+export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -282,7 +282,7 @@ export default function DraftAssistant({ enemyLineup }: any) {
     }
 
     console.log("team: ", team);
-    return team;
+    setCounterHeroes(team);
   };
 
   const enemyHasFlankers = () => {

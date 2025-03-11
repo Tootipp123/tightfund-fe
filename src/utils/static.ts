@@ -1951,6 +1951,15 @@ export const HERO_COUNTERS = [
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        score: 9.8,
+        description:
+          "Namor's Frozen Spawn (C) and Aquatic Dominion (E) are the biggest counters to divers like Cap.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
         role: "Duelist",

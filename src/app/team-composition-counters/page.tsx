@@ -10,6 +10,7 @@ import { useState } from "react";
 export default function TeamCompCountersPage() {
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
   const [selectedHeroes, setSelectedHeroes] = useState<any>([]);
+  const [counterHeroes, setCounterHeroes] = useState<any>([]);
 
   const toggleHeroSelection = (hero: any) => {
     setSelectedHeroes((prevSelected: any) => {
@@ -29,7 +30,10 @@ export default function TeamCompCountersPage() {
   return (
     <div>
       {selectedHeroes.length >= 6 && (
-        <DraftAssistant enemyLineup={selectedHeroes} />
+        <DraftAssistant
+          enemyLineup={selectedHeroes}
+          setCounterHeroes={setCounterHeroes}
+        />
       )}
       <Navbar />
       <main className="bg-[#1B1B29] min-h-[100vh]">
@@ -63,13 +67,53 @@ export default function TeamCompCountersPage() {
           </div>
 
           {/* //BODY */}
-          <section>
-            asd
-            {selectedHeroes.map((hero: any, idx: number) => (
-              <div key={idx} className="text-white">
-                {hero.name}
+          <section className="p-[100px]">
+            <div>
+              <h4 className="text-neutral-200 font-semibold text-lg mb-3">
+                Team to counter:
+              </h4>
+              <div className="w-full flex flex-row flex-wrap gap-6 md:gap-6">
+                {selectedHeroes.map((hero: any, index: number) => (
+                  <div key={index} className="w-[27%] md:w-[70px]">
+                    <div className="h-full">
+                      <div className="m-auto">
+                        <Image
+                          src={hero?.image}
+                          alt={hero.name}
+                          unoptimized
+                          width={150}
+                          height={150}
+                          className="rounded-md m-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="py-[50px]">
+              <h4 className="text-neutral-200 font-semibold text-lg mb-3">
+                Best 2-2-2 counters:
+              </h4>
+              <div className="w-full flex flex-row items-center justify-center flex-wrap gap-6 md:gap-6">
+                {counterHeroes.map((hero: any, index: number) => (
+                  <div key={index} className="w-[27%] md:w-[70px]">
+                    <div className="h-full">
+                      <div className="m-auto">
+                        <Image
+                          src={hero?.image}
+                          alt={hero.name}
+                          unoptimized
+                          width={150}
+                          height={150}
+                          className="rounded-md m-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </section>
         </div>
       </main>
