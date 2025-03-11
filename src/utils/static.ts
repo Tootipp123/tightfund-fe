@@ -13,8 +13,18 @@ export const HERO_COUNTERS = [
     goodAgainst: [],
     counterPicks: [
       {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        name: "Groot",
+        role: "Vanguard",
+        score: 10,
+        description:
+          "Groot can use his walls to separate The Thing from his allies, preventing him from leaping to them and get heals. Additionally, Groot has enough damage output to reduce The Thing's HP quickly.",
+      },
+      {
         name: "Iron Man",
         role: "Duelist",
+        score: 10,
         description:
           "Iron Man is powerful against heroes that can't reach him, like The Thing. Additionally, his Unibeam's damage output has increased to 190 per second (previously 180), making him an even bigger threat to The Thing.",
         image:
@@ -24,6 +34,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
         name: "Squirrel Girl",
+        score: 9,
         role: "Duelist",
         description:
           "Her Squirrel Blockade ability can stun The Thing, making him vulnerable to attacks. Additionally, if he decides to sprint toward her, she can simply jump to make a quick escape.",
@@ -31,6 +42,7 @@ export const HERO_COUNTERS = [
       {
         name: "Storm",
         role: "Duelist",
+        score: 9.5,
         description:
           "Storm's Goddess Boost got nerfed in this patch, but she can still deal massive damage to The Thing while staying safe in the air, even if he isn't inside her weather control area.",
         image:
@@ -39,18 +51,11 @@ export const HERO_COUNTERS = [
       {
         name: "Hela",
         role: "Duelist",
+        score: 9,
         description:
           "Hela can stun The Thing with her Soul Drainer (E) if he charges into the backline. Additionally, her high damage output can quickly reduce his HP.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
-      },
-      {
-        name: "Groot",
-        role: "Vanguard",
-        description:
-          "The Thing relies on his Yancy Street Charge ability (LShift) for mobility and doesn’t have any other escape abilities like Doctor Strange or Cap. This allows Groot to block him with his wall, isolating him from his team.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
       },
     ],
   },
@@ -71,6 +76,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
         role: "Duelist",
+        score: 10,
         description:
           "Long-range DPS typically outmatches Johnny. And Hela's buff in this patch makes her an easy counter for him, as she can hit him in the air without being threatened by his flames.",
       },
@@ -79,6 +85,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
         name: "Hawkeye",
         role: "Duelist",
+        score: 10,
         description:
           "Similar to Hela, Hawkeye can deal massive damage to Johnny from a safe distance using only his normal attacks.",
       },
@@ -87,6 +94,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 10,
         description:
           "Punisher's a typical counter to aerborne heroes, forcing them always to back up and get threatened by his Culling Turret.",
       },
@@ -95,6 +103,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         role: "Duelist",
+        score: 9.5,
         description:
           "Psylocke can attack Johnny from unexpected angles and quickly escape using dashes and invisibility to avoid getting caught by his abilities.",
       },
@@ -103,6 +112,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         role: "Duelist",
+        score: 9.6,
         description:
           "The only melee hero who can hunt Johnny while staying safe from his attacks. Spider-Man's swinging ability and the Web-Cluster buff (reduced from 3s to 2.5s) make him a significant threat to Johnny.",
       },
@@ -134,6 +144,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         role: "Duelist",
+        score: 8.5,
         descriptions: [
           "In situations where Storm's Goddess Boost (E) is on cooldown, this is an opportunity for Spidey to catch her mid-air and deliver critical damage or a quick kill.",
           "With the help of Venom's Suit Expulsion skill, Spidey can delete Storm with a single combination.",
@@ -142,6 +153,7 @@ export const HERO_COUNTERS = [
       {
         name: "Star-Lord",
         role: "Duelist",
+        score: 8.6,
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         descriptions: [
@@ -152,38 +164,30 @@ export const HERO_COUNTERS = [
       {
         name: "Winter Soldier",
         role: "Duelist",
+        score: 8.1,
         descriptions: [
           "With great timing, Winter Soldier can catch Storm in mid-air with Bionic hook (Right click). Followed by Trooper’s Fist (E) and a flurry of normal attacks, and it's over for her.",
         ],
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
       },
+    ],
+    counterPicks: [
       {
         name: "Doctor Strange",
         role: "Vanguard",
-        descriptions: [
-          "In situations where Storm is high up in the air, Strange can activate his Cloak of Levitation (LShift) and chase her, having the perfect opportunity for an instant kill.",
-          "In situations where Storm gets caught up with Strange's ultimate, it will be over without a well-timed defensive ult from her Strategist.",
-        ],
+        score: 10,
+        description:
+          "Strange's shield allows him to block Storm's Wind Blade and Bolt Rush. Additionally, the radius of his shield can help his allies block incoming damage as well.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
       },
-      {
-        name: "Black Panther",
-        role: "Duelist",
-        descriptions: [
-          "Most of the time, Storm counters Tchalla easily. But in tight areas where Storm is vulnerable to his Spear and dashes, if he can land a perfect combo (Double spear + Double dash), it's a guaranteed kill.",
-        ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-      },
-    ],
-    counterPicks: [
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 10,
         description:
           "He can land multiple consistent damage to her in a safe distance, forcing her to retreat.",
       },
@@ -192,14 +196,25 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
         role: "Duelist",
+        score: 10,
         description:
           "Her long-range attacks can be a pain to Storm's low mobility in the air.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        score: 9.8,
+        description:
+          "Namor's long-range attacks and spawns are effective counters to Storm. Additionally, his Blessings of the Deep (Shift) allows him to reposition strategically, allowing him to surprise Storm from unexpected angles.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
         name: "Iron Fist",
         role: "Duelist",
+        score: 8.5,
         description:
           "He can surprise and burst Storm in mid-air and make her ineffective.",
       },
@@ -208,12 +223,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         role: "Duelist",
+        score: 9,
         description:
           "She can surprise Storm from behind, while her burst damage can force Storm to disengage.",
       },
       {
         name: "Black Widow",
         role: "Duelist",
+        score: 9.3,
         description:
           "Black Widow's mechanics as a sniper is a natural counter to Storm as she can snipe her in a safe distance.",
         image:
@@ -222,6 +239,7 @@ export const HERO_COUNTERS = [
       {
         name: "Luna Snow",
         role: "Strategist",
+        score: 8.3,
         description: "Her ultimate ability can block Storm's ultimate.",
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
@@ -231,6 +249,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
         name: "Rocket Racoon",
         role: "Strategist",
+        score: 9,
         description:
           "Rocket can easily evade Storm's attacks and ultimate due to his excellent mobility. Additionally, his ultimate amplifies his team, making them a greater threat to Storm in the air by giving them an advantage in damage output.",
       },
@@ -286,42 +305,6 @@ export const HERO_COUNTERS = [
       },
       {
         image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
-        name: "Magik",
-        role: "Duelist",
-        descriptions: [
-          "In tight spaces where Iron Man can’t fly high in the air, Magik can pressure him with her normal attacks, forcing him to use his Hyper-Velocity ability (LShift) to retreat.",
-        ],
-      },
-      {
-        name: "Black Panther",
-        role: "Duelist",
-        descriptions: [
-          "Most of the time, Iron Man counters Tchalla easily. But in tight spaces where Iron Man is vulnerable to his Spear and dashes, if he can land a perfect combo (Double spear + Double dash), it's a guaranteed kill.",
-        ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
-        name: "Doctor Strange",
-        role: "Vanguard",
-        descriptions: [
-          "Strange can protect his team against Iron Man's normal attacks with his shield. It can also block Iron Man's ultimate if he's in the right position and timing.",
-        ],
-      },
-      {
-        name: "Wolverine",
-        role: "Duelist",
-        descriptions: [
-          "If Iron Man's flying near the ground, it's a perfect time for Wolverine to flank and catch him off guard.",
-        ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
-      },
-      {
-        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
         name: "Loki",
         role: "Strategist",
@@ -333,9 +316,19 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        name: "Doctor Strange",
+        role: "Vanguard",
+        score: 10,
+        description:
+          "Strange can protect his team against Iron Man's normal attacks with his shield. It can also block Iron Man's ultimate if he's in the right position and timing.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
         name: "Iron Fist",
         role: "Duelist",
+        score: 8.6,
         description:
           "Iron Fist can get behind Iron Man and pressure him mid-air. Additionally, he can easily parry any of Iron Man's attacks.",
       },
@@ -344,14 +337,25 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
         name: "Rocket Racoon",
         role: "Strategist",
+        score: 9,
         description:
           "Rocket might be the best strategist to counter Iron Man. He can freely hit him in the air while having exceptional mobility that allows him to evade any of Iron Man's attacks. Additionally, his ultimate amplifies his team, making them more of a threat to Iron Man in the air rather than providing a defensive ultimate.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        score: 10,
+        description:
+          "Namor's long-range attacks and spawns are effective counters to Iron Man. Additionally, his Blessings of the Deep (Shift) allows him to reposition strategically, allowing him to surprise Iron Man from unexpected angles.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         name: "Star-Lord",
         role: "Duelist",
+        score: 9.3,
         description:
           "He can chase and solo-kill Iron Man in mid air almost instantly.",
       },
@@ -360,6 +364,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 10,
         description:
           "He can pressure Iron Man while maintaining consistent damage output, and force him to retreat.",
       },
@@ -368,6 +373,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
         name: "Psylocke",
         role: "Duelist",
+        score: 9.5,
         description:
           "Her mobility and quick damage output can burst Iron Man before he can even escape.",
       },
@@ -376,12 +382,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
         name: "Spider-Man",
         role: "Duelist",
+        score: 9.2,
         description:
           "He can be a pain to deal in the air with or without the Venom's Suit Expulsion skill.",
       },
       {
         name: "Black Widow",
         role: "Duelist",
+        score: 9.4,
         description:
           "Black Widow's mechanics as a sniper is a natural counter to Iron Man as she can snipe him in a safe distance.",
         image:
@@ -392,6 +400,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
         role: "Duelist",
+        score: 9.98,
         description: "She can land massive damage to him in a safe distance.",
       },
       {
@@ -399,6 +408,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
         name: "Hawkeye",
         role: "Duelist",
+        score: 10,
         description:
           "Similar with Hela, he can land massive damage to him in a safe distance.",
       },
@@ -467,6 +477,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
+        score: 9.0,
         role: "Duelist",
         description:
           "Punisher's ultimate can outdamage Invisible Woman's ultimate.",
@@ -475,6 +486,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
         name: "Moon Knight",
+        score: 9.3,
         role: "Duelist",
         description:
           "With great positioning, he can pressure her with Crescent Dart.",
@@ -483,6 +495,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
         name: "Squirrel Girl",
+        score: 9.1,
         role: "Duelist",
         description:
           "Squirrel Girl can completely melt ⅓ of Guardian Shield’s health per Burst Acorn (LMB). Her Unbeatable Squirrel Tsunami (Q) passes through her Guardian Shield.",
@@ -556,9 +569,19 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        name: "Groot",
+        role: "Vanguard",
+        score: 10,
+        description:
+          "Groot can use his walls to separate Mr. Fantastic from his allies, exploiting his low mobility and preventing him from receiving heals.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
         role: "Duelist",
+        score: 9.25,
         description:
           "Even though Mr. Fantastic can block Storm's ultimate with Reflexive Rubber, she can still deal massive damage to him using Goddess Boost.",
       },
@@ -567,6 +590,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 9.0,
         description:
           "His Culling Turret ability can melt down Mr. Fantastic's hp before he can even get value.",
       },
@@ -575,6 +599,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         role: "Duelist",
+        score: 9.23,
         description:
           "Even though Mr. Fantastic can block Iron Man's ultimate with Reflexive Rubber, his flight abilities and consistent damage output can still overwhelm him.",
       },
@@ -582,6 +607,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
         name: "Hawkeye",
+        score: 9.15,
         role: "Duelist",
         description: "He can pressure Mr. Fantastic from a safe distance.",
       },
@@ -589,6 +615,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
         name: "Hela",
+        score: 9.12,
         role: "Duelist",
         description:
           "Similar to Hawkeye, she can pressure Mr. Fantastic from a safe distance.",
@@ -645,12 +672,14 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 9.0,
         description:
           "His Culling Turret ability can be a nightmare for Venom, as it can melt his HP down without giving him a chance to regenerate or escape.",
       },
       {
         name: "Wolverine",
         role: "Duelist",
+        score: 9.3,
         description:
           "Wolverine's mechanics counter Venom's playstyle in every way. Since Venom's gameplay relies on pressuring the backline, Wolverine can easily catch him by waiting until he dives and then striking him off guard.",
         image:
@@ -660,6 +689,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
+        score: 9.5,
         role: "Duelist",
         description:
           "Her Goddess Boost ability and aerial mechanics can pressure Venom if he attempts to dive.",
@@ -669,6 +699,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
         name: "Magneto",
         role: "Vanguard",
+        score: 9.1,
         description:
           "His shield can negate Venom’s attacks, while Metal Bulwark shields allies from Venom’s dive attempts.",
       },
@@ -677,6 +708,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         role: "Duelist",
+        score: 9.59,
         description:
           "His flight abilities and consistent damage can pressure Venom easily.",
       },
@@ -718,6 +750,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740187180/rivals%20v2/The_Thing_Icon_ydoqtg.webp",
         name: "The Thing",
+        score: 9.2,
         role: "Vanguard",
         description:
           "The Thing's Yancy Street Charge ability (Shift) prevents Black Panther from using his dashes and kick. When this happens, your team can take advantage of the opening.",
@@ -727,6 +760,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740186347/rivals%20v2/johnny_g4yy6w.webp",
         name: "Human Torch",
         role: "Duelist",
+        score: 9.01,
         description:
           "He can attack freely and control areas, making it difficult for Black Panther to enter. Additionally, he remains out of Black Panther's reach in most areas.",
       },
@@ -735,6 +769,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         name: "Star-Lord",
         role: "Duelist",
+        score: 9.35,
         description:
           "He can land consistent DPS to T'Challa without getting hit by his spears or dashes, making him a natural counter.",
       },
@@ -742,6 +777,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
         name: "Peni Parker",
+        score: 9.5,
         role: "Vanguard",
         description:
           "She can prevent or slow down Black Panther by placing mines and spider nest.",
@@ -751,6 +787,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         role: "Duelist",
+        score: 10,
         description:
           "His flight ability allows him to swiftly burst him down without being reached.",
       },
@@ -758,6 +795,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
+        score: 10,
         role: "Duelist",
         description:
           "She can deal massive damage to him while being unreachable.",
@@ -767,6 +805,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
         name: "Namor",
         role: "Duelist",
+        score: 10,
         description:
           "He can disrupt Black Panther from engaging the enemy backline using his spawns.",
       },
@@ -775,6 +814,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
         name: "Loki",
         role: "Strategist",
+        score: 9.14,
         description:
           "His lamp and clone swapping abilities can prevent Black Panther from killing him instantly.",
       },
@@ -783,6 +823,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
         name: "Cloak & Dagger",
         role: "Strategist",
+        score: 9.12,
         description:
           "She's the best strategist to counter Black Panther. All of her abilities makes him ineffective in the game.",
       },
@@ -1056,6 +1097,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 9.15,
         description:
           "Punisher's consistent damage output can pressure Hela and force her to retreat.",
       },
@@ -1064,22 +1106,16 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
         name: "Magik",
         role: "Duelist",
+        score: 9.3,
         description:
           "Magik's mechanics allow her to pressure Hela in the backline, even with her Strategists around. And unlike T'challa, Magik can still live even if she gets hit with Hela's ",
-      },
-      {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
-        name: "Captain America",
-        role: "Vanguard",
-        description:
-          "Rushing forward while shielded in front of Hela can pressure her into a defensive position.",
       },
       {
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
         name: "Doctor Strange",
         role: "Vanguard",
+        score: 9.89,
         description:
           "He can block Hela's attacks and ultimate by flying and shielding in front of her.",
       },
@@ -1088,6 +1124,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
         name: "Luna Snow",
         role: "Strategist",
+        score: 9.0,
         description:
           "Luna Snow can make Hela less of a threat with her ultimate.",
       },
@@ -1095,6 +1132,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
         name: "Loki",
+        score: 9.5,
         role: "Strategist",
         description: "His mischief abilities can slow down Hela's playstyle.",
       },
@@ -1154,6 +1192,7 @@ export const HERO_COUNTERS = [
         name: "Iron Man",
         role: "Duelist",
         description: "His ultimate can pierce through Luna Snow's ultimate.",
+        score: 9.5,
       },
       {
         image:
@@ -1161,6 +1200,7 @@ export const HERO_COUNTERS = [
         name: "Punisher",
         role: "Duelist",
         description: "Punisher's ultimate can outdamage Luna Snow's ultimate.",
+        score: 9,
       },
       {
         image:
@@ -1234,6 +1274,14 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "Magik typically struggles against aerial heroes, just like Iron Man. Additionally, when Magik decides to flank the backline, Iron Man can simply spam normal attacks to pressure her and force her to retreat.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        description:
+          "Namor can pressure Magik to prevent her from engaging the backline using his spawns.",
       },
       {
         image:
@@ -1453,6 +1501,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         role: "Duelist",
+        score: 10,
         description:
           "Flight abilities allow him to bypass nests and mines, giving him freedom to attack her from any angle.",
       },
@@ -1460,6 +1509,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
         name: "Storm",
+        score: 10,
         role: "Duelist",
         description:
           "Her Normal attacks and Bolt Rush ability are more than enough to reduce Peni's HP instantly. She can also destroy nests and mines easily.",
@@ -1469,6 +1519,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
         name: "Punisher",
         role: "Duelist",
+        score: 9.75,
         description:
           "He can quickly destroy spider nests and mines from a safe distance.",
       },
@@ -1477,6 +1528,7 @@ export const HERO_COUNTERS = [
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
         name: "Star-Lord",
         role: "Duelist",
+        score: 9.9,
         description:
           "He can pressure from different angles while maintaining consistent damage output",
       },
@@ -1484,14 +1536,25 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
         name: "Doctor Strange",
+        score: 9.5,
         role: "Vanguard",
         description:
           "Shield and portals help team push through her defenses while blocking her damage",
       },
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        score: 9.8,
+        description:
+          "Namor can also destroy Peni's spider nests and mines from a safe distance while protecting his allies with his spawns.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
         name: "Groot",
+        score: 9.7,
         role: "Vanguard",
         description:
           "His normal attacks can destroy spider nests and mines from a safe position.",
@@ -1500,6 +1563,7 @@ export const HERO_COUNTERS = [
         image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
         name: "Loki",
+        score: 9.3,
         role: "Strategist",
         description:
           "Can escape to Peni's ultimate easily by swapping position to another doppleganger.",
@@ -1574,6 +1638,14 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "He can melt Hulk's hp with his consistent DPS and force him to retreat.",
+      },
+      {
+        image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        name: "Namor",
+        role: "Duelist",
+        description:
+          "Namor can also melt Thor's HP from a safe distance while protecting his allies with his spawns.",
       },
       {
         image:

@@ -44,16 +44,22 @@ export default function DraftAssistant({ enemyLineup }: any) {
   // 1. assess if enemy team has 3 healers and counter it.
   const [strategists, setStrategists] = useState<any>([]);
 
-  const [vanguardForVanguard, setVanguardForVanguard] = useState<any>({});
+  // Vanguard
+  const [mostFrequentVanguard, setMostFrequentVanguard] = useState<any>({});
+  const [secondFrequentVanguard, setSecondFrequentVanguard] = useState<any>({});
+
   const [vanguardForStrat, setVanguardForStrat] = useState<any>({});
   const [duelistForStrat, setDuelistForStrat] = useState<any>({});
   const [duelistForDuelist, setDuelistForDuelist] = useState<any>({});
   const [duelistForVanguard, setDuelistForVanguard] = useState<any>({});
+  const [mostFrequentDuelist, setMostFrequentDuelist] = useState<any>({});
+  const [secondFrequentDuelist, setSecondFrequentDuelist] = useState<any>({});
 
   useEffect(() => {
     const vanguards = initCounters("Vanguard");
     const duelists = initCounters("Duelist");
     const strategists = initStrategists();
+
     setStrategists(strategists);
     handleCountersForDuelsAndVanguards();
 
@@ -157,6 +163,11 @@ export default function DraftAssistant({ enemyLineup }: any) {
       (hero: any) =>
         hero.counterPicks.filter((cp: any) => cp.role === "Vanguard")
     );
+    const vanguardToDuelistCounterPicks = selectedDuelists.flatMap(
+      (hero: any) =>
+        hero.counterPicks.filter((cp: any) => cp.role === "Vanguard")
+    );
+
     const filteredDuelistsCounters = handleFilterDuelists(duelistCounterPicks);
     const filteredVanguardCounters = handleFilterDuelists(vanguardCounterPicks);
 
@@ -173,17 +184,34 @@ export default function DraftAssistant({ enemyLineup }: any) {
         !matchingItems.some((match: any) => match.name === heroB.name)
     );
 
-    // if a hero in filteredVanguardCounters already exists in filteredDuelistsCounters, remove it first before passing to useFrequentHerOChecker
+    const combinedVanguardCounters = [
+      ...vanguardToVanguardCounterPicks,
+      ...vanguardToDuelistCounterPicks,
+    ];
+
     const { mostFrequent: mainVanguardCounter } = useFrequentHeroChecker(
       filteredVanguardCountersB
     );
-    const { mostFrequent: mainVanguardForVanguard } = useFrequentHeroChecker(
-      vanguardToVanguardCounterPicks
-    );
+
+    const { mostFrequent: mainVanguard, secondFrequent: secondaryVanguard } =
+      useFrequentHeroChecker(combinedVanguardCounters);
 
     setDuelistForDuelist(mainDuelistCounter);
     setDuelistForVanguard(mainVanguardCounter);
-    setVanguardForVanguard(mainVanguardForVanguard);
+
+    const combinedDuelistAndVangCounters = [
+      ...filteredDuelistsCounters,
+      ...filteredVanguardCounters,
+    ];
+    const {
+      mostFrequent: mostFrqntDuelist,
+      secondFrequent: secondFrqntDuelist,
+    } = useFrequentHeroChecker(combinedDuelistAndVangCounters);
+
+    setMostFrequentDuelist(mostFrqntDuelist);
+    setSecondFrequentDuelist(secondFrqntDuelist);
+    setMostFrequentVanguard(mainVanguard);
+    setSecondFrequentVanguard(secondaryVanguard);
   };
 
   // @TASK:
@@ -223,25 +251,38 @@ export default function DraftAssistant({ enemyLineup }: any) {
   };
 
   const constructFinalCounterComp = () => {
-    // final comp here
-    console.log("strategists: ", strategists);
     const {
       mostFrequent: mainStrategist,
       secondFrequent: secondaryStrategist,
     } = useFrequentHeroChecker(strategists);
-    const mainDuelist = enemyHasThreeStrategists()
-      ? duelistForStrat
-      : duelistForDuelist;
-    const team = [
-      vanguardForVanguard,
-      vanguardForStrat,
-      mainDuelist,
-      duelistForVanguard,
-      mainStrategist,
-      secondaryStrategist,
-    ];
+
+    let team = [];
+    if (enemyHasVanguard()) {
+      team = [
+        // vanguardForVanguard,
+        // vanguardForStrat ?? vanguardForDuelist ?? secondFrequentVanguard,
+        mostFrequentVanguard,
+        secondFrequentVanguard,
+        mostFrequentDuelist,
+        secondFrequentDuelist,
+        mainStrategist,
+        secondaryStrategist,
+      ];
+    } else {
+      team = [
+        // vanguardForDuelist,
+        // vanguardForStrat ?? secondFrequentVanguard,
+        mostFrequentVanguard,
+        secondFrequentVanguard,
+        mostFrequentDuelist,
+        duelistForDuelist,
+        mainStrategist,
+        secondaryStrategist,
+      ];
+    }
 
     console.log("team: ", team);
+    return team;
   };
 
   const enemyHasFlankers = () => {
@@ -270,6 +311,10 @@ export default function DraftAssistant({ enemyLineup }: any) {
         hero.name === "Mantis" ||
         hero.name === "Invisible Woman"
     );
+  };
+
+  const enemyHasVanguard = () => {
+    return enemyLineup.some((hero: any) => hero.role === "Vanguard");
   };
 
   const useFrequentHeroChecker = (counterPicks: any) => {
