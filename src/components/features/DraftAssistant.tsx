@@ -2,7 +2,11 @@
 import { HERO_COUNTERS } from "@/utils/static";
 import { useEffect, useState } from "react";
 
-export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
+export default function DraftAssistant({
+  enemyLineup,
+  setCounterHeroes,
+  setThreeStratComp,
+}: any) {
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -48,10 +52,6 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
   const [mostFrequentVanguard, setMostFrequentVanguard] = useState<any>({});
   const [secondFrequentVanguard, setSecondFrequentVanguard] = useState<any>({});
 
-  const [vanguardForStrat, setVanguardForStrat] = useState<any>({});
-  const [duelistForStrat, setDuelistForStrat] = useState<any>({});
-  const [duelistForDuelist, setDuelistForDuelist] = useState<any>({});
-  const [duelistForVanguard, setDuelistForVanguard] = useState<any>({});
   const [mostFrequentDuelist, setMostFrequentDuelist] = useState<any>({});
   const [secondFrequentDuelist, setSecondFrequentDuelist] = useState<any>({});
 
@@ -63,18 +63,9 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
     setStrategists(strategists);
     handleCountersForDuelsAndVanguards();
 
-    const filteredDuelists = handleFilterDuelists(duelists);
-    const bestDuelistsForEnemyStrats = ThreeStrategistComp(filteredDuelists);
-    const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
-
-    const { mostFrequent: mainDuelistForStrat } = useFrequentHeroChecker(
-      bestDuelistsForEnemyStrats
-    );
-    const { mostFrequent: mainVanguardForStrats } = useFrequentHeroChecker(
-      bestVanguardsForEnemyStrats
-    );
-    setDuelistForStrat(mainDuelistForStrat);
-    setVanguardForStrat(mainVanguardForStrats);
+    // const filteredDuelists = handleFilterDuelists(duelists);
+    // const bestDuelistsForEnemyStrats = ThreeStrategistComp(filteredDuelists);
+    // const bestVanguardsForEnemyStrats = ThreeStrategistComp(vanguards);
     // - After getting the best duels and vanguards to counter 3 healers,
     // - Choose the remaining slot to the available duelists and vanguards state
     // }
@@ -171,33 +162,16 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
     const filteredDuelistsCounters = handleFilterDuelists(duelistCounterPicks);
     const filteredVanguardCounters = handleFilterDuelists(vanguardCounterPicks);
 
-    const { mostFrequent: mainDuelistCounter } = useFrequentHeroChecker(
-      filteredDuelistsCounters
-    );
-
-    const matchingItems = filteredDuelistsCounters.filter((heroA: any) =>
-      filteredVanguardCounters.some((heroB: any) => heroA.name === heroB.name)
-    );
-
-    const filteredVanguardCountersB = filteredVanguardCounters.filter(
-      (heroB: any) =>
-        !matchingItems.some((match: any) => match.name === heroB.name)
-    );
-
     const combinedVanguardCounters = [
       ...vanguardToVanguardCounterPicks,
       ...vanguardToDuelistCounterPicks,
     ];
 
-    const { mostFrequent: mainVanguardCounter } = useFrequentHeroChecker(
-      filteredVanguardCountersB
-    );
-
     const { mostFrequent: mainVanguard, secondFrequent: secondaryVanguard } =
       useFrequentHeroChecker(combinedVanguardCounters);
 
-    setDuelistForDuelist(mainDuelistCounter);
-    setDuelistForVanguard(mainVanguardCounter);
+    // setDuelistForDuelist(mainDuelistCounter);
+    // setDuelistForVanguard(mainVanguardCounter);
 
     const combinedDuelistAndVangCounters = [
       ...filteredDuelistsCounters,
@@ -218,36 +192,64 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
   // Check if enemy has flanker
   // 1. Check if this lineup is good: Loki, Namor, Luna
   // 2. Check if this lineup is good: Warlock, Starlord, Mantis
-  const ThreeStrategistComp = (counterList: any) => {
-    const counterHeroesForThreeStrats = [
-      "Groot",
-      "Venom",
-      "Magneto",
-      "Scarlet Witch",
-      "Moon Knight",
-      "Hawkeye",
-      "Squirrel Girl",
-      "Namor",
-    ];
+  // const ThreeStrategistComp = (counterList: any) => {
+  //   const counterHeroesForThreeStrats = [
+  //     "Groot",
+  //     "Venom",
+  //     "Magneto",
+  //     "Scarlet Witch",
+  //     "Moon Knight",
+  //     "Hawkeye",
+  //     "Squirrel Girl",
+  //     "Namor",
+  //   ];
 
-    // check which duelist or vanguard available is best against 3 supports
-    const enemyStrats = enemyLineup.filter((e: any) => e.role === "Strategist");
-    const countersToStrats = enemyStrats.flatMap((strat: any) =>
-      strat.counterPicks.filter((counter: any) =>
-        counterList.some((hero: any) => hero.name === counter.name)
-      )
+  //   // check which duelist or vanguard available is best against 3 supports
+  //   const enemyStrats = enemyLineup.filter((e: any) => e.role === "Strategist");
+  //   const countersToStrats = enemyStrats.flatMap((strat: any) =>
+  //     strat.counterPicks.filter((counter: any) =>
+  //       counterList.some((hero: any) => hero.name === counter.name)
+  //     )
+  //   );
+
+  //   const filteredCountersToStrats = countersToStrats.filter((h: any) =>
+  //     counterHeroesForThreeStrats.includes(h.name)
+  //   );
+
+  //   if (countersToStrats.length > 0) {
+  //     return filteredCountersToStrats.length > 0
+  //       ? filteredCountersToStrats
+  //       : countersToStrats;
+  //   }
+  //   return [];
+  // };
+
+  const isThreeStratCompGood = () => {
+    const duelistCount = enemyLineup.filter(
+      (hero: any) => hero.role === "Duelist"
+    ).length;
+
+    const haveAntiThreeStratHero = enemyLineup.some(
+      (hero: any) =>
+        hero.name === "Captain America" ||
+        hero.name === "Venom" ||
+        hero.name === "Hulk" ||
+        hero.name === "Groot" ||
+        hero.name === "Hawkeye" ||
+        hero.name === "Psylocke" ||
+        hero.name === "Hela" ||
+        hero.name === "Moon Knight"
     );
 
-    const filteredCountersToStrats = countersToStrats.filter((h: any) =>
-      counterHeroesForThreeStrats.includes(h.name)
+    return duelistCount === 1 && !haveAntiThreeStratHero;
+  };
+
+  const isThreeDuelCompGood = () => {
+    const haveWolverine = enemyLineup.some(
+      (hero: any) => hero.name === "Wolverine"
     );
 
-    if (countersToStrats.length > 0) {
-      return filteredCountersToStrats.length > 0
-        ? filteredCountersToStrats
-        : countersToStrats;
-    }
-    return [];
+    return haveWolverine;
   };
 
   const constructFinalCounterComp = () => {
@@ -259,30 +261,98 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
     let team = [];
     if (enemyHasVanguard()) {
       team = [
-        // vanguardForVanguard,
-        // vanguardForStrat ?? vanguardForDuelist ?? secondFrequentVanguard,
         mostFrequentVanguard,
         secondFrequentVanguard,
         mostFrequentDuelist,
         secondFrequentDuelist,
         mainStrategist,
-        secondaryStrategist,
+        secondaryStrategist ??
+          getRandomStrategist(mainStrategist, secondaryStrategist),
       ];
     } else {
       team = [
-        // vanguardForDuelist,
-        // vanguardForStrat ?? secondFrequentVanguard,
         mostFrequentVanguard,
         secondFrequentVanguard,
         mostFrequentDuelist,
-        duelistForDuelist,
+        secondFrequentDuelist,
         mainStrategist,
-        secondaryStrategist,
+        secondaryStrategist ??
+          getRandomStrategist(mainStrategist, secondaryStrategist),
       ];
     }
+    setCounterHeroes(teamUpAssigner(team));
 
-    console.log("team: ", team);
-    setCounterHeroes(team);
+    if (isThreeStratCompGood()) {
+      const thirdStrategist = strategists.find(
+        (strat: any) =>
+          strat.name !== mainStrategist.name &&
+          strat.name !== secondaryStrategist.name
+      );
+
+      const threeStratTeam = [
+        mostFrequentVanguard,
+        secondFrequentVanguard,
+        mostFrequentDuelist,
+        mainStrategist,
+        secondaryStrategist ??
+          getRandomStrategist(mainStrategist, secondaryStrategist),
+        thirdStrategist ??
+          getRandomStrategist(mainStrategist, secondaryStrategist),
+      ];
+
+      setThreeStratComp(threeStratTeam);
+    }
+
+    if (isThreeDuelCompGood()) {
+    }
+  };
+
+  const getRandomStrategist = (
+    mainStrategist: any,
+    secondaryStrategist: any
+  ) => {
+    const availableStrategists = HERO_COUNTERS.filter(
+      (hero) =>
+        hero.role === "Strategist" &&
+        hero.name !== mainStrategist?.name &&
+        hero.name !== secondaryStrategist?.name
+    );
+
+    return availableStrategists.length > 0
+      ? availableStrategists[
+          Math.floor(Math.random() * availableStrategists.length)
+        ]
+      : null;
+  };
+
+  const teamUpAssigner = (heroes: any) => {
+    console.log("heroes: ", heroes);
+    const namorExists = heroes.some((hero: any) => hero.name === "Namor");
+    const lunaExists = heroes.some((hero: any) => hero.name === "Luna");
+
+    const punisherExists = heroes.some(
+      (hero: any) => hero.name === "Punisher" || hero.name === "The Punisher"
+    );
+    const buckyExists = heroes.some(
+      (hero: any) => hero.name === "Winter Soldier"
+    );
+    const rocketExists = heroes.some(
+      (hero: any) => hero.name === "Rocket Racoon"
+    );
+
+    if (namorExists && !lunaExists) {
+      heroes[heroes.length - 1] = HERO_COUNTERS.find(
+        (h: any) => h.name === "Luna Snow"
+      );
+    }
+
+    if (punisherExists && buckyExists && !rocketExists) {
+      heroes[heroes.length - 1] = HERO_COUNTERS.find(
+        (h: any) => h.name === "Rocket Racoon"
+      );
+    }
+
+    return heroes;
   };
 
   const enemyHasFlankers = () => {
@@ -293,24 +363,6 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
         hero.name === "Psylocke"
     );
     return flankersExist;
-  };
-
-  const enemyHasThreeStrategists = () => {
-    const strategistCount = enemyLineup.filter(
-      (hero: any) => hero.role === "Strategist"
-    ).length;
-
-    return strategistCount === 3;
-  };
-
-  const enemyHasNoDefensiveUlt = () => {
-    return !enemyLineup.some(
-      (hero: any) =>
-        hero.name === "Cloak & Dagger" ||
-        hero.name === "Luna Snow" ||
-        hero.name === "Mantis" ||
-        hero.name === "Invisible Woman"
-    );
   };
 
   const enemyHasVanguard = () => {
@@ -359,7 +411,7 @@ export default function DraftAssistant({ enemyLineup, setCounterHeroes }: any) {
   return (
     <>
       <button
-        className="bg-blue-500"
+        className="bg-transparent mt-5 text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
         onClick={() => constructFinalCounterComp()}
       >
         Generate
