@@ -6,6 +6,7 @@ export default function DraftAssistant({
   enemyLineup,
   setCounterHeroes,
   setThreeStratComp,
+  setThreeDuelTeam,
 }: any) {
   // REQUIREMENTS:
   // input 6 heroes
@@ -56,12 +57,10 @@ export default function DraftAssistant({
   const [secondFrequentDuelist, setSecondFrequentDuelist] = useState<any>({});
 
   useEffect(() => {
-    const vanguards = initCounters("Vanguard");
-    const duelists = initCounters("Duelist");
     const strategists = initStrategists();
 
     setStrategists(strategists);
-    handleCountersForDuelsAndVanguards();
+    initCountersForDuelsAndVanguards();
 
     // const filteredDuelists = handleFilterDuelists(duelists);
     // const bestDuelistsForEnemyStrats = ThreeStrategistComp(filteredDuelists);
@@ -137,7 +136,7 @@ export default function DraftAssistant({
     return duelists;
   };
 
-  const handleCountersForDuelsAndVanguards = () => {
+  const initCountersForDuelsAndVanguards = () => {
     const selectedDuelists: any = enemyLineup.filter(
       (hero: any) => hero.role === "Duelist"
     );
@@ -170,9 +169,6 @@ export default function DraftAssistant({
     const { mostFrequent: mainVanguard, secondFrequent: secondaryVanguard } =
       useFrequentHeroChecker(combinedVanguardCounters);
 
-    // setDuelistForDuelist(mainDuelistCounter);
-    // setDuelistForVanguard(mainVanguardCounter);
-
     const combinedDuelistAndVangCounters = [
       ...filteredDuelistsCounters,
       ...filteredVanguardCounters,
@@ -187,42 +183,6 @@ export default function DraftAssistant({
     setMostFrequentVanguard(mainVanguard);
     setSecondFrequentVanguard(secondaryVanguard);
   };
-
-  // @TASK:
-  // Check if enemy has flanker
-  // 1. Check if this lineup is good: Loki, Namor, Luna
-  // 2. Check if this lineup is good: Warlock, Starlord, Mantis
-  // const ThreeStrategistComp = (counterList: any) => {
-  //   const counterHeroesForThreeStrats = [
-  //     "Groot",
-  //     "Venom",
-  //     "Magneto",
-  //     "Scarlet Witch",
-  //     "Moon Knight",
-  //     "Hawkeye",
-  //     "Squirrel Girl",
-  //     "Namor",
-  //   ];
-
-  //   // check which duelist or vanguard available is best against 3 supports
-  //   const enemyStrats = enemyLineup.filter((e: any) => e.role === "Strategist");
-  //   const countersToStrats = enemyStrats.flatMap((strat: any) =>
-  //     strat.counterPicks.filter((counter: any) =>
-  //       counterList.some((hero: any) => hero.name === counter.name)
-  //     )
-  //   );
-
-  //   const filteredCountersToStrats = countersToStrats.filter((h: any) =>
-  //     counterHeroesForThreeStrats.includes(h.name)
-  //   );
-
-  //   if (countersToStrats.length > 0) {
-  //     return filteredCountersToStrats.length > 0
-  //       ? filteredCountersToStrats
-  //       : countersToStrats;
-  //   }
-  //   return [];
-  // };
 
   const isThreeStratCompGood = () => {
     const duelistCount = enemyLineup.filter(
@@ -249,7 +209,11 @@ export default function DraftAssistant({
       (hero: any) => hero.name === "Wolverine"
     );
 
-    return haveWolverine;
+    const strategists = enemyLineup.filter(
+      (hero: any) => hero.role === "Strategist"
+    );
+
+    return haveWolverine || strategists.length >= 3;
   };
 
   const constructFinalCounterComp = () => {
@@ -304,6 +268,68 @@ export default function DraftAssistant({
     }
 
     if (isThreeDuelCompGood()) {
+      const antiThreeStratDuelists = [
+        {
+          name: "Moon Knight",
+          role: "Duelist",
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+          description:
+            "Ancient Ankh can effectively pressure strategists from a safe distance, as they tend to stay close together, and it is difficult to destroy when placed near the enemy strategist's position.",
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+          name: "Psylocke",
+          role: "Duelist",
+          description: "",
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+          name: "Hawkeye",
+          role: "Duelist",
+          description: "",
+        },
+      ];
+
+      // Get duelists that are not the most frequent ones
+      const availableDuelists = antiThreeStratDuelists.filter(
+        (hero) =>
+          hero.name !== mostFrequentDuelist.name &&
+          hero.name !== secondFrequentDuelist.name
+      );
+
+      const selectedDuelists: any = enemyLineup.filter(
+        (hero: any) => hero.role === "Duelist"
+      );
+
+      const duelistCounterPicks = selectedDuelists.flatMap((hero: any) =>
+        hero.counterPicks.filter((cp: any) => cp.role === "Duelist")
+      );
+
+      // Find duelists that exist in both antiThreeStratDuelists and duelistCounterPicks
+      const counterPickDuelists = availableDuelists.filter((hero) =>
+        duelistCounterPicks.some((cp: any) => cp.name === hero.name)
+      );
+
+      // If there are counter picks, use them; otherwise, use the first available duelist
+      const additionalDuelist =
+        counterPickDuelists.length > 0
+          ? counterPickDuelists[0]
+          : availableDuelists.length > 0 && availableDuelists[0];
+
+      const threeDuelTeam = [
+        mostFrequentVanguard,
+        mostFrequentDuelist,
+        secondFrequentDuelist,
+        additionalDuelist, // Add one or more counter-pick duelists
+        mainStrategist,
+        secondaryStrategist ??
+          getRandomStrategist(mainStrategist, secondaryStrategist),
+      ];
+
+      setThreeDuelTeam(threeDuelTeam);
     }
   };
 
