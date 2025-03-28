@@ -19,11 +19,14 @@ interface ContextValue {
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [accessToken, setAccessToken] = useState("");
   const [isMember, setIsMember] = useState(false);
+  const [profileDetails, setProfileDetails] = useState(false);
   const [subscriptionId, setSubscriptionId] = useState("");
 
-  const value: ContextValue = {
+  const value: any = {
     accessToken,
     setAccessToken,
+    profileDetails,
+    setProfileDetails,
     isMember,
     setIsMember,
     subscriptionId,

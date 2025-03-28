@@ -3,11 +3,12 @@
 import DraftAssistant from "@/components/features/DraftAssistant";
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FaRegHandPointLeft } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import { VscChromeClose } from "react-icons/vsc";
 
+import { createGuestApi } from "@/api/Guest";
 import DuelistIcon from "@/assets/Duelist_Icon.webp";
 import StrategistIcon from "@/assets/Strategist_Icon.webp";
 import VanguardIcon from "@/assets/Vanguard_Icon.webp";
@@ -19,6 +20,37 @@ export default function TeamCompCountersPage() {
   const [threeStratComp, setThreeStratComp] = useState<any>([]);
   const [threeDuelTeam, setThreeDuelTeam] = useState<any>([]);
   const [searchHero, setSearchHero] = useState("");
+
+  const [limitCount, setLimitCount] = useState<number | null>(null); // Initialize as null
+
+  // Initialize limit count from localStorage
+  useEffect(() => {
+    const storedCount = localStorage.getItem("draftLimitCount");
+    const initialCount = storedCount ? parseInt(storedCount) : 3;
+    setLimitCount(initialCount);
+  }, []);
+
+  // Update localStorage when limitCount changes
+  useEffect(() => {
+    if (limitCount !== null) {
+      localStorage.setItem("draftLimitCount", limitCount.toString());
+    }
+  }, [limitCount]);
+
+  const handleGuestVisitPage = async () => {
+    try {
+      await createGuestApi(
+        localStorage.getItem("guestId"),
+        "GUEST_VISITS_GENERATE_TEAM_COUNTER_PAGE"
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    handleGuestVisitPage();
+  }, []);
 
   // Filter heroes based on search term
   const filteredHeroes = useMemo(() => {
@@ -216,29 +248,36 @@ export default function TeamCompCountersPage() {
                   <p className="text-neutral-300">Select 6 heroes to proceed</p>
                 </div>
               )}
-              <div className="flex items-center gap-3">
-                {selectedHeroes.length >= 6 && (
+              <div className="mt-5">
+                {limitCount !== null && limitCount <= 0 && (
+                  <p className="text-neutral-300 text-sm mb-2">
+                    You've used all free attempts
+                  </p>
+                )}
+                <div className="flex items-center gap-3">
                   <DraftAssistant
                     enemyLineup={selectedHeroes}
                     setCounterHeroes={setCounterHeroes}
                     setThreeStratComp={setThreeStratComp}
                     setThreeDuelTeam={setThreeDuelTeam}
+                    limitCount={limitCount}
+                    setLimitCount={setLimitCount}
                   />
-                )}
-                {selectedHeroes.length > 0 && (
-                  <button
-                    className="border-neutral-700 border mt-5 min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 text-white font-semibold py-2 px-0 rounded"
-                    onClick={() => {
-                      setSelectedHeroes([]);
-                      setCounterHeroes([]);
-                      setThreeStratComp([]);
-                      setThreeDuelTeam([]);
-                    }}
-                  >
-                    <IoIosClose className="text-neutral-300 text-2xl mr-1" />
-                    Clear
-                  </button>
-                )}
+                  {selectedHeroes.length > 0 && (
+                    <button
+                      className="border-neutral-700 border min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 text-white font-semibold py-2 px-0 rounded"
+                      onClick={() => {
+                        setSelectedHeroes([]);
+                        setCounterHeroes([]);
+                        setThreeStratComp([]);
+                        setThreeDuelTeam([]);
+                      }}
+                    >
+                      <IoIosClose className="text-neutral-300 text-2xl mr-1" />
+                      Clear
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 

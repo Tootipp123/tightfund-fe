@@ -1,5 +1,7 @@
 "use client";
+import { createGuestApi } from "@/api/Guest";
 import { HERO_COUNTERS } from "@/utils/static";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import AnimatedLoadingIcon from "../ui/AnimatedLoadingIcon";
 
@@ -8,7 +10,10 @@ export default function DraftAssistant({
   setCounterHeroes,
   setThreeStratComp,
   setThreeDuelTeam,
+  limitCount,
+  setLimitCount,
 }: any) {
+  const router = useRouter();
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -57,6 +62,17 @@ export default function DraftAssistant({
 
   const [mostFrequentDuelist, setMostFrequentDuelist] = useState<any>({});
   const [secondFrequentDuelist, setSecondFrequentDuelist] = useState<any>({});
+
+  const handleGenerate = () => {
+    if (limitCount === null || limitCount <= 0) return;
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      constructFinalCounterComp();
+      setLimitCount((prev: any) => (prev !== null ? prev - 1 : 0));
+    }, 500);
+  };
 
   useEffect(() => {
     const strategists = initStrategists();
@@ -438,18 +454,38 @@ export default function DraftAssistant({
 
   return (
     <>
-      <button
-        className="bg-transparent mt-5 min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
-        onClick={() => {
-          setLoading(true);
-          setTimeout(() => {
-            setLoading(false);
-            constructFinalCounterComp();
-          }, 500);
-        }}
-      >
-        {loading ? <AnimatedLoadingIcon size="medium" /> : <>Generate</>}
-      </button>
+      {limitCount !== null && limitCount <= 0 ? (
+        <div>
+          <button
+            onClick={async () => {
+              try {
+                await createGuestApi(
+                  localStorage.getItem("guestId"),
+                  "CLICK_UNLOCK_UNLIMITED"
+                );
+              } catch (err) {
+                console.log(err);
+              }
+              router.push("/membership");
+            }}
+            className="bg-transparent min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold py-2 px-4 rounded"
+          >
+            Unlock Unlimited
+          </button>
+        </div>
+      ) : (
+        <button
+          className="bg-transparent disabled:opacity-[0.5] disabled:cursor-not-allowed min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
+          disabled={enemyLineup.length < 6 || limitCount === null}
+          onClick={handleGenerate}
+        >
+          {loading ? (
+            <AnimatedLoadingIcon size="medium" />
+          ) : (
+            <>Generate {limitCount !== null && `(${limitCount} free left)`}</>
+          )}
+        </button>
+      )}
     </>
   );
 }

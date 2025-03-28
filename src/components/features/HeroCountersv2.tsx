@@ -171,7 +171,7 @@ export default function HeroCountersv2() {
             <div className="flex flex-col items-center gap-10">
               <div>
                 <p className="text-neutral-200 mb-1 font-medium">
-                  Your enemy team:
+                  Your opponents' lineup:
                 </p>
                 <div className="flex items-center gap-2">
                   {sampleOne.map((item: any, idx: number) => (

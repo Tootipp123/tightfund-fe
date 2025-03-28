@@ -1,5 +1,6 @@
 "use client";
 
+import { createGuestApi } from "@/api/Guest";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -39,9 +40,19 @@ export default function Membership() {
             <h2 className="font-semibold text-xl text-center text-neutral-50">
               Peak Rivals Membership
             </h2>
-            <p className="text-neutral-400 text-center">$3/month or $29/year</p>
+            <p className="text-neutral-400 text-center">$6/month</p>
             <button
-              onClick={() => router.push("/payment")}
+              onClick={async () => {
+                try {
+                  await createGuestApi(
+                    localStorage.getItem("guestId"),
+                    "CLICK_MEMBERSHIP_UPGRADE_BTN"
+                  );
+                } catch (err) {
+                  console.log(err);
+                }
+                router.push("/payment");
+              }}
               className="mt-3 bg-emerald-500 rounded-md w-full py-3 text-white font-medium"
             >
               Upgrade
@@ -51,19 +62,13 @@ export default function Membership() {
                 <li className="flex items-center gap-3">
                   <FaCheck className="text-emerald-500 text-lg" />
                   <p className="text-neutral-50">
+                    Unlimited team counters generation
+                  </p>
+                </li>
+                <li className="flex items-center gap-3">
+                  <FaCheck className="text-emerald-500 text-lg" />
+                  <p className="text-neutral-50">
                     Advanced counter pick details
-                  </p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <FaCheck className="text-emerald-500 text-lg" />
-                  <p className="text-neutral-50">
-                    Access to map-specific heroes
-                  </p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <FaCheck className="text-emerald-500 text-lg" />
-                  <p className="text-neutral-50">
-                    Access to good counter against
                   </p>
                 </li>
                 <li className="flex items-center gap-3">
