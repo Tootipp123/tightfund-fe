@@ -64,9 +64,6 @@ export default function Navbar() {
               } hidden md:flex text-xs md:text-sm relative items-center gap-1`}
             >
               <span>Team Up Counters</span>
-              <div className="bg-yellow-600 text-xs text-white px-1 w-fit rounded-sm">
-                New
-              </div>
             </Link>
             <Link
               href="/team-compositions"
@@ -79,14 +76,17 @@ export default function Navbar() {
               Team Compositions
             </Link>
             <Link
-              href="/team-composition-counters"
+              href="/generate-team-counters"
               className={`${
-                currentPath === "/map-specific-heroes"
+                currentPath === "/generate-team-counters"
                   ? "text-white font-bold"
                   : "text-neutral-200"
-              } hidden md:block text-xs md:text-sm`}
+              } hidden text-xs md:text-sm md:flex items-center gap-2`}
             >
-              Team Comp Counters
+              <p>Generate Team Counters</p>
+              <div className="bg-yellow-600 text-xs text-white px-1 w-fit rounded-sm">
+                Hot
+              </div>
             </Link>
           </div>
           <div className="flex items-center gap-3">

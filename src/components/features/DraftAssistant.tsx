@@ -1,6 +1,7 @@
 "use client";
 import { HERO_COUNTERS } from "@/utils/static";
 import { useEffect, useState } from "react";
+import AnimatedLoadingIcon from "../ui/AnimatedLoadingIcon";
 
 export default function DraftAssistant({
   enemyLineup,
@@ -48,6 +49,7 @@ export default function DraftAssistant({
   // META TEAMCOMP ASSESSMENT (LAST PART OF THE LOGIC):
   // 1. assess if enemy team has 3 healers and counter it.
   const [strategists, setStrategists] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
 
   // Vanguard
   const [mostFrequentVanguard, setMostFrequentVanguard] = useState<any>({});
@@ -437,10 +439,16 @@ export default function DraftAssistant({
   return (
     <>
       <button
-        className="bg-transparent mt-5 text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
-        onClick={() => constructFinalCounterComp()}
+        className="bg-transparent mt-5 min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
+        onClick={() => {
+          setLoading(true);
+          setTimeout(() => {
+            setLoading(false);
+            constructFinalCounterComp();
+          }, 500);
+        }}
       >
-        Generate
+        {loading ? <AnimatedLoadingIcon size="medium" /> : <>Generate</>}
       </button>
     </>
   );

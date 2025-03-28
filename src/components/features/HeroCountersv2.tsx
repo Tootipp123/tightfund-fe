@@ -2,6 +2,7 @@
 
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import AutoComplete from "../ui/AutoComplete";
 import CounterModal from "./CounterModal";
@@ -10,6 +11,7 @@ export default function HeroCountersv2() {
   const [searchVal, setSearchVal] = useState("");
   const [searchResults, setSearchResults] = useState(HERO_COUNTERS);
   const [selectedHero, setSelectedHero] = useState<any>(null);
+  const router = useRouter();
   const [selectedHeroCategory, setSelectedHeroCategory] =
     useState<string>("All Heroes");
   const [tierFilter, setTierFilter] = useState<any>({
@@ -131,8 +133,78 @@ export default function HeroCountersv2() {
     // }
   };
 
+  const sampleOne = [
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740187180/rivals%20v2/The_Thing_Icon_ydoqtg.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+  ];
+
+  const sampleTwo = [
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+  ];
+
   return (
     <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px]">
+      <div className="rounded-xl border border-neutral-700 bg-[#2E2E42] p-5 mt-5">
+        <div className="flex items-center justify-between px-[100px]">
+          <section className="w-[40%]">
+            <p className="text-xl text-neutral-200 mb-3 mt-5 font-semibold">
+              Want to destroy your enemies' lineup? Discover the perfect hero
+              counters!
+            </p>
+            <button
+              className="bg-transparent min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
+              onClick={() => router.push("/generate-team-counters")}
+            >
+              Go to this page
+            </button>
+          </section>
+          <section>
+            <div className="flex flex-col items-center gap-10">
+              <div>
+                <p className="text-neutral-200 mb-1 font-medium">
+                  Your enemy team:
+                </p>
+                <div className="flex items-center gap-2">
+                  {sampleOne.map((item: any, idx: number) => (
+                    <Image
+                      src={item}
+                      key={idx}
+                      width={50}
+                      height={50}
+                      alt="Test"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-green-300 mb-1 font-medium">
+                  Suggested team to counter them:
+                </p>
+                <div className="flex items-center gap-2">
+                  {sampleTwo.map((item: any, idx: number) => (
+                    <Image
+                      src={item}
+                      key={idx}
+                      width={50}
+                      height={50}
+                      alt="Test"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
       <header className="pt-[40px] md:pt-[100px] relative">
         <h1 className="text-2xl md:text-3xl text-neutral-100 relative px-[0px] md:px-[300px] font-black text-center">
           Select a Hero To Counter

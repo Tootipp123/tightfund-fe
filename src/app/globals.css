@@ -9,7 +9,7 @@ select:focus {
 }
 
 body {
-  background-color: #1B1B29;
+  background-color: #1b1b29;
 }
 
 .gradient-border {
@@ -23,18 +23,18 @@ body {
 }
 
 .button-para {
-  background:#f7db4a;
+  background: #f7db4a;
   /* box-shadow: 10px 10px 0 rgba(0,0,0,.5); */
   /* display:inline-block; */
-  padding:.1em 1em;
-  text-decoration:none;
+  padding: 0.1em 1em;
+  text-decoration: none;
 }
 
 /* .button-para:hover {
   box-shadow: 0 0 0 ;
 } */
 
-.parallelogram{
+.parallelogram {
   transform: skew(-5deg);
 }
 /* 
@@ -57,6 +57,6 @@ body {
 } */
 
 .black-fade {
-  background: rgba(27,27,41,0.98);
-  box-shadow: 0 0 15px 40px rgba(27,27,41,0.98);
+  background: rgba(27, 27, 41, 0.98);
+  box-shadow: 0 0 15px 40px rgba(27, 27, 41, 0.98);
 }

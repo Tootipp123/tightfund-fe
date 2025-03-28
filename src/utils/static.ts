@@ -1498,6 +1498,15 @@ export const HERO_COUNTERS = [
     counterPicks: [
       {
         image:
+          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        name: "Moon Knight",
+        score: 9.3,
+        role: "Duelist",
+        description:
+          "Moon Knight can easily destory Peni's spider nests and mines with Ancient Ankh.",
+      },
+      {
+        image:
           "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
         name: "Iron Man",
         role: "Duelist",
