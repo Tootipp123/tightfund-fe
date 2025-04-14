@@ -1,6 +1,5 @@
 "use client";
 
-import { createGuestApi } from "@/api/Guest";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -41,22 +40,20 @@ export default function Membership() {
               Peak Rivals Membership
             </h2>
             <p className="text-neutral-400 text-center">$6/month</p>
-            <button
-              onClick={async () => {
-                try {
-                  await createGuestApi(
-                    localStorage.getItem("guestId"),
-                    "CLICK_MEMBERSHIP_UPGRADE_BTN"
-                  );
-                } catch (err) {
-                  console.log(err);
-                }
-                router.push("/payment");
+            <a
+              className="gumroad-button"
+              href={`https://9273069619178.gumroad.com/l/peakrivals?user_id=${
+                window?.localStorage?.getItem("userId") || "testId"
+              }`}
+              style={{
+                width: "100%",
+                marginTop: 10,
               }}
-              className="mt-3 bg-emerald-500 rounded-md w-full py-3 text-white font-medium"
+              data-success-callback="handleGumroadPayment"
+              data-gumroad-overlay-checkout="true"
             >
-              Upgrade
-            </button>
+              <button>Pay on</button>
+            </a>
             <div className="border-t border-neutral-600 mt-5 pt-4">
               <ul className="flex flex-col gap-4">
                 <li className="flex items-center gap-3">

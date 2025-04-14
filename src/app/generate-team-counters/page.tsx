@@ -13,8 +13,10 @@ import DuelistIcon from "@/assets/Duelist_Icon.webp";
 import StrategistIcon from "@/assets/Strategist_Icon.webp";
 import VanguardIcon from "@/assets/Vanguard_Icon.webp";
 import Navbar from "@/components/features/Navbar";
+import { useUserStore } from "@/store/User";
 
 export default function TeamCompCountersPage() {
+  const { isMember } = useUserStore();
   const [selectedHeroes, setSelectedHeroes] = useState<any>([]);
   const [counterHeroes, setCounterHeroes] = useState<any>([]);
   const [threeStratComp, setThreeStratComp] = useState<any>([]);
@@ -249,7 +251,7 @@ export default function TeamCompCountersPage() {
                 </div>
               )}
               <div className="mt-5">
-                {limitCount !== null && limitCount <= 0 && (
+                {!isMember && limitCount !== null && limitCount <= 0 && (
                   <p className="text-neutral-300 text-sm mb-2">
                     You've used all free attempts
                   </p>

@@ -37,10 +37,11 @@ export default function VerifyUser() {
   useEffect(() => {
     if (profile) {
       setProfileDetails(profile);
-      setIsMember(profile.subscriptionId);
+      setIsMember(profile.isMember);
       setSubscriptionId(profile.subscriptionId);
       localStorage.setItem("subscriptionId", profile.subscriptionId);
       localStorage.setItem("profileId", profile._id);
+      console.log("profile: ", profile);
       localStorage.setItem("userId", profile.userId);
     }
   }, [profile]);

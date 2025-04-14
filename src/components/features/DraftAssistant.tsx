@@ -1,5 +1,6 @@
 "use client";
 import { createGuestApi } from "@/api/Guest";
+import { useUserStore } from "@/store/User";
 import { HERO_COUNTERS } from "@/utils/static";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -13,7 +14,10 @@ export default function DraftAssistant({
   limitCount,
   setLimitCount,
 }: any) {
+  const { isMember } = useUserStore();
   const router = useRouter();
+
+  console.log("isMember: ", isMember);
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -64,7 +68,7 @@ export default function DraftAssistant({
   const [secondFrequentDuelist, setSecondFrequentDuelist] = useState<any>({});
 
   const handleGenerate = () => {
-    if (limitCount === null || limitCount <= 0) return;
+    if (limitCount === null || (limitCount <= 0 && !isMember)) return;
 
     setLoading(true);
     setTimeout(() => {
@@ -451,6 +455,18 @@ export default function DraftAssistant({
       secondFrequent,
     };
   };
+
+  if (isMember) {
+    return (
+      <button
+        className="bg-transparent disabled:opacity-[0.5] disabled:cursor-not-allowed min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded"
+        disabled={enemyLineup.length < 6}
+        onClick={handleGenerate}
+      >
+        {loading ? <AnimatedLoadingIcon size="medium" /> : <>Generate</>}
+      </button>
+    );
+  }
 
   return (
     <>

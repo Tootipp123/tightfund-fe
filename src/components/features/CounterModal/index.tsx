@@ -1,13 +1,7 @@
 "use client";
 
-import useMiddleware from "@/hooks/useMiddleware";
-import { useUserStore } from "@/store/User";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import BecomeMember from "./BecomeMember";
-import SameHeroCounter from "./SameHeroCounter";
-
 interface Props {
   hero: any;
   onClose: () => void;
@@ -19,11 +13,8 @@ export default function CounterModal({
   onClose,
   persist = false,
 }: Props) {
-  const router = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
-  const { accessToken } = useMiddleware();
-  const { isMember } = useUserStore();
 
   useEffect(() => {
     // Disable scrolling
@@ -48,6 +39,16 @@ export default function CounterModal({
     };
   }, [showMenu]);
 
+  const roleBackground = (role: string) => {
+    if (role === "Duelist") {
+      return "bg-blue-950 text-blue-300";
+    } else if (role === "Strategist") {
+      return "bg-green-950 text-green-300";
+    } else if (role === "Vanguard") {
+      return "bg-yellow-950 text-yellow-300";
+    }
+  };
+
   const SituationalCounters = () => {
     return (
       <div className="mt-5 py-5 border-t border-[#383852]">
@@ -65,16 +66,20 @@ export default function CounterModal({
                 <Image
                   src={counter.image}
                   alt={counter.name}
-                  unoptimized
                   width={45}
                   height={45}
                   className="rounded-md"
                 />
               </div>
               <div className="w-full">
-                <h2 className="text-neutral-100 flex-1 capitalize font-semibold text-lg">
-                  {counter.name}
-                </h2>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-neutral-100 capitalize font-semibold text-lg">
+                    {counter.name}
+                  </h2>
+                  <div className={`${roleBackground(counter.role)} px-2`}>
+                    {counter.role}
+                  </div>
+                </div>
                 <ul className="list-disc text-[#A0A0AF] ml-4">
                   {counter.descriptions.map((desc: any, descIdx: any) => (
                     <li key={descIdx} className="pb-2">
@@ -90,50 +95,6 @@ export default function CounterModal({
     );
   };
 
-  const Sidebar = () => {
-    return (
-      <div className="border-r border-neutral-700 w-[600px]">
-        <div className="flex p-7 items-center border-b border-neutral-700 gap-4 pb-5">
-          <Image
-            src={hero?.image}
-            alt={hero?.name}
-            unoptimized
-            width={70}
-            height={70}
-            className="rounded-md"
-          />
-          <div className="w-full">
-            <div>
-              <h2 className="capitalize text-white font-bold text-lg m-0 p-0">
-                {hero.name}
-              </h2>
-              <p className="text-sm text-neutral-300">{hero.role}</p>
-            </div>
-          </div>
-        </div>
-        <div className="items p-2 my-2">
-          <ul>
-            <li className="text-neutral-50 font-semibold py-2 px-3 cursor-pointer bg-[#2b2b38] rounded-md">
-              Natural counters
-            </li>
-            <li className="text-neutral-400 py-2 cursor-pointer px-3">
-              Situational counters
-            </li>
-            <li className="text-neutral-400 py-2 cursor-pointer px-3">
-              Best maps
-            </li>
-            <li className="text-neutral-400 py-2 cursor-pointer px-3">
-              Best game modes
-            </li>
-            <li className="text-neutral-400 py-2 cursor-pointer px-3">
-              Counter with same hero
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <>
       <div
@@ -143,145 +104,157 @@ export default function CounterModal({
       <div
         className={`w-[85%] md:w-[900px] h-full z-[700] overflow-auto bg-[#1B1B29] rounded-md shadow-lg fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
       >
-        <div className="flex">
-          <Sidebar />
-          <div className="p-7 border-t border-[#383852]">
-            <h2 className="text-neutral-100 capitalize font-bold text-lg">
-              Natural Counters:
-            </h2>
-            <p className="text-[#A0A0AF]">
-              Heroes that counters {hero?.name}'s fundamental kit.
-            </p>
-            <div className="mt-4">
-              {hero.counterPicks.map((counter: any, counterKey: any) => (
-                <div key={counterKey} className="flex gap-4 mt-3">
-                  <div className="w-[45px] h-[45px] relative overflow-hidden">
-                    <Image
-                      src={counter.image}
-                      alt={counter.name}
-                      unoptimized
-                      width={45}
-                      height={45}
-                      className="rounded-md"
-                    />
-                  </div>
-                  <div className="w-full">
-                    <h2 className="text-neutral-100 flex-1 capitalize font-semibold text-lg">
+        <div className="flex bg-[#0c0c12] p-7 items-center gap-4 pb-5 w-full">
+          <Image
+            src={hero?.image}
+            alt={hero?.name}
+            width={70}
+            height={70}
+            className="rounded-md"
+          />
+          <div className="flex justify-between items-center w-full">
+            <div>
+              <h2 className="capitalize font-bold text-white text-lg m-0 p-0">
+                {hero.name}
+              </h2>
+              <div
+                className={`${roleBackground(
+                  hero.role
+                )} px-2 w-fit text-neutral-400`}
+              >
+                {hero.role}
+              </div>
+            </div>
+            {hero?.meta ? (
+              <p className="font-semibold mr-2 bg-gradient-to-r from-blue-300 to-indigo-300 inline-block text-transparent bg-clip-text">
+                In meta
+              </p>
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>
+        <div className="p-7 border-t border-[#383852]">
+          <h2 className="text-neutral-100 capitalize font-bold text-lg">
+            Natural Counters:
+          </h2>
+          <p className="text-[#A0A0AF]">
+            Heroes that counters {hero?.name}'s fundamental kit.
+          </p>
+          <div className="mt-4">
+            {hero.counterPicks.map((counter: any, counterKey: any) => (
+              <div key={counterKey} className="flex gap-4 mt-3">
+                <div className="w-[45px] h-[45px] relative overflow-hidden">
+                  <Image
+                    src={counter.image}
+                    alt={counter.name}
+                    width={45}
+                    height={45}
+                    className="rounded-md"
+                  />
+                </div>
+                <div className="w-full">
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-neutral-100 capitalize font-semibold text-lg">
                       {counter.name}
                     </h2>
-                    <p className="text-[#A0A0AF]">{counter.description}</p>
+                    <div className={`${roleBackground(counter.role)} px-2`}>
+                      {counter.role}
+                    </div>
+                  </div>
+                  <p className="text-[#A0A0AF]">{counter.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          {hero?.situationalCounters && <SituationalCounters />}
+          {hero?.howToCounter && (
+            <div className="mt-6 border-t py-5 border-[#383852]">
+              <div>
+                <h4 className="text-neutral-50 font-bold text-lg">
+                  How To Counter
+                </h4>
+                <p className="text-neutral-200">
+                  This is the preferred position to counter Iron Fist in the
+                  back line.
+                </p>
+                <div className="flex gap-5 items-center">
+                  <Image
+                    src={hero?.howToCounter?.image}
+                    alt="How to counter"
+                    width={600}
+                    height={300}
+                    className="mt-5"
+                  />
+                  <div>
+                    <h4 className="text-neutral-50 font-bold text-lg">
+                      Scenarios:
+                    </h4>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: hero?.howToCounter?.description,
+                      }}
+                    ></div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-            {hero?.situationalCounters && <SituationalCounters />}
-            {hero?.howToCounter && (
-              <div className="mt-6 border-t py-5 border-[#383852]">
+          )}
+          <div className="mt-5 py-5 border-t border-[#383852]">
+            <div>
+              {hero.goodAgainst.length ? (
                 <div>
-                  <h4 className="text-neutral-50 font-bold text-lg">
-                    How To Counter
-                  </h4>
-                  <p className="text-neutral-200">
-                    This is the preferred position to counter Iron Fist in the
-                    back line.
-                  </p>
-                  <div className="flex gap-5 items-center">
-                    <Image
-                      src={hero?.howToCounter?.image}
-                      alt="How to counter"
-                      width={600}
-                      unoptimized
-                      height={300}
-                      className="mt-5"
-                    />
-                    <div>
-                      <h4 className="text-neutral-50 font-bold text-lg">
-                        Scenarios:
-                      </h4>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: hero?.howToCounter?.description,
-                        }}
-                      ></div>
-                    </div>
+                  <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">
+                    Good Against:
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-7">
+                    {hero.goodAgainst.map((counter: any, counterKey: any) => (
+                      <div key={counterKey} className="flex items-center gap-3">
+                        <Image
+                          src={counter.image}
+                          alt={counter.name}
+                          width={45}
+                          height={45}
+                          className="rounded-md"
+                        />
+                        <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
+                          {counter.name}
+                        </h2>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
-            )}
-            <div className="mt-5 py-5 border-t border-[#383852]">
-              <div>
-                {hero.goodAgainst.length ? (
-                  <div>
-                    <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">
-                      Good Counter Against:
-                    </h2>
-                    <div className="relative w-full">
-                      {hero.goodAgainst
-                        .slice(0, 2)
-                        .map((counter: any, counterKey: any) => (
-                          <div key={counterKey} className="flex gap-4 mt-3">
-                            <div className="w-[45px] h-[45px] relative overflow-hidden">
-                              <Image
-                                src={counter.image}
-                                alt={counter.name}
-                                unoptimized
-                                width={45}
-                                height={45}
-                                className="rounded-md"
-                              />
-                            </div>
-                            <div className="pt-1">
-                              <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
-                                {counter.name}
-                              </h2>
-                              <p className="text-[#A0A0AF]">
-                                {counter.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      {!isMember && <BecomeMember />}
-                    </div>
-                  </div>
-                ) : (
-                  <></>
-                )}
-              </div>
-              <div>
-                {hero.goodPairWith?.length ? (
-                  <div>
-                    <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">
-                      Good Pair With:
-                    </h2>
-                    <div className="flex flex-wrap items-center gap-7">
-                      {hero.goodPairWith.map(
-                        (counter: any, counterKey: any) => (
-                          <div
-                            key={counterKey}
-                            className="flex items-center gap-3"
-                          >
-                            <Image
-                              src={counter.image}
-                              unoptimized
-                              alt={counter.name}
-                              width={45}
-                              height={45}
-                              className="rounded-md"
-                            />
-                            <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
-                              {counter.name}
-                            </h2>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                ) : (
-                  <></>
-                )}
-              </div>
+              ) : (
+                <></>
+              )}
             </div>
-            <SameHeroCounter hero={hero} />
+            <div>
+              {hero.goodPairWith?.length ? (
+                <div>
+                  <h2 className="text-neutral-100 capitalize font-bold text-lg mb-2">
+                    Good Pair With:
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-7">
+                    {hero.goodPairWith.map((counter: any, counterKey: any) => (
+                      <div key={counterKey} className="flex items-center gap-3">
+                        <Image
+                          src={counter.image}
+                          alt={counter.name}
+                          width={45}
+                          height={45}
+                          className="rounded-md"
+                        />
+                        <h2 className="text-neutral-100 capitalize font-semibold text-md m-0 p-0">
+                          {counter.name}
+                        </h2>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </div>
       </div>

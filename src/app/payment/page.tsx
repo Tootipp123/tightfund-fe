@@ -1,6 +1,5 @@
 "use client";
 
-import Paypal from "@/components/features/Paypal";
 import Button from "@/components/ui/Button";
 import { useRouter } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5";
@@ -30,9 +29,7 @@ export default function Payment() {
             <p className="text-neutral-100 font-semibold">Total</p>
             <p className="text-neutral-100 font-semibold">$3.99</p>
           </div>
-          <div className="mt-5">
-            <Paypal />
-          </div>
+          <div className="mt-5">{/* <Paypal /> */}</div>
           <p className="text-sm text-neutral-200 mt-10">
             By starting a Peak Rivals membership, you agree to our Membership
             Terms of Service. Your payment method will be charged a recurring
