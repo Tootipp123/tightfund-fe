@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/ui/Button";
+import { useUserStore } from "@/store/User";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaCheck } from "react-icons/fa6";
@@ -9,6 +10,7 @@ import GalactaImg from "../../assets/img_icon_will-of-galacta.webp";
 
 export default function Membership() {
   const router = useRouter();
+  const { userId }: any = useUserStore();
 
   return (
     <>
@@ -42,9 +44,7 @@ export default function Membership() {
             <p className="text-neutral-400 text-center">$6/month</p>
             <a
               className="gumroad-button"
-              href={`https://9273069619178.gumroad.com/l/peakrivals?user_id=${
-                window?.localStorage?.getItem("userId") || "testId"
-              }`}
+              href={`https://9273069619178.gumroad.com/l/peakrivals?user_id=${userId}`}
               style={{
                 width: "100%",
                 marginTop: 10,
