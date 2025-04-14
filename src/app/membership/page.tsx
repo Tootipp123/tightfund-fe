@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import { useUserStore } from "@/store/User";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import { IoArrowBack } from "react-icons/io5";
 import GalactaImg from "../../assets/img_icon_will-of-galacta.webp";
@@ -11,6 +12,13 @@ import GalactaImg from "../../assets/img_icon_will-of-galacta.webp";
 export default function Membership() {
   const router = useRouter();
   const { userId }: any = useUserStore();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // const token = localStorage.getItem("accessToken");
+    console.log("userId: ", userId);
+    setIsLoggedIn(!!userId);
+  }, [userId]);
 
   return (
     <>
@@ -48,12 +56,26 @@ export default function Membership() {
               style={{
                 width: "100%",
                 marginTop: 10,
+                display: isLoggedIn ? "flex" : "none",
               }}
               data-success-callback="handleGumroadPayment"
               data-gumroad-overlay-checkout="true"
             >
               <button>Pay on</button>
             </a>
+            {!isLoggedIn && (
+              <a
+                href={`${
+                  !isLoggedIn
+                    ? "/signin?from=membership"
+                    : `https://9273069619178.gumroad.com/l/peakrivals?user_id=${userId}`
+                }`}
+              >
+                <button className="w-full bg-white rounded-md py-3 mt-5 font-semibold">
+                  Continue
+                </button>
+              </a>
+            )}
             <div className="border-t border-neutral-600 mt-5 pt-4">
               <ul className="flex flex-col gap-4">
                 <li className="flex items-center gap-3">

@@ -1,66 +1,18 @@
 "use client";
 
-import { signupUser } from "@/api/User";
-import GoogleSignin from "@/components/features/GoogleSignin";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { FaDiscord } from "react-icons/fa";
 import { MdKeyboardBackspace } from "react-icons/md";
-import { useMutation } from "react-query";
 import Modal from "../../../components/ui/Modal";
 
 export default function SignupPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  const searchParams = useSearchParams();
+  const fromMembershipPage = searchParams.get("from") === "membership";
 
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [signupError, setSignupError] = useState("");
   const [showTermsAndConditionsModal, setShowTermsAndConditionsModal] =
     useState(false);
-
-  const signupMutation = useMutation(signupUser, {
-    onSuccess: async (res: any) => {
-      localStorage.setItem("accessToken", res.accessToken);
-      localStorage.setItem("userId", res.userId);
-      localStorage.setItem("username", res.username ?? "");
-      localStorage.setItem("email", res.email);
-      localStorage.setItem("thumbnailImage", res.profileImage.thumbnailImage);
-      router.push("/profile/complete");
-    },
-    onError: (err) => {
-      console.log(err);
-    },
-  });
-
-  const createAccount = () => {
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      setSignupError("Please enter a valid email address");
-      return;
-    }
-
-    // Check other required fields
-    if (!password || !confirmPassword) {
-      setSignupError("All fields are required");
-      return;
-    }
-
-    // Check if passwords match
-    if (password !== confirmPassword) {
-      setSignupError("Password and confirm password did not match");
-      return;
-    }
-
-    // Call the signup mutation
-    signupMutation.mutateAsync({
-      email,
-      username,
-      password,
-    });
-  };
 
   return (
     <>
@@ -84,7 +36,7 @@ export default function SignupPage() {
                 Sign in to Peak Rivals
               </h3>
               <div className="my-5">
-                <GoogleSignin />
+                {/* <GoogleSignin /> */}
                 <button
                   onClick={async () => {
                     window.location.href = process.env
@@ -114,7 +66,7 @@ export default function SignupPage() {
 
       {showTermsAndConditionsModal && (
         <Modal onClose={() => setShowTermsAndConditionsModal(false)}>
-          <div className="w-[90%] h-[550px] md:w-[500px] md:h-[700px] border border-neutral-800 bg-neutral-950 bg-white p-7 overflow-auto m-auto">
+          <div className="w-[90%] h-[550px] md:w-[500px] md:h-[700px] border border-neutral-800 bg-dark-bg p-7 overflow-auto m-auto">
             <h1 className="text-neutral-200 text-xl font-bold">
               PRIVACY POLICY
             </h1>

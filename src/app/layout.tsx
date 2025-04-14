@@ -1,3 +1,5 @@
+import CookieConsentPopup from "@/components/features/CookieConsentPopup";
+import LoadGumroad from "@/components/features/LoadGumroad";
 import Providers from "@/components/features/Providers";
 import VerifyUser from "@/components/features/VerifyUser";
 import AppContextProvider from "@/store";
@@ -47,6 +49,8 @@ export default function RootLayout({
           <Providers>
             <AppContextProvider>
               <VerifyUser />
+              <LoadGumroad />
+              <CookieConsentPopup />
               {children}
             </AppContextProvider>
           </Providers>

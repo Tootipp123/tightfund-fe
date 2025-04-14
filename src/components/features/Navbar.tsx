@@ -16,7 +16,7 @@ export default function Navbar() {
   const currentPath = usePathname();
   const { accessToken } = useMiddleware();
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const { isMember } = useUserStore();
+  const { isMember, subscriptionId } = useUserStore();
   const [showCancelMembership, setShowCancelMembership] = useState(false);
 
   const signOut = async () => {
@@ -116,12 +116,14 @@ export default function Navbar() {
                   >
                     <ul className="text-sm text-neutral-100">
                       {isMember ? (
-                        <li
-                          onClick={() => setShowCancelMembership(true)}
-                          className="py-1 px-4 cursor-pointer"
+                        <a
+                          href={`https://gumroad.com/subscriptions/${subscriptionId}/manage`}
+                          target="_blank"
                         >
-                          Cancel membership
-                        </li>
+                          <li className="py-1 px-4 cursor-pointer">
+                            Cancel membership
+                          </li>
+                        </a>
                       ) : (
                         <li
                           onClick={() => router.push("/membership")}

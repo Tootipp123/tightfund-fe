@@ -11,9 +11,11 @@ interface ContextValue {
   accessToken: string;
   setAccessToken: any;
   isMember: boolean;
+  userId: string;
   setIsMember: any;
   subscriptionId: any;
   setSubscriptionId: any;
+  setUserId: any;
 }
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
@@ -21,6 +23,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [isMember, setIsMember] = useState(false);
   const [profileDetails, setProfileDetails] = useState(false);
   const [subscriptionId, setSubscriptionId] = useState("");
+  const [userId, setUserId] = useState("");
 
   const value: any = {
     accessToken,
@@ -29,6 +32,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     setProfileDetails,
     isMember,
     setIsMember,
+    userId,
+    setUserId,
     subscriptionId,
     setSubscriptionId,
   };

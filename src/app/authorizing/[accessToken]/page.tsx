@@ -11,13 +11,19 @@ export default function Authorizing() {
 
   const userId = searchParams.get("resourceId") as string;
   const profileId = searchParams.get("profileId") as string;
+  const stateParam = searchParams.get("state") as string;
 
   useEffect(() => {
     if (param.accessToken) {
       localStorage.setItem("accessToken", param.accessToken as string);
       localStorage.setItem("userId", userId);
       localStorage.setItem("profileId", profileId);
-      router.push("/");
+
+      if (stateParam === "membership_page") {
+        router.push("/membership");
+      } else {
+        router.push("/");
+      }
     }
   }, [param]);
 

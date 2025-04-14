@@ -7,7 +7,7 @@ import { useQuery } from "react-query";
 import { v4 as uuidv4 } from "uuid";
 
 export default function VerifyUser() {
-  const { setIsMember, setSubscriptionId, setProfileDetails }: any =
+  const { setIsMember, setSubscriptionId, setProfileDetails, setUserId }: any =
     useUserStore();
 
   useEffect(() => {
@@ -39,6 +39,7 @@ export default function VerifyUser() {
       setProfileDetails(profile);
       setIsMember(profile.isMember);
       setSubscriptionId(profile.subscriptionId);
+      setUserId(profile.userId);
       localStorage.setItem("subscriptionId", profile.subscriptionId);
       localStorage.setItem("profileId", profile._id);
       console.log("profile: ", profile);
