@@ -10,6 +10,7 @@ export default function PaymentSuccessPage() {
     <main className="bg-[#1B1B29] min-h-screen flex justify-center items-center">
       <div className="m-auto">
         <h2 className="font-semibold text-3xl text-center text-neutral-50">
+          <div>🎉</div>
           Congratulations!
         </h2>
         <p className="font-medium text-lg text-center text-neutral-200 mt-2">
