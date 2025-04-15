@@ -1,7 +1,6 @@
 import AnimatedLoadingIcon from "@/components/ui/AnimatedLoadingIcon";
 import { Suspense } from "react";
 
-// test
 export default function SigninLayout({ children }: any) {
   const LoadingState = () => {
     return (
