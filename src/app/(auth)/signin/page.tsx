@@ -36,7 +36,6 @@ export default function SignupPage() {
                 Sign in to Peak Rivals
               </h3>
               <div className="my-5">
-                {/* <GoogleSignin /> */}
                 <button
                   onClick={async () => {
                     window.location.href = `${
