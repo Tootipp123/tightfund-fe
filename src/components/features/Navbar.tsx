@@ -3,6 +3,7 @@
 import { logoutUser } from "@/api/User";
 import useMiddleware from "@/hooks/useMiddleware";
 import { useUserStore } from "@/store/User";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -28,6 +29,12 @@ export default function Navbar() {
       window.localStorage.removeItem("accessToken");
       window.location.reload();
     }
+  };
+
+  const loadStyle = () => {
+    return isMember
+      ? "bg-gradient-to-r from-yellow-600 to-yellow-300"
+      : "bg-white";
   };
 
   return (
@@ -106,7 +113,17 @@ export default function Navbar() {
                   className="flex items-center cursor-pointer"
                   onClick={() => setShowUserMenu((prev) => !prev)}
                 >
-                  <div className="w-[30px] h-[30px] rounded-full bg-white"></div>
+                  <div
+                    className={`${loadStyle()} w-[33px] h-[33px] p-[3px] relative rounded-full flex items-center justify-center overflow-hidden`}
+                  >
+                    <Image
+                      src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp"
+                      alt="Jeff Profile"
+                      className="rounded-full bg-white"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
                   <RiArrowDropDownFill className="text-lg text-white" />
                 </div>
                 {showUserMenu && (

@@ -49,7 +49,9 @@ export default function Membership() {
             <h2 className="font-semibold text-xl text-center text-neutral-50">
               Peak Rivals Membership
             </h2>
-            <p className="text-neutral-400 text-center">$6/month</p>
+            <p className="text-neutral-200 font-medium mt-3 text-center">
+              $5.99/month
+            </p>
             <a
               className="gumroad-button"
               href={`https://9273069619178.gumroad.com/l/peakrivals?user_id=${userId}`}
@@ -76,7 +78,12 @@ export default function Membership() {
                 </button>
               </a>
             )}
-            <div className="border-t border-neutral-600 mt-5 pt-4">
+            <li className="flex items-center justify-center my-3">
+              <p className="text-neutral-300 text-sm">
+                Free 1 week trial - Cancel anytime
+              </p>
+            </li>
+            <div className="border-t border-neutral-600 pt-4">
               <ul className="flex flex-col gap-4">
                 <li className="flex items-center gap-3">
                   <FaCheck className="text-emerald-500 text-lg" />

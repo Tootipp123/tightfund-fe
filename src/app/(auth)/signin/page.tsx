@@ -39,8 +39,7 @@ export default function SignupPage() {
                 {/* <GoogleSignin /> */}
                 <button
                   onClick={async () => {
-                    window.location.href = process.env
-                      .NEXT_PUBLIC_DISCORD_CALLBACK_URL as string;
+                    window.location.href = `${process.env.NEXT_PUBLIC_DISCORD_CALLBACK_URL}&state=membership_page`;
                   }}
                   className="rounded-md w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >

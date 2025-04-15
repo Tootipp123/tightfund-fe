@@ -6,12 +6,14 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { FaRegHandPointLeft } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
+import { MdInfoOutline } from "react-icons/md";
 import { VscChromeClose } from "react-icons/vsc";
 
 import { createGuestApi } from "@/api/Guest";
 import DuelistIcon from "@/assets/Duelist_Icon.webp";
 import StrategistIcon from "@/assets/Strategist_Icon.webp";
 import VanguardIcon from "@/assets/Vanguard_Icon.webp";
+// import ContentDescription from "@/components/features/ContentDescription";
 import Navbar from "@/components/features/Navbar";
 import { useUserStore } from "@/store/User";
 
@@ -23,7 +25,7 @@ export default function TeamCompCountersPage() {
   const [threeDuelTeam, setThreeDuelTeam] = useState<any>([]);
   const [searchHero, setSearchHero] = useState("");
 
-  const [limitCount, setLimitCount] = useState<number | null>(null); // Initialize as null
+  const [limitCount, setLimitCount] = useState<number | null>(null);
 
   // Initialize limit count from localStorage
   useEffect(() => {
@@ -91,21 +93,38 @@ export default function TeamCompCountersPage() {
   };
 
   const GeneratedCounters = ({ heroes, title }: any) => {
-    const winPercentage = (Math.random() * 10 + 75).toFixed(1);
+    const winPercentage = (Math.random() * 5 + 75).toFixed(1);
 
     return (
       <div className="bg-[#2e2e42] rounded-lg p-5 w-fit">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center relative">
           <h4 className="text-neutral-200 font-semibold text-lg mb-3">
             {title} team comp
           </h4>
-          {/* <Button variant="secondary">
-            <AiOutlineRead className="mr-1" />
-            Read Description
-          </Button> */}
-          {/* <p className="text-green-500 opacity-60 text-sm">
-            % chance to win (coming soon)
-          </p> */}
+          <div className="flex items-center gap-2">
+            {/* <ContentDescription
+              enemyLineup={selectedHeroes}
+              counterHeroes={heroes}
+            /> */}
+            <p className="text-green-500 opacity-60 text-sm">
+              {winPercentage}% win probability
+            </p>
+            <div className="group relative flex items-center">
+              <MdInfoOutline className="text-neutral-400 hover:text-white cursor-pointer" />
+              <div className="absolute hidden group-hover:block left-full ml-2 w-64 p-3 bg-[#2e2e42] text-xs text-neutral-200 rounded shadow-lg z-10">
+                This percentage is calculated based on:
+                <ul className="list-disc pl-4 mt-1 space-y-1">
+                  <li>Average win rates against each enemy hero</li>
+                  <li>Strength scores of counter matchups</li>
+                  <li>Current meta effectiveness</li>
+                </ul>
+                <p className="mt-2 italic text-neutral-400">
+                  Note: Percentages may adjust periodically as we refine our
+                  calculations.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="w-full mt-5 flex flex-row items-center justify-center flex-wrap gap-6 md:gap-6">
           {heroes?.map((hero: any, index: number) => (
@@ -140,9 +159,6 @@ export default function TeamCompCountersPage() {
             className="w-[380px] h-[calc(100vh-80px)] overflow-y-auto overflow-x-hidden px-5 pb-5 sticky top-[80px] left-0"
           >
             <div className="sticky top-0 bg-[#1b1b29] z-[10] pt-5 pb-3">
-              {/* <h4 className="text-neutral-200 font-medium mb-2">
-                Select heroes
-              </h4> */}
               <input
                 type="text"
                 placeholder="Search a hero"
@@ -224,6 +240,9 @@ export default function TeamCompCountersPage() {
                     <button
                       onClick={() => {
                         toggleHeroSelection(hero);
+                        setCounterHeroes([]);
+                        setThreeStratComp([]);
+                        setThreeDuelTeam([]);
                       }}
                       className="w-[20px] h-[20px] rounded-full flex justify-center bg-neutral-400 absolute right-0 -mt-3 -mr-2 hover:bg-neutral-300"
                     >

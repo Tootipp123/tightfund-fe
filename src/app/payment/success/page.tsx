@@ -23,6 +23,19 @@ export default function PaymentSuccessPage() {
             Back to home
           </Button>
         </div>
+        <p className="font-medium text-sm text-center text-neutral-400 mt-10 w-[600px]">
+          If your membership did not reflect on time, please wait up to 3
+          minutes and refresh the page. If issue still persists, contact
+          thehealthyprogrammer on our{" "}
+          <a
+            href="https://discord.gg/8xc3a7cCSg"
+            target="_blank"
+            className="text-purple-400"
+          >
+            Discord
+          </a>{" "}
+          server.
+        </p>
       </div>
     </main>
   );
