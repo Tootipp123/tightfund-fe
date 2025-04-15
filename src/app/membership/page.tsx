@@ -93,17 +93,11 @@ export default function Membership() {
                 </li>
                 <li className="flex items-center gap-3">
                   <FaCheck className="text-emerald-500 text-lg" />
-                  <p className="text-neutral-50">
-                    Advanced counter pick details
-                  </p>
+                  <p className="text-neutral-50">Early access to all updates</p>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaCheck className="text-emerald-500 text-lg" />
-                  <p className="text-neutral-50">Hero favorites filter</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <FaCheck className="text-emerald-500 text-lg" />
-                  <p className="text-neutral-50">Early access to updates</p>
+                  <p className="text-neutral-50">Priority support on Discord</p>
                 </li>
               </ul>
             </div>
