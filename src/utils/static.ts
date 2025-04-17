@@ -1,11 +1,85 @@
+import Adam from "../assets/heroes/adam_w2m9ek.png";
+import Panther from "../assets/heroes/bpnew_xzsr2r.png";
+import Widow from "../assets/heroes/btw_pnokvx.png";
+import Bucky from "../assets/heroes/bucky_tdwc4f.png";
+import Cap from "../assets/heroes/cap_j99m6o.png";
+import Cnd from "../assets/heroes/cnd_ivfbce.png";
+import Groot from "../assets/heroes/groot_xxhfud.png";
+import Hawkeye from "../assets/heroes/hawkeye_yybihp.png";
+import Hela from "../assets/heroes/hela_lluyca.png";
+import Hulk from "../assets/heroes/hulk_i6rxrq.png";
+import Johnny from "../assets/heroes/humantorch_1_jx2y0t.png";
+import Invis from "../assets/heroes/invis_woman_sdpex8.png";
+import IronMan from "../assets/heroes/ironmannew_eadtkr.png";
+import IronFist from "../assets/heroes/iron_fist_uxavml.png";
+import Jeff from "../assets/heroes/jeff_wadppv.png";
+import Loki from "../assets/heroes/loki_qeoeyh.png";
+import Luna from "../assets/heroes/luna_s8dvx4.png";
+import Magik from "../assets/heroes/magik_t6cemu.png";
+import Magneto from "../assets/heroes/magneto_wbantn.png";
+import Mantis from "../assets/heroes/mantis_xhldqc.png";
+import MoonKnight from "../assets/heroes/mk-new_1_tcgzik.png";
+import Reed from "../assets/heroes/mr_fantastic_np1ays.png";
+import Namor from "../assets/heroes/namor_acnpav.png";
+import Peni from "../assets/heroes/peni_wdcktf.png";
+import Psy from "../assets/heroes/psy_feub8t.png";
+import Punisher from "../assets/heroes/punisher_g8ytdf.png";
+import Rocket from "../assets/heroes/rocket-new_1_raqc7g.png";
+import Wanda from "../assets/heroes/scar_xspbho.png";
+import Spidey from "../assets/heroes/spidey_bti4dq.png";
+import Squirrel from "../assets/heroes/squi_yo6cgm.png";
+import StarLord from "../assets/heroes/star_du9q4c.png";
+import Storm from "../assets/heroes/storm_jan4ge.png";
+import Strange from "../assets/heroes/strange_t4560m.png";
+import Thing from "../assets/heroes/The_Thing_Heroportrait_1_egyvsz.png";
+import Thor from "../assets/heroes/thor_lhhqwi.png";
+import Venom from "../assets/heroes/venom_lu4wjv.png";
+import Wolvie from "../assets/heroes/wolvie_j9xibh.png";
+
+import ThumbAdam from "../assets/thumbs/Adam_Warlock_Icon_exkpa4.webp";
+import ThumbPanther from "../assets/thumbs/Black_Panther_Icon_pzkpcd.webp";
+import ThumbWidow from "../assets/thumbs/Black_Widow_Icon_hfelvs.webp";
+import ThumbCap from "../assets/thumbs/Captain_America_Icon_cehji6.webp";
+import ThumbCnd from "../assets/thumbs/Cloak__26_Dagger_Icon_qgjwi4.webp";
+import ThumbStrange from "../assets/thumbs/Doctor_Strange_Icon_qtd9ik.webp";
+import ThumbGroot from "../assets/thumbs/Groot_Icon_udutn9.webp";
+import ThumbHawkeye from "../assets/thumbs/Hawkeye_Icon_q7o2so.webp";
+import ThumbHela from "../assets/thumbs/Hela_Icon_kvrhsp.webp";
+import ThumbHulk from "../assets/thumbs/Hulk_Icon_d2xnfs.webp";
+import ThumbInvis from "../assets/thumbs/invis-woman-x1_bga15m.png";
+import ThumbIronFist from "../assets/thumbs/Iron_Fist_Icon_t1byee.webp";
+import ThumbIronMan from "../assets/thumbs/Iron_Man_Icon_vyqsna.webp";
+import ThumbJeff from "../assets/thumbs/Jeff_the_Land_Shark_Icon_mkp5f4.webp";
+import ThumbJohnny from "../assets/thumbs/johnny_g4yy6w.webp";
+import ThumbLoki from "../assets/thumbs/Loki_Icon_tysbig.webp";
+import ThumbLuna from "../assets/thumbs/Luna_Snow_Icon_snupak.webp";
+import ThumbMagik from "../assets/thumbs/Magik_Icon_tkyxty.webp";
+import ThumbMagneto from "../assets/thumbs/Magneto_Icon_tlpvn5.webp";
+import ThumbMantis from "../assets/thumbs/Mantis_Icon_wjrezu.webp";
+import ThumbMoonKnight from "../assets/thumbs/Moon_Knight_Icon_c8keu4.webp";
+import ThumbReed from "../assets/thumbs/mr_fantastic_rh931l.png";
+import ThumbNamor from "../assets/thumbs/Namor_Icon_ri6epi.webp";
+import ThumbPeni from "../assets/thumbs/Peni_Parker_Icon_u0uafv.webp";
+import ThumbPsy from "../assets/thumbs/Psylocke_Icon_ls6zo3.webp";
+import ThumbRocket from "../assets/thumbs/Rocket_Raccoon_Icon_fqblcl.webp";
+import ThumbWanda from "../assets/thumbs/Scarlet_Witch_Icon_mdkxbf.webp";
+import ThumbSpidey from "../assets/thumbs/Spider-Man_Icon_lvnyoc.webp";
+import ThumbSquirrel from "../assets/thumbs/Squirrel_Girl_Icon_gtg592.webp";
+import ThumbStarLord from "../assets/thumbs/Star-Lord_Icon_mvulbd.webp";
+import ThumbStorm from "../assets/thumbs/Storm_Icon_ncerpu.webp";
+import ThumbPunisher from "../assets/thumbs/The_Punisher_Icon_hqyd44.webp";
+import ThumbThing from "../assets/thumbs/The_Thing_Icon_ydoqtg.webp";
+import ThumbThor from "../assets/thumbs/Thor_Icon_vziina.webp";
+import ThumbVenom from "../assets/thumbs/Venom_Icon_mwro7g.webp";
+import ThumbBucky from "../assets/thumbs/Winter_Soldier_Icon_lceqsq.webp";
+import ThumbWolvie from "../assets/thumbs/Wolverine_Icon_xhlm8q.webp";
+
 export const HERO_COUNTERS = [
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740187180/rivals%20v2/The_Thing_Icon_ydoqtg.webp",
+    image: ThumbThing,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740119810/rivals%20v2/humantorch_1_jx2y0t.png",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1740119810/rivals%20v2/The_Thing_Heroportrait_1_egyvsz.png",
+    tallImage: Thing,
     name: "The Thing",
     role: "Vanguard",
     meta: true,
@@ -13,8 +87,7 @@ export const HERO_COUNTERS = [
     goodAgainst: [],
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         role: "Vanguard",
         score: 10,
@@ -27,12 +100,10 @@ export const HERO_COUNTERS = [
         score: 10,
         description:
           "Iron Man is powerful against heroes that can't reach him, like The Thing. Additionally, his Unibeam's damage output has increased to 190 per second (previously 180), making him an even bigger threat to The Thing.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+        image: ThumbSquirrel,
         name: "Squirrel Girl",
         score: 9,
         role: "Duelist",
@@ -45,8 +116,7 @@ export const HERO_COUNTERS = [
         score: 9.5,
         description:
           "Storm's Goddess Boost got nerfed in this patch, but she can still deal massive damage to The Thing while staying safe in the air, even if he isn't inside her weather control area.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
         name: "Hela",
@@ -54,26 +124,22 @@ export const HERO_COUNTERS = [
         score: 9,
         description:
           "Hela can stun The Thing with her Soul Drainer (E) if he charges into the backline. Additionally, her high damage output can quickly reduce his HP.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
       },
     ],
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740186347/rivals%20v2/johnny_g4yy6w.webp",
+    image: ThumbJohnny,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740119810/rivals%20v2/humantorch_1_jx2y0t.png",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1740119810/rivals%20v2/humantorch_1_jx2y0t.png",
+    tallImage: Johnny,
     name: "Human Torch",
     role: "Duelist",
     meta: false,
     tier: "B",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         score: 10,
@@ -81,8 +147,7 @@ export const HERO_COUNTERS = [
           "Long-range DPS typically outmatches Johnny. And Hela's buff in this patch makes her an easy counter for him, as she can hit him in the air without being threatened by his flames.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         score: 10,
@@ -90,8 +155,7 @@ export const HERO_COUNTERS = [
           "Similar to Hela, Hawkeye can deal massive damage to Johnny from a safe distance using only his normal attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 10,
@@ -99,8 +163,7 @@ export const HERO_COUNTERS = [
           "Punisher's a typical counter to aerborne heroes, forcing them always to back up and get threatened by his Culling Turret.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         score: 9.5,
@@ -108,8 +171,7 @@ export const HERO_COUNTERS = [
           "Psylocke can attack Johnny from unexpected angles and quickly escape using dashes and invisibility to avoid getting caught by his abilities.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         score: 9.6,
@@ -117,8 +179,7 @@ export const HERO_COUNTERS = [
           "The only melee hero who can hunt Johnny while staying safe from his attacks. Spider-Man's swinging ability and the Web-Cluster buff (reduced from 3s to 2.5s) make him a significant threat to Johnny.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         description:
@@ -128,20 +189,17 @@ export const HERO_COUNTERS = [
     goodAgainst: [],
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+    image: ThumbStorm,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/storm_jan4ge.png",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/storm_jan4ge.png",
+    tallImage: Storm,
     name: "Storm",
     role: "Duelist",
     meta: true,
     tier: "S",
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         score: 8.5,
@@ -154,8 +212,7 @@ export const HERO_COUNTERS = [
         name: "Star-Lord",
         role: "Duelist",
         score: 8.6,
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         descriptions: [
           "In situations where Storm is high up in the air, Star-Lord can exploit her vulnerable position. With her out of sight from her Strategists, she's unlikely to receive healing and leave her exposed to his attacks.",
           "When Star-Lord’s ultimate is charged and Storm is far from her Strategists’ defensive ult on the ground, it will be a guaranteed kill.",
@@ -168,8 +225,7 @@ export const HERO_COUNTERS = [
         descriptions: [
           "With great timing, Winter Soldier can catch Storm in mid-air with Bionic hook (Right click). Followed by Trooper’s Fist (E) and a flurry of normal attacks, and it's over for her.",
         ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
       },
     ],
     counterPicks: [
@@ -179,12 +235,10 @@ export const HERO_COUNTERS = [
         score: 10,
         description:
           "Strange's shield allows him to block Storm's Wind Blade and Bolt Rush. Additionally, the radius of his shield can help his allies block incoming damage as well.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 10,
@@ -192,8 +246,7 @@ export const HERO_COUNTERS = [
           "He can land multiple consistent damage to her in a safe distance, forcing her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         score: 10,
@@ -201,8 +254,7 @@ export const HERO_COUNTERS = [
           "Her long-range attacks can be a pain to Storm's low mobility in the air.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         score: 9.8,
@@ -210,8 +262,7 @@ export const HERO_COUNTERS = [
           "Namor's long-range attacks and spawns are effective counters to Storm. Additionally, his Blessings of the Deep (Shift) allows him to reposition strategically, allowing him to surprise Storm from unexpected angles.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         score: 8.5,
@@ -219,8 +270,7 @@ export const HERO_COUNTERS = [
           "He can surprise and burst Storm in mid-air and make her ineffective.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         score: 9,
@@ -233,20 +283,17 @@ export const HERO_COUNTERS = [
         score: 9.3,
         description:
           "Black Widow's mechanics as a sniper is a natural counter to Storm as she can snipe her in a safe distance.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
       },
       {
         name: "Luna Snow",
         role: "Strategist",
         score: 8.3,
         description: "Her ultimate ability can block Storm's ultimate.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        image: ThumbRocket,
         name: "Rocket Racoon",
         role: "Strategist",
         score: 9,
@@ -258,44 +305,37 @@ export const HERO_COUNTERS = [
       {
         name: "Groot",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Magik",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+    image: ThumbIronMan,
     name: "Iron Man",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_man_wtebxq.png",
     role: "Duelist",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619436/rivals%20v2/ironmannew_eadtkr.png",
+    tallImage: IronMan,
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         descriptions: [
@@ -304,8 +344,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         role: "Strategist",
         descriptions: [
@@ -315,8 +354,7 @@ export const HERO_COUNTERS = [
     ],
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         score: 10,
@@ -324,8 +362,7 @@ export const HERO_COUNTERS = [
           "Strange can protect his team against Iron Man's normal attacks with his shield. It can also block Iron Man's ultimate if he's in the right position and timing.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         score: 8.6,
@@ -333,8 +370,7 @@ export const HERO_COUNTERS = [
           "Iron Fist can get behind Iron Man and pressure him mid-air. Additionally, he can easily parry any of Iron Man's attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        image: ThumbRocket,
         name: "Rocket Racoon",
         role: "Strategist",
         score: 9,
@@ -342,8 +378,7 @@ export const HERO_COUNTERS = [
           "Rocket might be the best strategist to counter Iron Man. He can freely hit him in the air while having exceptional mobility that allows him to evade any of Iron Man's attacks. Additionally, his ultimate amplifies his team, making them more of a threat to Iron Man in the air rather than providing a defensive ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         score: 10,
@@ -351,8 +386,7 @@ export const HERO_COUNTERS = [
           "Namor's long-range attacks and spawns are effective counters to Iron Man. Additionally, his Blessings of the Deep (Shift) allows him to reposition strategically, allowing him to surprise Iron Man from unexpected angles.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         score: 9.3,
@@ -360,8 +394,7 @@ export const HERO_COUNTERS = [
           "He can chase and solo-kill Iron Man in mid air almost instantly.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 10,
@@ -369,8 +402,7 @@ export const HERO_COUNTERS = [
           "He can pressure Iron Man while maintaining consistent damage output, and force him to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         score: 9.5,
@@ -378,8 +410,7 @@ export const HERO_COUNTERS = [
           "Her mobility and quick damage output can burst Iron Man before he can even escape.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         score: 9.2,
@@ -392,20 +423,17 @@ export const HERO_COUNTERS = [
         score: 9.4,
         description:
           "Black Widow's mechanics as a sniper is a natural counter to Iron Man as she can snipe him in a safe distance.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         score: 9.98,
         description: "She can land massive damage to him in a safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         score: 10,
@@ -417,65 +445,55 @@ export const HERO_COUNTERS = [
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
         name: "Venom",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740187180/rivals%20v2/The_Thing_Icon_ydoqtg.webp",
+        image: ThumbThing,
         name: "The Thing",
         role: "Vanguard",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Jeff",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
+        image: ThumbJeff,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+    image: ThumbInvis,
     name: "Invisible Woman",
     meta: true,
     tier: "S",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
+    tallImage: Invis,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/invis_woman_sdpex8.png",
     role: "Strategist",
     new: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         score: 9.0,
         role: "Duelist",
@@ -483,8 +501,7 @@ export const HERO_COUNTERS = [
           "Punisher's ultimate can outdamage Invisible Woman's ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
         name: "Moon Knight",
         score: 9.3,
         role: "Duelist",
@@ -492,8 +509,7 @@ export const HERO_COUNTERS = [
           "With great positioning, he can pressure her with Crescent Dart.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+        image: ThumbSquirrel,
         name: "Squirrel Girl",
         score: 9.1,
         role: "Duelist",
@@ -503,8 +519,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         descriptions: [
@@ -512,8 +527,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         descriptions: [
@@ -523,53 +537,45 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         description: "High burst damage while maintaing safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         description: "",
       },
       {
         name: "Iron Fist",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
       },
       {
         name: "Wolverine",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736686183/Rivals/mr_fantastic_rh931l.png",
+    image: ThumbReed,
     name: "Mr. Fantastic",
     tier: "B",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
+    tallImage: Reed,
     role: "Duelist",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mr_fantastic_np1ays.png",
     new: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         role: "Vanguard",
         score: 10,
@@ -577,8 +583,7 @@ export const HERO_COUNTERS = [
           "Groot can use his walls to separate Mr. Fantastic from his allies, exploiting his low mobility and preventing him from receiving heals.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         score: 9.25,
@@ -586,8 +591,7 @@ export const HERO_COUNTERS = [
           "Even though Mr. Fantastic can block Storm's ultimate with Reflexive Rubber, she can still deal massive damage to him using Goddess Boost.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 9.0,
@@ -595,8 +599,7 @@ export const HERO_COUNTERS = [
           "His Culling Turret ability can melt down Mr. Fantastic's hp before he can even get value.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         score: 9.23,
@@ -604,16 +607,14 @@ export const HERO_COUNTERS = [
           "Even though Mr. Fantastic can block Iron Man's ultimate with Reflexive Rubber, his flight abilities and consistent damage output can still overwhelm him.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         score: 9.15,
         role: "Duelist",
         description: "He can pressure Mr. Fantastic from a safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         score: 9.12,
         role: "Duelist",
@@ -623,32 +624,27 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         description: "High burst damage while maintaing safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+        image: ThumbSquirrel,
         name: "Squirrel Girl",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         description: "",
       },
@@ -656,20 +652,17 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+    image: ThumbVenom,
     name: "Venom",
     role: "Vanguard",
     tier: "S",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607173/rivals%20v2/venom_lu4wjv.png",
+    tallImage: Venom,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607173/rivals%20v2/venom_lu4wjv.png",
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 9.0,
@@ -682,12 +675,10 @@ export const HERO_COUNTERS = [
         score: 9.3,
         description:
           "Wolverine's mechanics counter Venom's playstyle in every way. Since Venom's gameplay relies on pressuring the backline, Wolverine can easily catch him by waiting until he dives and then striking him off guard.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         score: 9.5,
         role: "Duelist",
@@ -695,8 +686,7 @@ export const HERO_COUNTERS = [
           "Her Goddess Boost ability and aerial mechanics can pressure Venom if he attempts to dive.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
         name: "Magneto",
         role: "Vanguard",
         score: 9.1,
@@ -704,8 +694,7 @@ export const HERO_COUNTERS = [
           "His shield can negate Venom’s attacks, while Metal Bulwark shields allies from Venom’s dive attempts.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         score: 9.59,
@@ -715,40 +704,34 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
         name: "Adam Warlock",
         description: "",
       },
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+    image: ThumbPanther,
     name: "Black Panther",
     tier: "B",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619435/rivals%20v2/bpnew_xzsr2r.png",
+    tallImage: Panther,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bp_lyq0v1.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740187180/rivals%20v2/The_Thing_Icon_ydoqtg.webp",
+        image: ThumbThing,
         name: "The Thing",
         score: 9.2,
         role: "Vanguard",
@@ -756,8 +739,7 @@ export const HERO_COUNTERS = [
           "The Thing's Yancy Street Charge ability (Shift) prevents Black Panther from using his dashes and kick. When this happens, your team can take advantage of the opening.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740186347/rivals%20v2/johnny_g4yy6w.webp",
+        image: ThumbJohnny,
         name: "Human Torch",
         role: "Duelist",
         score: 9.01,
@@ -765,8 +747,7 @@ export const HERO_COUNTERS = [
           "He can attack freely and control areas, making it difficult for Black Panther to enter. Additionally, he remains out of Black Panther's reach in most areas.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         score: 9.35,
@@ -774,8 +755,7 @@ export const HERO_COUNTERS = [
           "He can land consistent DPS to T'Challa without getting hit by his spears or dashes, making him a natural counter.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         score: 9.5,
         role: "Vanguard",
@@ -783,8 +763,7 @@ export const HERO_COUNTERS = [
           "She can prevent or slow down Black Panther by placing mines and spider nest.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         score: 10,
@@ -792,8 +771,7 @@ export const HERO_COUNTERS = [
           "His flight ability allows him to swiftly burst him down without being reached.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         score: 10,
         role: "Duelist",
@@ -801,8 +779,7 @@ export const HERO_COUNTERS = [
           "She can deal massive damage to him while being unreachable.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         score: 10,
@@ -810,8 +787,7 @@ export const HERO_COUNTERS = [
           "He can disrupt Black Panther from engaging the enemy backline using his spawns.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         role: "Strategist",
         score: 9.14,
@@ -819,8 +795,7 @@ export const HERO_COUNTERS = [
           "His lamp and clone swapping abilities can prevent Black Panther from killing him instantly.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
         name: "Cloak & Dagger",
         role: "Strategist",
         score: 9.12,
@@ -830,8 +805,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
         name: "Magneto",
         role: "Vanguard",
         descriptions: [
@@ -840,8 +814,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         descriptions: [
@@ -849,8 +822,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         descriptions: [
@@ -859,8 +831,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         role: "Strategist",
         descriptions: [
@@ -872,37 +843,31 @@ export const HERO_COUNTERS = [
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Black Widow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
       },
       {
         name: "Hawkeye",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
       },
       {
         name: "Winter Soldier",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+    image: ThumbCnd,
     name: "Cloak & Dagger",
     tier: "S",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/cnd_ivfbce.png",
+    tallImage: Cnd,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/cnd_ivfbce.png",
     role: "Strategist",
@@ -913,36 +878,31 @@ export const HERO_COUNTERS = [
         role: "Vanguard",
         description:
           "His ultimate can pierce through Cloak and Dagger's ultimate. You just need to time his ult and use it when she stops her dashes.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         description:
           "She can disrupt her by flanking from the back while being tanky and hard to kill.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Hela can target C&D from a safe distance, forcing her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
           "Same with Hela, he can target C&D from a safe distance, forcing her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
@@ -953,24 +913,20 @@ export const HERO_COUNTERS = [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         description: "",
       },
       {
         name: "Venom",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         description: "",
       },
@@ -978,35 +934,30 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+    image: ThumbGroot,
     name: "Groot",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/groot_xxhfud.png",
+    tallImage: Groot,
     role: "Vanguard",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/groot_xxhfud.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
           "He can easily destroy Groot's walls and deal massive damage to Groot as well.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
           "Venom can escape over Groot's walls whenever Groot decides to block him in the back.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
@@ -1017,36 +968,31 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "He can easily catch Groot and focus on him due to his low mobility.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He can pressure Groot and force him to back up or melt his hp with his Unibeam ability.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
         name: "Winter Soldier",
         role: "Duelist",
         description:
           "He can easily hook Groot if he overcommits and kill him instantly since Groot has low mobility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Groot has low mobility. So she can pressure Groot and force him to back up.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
         name: "Cloak & Dagger",
         role: "Strategist",
         description:
@@ -1057,24 +1003,20 @@ export const HERO_COUNTERS = [
       {
         name: "Mantis",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
       },
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
         name: "Black Widow",
         description: "",
       },
@@ -1082,19 +1024,16 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+    image: ThumbHela,
     name: "Hela",
     role: "Duelist",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/hela_lluyca.png",
+    tallImage: Hela,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/hela_lluyca.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 9.15,
@@ -1102,8 +1041,7 @@ export const HERO_COUNTERS = [
           "Punisher's consistent damage output can pressure Hela and force her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         score: 9.3,
@@ -1111,8 +1049,7 @@ export const HERO_COUNTERS = [
           "Magik's mechanics allow her to pressure Hela in the backline, even with her Strategists around. And unlike T'challa, Magik can still live even if she gets hit with Hela's ",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         score: 9.89,
@@ -1120,8 +1057,7 @@ export const HERO_COUNTERS = [
           "He can block Hela's attacks and ultimate by flying and shielding in front of her.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         score: 9.0,
@@ -1129,8 +1065,7 @@ export const HERO_COUNTERS = [
           "Luna Snow can make Hela less of a threat with her ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         score: 9.5,
         role: "Strategist",
@@ -1139,8 +1074,7 @@ export const HERO_COUNTERS = [
     ],
     evenMatchups: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         description:
           "His range and vision control can force her to play defensively.",
@@ -1150,24 +1084,20 @@ export const HERO_COUNTERS = [
       {
         name: "Iron Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
         name: "Storm",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
         name: "Star-Lord",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
         name: "Black Widow",
         description: "",
       },
@@ -1175,11 +1105,9 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+    image: ThumbLuna,
     name: "Luna Snow",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/luna_s8dvx4.png",
+    tallImage: Luna,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/luna_s8dvx4.png",
     role: "Strategist",
@@ -1187,48 +1115,42 @@ export const HERO_COUNTERS = [
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description: "His ultimate can pierce through Luna Snow's ultimate.",
         score: 9.5,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description: "Punisher's ultimate can outdamage Luna Snow's ultimate.",
         score: 9,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "Psylocke can easily flank and solo-kill Luna, while avoiding her freezing ability with dashes and invisibility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+        image: ThumbWanda,
         name: "Scarlet Witch",
         role: "Duelist",
         description:
           "Her ultimate ability can pierce through Luna Snow's ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         description:
           "He can rush forward and pressure her, since Luna has limited mobility. And his shield can block her freezing ability.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         role: "Strategist",
         description: "Loki can simply copy Luna and activate her ultimate.",
@@ -1238,18 +1160,15 @@ export const HERO_COUNTERS = [
       {
         name: "Spider-Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
@@ -1257,51 +1176,44 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+    image: ThumbMagik,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/magik_t6cemu.png",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/magik_t6cemu.png",
+    tallImage: Magik,
     name: "Magik",
     tier: "B",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "Magik typically struggles against aerial heroes, just like Iron Man. Additionally, when Magik decides to flank the backline, Iron Man can simply spam normal attacks to pressure her and force her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         description:
           "Namor can pressure Magik to prevent her from engaging the backline using his spawns.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
           "Similar to Iron Man, Magik would have difficulty reaching Storm in certain areas, and Storm typically has the advantage when it comes to attacking freely. However, Storm has limited mobility, and Magik can still reach and kill her with a few well-executed combos.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         description:
           "His Eye of Agamotto prevents Magik from teleporting. Additionally, he can play defensively if his backline is being pressured.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         description: "Freezing abilities disrupt her combos.",
@@ -1311,76 +1223,65 @@ export const HERO_COUNTERS = [
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Spider-Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
       },
       {
         name: "Punisher",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
       },
       {
         name: "Loki",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+    image: ThumbIronFist,
     name: "Iron Fist",
     tier: "C",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/iron_fist_uxavml.png",
+    tallImage: IronFist,
     role: "Duelist",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_fist_uxavml.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         description:
           "Namor can disrupt Iron Fist from engaging the enemy backline using his spawns.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         description:
           "Cap is too tanky to be burst by Iron Fist. Plus he can use shield to negate his normal attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        image: ThumbInvis,
         name: "Invisible Woman",
         role: "Strategist",
         description:
           "With her Close Quarter Combat combo, or even her simple Agile Strike + Force Physics — Sue can effectively flake off an Iron Fist. Her Force Physics is also doubled whenever he uses his Harmony Recovery (E).",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        image: ThumbRocket,
         name: "Rocket Racoon",
         role: "Strategist",
         description:
           "Rocket can escape easily when he gets pounced by Iron Fist, making it difficult for him to be killed.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         role: "Strategist",
         description:
@@ -1389,8 +1290,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
         name: "Moon Knight",
         role: "Duelist",
         descriptions: [
@@ -1398,8 +1298,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         descriptions: [
@@ -1407,8 +1306,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         descriptions: [
@@ -1417,8 +1315,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
         name: "Winter Soldier",
         role: "Duelist",
         descriptions: [
@@ -1426,8 +1323,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         role: "Strategist",
         descriptions: [
@@ -1436,8 +1332,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         role: "Vanguard",
         descriptions: [
@@ -1461,44 +1356,37 @@ export const HERO_COUNTERS = [
       {
         name: "Iron Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
         name: "Storm",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
         name: "Spider-Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
       },
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+    image: ThumbPeni,
     name: "Peni Parker",
     tier: "B",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/peni_wdcktf.png",
+    tallImage: Peni,
     role: "Vanguard",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/peni_wdcktf.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         score: 10,
@@ -1506,8 +1394,7 @@ export const HERO_COUNTERS = [
           "Flight abilities allow him to bypass nests and mines, giving him freedom to attack her from any angle.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         score: 10,
         role: "Duelist",
@@ -1515,8 +1402,7 @@ export const HERO_COUNTERS = [
           "Her Normal attacks and Bolt Rush ability are more than enough to reduce Peni's HP instantly. She can also destroy nests and mines easily.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         score: 9.75,
@@ -1524,8 +1410,7 @@ export const HERO_COUNTERS = [
           "He can quickly destroy spider nests and mines from a safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         score: 9.9,
@@ -1533,8 +1418,7 @@ export const HERO_COUNTERS = [
           "He can pressure from different angles while maintaining consistent damage output",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         score: 9.5,
         role: "Vanguard",
@@ -1542,8 +1426,7 @@ export const HERO_COUNTERS = [
           "Shield and portals help team push through her defenses while blocking her damage",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         score: 9.8,
@@ -1551,8 +1434,7 @@ export const HERO_COUNTERS = [
           "Namor can also destroy Peni's spider nests and mines from a safe distance while protecting his allies with his spawns.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         score: 9.7,
         role: "Vanguard",
@@ -1560,8 +1442,7 @@ export const HERO_COUNTERS = [
           "His normal attacks can destroy spider nests and mines from a safe position.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         score: 9.3,
         role: "Strategist",
@@ -1573,51 +1454,43 @@ export const HERO_COUNTERS = [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Magik",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
       },
       {
         name: "Wolverine",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
       },
       {
         name: "Hulk",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
       },
       {
         name: "Iron Fist",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+    image: ThumbHulk,
     name: "Hulk",
     tier: "S",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/hulk_i6rxrq.png",
+    tallImage: Hulk,
     role: "Vanguard",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/hulk_i6rxrq.png",
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
@@ -1628,28 +1501,24 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "Her Goddess Boost and consistent damage output can force Hulk to retreat.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
           "He can melt Hulk's hp with his consistent DPS and force him to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         description:
           "Namor can also melt Thor's HP from a safe distance while protecting his allies with his spawns.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+        image: ThumbThor,
         name: "Thor",
         role: "Vanguard",
         description:
@@ -1658,8 +1527,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         role: "Vanguard",
         descriptions: [
@@ -1667,8 +1535,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
         name: "Wolverine",
         role: "Duelist",
         descriptions: [
@@ -1677,8 +1544,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         role: "Strategist",
         descriptions: [
@@ -1686,8 +1552,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         descriptions: [
@@ -1699,50 +1564,42 @@ export const HERO_COUNTERS = [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Doctor Strange",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
       },
       {
         name: "Groot",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Cloak & Dagger",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+    image: ThumbHawkeye,
     name: "Hawkeye",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/hawkeye_yybihp.png",
+    tallImage: Hawkeye,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/hawkeye_yybihp.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
@@ -1752,20 +1609,17 @@ export const HERO_COUNTERS = [
         name: "Groot",
         role: "Vanguard",
         description: "He can easily block his arrows with walls.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         description:
           "He can eliminate Hawkeye with a single combo if he catches him off guard.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
@@ -1776,59 +1630,50 @@ export const HERO_COUNTERS = [
       {
         name: "Iron Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Jeff",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
+        image: ThumbJeff,
       },
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Black Widow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+    image: ThumbPsy,
     name: "Psylocke",
     tier: "S",
     meta: true,
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/psy_feub8t.png",
+    tallImage: Psy,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/psy_feub8t.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         description:
           "Star-Lord's mobility, evasiveness, and consistent damage can outmatch Psylocke in a one-on-one situation.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+        image: ThumbWanda,
         name: "Scarlet Witch",
         role: "Duelist",
         description:
@@ -1839,12 +1684,10 @@ export const HERO_COUNTERS = [
         role: "Vanguard",
         description:
           "Unlike other vanguards, who can be easily punished by Psylocke's attacks, Venom is too mobile and tanky for her to handle.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        image: ThumbInvis,
         name: "Invisible Woman",
         role: "Strategist",
         description:
@@ -1858,12 +1701,10 @@ export const HERO_COUNTERS = [
         descriptions: [
           "Namor can defend the backline with spawns and pressure Psylocke from flanking.",
         ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         descriptions: [
@@ -1876,8 +1717,7 @@ export const HERO_COUNTERS = [
         descriptions: [
           "Luna Snow's ultimate ability negates Psylocke's ultimate ability.",
         ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
         name: "Mantis",
@@ -1885,73 +1725,62 @@ export const HERO_COUNTERS = [
         descriptions: [
           "Mantis's ultimate ability negates Psylocke's ultimate ability.",
         ],
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
       },
     ],
     goodAgainst: [
       {
         name: "Storm",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
       {
         name: "Groot",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
         name: "Jeff",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
+        image: ThumbJeff,
       },
       {
         name: "Rocket",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        image: ThumbRocket,
       },
       {
         name: "Black Widow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+        image: ThumbWidow,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+    image: ThumbCap,
     name: "Captain America",
     tier: "B",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/cap_j99m6o.png",
     role: "Vanguard",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/cap_j99m6o.png",
+    tallImage: Cap,
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         role: "Vanguard",
         description:
           "Even though Cap can escape Groot's wall, Groot's damage output can shred Cap's HP, and he can easily reach him with his normal attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         score: 9.8,
@@ -1959,16 +1788,14 @@ export const HERO_COUNTERS = [
           "Namor's Frozen Spawn (C) and Aquatic Dominion (E) are the biggest counters to divers like Cap.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Her Soul Drainer's stun and massive damage can pressure him from a safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
@@ -1979,85 +1806,73 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "Her consistent DPS can overwhelm him if he dives into the backline.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+        image: ThumbWanda,
       },
       {
         name: "Loki",
         role: "Strategist",
         description:
           "His clones and mobility can make it hard for Cap to pressure him.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
       },
     ],
     goodAgainst: [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Groot",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
         name: "Rocket",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+        image: ThumbRocket,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+    image: ThumbMoonKnight,
     name: "Moon Knight",
     meta: true,
     tier: "S",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619034/rivals%20v2/mk-new_1_tcgzik.png",
+    tallImage: MoonKnight,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/moon_knight_lxkm3i.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
           "Her higher aerial abilities and long-range attacks can pressure Moon Knight and force him to change position.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         description:
           "Moon Knight's Ankh can be useless to Black Panther, since he can simply dash out of its area of effect, while still dealing massive damage to him.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "Moon Knight's abilities are useless to unreachable heroes like Iron Man. Additionally, Iron Man can outdamage his normal attacks if he tries to target him.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         description:
@@ -2068,22 +1883,19 @@ export const HERO_COUNTERS = [
         role: "Vanguard",
         description:
           "His shield and Metal Bulwark simply deny Moon Knight’s attacks.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
       },
       {
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can hunt Moon Knight from behind and kill him instantly.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
       },
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         descriptions: [
@@ -2092,8 +1904,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         descriptions: [
@@ -2105,66 +1916,56 @@ export const HERO_COUNTERS = [
       {
         name: "Punisher",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
       },
       {
         name: "Namor",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Adam Warlock",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
       },
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+    image: ThumbLoki,
     name: "Loki",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/loki_qeoeyh.png",
+    tallImage: Loki,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/loki_qeoeyh.png",
     role: "Strategist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
         name: "Moon Knight",
         role: "Duelist",
         description:
           "He can easily destroy Loki's clones and prevent him from getting his preferred position.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He can track the original Loki from above and deal massive damage to him.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
@@ -2175,36 +1976,30 @@ export const HERO_COUNTERS = [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Psylocke",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
       },
       {
         name: "Magik",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
       },
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
         name: "Cloak & Dagger",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         description: "",
       },
@@ -2212,51 +2007,44 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+    image: ThumbMantis,
     name: "Mantis",
     tier: "S",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/mantis_xhldqc.png",
     role: "Strategist",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/mantis_xhldqc.png",
+    tallImage: Mantis,
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He can easily pressure Mantis from above and force her to hide.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description: "Punisher's ultimate can outdamage Mantis's ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         description:
           "He can deal massive damage to Mantis and force her to use resources rather than healing allies.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         description:
           "He can chase and harass Mantis and avoid sleeping abilities using his shield.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
@@ -2267,78 +2055,67 @@ export const HERO_COUNTERS = [
       {
         name: "Magik",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Namor",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+    image: ThumbSpidey,
     name: "Spider-Man",
-    tier: "C",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/spidey_bti4dq.png",
+    tier: "B",
+    tallImage: Spidey,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/spidey_bti4dq.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         description:
           "His spawns disrupts Spider-Man's ability to pressure the backline.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         description:
           "He's stronger against him in one-on-one combat, and can chase him in the air using double jumps.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         description:
           "Shield of Seraphim blocks web attacks, and his crowd control abilities disrupt Spider-Man’s combos",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "With great positioning, she can instantly kill Spider-Man with few attacks. Plus she has an escape if Spider-Man decides to combo her.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
           "He can instantly kill Spider-Man with 2-3 shots before Spider-Man even has a chance to dive.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         description:
@@ -2349,76 +2126,65 @@ export const HERO_COUNTERS = [
       {
         name: "Iron Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
         name: "Storm",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
       },
       {
         name: "Peni Parker",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
         name: "Moon Knight",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
       },
     ],
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Rocket_Raccoon_Icon_fqblcl.webp",
+    image: ThumbRocket,
     name: "Rocket Racoon",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737619035/rivals%20v2/rocket-new_1_raqc7g.png",
+    tallImage: Rocket,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/rocket_g4v6nw.png",
     role: "Strategist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         description:
           "He can chase Rocket at the back while avoiding minigun fire.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         description:
           "He can pressure Rocket and make him focus on escaping instead of healing allies.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "With his flight abilities, he can pressure Rocket and deal massive damage to him from above.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can flank easily at the back with invisibility, forcing him to escape instead of healing allies.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
@@ -2427,20 +2193,17 @@ export const HERO_COUNTERS = [
     ],
     goodPairWith: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
         name: "Winter Soldier",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
@@ -2449,12 +2212,10 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+    image: ThumbWolvie,
     name: "Wolverine",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607173/rivals%20v2/wolvie_j9xibh.png",
+    tallImage: Wolvie,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607173/rivals%20v2/wolvie_j9xibh.png",
     role: "Duelist",
@@ -2465,35 +2226,30 @@ export const HERO_COUNTERS = [
         role: "Vanguard",
         description:
           "Peni's spider nests and mines are a natural counter to Wolverine's mechanics, as they threaten him when he tries to catch anyone within certain areas.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He is unreachable and can melt down Wolverine's hp instantly.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         description:
           "His spawns can pressure Wolverine from flanking the back line.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description: "She is unreachable and can punish Wolverine if he dives.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736610733/Rivals/invis-woman-x1_bga15m.png",
+        image: ThumbInvis,
         name: "Invisible Woman",
         role: "Strategist",
         description:
@@ -2502,8 +2258,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         descriptions: [
@@ -2511,8 +2266,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         descriptions: [
@@ -2520,8 +2274,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         role: "Strategist",
         descriptions: [
@@ -2529,8 +2282,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
         descriptions: [
@@ -2540,20 +2292,17 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
         name: "Magneto",
         description: "",
       },
@@ -2561,73 +2310,63 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+    image: ThumbThor,
     name: "Thor",
     role: "Vanguard",
     tier: "B",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607172/rivals%20v2/thor_lhhqwi.png",
+    tallImage: Thor,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607172/rivals%20v2/thor_lhhqwi.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         role: "Vanguard",
         description:
           "Peni's spider nests and mines can control certain areas and prevent Thor from using his Storm Surge ability (LShift) to close the distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He is unreachable in certain areas and can melt down Thor's hp instantly.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
           "She is unreachable in certain areas and can reduce Thor's hp.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
         name: "Wolverine",
         role: "Duelist",
         description:
           "Wolverine can easily catch Thor off guard and shred his HP before he has a chance to escape.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description: "High sustained damage output forces Thor to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         role: "Duelist",
         description:
           "He can maintain safe distance while dealing consistent damage.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+        image: ThumbWanda,
         name: "Scarlet Witch",
         role: "Duelist",
         description: "She can burst Thor's HP instantly at range.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         role: "Strategist",
         description:
@@ -2636,20 +2375,17 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         description: "",
       },
@@ -2657,19 +2393,16 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Squirrel_Girl_Icon_gtg592.webp",
+    image: ThumbSquirrel,
     name: "Squirrel Girl",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/squi_yo6cgm.png",
+    tallImage: Squirrel,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/squi_yo6cgm.png",
     role: "Duelist",
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         descriptions: [
@@ -2683,28 +2416,24 @@ export const HERO_COUNTERS = [
         role: "Vanguard",
         description:
           "Groot's walls can block Squirrel Girl's attacks, causing them to bounce off your position and your allies' positions.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         description:
           "Cap's shield blocks Squirrel Girl's acorns while his charge can pressure her and force her to retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         description:
           "His high mobility can close the distance and forces her to reposition.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description: "Long-range burst damage while maintaing safe distance.",
@@ -2712,20 +2441,17 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+        image: ThumbAdam,
         name: "Adam Warlock",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+        image: ThumbThor,
         name: "Thor",
         description: "",
       },
@@ -2733,13 +2459,11 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+    image: ThumbNamor,
     name: "Namor",
     tier: "S",
     meta: true,
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/namor_acnpav.png",
+    tallImage: Namor,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/namor_acnpav.png",
     role: "Duelist",
@@ -2749,27 +2473,23 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         description:
           "Moon Knight's ankh can quickly destroy Namor's turret with ease while maintaining a safe distance.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Her long-range attacks can destroy Namor's spawns easily.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description: "Long-range burst damage while maintaing safe distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
@@ -2778,32 +2498,27 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         description: "",
       },
@@ -2811,51 +2526,44 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+    image: ThumbPunisher,
     name: "The Punisher",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/punisher_g8ytdf.png",
+    tallImage: Punisher,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/punisher_g8ytdf.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Captain_America_Icon_cehji6.webp",
+        image: ThumbCap,
         name: "Captain America",
         role: "Vanguard",
         description:
           "Cap can dive into Punisher's turret and pressure him by shielding upfront. He can also negate Punisher's shotgun and other attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Hela can destroy Punisher's turret from a safe distance. Additionally, her long-range damage output surpasses his normal attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
           "Hawkeye can destroy Punisher's turret from a safe distance. Additionally, one or two headshots can take him down entirely.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
         name: "Iron Fist",
         role: "Duelist",
         description:
           "Iron Fist can apply pressure from the back and easily parry Punisher's attacks easily.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         description:
@@ -2866,14 +2574,12 @@ export const HERO_COUNTERS = [
         role: "Strategist",
         description:
           "Cloak & Dagger's ultimate completely negates Punisher's ultimate. Additionally, she can hide her allies if Punisher activates his ultimate or turret.",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
       },
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         descriptions: [
@@ -2881,8 +2587,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         descriptions: [
@@ -2893,26 +2598,22 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         description: "",
       },
@@ -2920,43 +2621,37 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp",
+    image: ThumbJeff,
     name: "Jeff",
     tier: "C",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607168/rivals%20v2/jeff_wadppv.png",
+    tallImage: Jeff,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/jeff_wadppv.png",
     role: "Strategist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         role: "Duelist",
         description:
           "He can simply punish Jeff in mid air while not being reached by Jeff's ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         description:
           "She can simply punish Jeff from above while not being reached by Jeff's ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         description:
           "He can pressure Jeff at the back and force him to retreat instead of healing allies. He can also avoid Jeff's ultimate with his exceptional mobility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
@@ -2966,8 +2661,7 @@ export const HERO_COUNTERS = [
     goodAgainst: [],
     goodPairWith: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
@@ -2975,51 +2669,44 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Scarlet_Witch_Icon_mdkxbf.webp",
+    image: ThumbWanda,
     name: "Scarlet Witch",
     tier: "C",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607170/rivals%20v2/scar_xspbho.png",
+    tallImage: Wanda,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607170/rivals%20v2/scar_xspbho.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can surprise her with combinations and assasinate her easily.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
           "High consistent damage output can eliminate her before she can escape, plus his ultimate counters her aerial positioning.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         description:
           "His Shield of Seraphim negates her attacks and limit her effectiveness.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
           "Hawkeye can inflict massive damage on Wanda before she can even get close to his position.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
@@ -3028,26 +2715,22 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Thor_Icon_vziina.webp",
+        image: ThumbThor,
         name: "Thor",
         description: "",
       },
       {
         name: "Luna Snow",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
@@ -3055,43 +2738,37 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Widow_Icon_hfelvs.webp",
+    image: ThumbWidow,
     name: "Black Widow",
     tier: "C",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/btw_pnokvx.png",
+    tallImage: Widow,
     role: "Duelist",
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/btw_pnokvx.png",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can surprise her with combinations and assasinate her from unexpected angles.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magik_Icon_tkyxty.webp",
+        image: ThumbMagik,
         name: "Magik",
         role: "Duelist",
         description:
           "With the help of her teleportation abilities, she can flank and pressure Widow in the backline, capitalizing on her low mobility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         description:
           "T'Challa's mechanics can pressure Widow from unexpected angles and capitalize on her low mobility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         description:
@@ -3100,14 +2777,12 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         description: "",
       },
@@ -3115,43 +2790,37 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Adam_Warlock_Icon_exkpa4.webp",
+    image: ThumbAdam,
     name: "Adam Warlock",
     tier: "B",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/adam_w2m9ek.png",
+    tallImage: Adam,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/adam_w2m9ek.png",
     role: "Strategist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         role: "Duelist",
         description:
           "His swinging mobility can quickly close the distance and land combinations to him.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can surprise him with combinations and assasinate him easily.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         description:
           "He can flank and pressure Adam from unexpected angles and capitalize on his low mobility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
@@ -3161,26 +2830,22 @@ export const HERO_COUNTERS = [
     goodAgainst: [],
     goodPairWith: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Mantis_Icon_wjrezu.webp",
+        image: ThumbMantis,
         name: "Mantis",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+        image: ThumbStarLord,
         name: "Star-Lord",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         description: "",
       },
@@ -3188,35 +2853,30 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+    image: ThumbBucky,
     name: "Winter Soldier",
     tier: "A",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607167/rivals%20v2/bucky_tdwc4f.png",
+    tallImage: Bucky,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607167/rivals%20v2/bucky_tdwc4f.png",
     role: "Duelist",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484731/Rivals/Psylocke_Icon_ls6zo3.webp",
+        image: ThumbPsy,
         name: "Psylocke",
         role: "Duelist",
         description:
           "She can land surprise attacks at different angles, and can easily avoid his combos with dashes and invisibility.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Hela can deal massive damage to him from long range while staying safe from the reach of his Bionic Hook.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
@@ -3225,8 +2885,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         descriptions: [
@@ -3235,8 +2894,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
         name: "Magneto",
         role: "Vanguard",
         descriptions: [
@@ -3244,8 +2902,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         descriptions: [
@@ -3255,20 +2912,17 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
         name: "Groot",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Spider-Man_Icon_lvnyoc.webp",
+        image: ThumbSpidey,
         name: "Spider-Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Peni_Parker_Icon_u0uafv.webp",
+        image: ThumbPeni,
         name: "Peni Parker",
         description: "",
       },
@@ -3276,36 +2930,31 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+    image: ThumbMagneto,
     name: "Magneto",
     tier: "S",
     meta: true,
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607169/rivals%20v2/magneto_wbantn.png",
+    tallImage: Magneto,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607169/rivals%20v2/magneto_wbantn.png",
     role: "Vanguard",
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
           "Punisher's Culling Turret (E) ability can break Magneto's shield quickly, forcing him to hide or retreat.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
         name: "Wolverine",
         role: "Duelist",
         description:
           "Wolverine's claws can pierce through Magneto's shield. Additionally, he can capitalize on Magneto's low mobility and catch him off guard with ease.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
@@ -3314,8 +2963,7 @@ export const HERO_COUNTERS = [
     ],
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         descriptions: [
@@ -3323,8 +2971,7 @@ export const HERO_COUNTERS = [
         ],
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Storm_Icon_ncerpu.webp",
+        image: ThumbStorm,
         name: "Storm",
         role: "Duelist",
         descriptions: [
@@ -3334,26 +2981,22 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Cloak__26_Dagger_Icon_qgjwi4.webp",
+        image: ThumbCnd,
         name: "Cloak & Dagger",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         description: "",
       },
@@ -3361,11 +3004,9 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+    image: ThumbStrange,
     name: "Doctor Strange",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607172/rivals%20v2/strange_t4560m.png",
+    tallImage: Strange,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607172/rivals%20v2/strange_t4560m.png",
     role: "Vanguard",
@@ -3373,40 +3014,35 @@ export const HERO_COUNTERS = [
     meta: true,
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484734/Rivals/Wolverine_Icon_xhlm8q.webp",
+        image: ThumbWolvie,
         name: "Wolverine",
         role: "Duelist",
         description:
           "His claws can pierce through Strange's shield. Additionaly, he can catch strange mid air if he uses Cloak of Levitation.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Winter_Soldier_Icon_lceqsq.webp",
+        image: ThumbBucky,
         name: "Winter Soldier",
         role: "Duelist",
         description:
           "He can pull Strange with bionic hook and punish him with the team.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
         name: "Black Panther",
         role: "Duelist",
         description:
           "His Spirit Rend (LShift) and Spinning Kick (E) bypass Strange's shield, and it's easy for him to attack from unexpected angles.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/Venom_Icon_mwro7g.webp",
+        image: ThumbVenom,
         name: "Venom",
         role: "Vanguard",
         description:
           "He can disrupt Strange’s shield while providing consistent crowd control.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Hulk_Icon_d2xnfs.webp",
+        image: ThumbHulk,
         name: "Hulk",
         role: "Vanguard",
         description:
@@ -3415,20 +3051,17 @@ export const HERO_COUNTERS = [
     ],
     goodAgainst: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
         name: "Iron Man",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         description: "",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         description: "",
       },
@@ -3436,19 +3069,16 @@ export const HERO_COUNTERS = [
     weakness: "qrqwr",
   },
   {
-    image:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484732/Rivals/Star-Lord_Icon_mvulbd.webp",
+    image: ThumbStarLord,
     name: "Star-Lord",
     tier: "A",
     role: "Duelist",
-    tallImage:
-      "https://res.cloudinary.com/dqrtlfjc0/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1737607171/rivals%20v2/star_du9q4c.png",
+    tallImage: StarLord,
     fullImage:
       "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607171/rivals%20v2/star_du9q4c.png",
     situationalCounters: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Namor_Icon_ri6epi.webp",
+        image: ThumbNamor,
         name: "Namor",
         role: "Duelist",
         descriptions: [
@@ -3459,56 +3089,49 @@ export const HERO_COUNTERS = [
     ],
     counterPicks: [
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Magneto_Icon_tlpvn5.webp",
+        image: ThumbMagneto,
         name: "Magneto",
         role: "Vanguard",
         description:
           "Metallic Curtain negates Star-Lord's damage output, while Metal Bulwark can shield allies from incoming damage.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Luna_Snow_Icon_snupak.webp",
+        image: ThumbLuna,
         name: "Luna",
         role: "Strategist",
         description:
           "Luna's ultimate can completely block Star-Lord's attacks and ultimate.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Loki_Icon_tysbig.webp",
+        image: ThumbLoki,
         name: "Loki",
         role: "Strategist",
         description:
           "Loki's healing lamp completely blocks Star-Lord's attacks and ultimate ability. Additionally, he can capitalize on Star-Lord's ultimate by copying it and using it against the enemy team.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Doctor_Strange_Icon_qtd9ik.webp",
+        image: ThumbStrange,
         name: "Doctor Strange",
         role: "Vanguard",
         description:
           "His shield negates Star-Lord's damage output, while his crowd control can also help allies to avoid his attacks.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hela_Icon_kvrhsp.webp",
+        image: ThumbHela,
         name: "Hela",
         role: "Duelist",
         description:
           "Hela's buff in this patch makes her a great counter to Star-Lord, as she can deal a massive amount of damage to him before he can even close the distance.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484733/Rivals/The_Punisher_Icon_hqyd44.webp",
+        image: ThumbPunisher,
         name: "Punisher",
         role: "Duelist",
         description:
           "Punisher's Culling Turret can threaten Star-Lord from long distances. His abilities are typically anti-aerial, making him a natural counter to Star-Lord.",
       },
       {
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Hawkeye_Icon_q7o2so.webp",
+        image: ThumbHawkeye,
         name: "Hawkeye",
         role: "Duelist",
         description:
@@ -3519,32 +3142,27 @@ export const HERO_COUNTERS = [
       {
         name: "Black Panther",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484728/Rivals/Black_Panther_Icon_pzkpcd.webp",
+        image: ThumbPanther,
       },
       {
         name: "Iron Man",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Man_Icon_vyqsna.webp",
+        image: ThumbIronMan,
       },
       {
         name: "Groot",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Groot_Icon_udutn9.webp",
+        image: ThumbGroot,
       },
       {
         name: "Moon Knight",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484730/Rivals/Moon_Knight_Icon_c8keu4.webp",
+        image: ThumbMoonKnight,
       },
       {
         name: "Iron Fist",
         description: "",
-        image:
-          "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Iron_Fist_Icon_t1byee.webp",
+        image: ThumbIronFist,
       },
     ],
     weakness: "qrqwr",

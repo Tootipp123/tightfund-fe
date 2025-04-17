@@ -72,7 +72,7 @@ export default function Navbar() {
             >
               <span>Team Up Counters</span>
             </Link>
-            <Link
+            {/* <Link
               href="/team-compositions"
               className={`${
                 currentPath === "/team-compositions"
@@ -81,7 +81,7 @@ export default function Navbar() {
               } hidden md:block text-xs md:text-sm`}
             >
               Team Compositions
-            </Link>
+            </Link> */}
             <Link
               href="/generate-team-counters"
               className={`${
