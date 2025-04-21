@@ -4,6 +4,7 @@ import Widow from "../assets/heroes/btw_pnokvx.png";
 import Bucky from "../assets/heroes/bucky_tdwc4f.png";
 import Cap from "../assets/heroes/cap_j99m6o.png";
 import Cnd from "../assets/heroes/cnd_ivfbce.png";
+import EmmaFrost from "../assets/heroes/emma_3232.png";
 import Groot from "../assets/heroes/groot_xxhfud.png";
 import Hawkeye from "../assets/heroes/hawkeye_yybihp.png";
 import Hela from "../assets/heroes/hela_lluyca.png";
@@ -42,6 +43,7 @@ import ThumbWidow from "../assets/thumbs/Black_Widow_Icon_hfelvs.webp";
 import ThumbCap from "../assets/thumbs/Captain_America_Icon_cehji6.webp";
 import ThumbCnd from "../assets/thumbs/Cloak__26_Dagger_Icon_qgjwi4.webp";
 import ThumbStrange from "../assets/thumbs/Doctor_Strange_Icon_qtd9ik.webp";
+import ThumbEmma from "../assets/thumbs/Emma_Frost.png";
 import ThumbGroot from "../assets/thumbs/Groot_Icon_udutn9.webp";
 import ThumbHawkeye from "../assets/thumbs/Hawkeye_Icon_q7o2so.webp";
 import ThumbHela from "../assets/thumbs/Hela_Icon_kvrhsp.webp";
@@ -69,12 +71,66 @@ import ThumbStarLord from "../assets/thumbs/Star-Lord_Icon_mvulbd.webp";
 import ThumbStorm from "../assets/thumbs/Storm_Icon_ncerpu.webp";
 import ThumbPunisher from "../assets/thumbs/The_Punisher_Icon_hqyd44.webp";
 import ThumbThing from "../assets/thumbs/The_Thing_Icon_ydoqtg.webp";
+
 import ThumbThor from "../assets/thumbs/Thor_Icon_vziina.webp";
 import ThumbVenom from "../assets/thumbs/Venom_Icon_mwro7g.webp";
 import ThumbBucky from "../assets/thumbs/Winter_Soldier_Icon_lceqsq.webp";
 import ThumbWolvie from "../assets/thumbs/Wolverine_Icon_xhlm8q.webp";
 
 export const HERO_COUNTERS = [
+  {
+    image: ThumbEmma,
+    fullImage:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1740119810/rivals%20v2/humantorch_1_jx2y0t.png",
+    tallImage: EmmaFrost,
+    name: "Emma Frost",
+    role: "Vanguard",
+    meta: true,
+    tier: "A",
+    goodAgainst: [],
+    counterPicks: [
+      {
+        image: ThumbGroot,
+        name: "Groot",
+        role: "Vanguard",
+        score: 10,
+        description:
+          "Groot might be the best vanguard to counter Emma. With her low mobility, he can capitalize on it by blocking her from behind and attacking freely.",
+      },
+      {
+        name: "Iron Man",
+        role: "Duelist",
+        score: 10,
+        description:
+          "Iron Man is powerful against heroes that can't reach him, like Emma. He can simply free hit above without getting dealt any damage at all by Emma.",
+        image: ThumbIronMan,
+      },
+      {
+        name: "Hela",
+        role: "Duelist",
+        score: 9,
+        description:
+          "Hela's long range and projectile speed allow her to attack Emma freely from a distance.",
+        image: ThumbHela,
+      },
+      {
+        image: ThumbPunisher,
+        name: "Punisher",
+        role: "Duelist",
+        score: 10,
+        description:
+          "Punisher can easily break Emma's shield with his consistent damage output and long-range attacks.",
+      },
+      {
+        name: "Hawkeye",
+        role: "Duelist",
+        score: 9,
+        description:
+          "Similar with Hela, Hawkeye's long range and projectile speed allow him to attack Emma freely from a distance.",
+        image: ThumbHawkeye,
+      },
+    ],
+  },
   {
     image: ThumbThing,
     fullImage:
