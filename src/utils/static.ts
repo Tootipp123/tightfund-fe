@@ -102,7 +102,7 @@ export const HERO_COUNTERS = [
         role: "Duelist",
         score: 10,
         description:
-          "Iron Man is powerful against heroes that can't reach him, like Emma. He can simply free hit above without getting dealt any damage at all by Emma.",
+          "Iron Man is powerful against heroes that can't reach him, like Emma. He can simply free hit above without getting dealt any damage at all.",
         image: ThumbIronMan,
       },
       {
