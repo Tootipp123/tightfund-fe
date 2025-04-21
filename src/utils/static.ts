@@ -235,6 +235,13 @@ export const HERO_COUNTERS = [
           "The only melee hero who can hunt Johnny while staying safe from his attacks. Spider-Man's swinging ability and the Web-Cluster buff (reduced from 3s to 2.5s) make him a significant threat to Johnny.",
       },
       {
+        image: ThumbAdam,
+        name: "Adam Warlock",
+        score: 9,
+        description:
+          "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Human Torch.",
+      },
+      {
         image: ThumbLuna,
         name: "Luna Snow",
         role: "Strategist",
@@ -347,6 +354,13 @@ export const HERO_COUNTERS = [
         score: 8.3,
         description: "Her ultimate ability can block Storm's ultimate.",
         image: ThumbLuna,
+      },
+      {
+        image: ThumbAdam,
+        name: "Adam Warlock",
+        score: 9,
+        description:
+          "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Storm.",
       },
       {
         image: ThumbRocket,
@@ -496,6 +510,13 @@ export const HERO_COUNTERS = [
         description:
           "Similar with Hela, he can land massive damage to him in a safe distance.",
       },
+      {
+        image: ThumbAdam,
+        name: "Adam Warlock",
+        score: 9,
+        description:
+          "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Iron Man.",
+      },
     ],
     goodAgainst: [
       {
@@ -528,11 +549,6 @@ export const HERO_COUNTERS = [
         name: "Peni Parker",
         description: "",
         image: ThumbPeni,
-      },
-      {
-        name: "Jeff",
-        description: "",
-        image: ThumbJeff,
       },
     ],
     weakness: "qrqwr",
