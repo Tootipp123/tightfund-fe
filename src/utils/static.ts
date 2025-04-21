@@ -238,6 +238,7 @@ export const HERO_COUNTERS = [
         image: ThumbAdam,
         name: "Adam Warlock",
         score: 9,
+        role: "Strategist",
         description:
           "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Human Torch.",
       },
@@ -358,6 +359,7 @@ export const HERO_COUNTERS = [
       {
         image: ThumbAdam,
         name: "Adam Warlock",
+        role: "Strategist",
         score: 9,
         description:
           "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Storm.",
@@ -513,6 +515,7 @@ export const HERO_COUNTERS = [
       {
         image: ThumbAdam,
         name: "Adam Warlock",
+        role: "Strategist",
         score: 9,
         description:
           "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Iron Man.",
