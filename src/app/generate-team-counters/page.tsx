@@ -31,6 +31,9 @@ export default function TeamCompCountersPage() {
 
   // Initialize limit count from localStorage
   useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      router.push("/signin");
+    }
     const storedCount = localStorage.getItem("draftLimitCount");
     const initialCount = storedCount ? parseInt(storedCount) : 3;
     setLimitCount(initialCount);
