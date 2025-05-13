@@ -16,9 +16,11 @@ import VanguardIcon from "@/assets/Vanguard_Icon.webp";
 // import ContentDescription from "@/components/features/ContentDescription";
 import Navbar from "@/components/features/Navbar";
 import { useUserStore } from "@/store/User";
+import { useRouter } from "next/navigation";
 
 export default function TeamCompCountersPage() {
-  const { isMember } = useUserStore();
+  const router = useRouter();
+  const { accessToken, isMember } = useUserStore();
   const [selectedHeroes, setSelectedHeroes] = useState<any>([]);
   const [counterHeroes, setCounterHeroes] = useState<any>([]);
   const [threeStratComp, setThreeStratComp] = useState<any>([]);
@@ -29,6 +31,9 @@ export default function TeamCompCountersPage() {
 
   // Initialize limit count from localStorage
   useEffect(() => {
+    if (!accessToken) {
+      router.push("/signin");
+    }
     const storedCount = localStorage.getItem("draftLimitCount");
     const initialCount = storedCount ? parseInt(storedCount) : 3;
     setLimitCount(initialCount);
