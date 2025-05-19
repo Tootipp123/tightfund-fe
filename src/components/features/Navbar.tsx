@@ -176,14 +176,24 @@ export default function Navbar() {
           Hero Counters
         </Link>
         <Link
-          href="/teamcomp"
+          href="/team-up-counters"
           className={`${
-            currentPath === "/teamcomp"
+            currentPath === "/team-up-counters"
               ? "text-white font-bold"
               : "text-neutral-200"
           } text-xs md:text-sm`}
         >
-          Team Compositions
+          Team Up Counters
+        </Link>
+        <Link
+          href="/generate-team-counters"
+          className={`${
+            currentPath === "/generate-team-counters"
+              ? "text-white font-bold"
+              : "text-neutral-200"
+          } text-xs md:text-sm`}
+        >
+          Generate Counters
         </Link>
       </div>
     </>

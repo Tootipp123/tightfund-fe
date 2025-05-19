@@ -153,7 +153,7 @@ export default function HeroCountersv2() {
 
   return (
     <div className="w-full px-3 md:px-0 md:w-[1200px] mx-auto pb-[150px]">
-      <div className="rounded-xl border border-neutral-700 bg-[#2E2E42] p-5 mt-5">
+      <div className="hidden md:block rounded-xl border border-neutral-700 bg-[#2E2E42] p-5 mt-5">
         <div className="flex items-center justify-between px-[100px]">
           <section className="w-[40%]">
             <p className="text-xl text-neutral-200 mb-3 mt-5 font-semibold">
