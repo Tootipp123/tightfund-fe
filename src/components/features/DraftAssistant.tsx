@@ -485,9 +485,9 @@ export default function DraftAssistant({
               }
               router.push("/membership");
             }}
-            className="bg-transparent min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold py-2 px-4 rounded"
+            className="bg-transparent w-[140px] lg:min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold py-2 px-4 rounded"
           >
-            Unlock Unlimited
+            <p className="text-xs lg:text-[15px]">Unlock Unlimited</p>
           </button>
         </div>
       ) : (
@@ -499,7 +499,9 @@ export default function DraftAssistant({
           {loading ? (
             <AnimatedLoadingIcon size="medium" />
           ) : (
-            <>Generate {limitCount !== null && `(${limitCount} free left)`}</>
+            <p className="text-xs lg:text-[15px]">
+              Generate {limitCount !== null && `(${limitCount} free left)`}
+            </p>
           )}
         </button>
       )}

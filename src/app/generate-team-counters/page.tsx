@@ -3,18 +3,16 @@
 import DraftAssistant from "@/components/features/DraftAssistant";
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaRegHandPointLeft } from "react-icons/fa";
-import { IoIosClose } from "react-icons/io";
+import { IoIosClose, IoMdMenu } from "react-icons/io";
 import { MdInfoOutline } from "react-icons/md";
 import { VscChromeClose } from "react-icons/vsc";
 
 import { createGuestApi } from "@/api/Guest";
-import DuelistIcon from "@/assets/Duelist_Icon.webp";
-import StrategistIcon from "@/assets/Strategist_Icon.webp";
-import VanguardIcon from "@/assets/Vanguard_Icon.webp";
 // import ContentDescription from "@/components/features/ContentDescription";
 import { getFreeGenerateTriesCount } from "@/api/Profile";
+import { HeroSelection } from "@/components/features/HeroSelection";
 import Navbar from "@/components/features/Navbar";
 import { useUserStore } from "@/store/User";
 import { useRouter } from "next/navigation";
@@ -28,6 +26,7 @@ export default function TeamCompCountersPage() {
   const [threeStratComp, setThreeStratComp] = useState<any>([]);
   const [threeDuelTeam, setThreeDuelTeam] = useState<any>([]);
   const [searchHero, setSearchHero] = useState("");
+  const [isHeroModalOpen, setIsHeroModalOpen] = useState(false);
 
   const [limitCount, setLimitCount] = useState<number | null>(null);
 
@@ -100,7 +99,7 @@ export default function TeamCompCountersPage() {
     }, {});
   }, [filteredHeroes]);
 
-  const toggleHeroSelection = (hero: any) => {
+  const toggleHeroSelection = useCallback((hero: any) => {
     setSelectedHeroes((prevSelected: any) => {
       const isAlreadySelected = prevSelected.some(
         (h: any) => h.name === hero.name
@@ -112,7 +111,7 @@ export default function TeamCompCountersPage() {
         return [...prevSelected, hero];
       }
     });
-  };
+  }, []);
 
   const GeneratedCounters = ({ heroes, title }: any) => {
     const winPercentage = (Math.random() * 5 + 75).toFixed(1);
@@ -175,87 +174,55 @@ export default function TeamCompCountersPage() {
       <Navbar />
       <main className="bg-[#1B1B29] flex-1 overflow-hidden">
         <div className="w-full px-3 md:px-0 flex md:w-[1450px] mx-auto">
-          {/* Sticky Sidebar */}
-          <div
-            id="hero-sidebar"
-            className="w-[380px] h-[calc(100vh-80px)] overflow-y-auto overflow-x-hidden px-5 pb-5 sticky top-[80px] left-0"
-          >
-            <div className="sticky top-0 bg-[#1b1b29] z-[10] pt-5 pb-3">
-              <input
-                type="text"
-                placeholder="Search a hero"
-                className="rounded-md p-2 w-full bg-[#2e2e42] text-neutral-200"
-                value={searchHero}
-                onChange={(e) => setSearchHero(e.target.value)}
-              />
-            </div>
-            <div className="w-full overflow-y-auto overflow-x-hidden mt-4">
-              {Object.keys(groupedHeroes).length > 0 ? (
-                Object.entries(groupedHeroes).map(([role, heroes]: any) => (
-                  <div key={role} className="w-full mb-6">
-                    <h4 className="text-neutral-200 font-semibold text-lg mb-3 text-center">
-                      <Image
-                        src={
-                          role === "Vanguard"
-                            ? VanguardIcon
-                            : role === "Duelist"
-                            ? DuelistIcon
-                            : role === "Strategist"
-                            ? StrategistIcon
-                            : ""
-                        }
-                        alt={`${role} Icon`}
-                        width={35}
-                        height={35}
-                        className="m-auto"
-                      />
-                    </h4>
-                    <div className="flex items-center justify-center flex-wrap w-full">
-                      {heroes.map((hero: any, index: number) => (
-                        <div
-                          key={index}
-                          onClick={() => {
-                            if (selectedHeroes.length >= 6) {
-                              return;
-                            }
-                            toggleHeroSelection(hero);
-                          }}
-                          className={`hover:opacity-50 cursor-pointer relative p-2 rounded-md ${
-                            selectedHeroes.some(
-                              (h: any) => h.name === hero.name
-                            )
-                              ? "ring-2 ring-blue-500"
-                              : ""
-                          }`}
-                        >
-                          <div
-                            className={`w-[80px] h-[100px] overflow-hidden bg-[#12121c] shadow-[0_0_3px_3px_#12121c] rounded-md `}
-                          >
-                            <Image
-                              src={hero?.tallImage}
-                              alt={hero.name}
-                              unoptimized
-                              width={150}
-                              height={150}
-                              className="rounded-md mx-auto"
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p className="text-neutral-400 text-center mt-8">
-                  No heroes found matching your search
-                </p>
-              )}
-            </div>
+          <div className="hidden lg:block">
+            <HeroSelection
+              searchHero={searchHero}
+              setSearchHero={setSearchHero}
+              groupedHeroes={groupedHeroes}
+              selectedHeroes={selectedHeroes}
+              toggleHeroSelection={toggleHeroSelection}
+            />
           </div>
+
+          {isHeroModalOpen && (
+            <>
+              {/* Overlay */}
+              <div
+                className="fixed inset-0 bg-black bg-opacity-50 z-[998]"
+                onClick={() => setIsHeroModalOpen(false)}
+              />
+
+              {/* Modal */}
+              <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[90%] h-full bg-[#1B1B29] z-[999] rounded-lg overflow-y-auto">
+                <div className="flex justify-end p-4">
+                  <button
+                    onClick={() => setIsHeroModalOpen(false)}
+                    className="text-white text-2xl"
+                  >
+                    <VscChromeClose />
+                  </button>
+                </div>
+                <HeroSelection
+                  searchHero={searchHero}
+                  setSearchHero={setSearchHero}
+                  groupedHeroes={groupedHeroes}
+                  selectedHeroes={selectedHeroes}
+                  toggleHeroSelection={toggleHeroSelection}
+                />
+              </div>
+            </>
+          )}
 
           {/* Main Content */}
           <section className="flex-1 overflow-y-auto h-[calc(100vh-80px)]">
-            <div className="px-[60px] py-[30px] w-full border-b border-neutral-700">
+            <div className="lg:px-[60px] py-[30px] w-full border-b border-neutral-700">
+              <button
+                onClick={() => setIsHeroModalOpen(true)}
+                className="border block lg:hidden mb-5 rounded-md p-2 border-neutral-600 flex items-center gap-2 shadow-md"
+              >
+                <IoMdMenu className="text-neutral-300" />
+                <p className="text-neutral-300">Select Heroes</p>
+              </button>
               <div className="w-full flex flex-row flex-wrap gap-6 md:gap-6">
                 {selectedHeroes.map((hero: any, index: number) => (
                   <div key={index} className="w-[27%] md:w-[70px] relative">
@@ -328,7 +295,7 @@ export default function TeamCompCountersPage() {
               </div>
             </div>
 
-            <div className="px-[60px] py-[30px] w-full">
+            <div className="lg:px-[60px] py-[30px] w-full">
               <h2 className="text-xl text-white font-semibold mb-4">
                 Best Counter Picks:
               </h2>
