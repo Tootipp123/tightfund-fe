@@ -47,14 +47,14 @@ export default function TeamCompCountersPage() {
   });
 
   // Initialize limit count from localStorage
-  // useEffect(() => {
-  //   if (!localStorage.getItem("accessToken")) {
-  //     router.push("/signin");
-  //   }
-  //   const storedCount = localStorage.getItem("draftLimitCount");
-  //   const initialCount = storedCount ? parseInt(storedCount) : 3;
-  //   setLimitCount(initialCount);
-  // }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      router.push("/signin");
+    }
+    // const storedCount = localStorage.getItem("draftLimitCount");
+    // const initialCount = storedCount ? parseInt(storedCount) : 3;
+    // setLimitCount(initialCount);
+  }, []);
 
   // Update localStorage when limitCount changes
   useEffect(() => {
@@ -299,7 +299,7 @@ export default function TeamCompCountersPage() {
                 )}
                 <div className="flex items-center gap-3">
                   {isLoadingGetFreeTries ? (
-                    <>Loading...</>
+                    <p className="text-neutral-200">Loading...</p>
                   ) : (
                     <DraftAssistant
                       enemyLineup={selectedHeroes}
