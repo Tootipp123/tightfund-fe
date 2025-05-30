@@ -14,9 +14,11 @@ import DuelistIcon from "@/assets/Duelist_Icon.webp";
 import StrategistIcon from "@/assets/Strategist_Icon.webp";
 import VanguardIcon from "@/assets/Vanguard_Icon.webp";
 // import ContentDescription from "@/components/features/ContentDescription";
+import { getFreeGenerateTriesCount } from "@/api/Profile";
 import Navbar from "@/components/features/Navbar";
 import { useUserStore } from "@/store/User";
 import { useRouter } from "next/navigation";
+import { useQuery } from "react-query";
 
 export default function TeamCompCountersPage() {
   const router = useRouter();
@@ -29,15 +31,30 @@ export default function TeamCompCountersPage() {
 
   const [limitCount, setLimitCount] = useState<number | null>(null);
 
+  const {
+    isLoading: isLoadingGetFreeTries,
+    isError: isErrorFriends,
+    refetch: refetchFriends,
+  } = useQuery({
+    queryKey: ["getFreeGenerateTriesCount"],
+    queryFn: getFreeGenerateTriesCount,
+    staleTime: 0,
+    refetchOnMount: true,
+    onSuccess: (data) => {
+      localStorage.setItem("draftLimitCount", data.freeTeamCounterTriesCount);
+      setLimitCount(data.freeTeamCounterTriesCount);
+    },
+  });
+
   // Initialize limit count from localStorage
-  useEffect(() => {
-    if (!localStorage.getItem("accessToken")) {
-      router.push("/signin");
-    }
-    const storedCount = localStorage.getItem("draftLimitCount");
-    const initialCount = storedCount ? parseInt(storedCount) : 3;
-    setLimitCount(initialCount);
-  }, []);
+  // useEffect(() => {
+  //   if (!localStorage.getItem("accessToken")) {
+  //     router.push("/signin");
+  //   }
+  //   const storedCount = localStorage.getItem("draftLimitCount");
+  //   const initialCount = storedCount ? parseInt(storedCount) : 3;
+  //   setLimitCount(initialCount);
+  // }, []);
 
   // Update localStorage when limitCount changes
   useEffect(() => {
@@ -281,14 +298,18 @@ export default function TeamCompCountersPage() {
                   </p>
                 )}
                 <div className="flex items-center gap-3">
-                  <DraftAssistant
-                    enemyLineup={selectedHeroes}
-                    setCounterHeroes={setCounterHeroes}
-                    setThreeStratComp={setThreeStratComp}
-                    setThreeDuelTeam={setThreeDuelTeam}
-                    limitCount={limitCount}
-                    setLimitCount={setLimitCount}
-                  />
+                  {isLoadingGetFreeTries ? (
+                    <>Loading...</>
+                  ) : (
+                    <DraftAssistant
+                      enemyLineup={selectedHeroes}
+                      setCounterHeroes={setCounterHeroes}
+                      setThreeStratComp={setThreeStratComp}
+                      setThreeDuelTeam={setThreeDuelTeam}
+                      limitCount={limitCount}
+                      setLimitCount={setLimitCount}
+                    />
+                  )}
                   {selectedHeroes.length > 0 && (
                     <button
                       className="border-neutral-700 border min-w-[100px] min-h-[40px] flex items-center justify-center text-neutral-200 text-white font-semibold py-2 px-0 rounded"

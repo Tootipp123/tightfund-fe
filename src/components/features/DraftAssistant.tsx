@@ -1,5 +1,6 @@
 "use client";
 import { createGuestApi } from "@/api/Guest";
+import { updateFreeGenerateTriesCount } from "@/api/Profile";
 import { useUserStore } from "@/store/User";
 import { HERO_COUNTERS } from "@/utils/static";
 import { useRouter } from "next/navigation";
@@ -17,7 +18,6 @@ export default function DraftAssistant({
   const { isMember } = useUserStore();
   const router = useRouter();
 
-  console.log("isMember: ", isMember);
   // REQUIREMENTS:
   // input 6 heroes
   // input 4 bans
@@ -74,6 +74,7 @@ export default function DraftAssistant({
     setTimeout(() => {
       setLoading(false);
       constructFinalCounterComp();
+      updateFreeGenerateTriesCount();
       setLimitCount((prev: any) => (prev !== null ? prev - 1 : 0));
     }, 500);
   };
