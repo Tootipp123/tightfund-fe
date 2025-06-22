@@ -62,7 +62,7 @@ export default function Navbar() {
             >
               Hero Counters
             </Link>
-            <Link
+            {/* <Link
               href="/team-up-counters"
               className={`${
                 currentPath === "/team-up-counters"
@@ -71,7 +71,7 @@ export default function Navbar() {
               } hidden md:flex text-xs md:text-sm relative items-center gap-1`}
             >
               <span>Team Up Counters</span>
-            </Link>
+            </Link> */}
             {/* <Link
               href="/team-compositions"
               className={`${
@@ -175,7 +175,7 @@ export default function Navbar() {
         >
           Hero Counters
         </Link>
-        <Link
+        {/* <Link
           href="/team-up-counters"
           className={`${
             currentPath === "/team-up-counters"
@@ -184,7 +184,7 @@ export default function Navbar() {
           } text-xs md:text-sm`}
         >
           Team Up Counters
-        </Link>
+        </Link> */}
         <Link
           href="/generate-team-counters"
           className={`${

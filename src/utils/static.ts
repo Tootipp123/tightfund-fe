@@ -34,6 +34,7 @@ import Storm from "../assets/heroes/storm_jan4ge.png";
 import Strange from "../assets/heroes/strange_t4560m.png";
 import Thing from "../assets/heroes/The_Thing_Heroportrait_1_egyvsz.png";
 import Thor from "../assets/heroes/thor_lhhqwi.png";
+import Ultron from "../assets/heroes/ultron-5235.png";
 import Venom from "../assets/heroes/venom_lu4wjv.png";
 import Wolvie from "../assets/heroes/wolvie_j9xibh.png";
 
@@ -73,11 +74,105 @@ import ThumbPunisher from "../assets/thumbs/The_Punisher_Icon_hqyd44.webp";
 import ThumbThing from "../assets/thumbs/The_Thing_Icon_ydoqtg.webp";
 
 import ThumbThor from "../assets/thumbs/Thor_Icon_vziina.webp";
+import ThumbUltron from "../assets/thumbs/ultron.png";
 import ThumbVenom from "../assets/thumbs/Venom_Icon_mwro7g.webp";
 import ThumbBucky from "../assets/thumbs/Winter_Soldier_Icon_lceqsq.webp";
 import ThumbWolvie from "../assets/thumbs/Wolverine_Icon_xhlm8q.webp";
 
 export const HERO_COUNTERS = [
+  {
+    image: ThumbUltron,
+    name: "Ultron",
+    fullImage:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_man_wtebxq.png",
+    role: "Strategist",
+    tier: "B",
+    tallImage: Ultron,
+    counterPicks: [
+      {
+        image: ThumbIronFist,
+        name: "Iron Fist",
+        role: "Duelist",
+        score: 8.6,
+        description:
+          "Iron Fist can get behind Ultron and pressure him mid-air, making him unable to support his allies.",
+      },
+      {
+        image: ThumbSpidey,
+        name: "Spider-Man",
+        role: "Duelist",
+        score: 9.2,
+        description:
+          "He can be a pain to deal in the air with his high mobility.",
+      },
+      {
+        image: ThumbNamor,
+        name: "Namor",
+        role: "Duelist",
+        score: 10,
+        description:
+          "Namor's long-range attacks and spawns are effective counters to Ultron. Additionally, his Blessings of the Deep (Shift) allows him to reposition strategically, allowing him to attack Ultron from unexpected angles.",
+      },
+      {
+        image: ThumbStarLord,
+        name: "Star-Lord",
+        role: "Duelist",
+        score: 9.3,
+        description:
+          "He can chase and solo-kill Ultron in mid air almost instantly.",
+      },
+      {
+        image: ThumbPunisher,
+        name: "Punisher",
+        role: "Duelist",
+        score: 10,
+        description:
+          "He can pressure Ultron while maintaining consistent damage output, and force him to retreat.",
+      },
+      {
+        image: ThumbPsy,
+        name: "Psylocke",
+        role: "Duelist",
+        score: 9.5,
+        description:
+          "Her mobility and quick damage output can burst Ultron while he's busy supporting his allies.",
+      },
+      {
+        name: "Black Widow",
+        role: "Duelist",
+        score: 9.4,
+        description:
+          "Black Widow's mechanics as a sniper is a natural counter to Ultron as she can snipe him in a safe distance.",
+        image: ThumbWidow,
+      },
+      {
+        image: ThumbHela,
+        name: "Hela",
+        role: "Duelist",
+        score: 9.98,
+        description:
+          "She can land massive damage to Ultron in a safe distance.",
+      },
+      {
+        image: ThumbHawkeye,
+        name: "Hawkeye",
+        role: "Duelist",
+        score: 10,
+        description:
+          "Similar with Hela, he can land massive damage to Ultron in a safe distance.",
+      },
+      {
+        image: ThumbAdam,
+        name: "Adam Warlock",
+        role: "Strategist",
+        score: 9,
+        description:
+          "Adam's attack damage and projectile speed as a strategist make him a hard counter to flying heroes like Ultron.",
+      },
+    ],
+    goodAgainst: [],
+    weakness: "qrqwr",
+  },
   {
     image: ThumbEmma,
     fullImage:
