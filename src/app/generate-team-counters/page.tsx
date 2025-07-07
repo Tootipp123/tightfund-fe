@@ -6,11 +6,9 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaRegHandPointLeft } from "react-icons/fa";
 import { IoIosClose, IoMdMenu } from "react-icons/io";
-import { MdInfoOutline } from "react-icons/md";
 import { VscChromeClose } from "react-icons/vsc";
 
 import { createGuestApi } from "@/api/Guest";
-// import ContentDescription from "@/components/features/ContentDescription";
 import { getFreeGenerateTriesCount } from "@/api/Profile";
 import { HeroSelection } from "@/components/features/HeroSelection";
 import Navbar from "@/components/features/Navbar";
@@ -20,7 +18,7 @@ import { useQuery } from "react-query";
 
 export default function TeamCompCountersPage() {
   const router = useRouter();
-  const { accessToken, isMember } = useUserStore();
+  const { isMember } = useUserStore();
   const [selectedHeroes, setSelectedHeroes] = useState<any>([]);
   const [counterHeroes, setCounterHeroes] = useState<any>([]);
   const [threeStratComp, setThreeStratComp] = useState<any>([]);
@@ -30,11 +28,7 @@ export default function TeamCompCountersPage() {
 
   const [limitCount, setLimitCount] = useState<number | null>(null);
 
-  const {
-    isLoading: isLoadingGetFreeTries,
-    isError: isErrorFriends,
-    refetch: refetchFriends,
-  } = useQuery({
+  const { isLoading: isLoadingGetFreeTries } = useQuery({
     queryKey: ["getFreeGenerateTriesCount"],
     queryFn: getFreeGenerateTriesCount,
     staleTime: 0,
@@ -50,9 +44,6 @@ export default function TeamCompCountersPage() {
     if (!localStorage.getItem("accessToken")) {
       router.push("/signin");
     }
-    // const storedCount = localStorage.getItem("draftLimitCount");
-    // const initialCount = storedCount ? parseInt(storedCount) : 3;
-    // setLimitCount(initialCount);
   }, []);
 
   // Update localStorage when limitCount changes
@@ -114,8 +105,6 @@ export default function TeamCompCountersPage() {
   }, []);
 
   const GeneratedCounters = ({ heroes, title }: any) => {
-    const winPercentage = (Math.random() * 5 + 75).toFixed(1);
-
     return (
       <div className="bg-[#2e2e42] rounded-lg p-5 w-fit">
         <div className="flex justify-between items-center relative">
@@ -127,10 +116,10 @@ export default function TeamCompCountersPage() {
               enemyLineup={selectedHeroes}
               counterHeroes={heroes}
             /> */}
-            <p className="text-green-500 opacity-60 text-sm">
+            {/* <p className="text-green-500 opacity-60 text-sm">
               {winPercentage}% win probability
-            </p>
-            <div className="group relative flex items-center">
+            </p> */}
+            {/* <div className="group relative flex items-center">
               <MdInfoOutline className="text-neutral-400 hover:text-white cursor-pointer" />
               <div className="absolute hidden group-hover:block left-full ml-2 w-64 p-3 bg-[#2e2e42] text-xs text-neutral-200 rounded shadow-lg z-10">
                 This percentage is calculated based on:
@@ -144,7 +133,7 @@ export default function TeamCompCountersPage() {
                   calculations.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="w-full mt-5 flex flex-row items-center justify-center flex-wrap gap-6 md:gap-6">
