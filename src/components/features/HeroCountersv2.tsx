@@ -4,7 +4,6 @@ import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import AutoComplete from "../ui/AutoComplete";
 import CounterModal from "./CounterModal";
 
 export default function HeroCountersv2() {
@@ -157,7 +156,7 @@ export default function HeroCountersv2() {
         <div className="flex items-center justify-between px-[100px]">
           <section className="w-[40%]">
             <p className="text-xl text-neutral-200 mb-3 mt-5 font-semibold">
-              Want to destroy your enemies' lineup? Discover the perfect hero
+              Want to destroy your enemies' lineup? Find the perfect hero
               counters!
             </p>
             <button
@@ -239,12 +238,12 @@ export default function HeroCountersv2() {
               value={selectedHeroCategory}
               items={filters}
             /> */}
-            <AutoComplete
+            {/* <AutoComplete
               placeholder="Select a filter"
               onChange={(item: any) => setTierFilter(item)}
               value={tierFilter}
               items={tierFilters}
-            />
+            /> */}
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row md:flex-wrap gap-5">
