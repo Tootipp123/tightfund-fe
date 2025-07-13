@@ -23,6 +23,7 @@ import MoonKnight from "../assets/heroes/mk-new_1_tcgzik.png";
 import Reed from "../assets/heroes/mr_fantastic_np1ays.png";
 import Namor from "../assets/heroes/namor_acnpav.png";
 import Peni from "../assets/heroes/peni_wdcktf.png";
+import Phoenix from "../assets/heroes/phoenix_1.png";
 import Psy from "../assets/heroes/psy_feub8t.png";
 import Punisher from "../assets/heroes/punisher_g8ytdf.png";
 import Rocket from "../assets/heroes/rocket-new_1_raqc7g.png";
@@ -73,6 +74,7 @@ import ThumbStorm from "../assets/thumbs/Storm_Icon_ncerpu.webp";
 import ThumbPunisher from "../assets/thumbs/The_Punisher_Icon_hqyd44.webp";
 import ThumbThing from "../assets/thumbs/The_Thing_Icon_ydoqtg.webp";
 
+import ThumbPhoenix from "../assets/thumbs/Phoenix_Icon.webp";
 import ThumbThor from "../assets/thumbs/Thor_Icon_vziina.webp";
 import ThumbUltron from "../assets/thumbs/ultron.png";
 import ThumbVenom from "../assets/thumbs/Venom_Icon_mwro7g.webp";
@@ -80,6 +82,51 @@ import ThumbBucky from "../assets/thumbs/Winter_Soldier_Icon_lceqsq.webp";
 import ThumbWolvie from "../assets/thumbs/Wolverine_Icon_xhlm8q.webp";
 
 export const HERO_COUNTERS = [
+  {
+    image: ThumbPhoenix,
+    name: "Phoenix",
+    fullImage:
+      "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737607168/rivals%20v2/iron_man_wtebxq.png",
+    role: "Duelist",
+    tier: "B",
+    tallImage: Phoenix,
+    counterPicks: [
+      {
+        name: "Doctor Strange",
+        role: "Vanguard",
+        score: 9.5,
+        description:
+          "Strange's shield allows him to block Phoenix's attacks. Forcing her to reposition.",
+        image: ThumbStrange,
+      },
+      {
+        name: "Emma Frost",
+        role: "Vanguard",
+        score: 9.5,
+        description:
+          "Emma's shield allows her to block Phoenix's attacks. Forcing her to reposition.",
+        image: ThumbEmma,
+      },
+      {
+        image: ThumbPunisher,
+        name: "Punisher",
+        role: "Duelist",
+        score: 10,
+        description:
+          "He might be the best hitscan hero to counter Phoenix, as he's always in position while dealing consistent burst damage and applying pressure from afar.",
+      },
+      {
+        image: ThumbStarLord,
+        name: "Star-Lord",
+        role: "Duelist",
+        score: 9,
+        description:
+          "Star-Lord's consistent damage output can also pressure Phoenix, and his mobility allows him to quickly reposition.",
+      },
+    ],
+    goodAgainst: [],
+    weakness: "qrqwr",
+  },
   {
     image: ThumbUltron,
     name: "Ultron",
