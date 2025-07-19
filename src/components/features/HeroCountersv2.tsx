@@ -214,7 +214,7 @@ export default function HeroCountersv2() {
       <section className="mt-[40px] md:mt-[100px]">
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 px-2">
           <p className="text-center mt-4 text-neutral-200 font-semibold">
-            Updated meta as of {new Date().toDateString()} - Season 1
+            Updated meta as of {new Date().toDateString()}
           </p>
           <div className="flex flex-col md:flex-row items-center gap-5">
             <div className="flex flex-row items-center gap-5">
