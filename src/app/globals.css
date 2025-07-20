@@ -60,3 +60,11 @@ body {
   background: rgba(27, 27, 41, 0.98);
   box-shadow: 0 0 15px 40px rgba(27, 27, 41, 0.98);
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

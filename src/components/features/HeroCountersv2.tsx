@@ -1,9 +1,14 @@
 "use client";
 
+import JaxonMr from "@/assets/jaxonmr.png";
+import Slime from "@/assets/slime.jpg";
+import Third from "@/assets/third.jpg";
+
 import { HERO_COUNTERS } from "@/utils/static";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaTwitch } from "react-icons/fa6";
 import CounterModal from "./CounterModal";
 
 export default function HeroCountersv2() {
@@ -208,6 +213,76 @@ export default function HeroCountersv2() {
         <h1 className="text-2xl md:text-3xl text-neutral-100 relative px-[0px] md:px-[300px] font-black text-center">
           Select a Hero To Counter
         </h1>
+        <div className="w-full md:w-[700px] m-auto mt-[50px]">
+          <p className="text-white text-center font-semibold mb-4">
+            Content contributors:
+          </p>
+          <div className="flex md:flex-row gap-0 md:gap-3 hide-scrollbar overflow-x-auto md:overflow-visible whitespace-nowrap px-2">
+            {/* Contributor 1 */}
+            <div className="flex-shrink-0 flex flex-row gap-4 mt-3 w-[230px]">
+              <Image
+                src={JaxonMr}
+                alt={"JaxonMR"}
+                unoptimized
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div>
+                <div className="flex flex-row gap-1 items-center">
+                  <p className="text-neutral-50 font-bold">JaxonMR</p>
+                  <a
+                    href="https://www.twitch.tv/jaxonmr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTwitch className="text-[#6441a5]" />
+                  </a>
+                </div>
+
+                <p className="text-sm font-semibold bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+                  Top 1000 Tank Player
+                </p>
+              </div>
+            </div>
+
+            {/* Contributor 2 */}
+            <div className="flex-shrink-0 flex flex-row gap-4 mt-3 w-[230px]">
+              <Image
+                src={Third}
+                alt={"Third"}
+                unoptimized
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div>
+                <p className="text-neutral-50 font-bold">volumezShhh</p>
+                <p className="text-white opacity-[0.7] text-sm">
+                  Eternity - Highest
+                </p>
+              </div>
+            </div>
+
+            {/* Contributor 3 */}
+            <div className="flex-shrink-0 flex flex-row gap-4 mt-3 w-[230px]">
+              <Image
+                src={Slime}
+                alt={"SlimeDrunkentard"}
+                unoptimized
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div>
+                <p className="text-neutral-50 font-bold">SlimeDrunkentard</p>
+                <p className="text-white opacity-[0.7] text-sm">
+                  Celestial 1 - Highest
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
 
       {/* new */}
