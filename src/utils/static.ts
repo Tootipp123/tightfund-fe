@@ -123,6 +123,14 @@ export const HERO_COUNTERS = [
         description:
           "Star-Lord's consistent damage output can also pressure Phoenix, and his mobility allows him to quickly reposition.",
       },
+      {
+        image: ThumbCnd,
+        name: "Cloak & Dagger",
+        role: "Strategist",
+        score: 9,
+        description:
+          "Cloak and Dagger can simply use Dark Teleportation to effectively counter Phoenix’s ultimate ability.",
+      },
     ],
     goodAgainst: [],
     weakness: "qrqwr",
