@@ -22,12 +22,13 @@ export default function CookieConsentPopup() {
     localStorage.setItem("cookieConsent", "declined");
     setIsVisible(false);
     // Remove any non-essential cookies here
+    // test
   };
 
   return (
     <>
       {isVisible && (
-        <div className="fixed inset-x-0 bottom-0 z-50 bg-dark-bg shadow-lg border-t border-gray-200">
+        <div className="fixed inset-x-0 bottom-0 z-50 bg-[#000] shadow-lg border-t border-gray-600">
           <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-4 md:mb-0 md:mr-6">
@@ -49,7 +50,7 @@ export default function CookieConsentPopup() {
                 </button>
                 <button
                   onClick={handleAccept}
-                  className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
+                  className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700"
                 >
                   Accept All
                 </button>
