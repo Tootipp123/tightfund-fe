@@ -1,9 +1,10 @@
 "use client";
 
+import Navbar from "@/components/features/Navbar";
+import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { FaDiscord } from "react-icons/fa";
-import { MdKeyboardBackspace } from "react-icons/md";
+import { FcGoogle } from "react-icons/fc";
 import Modal from "../../../components/ui/Modal";
 
 export default function SignupPage() {
@@ -16,40 +17,36 @@ export default function SignupPage() {
 
   return (
     <>
+      <Navbar />
       <main
         id="signup"
-        className="bg-[#1B1B29] w-full m-auto h-[100vh] overflow-hidden"
+        className="bg-primary-main w-full m-auto overflow-hidden"
       >
-        <button
-          onClick={() => router.push("/")}
-          className="flex gap-2 items-center p-3"
-        >
-          <MdKeyboardBackspace className="w-4 h-4 dark:text-neutral-100 text-neutral-500" />
-          <h2 className="dark:text-neutral-100 text-neutral-500 font-semibold text-sm">
-            Back
-          </h2>
-        </button>
         <div className="flex md:flex-row flex-col items-center justify-between w-full min-h-[90vh]">
           <section className="md:px-[100px] px-5 m-auto">
             <div className="w-full md:w-[400px]">
-              <h3 className="text-neutral-200 md:mt-4 text-2xl font-semibold text-center">
+              <h3 className="text-dark-main md:mt-4 text-2xl font-semibold text-center">
                 Sign in to Peak Rivals
               </h3>
               <div className="my-5">
                 <button
-                  onClick={async () => {
-                    window.location.href = `${
-                      process.env.NEXT_PUBLIC_DISCORD_CALLBACK_URL
-                    }${fromMembershipPage ? "&state=membership_page" : ""}`;
-                  }}
-                  className="rounded-md w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
+                  onClick={() =>
+                    signIn("google", {
+                      callbackUrl: fromMembershipPage
+                        ? "/membership"
+                        : "/dashboard",
+                    })
+                  }
+                  className="rounded-md bg-white w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >
-                  <FaDiscord className="text-2xl" />
-                  <span className="text-sm">Sign in with Discord</span>
+                  <FcGoogle className="text-2xl bg-white rounded-full p-[2px]" />
+                  <span className="text-sm text-black">
+                    Sign in with Google
+                  </span>
                 </button>
               </div>
               <div className="gap-2 mt-5 text-center">
-                <p className="text-neutral-300 font-light md:text-md text-sm">
+                <p className="text-dark-main font-light md:text-md text-sm">
                   By joining, you agree to our
                   <b
                     onClick={() => setShowTermsAndConditionsModal(true)}

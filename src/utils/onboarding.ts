@@ -1,4 +1,4 @@
-type FieldType = "inputField" | "choices";
+type FieldType = "inputField" | "numberField" | "choices";
 
 export const firstOnboardingStep = {
   question: "What’s your current employment status?",
@@ -25,6 +25,7 @@ export const nextOnboardingSteps = {
   fullTime: [
     {
       question: "What’s your job title?",
+      description: "We will analyze your current job market",
       type: "inputField" as FieldType,
       value: "",
       inputField: {
@@ -38,6 +39,7 @@ export const nextOnboardingSteps = {
     },
     {
       question: "Pick your current job situation",
+      show: "Software Engineer",
       type: "choices" as FieldType,
       inputField: null,
       value: "",
@@ -61,8 +63,31 @@ export const nextOnboardingSteps = {
       ],
     },
     {
-      question:
-        "Do any of your dependents have health or other urgent concerns?",
+      question: "How much is your monthly expenses?",
+      type: "monthlyExpensesForm" as FieldType,
+      inputField: null,
+      value: "",
+      autoNext: false,
+      choices: [
+        {
+          icon: "",
+          label: "None",
+          value: "stable_job",
+        },
+        {
+          icon: "",
+          label: "Minor concerns",
+          value: "okay_job",
+        },
+        {
+          icon: "",
+          label: "Serious needs",
+          value: "okay_job",
+        },
+      ],
+    },
+    {
+      question: "Any family members or dependents with health/urgent needs?",
       type: "choices" as FieldType,
       inputField: null,
       value: "",
@@ -70,15 +95,33 @@ export const nextOnboardingSteps = {
       choices: [
         {
           icon: "",
-          label: "Yes",
+          label: "None",
           value: "stable_job",
         },
         {
           icon: "",
-          label: "None",
+          label: "Yes, minor needs",
+          value: "okay_job",
+        },
+        {
+          icon: "",
+          label: "Yes, serious needs",
           value: "okay_job",
         },
       ],
+    },
+    {
+      question: "How much are you willing to allocate for their urgent needs?",
+      type: "numberField" as FieldType,
+      value: "",
+      inputField: {
+        type: "text",
+        required: true,
+        label: "",
+        placeholder: "00.00",
+      },
+      autoNext: false,
+      choices: [],
     },
   ],
   partTime: [

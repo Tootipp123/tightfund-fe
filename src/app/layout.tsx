@@ -2,7 +2,6 @@ import CookieConsentPopup from "@/components/features/CookieConsentPopup";
 import LoadGumroad from "@/components/features/LoadGumroad";
 import Providers from "@/components/features/Providers";
 import VerifyUser from "@/components/features/VerifyUser";
-import AppContextProvider from "@/store";
 import QueryProviders from "@/utils/query-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -47,12 +46,10 @@ export default function RootLayout({
       >
         <QueryProviders>
           <Providers>
-            <AppContextProvider>
-              <VerifyUser />
-              <LoadGumroad />
-              <CookieConsentPopup />
-              {children}
-            </AppContextProvider>
+            <VerifyUser />
+            <LoadGumroad />
+            <CookieConsentPopup />
+            {children}
           </Providers>
         </QueryProviders>
       </body>

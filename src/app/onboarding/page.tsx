@@ -2,6 +2,7 @@
 
 import Field from "@/components/features/Onboarding/Field";
 import Button from "@/components/ui/Button";
+import { useOnboarding } from "@/store/useOnboarding";
 import { firstOnboardingStep, nextOnboardingSteps } from "@/utils/onboarding";
 import { useState } from "react";
 
@@ -39,18 +40,14 @@ export default function OnboardingPage() {
     "fullTime" | "partTime" | "unemployed" | ""
   >("");
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
-  const [onboardingSteps, setOnboardingSteps] = useState<any>(null);
+  const { onboardingSteps, setOnboardingSteps } = useOnboarding();
 
   const handleSelectInitialStep = (
     value: "fullTime" | "partTime" | "unemployed"
   ) => {
     setSelectedInitialStep(value);
     setCurrentStepIndex(0);
-
-    const selectedSteps = JSON.parse(
-      JSON.stringify(nextOnboardingSteps[value])
-    );
-    setOnboardingSteps(selectedSteps);
+    setOnboardingSteps(nextOnboardingSteps[value]);
   };
 
   if (selectedInitialStep && currentStepIndex !== null && onboardingSteps) {
@@ -59,9 +56,12 @@ export default function OnboardingPage() {
     return (
       <div className="w-full h-screen flex items-center justify-center">
         <div className="w-[420px] m-auto">
-          <h2 className="text-dark-main font-bold text-[32px] text-center px-5 leading-none">
+          <h2 className="text-dark-main font-bold text-[28px] text-center px-5 leading-none">
             {step.question}
           </h2>
+          <p className="text-dark-main font-regular mt-2 opacity-[0.9] text-[16px] text-center px-5 leading-none">
+            {step.description}
+          </p>
           <div className="flex items-center flex-col gap-y-4 mt-[80px]">
             <Field
               type={step.type}
@@ -73,6 +73,12 @@ export default function OnboardingPage() {
                 updated[currentStepIndex].value = text;
                 setOnboardingSteps(updated);
               }}
+              onNumberChange={(val: any) => {
+                const digitsOnly = val.replace(/\D/g, "");
+                const updated = [...onboardingSteps];
+                updated[currentStepIndex].value = digitsOnly;
+                setOnboardingSteps(updated);
+              }}
               onChoiceSelect={(val: string) => {
                 const updated = [...onboardingSteps];
                 updated[currentStepIndex].value = val;
@@ -81,8 +87,6 @@ export default function OnboardingPage() {
                 if (step.autoNext) {
                   setCurrentStepIndex((prev) => prev! + 1);
                 }
-
-                console.log(onboardingSteps);
               }}
             />
           </div>

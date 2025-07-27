@@ -2,7 +2,6 @@
 
 import { logoutUser } from "@/api/User";
 import useMiddleware from "@/hooks/useMiddleware";
-import { useUserStore } from "@/store/User";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -16,7 +15,6 @@ export default function Navbar() {
   const currentPath = usePathname();
   const { accessToken } = useMiddleware();
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const { isMember, subscriptionId } = useUserStore();
 
   const signOut = async () => {
     try {
@@ -27,12 +25,6 @@ export default function Navbar() {
       window.localStorage.removeItem("accessToken");
       window.location.reload();
     }
-  };
-
-  const loadStyle = () => {
-    return isMember
-      ? "bg-gradient-to-r from-yellow-600 to-yellow-300"
-      : "bg-white";
   };
 
   return (
@@ -84,7 +76,7 @@ export default function Navbar() {
                   onClick={() => setShowUserMenu((prev) => !prev)}
                 >
                   <div
-                    className={`${loadStyle()} w-[33px] h-[33px] p-[3px] relative rounded-full flex items-center justify-center overflow-hidden`}
+                    className={`w-[33px] h-[33px] p-[3px] relative rounded-full flex items-center justify-center overflow-hidden`}
                   >
                     <Image
                       src="https://res.cloudinary.com/dqrtlfjc0/image/upload/v1736484729/Rivals/Jeff_the_Land_Shark_Icon_mkp5f4.webp"
@@ -102,23 +94,6 @@ export default function Navbar() {
                     className="w-[180px] bg-[#1B1B29] border border-neutral-700 py-2 rounded-md absolute"
                   >
                     <ul className="text-sm text-neutral-100">
-                      {isMember ? (
-                        <a
-                          href={`https://gumroad.com/subscriptions/${subscriptionId}/manage`}
-                          target="_blank"
-                        >
-                          <li className="py-1 px-4 cursor-pointer">
-                            Cancel membership
-                          </li>
-                        </a>
-                      ) : (
-                        <li
-                          onClick={() => router.push("/membership")}
-                          className="py-1 px-4 cursor-pointer"
-                        >
-                          Become a Member
-                        </li>
-                      )}
                       <li
                         onClick={() => signOut()}
                         className="py-1 px-4 cursor-pointer"

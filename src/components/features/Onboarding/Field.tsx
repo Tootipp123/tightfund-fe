@@ -1,4 +1,6 @@
 import { TextInput } from "@/components/ui/TextInput";
+import { formatNumber } from "@/utils/formatNumber";
+import MonthlyExpensesForm from "../CustomForms/MonthlyExpensesForm";
 
 export default function Field({
   type,
@@ -6,13 +8,15 @@ export default function Field({
   inputField,
   choices,
   onInputChange,
+  onNumberChange,
   onChoiceSelect,
 }: {
-  type: "inputField" | "choices";
+  type: "inputField" | "numberField" | "choices" | "monthlyExpensesForm";
   value: any;
   inputField: any;
   choices: any;
   onInputChange?: (val: string) => void;
+  onNumberChange?: (val: any) => void;
   onChoiceSelect?: (val: string) => void;
 }) {
   switch (type) {
@@ -22,6 +26,16 @@ export default function Field({
           placeholder={inputField.placeholder}
           value={value}
           onChange={onInputChange}
+        />
+      );
+
+    case "numberField":
+      return (
+        <TextInput
+          placeholder={inputField.placeholder}
+          value={formatNumber(value)}
+          onChange={onNumberChange}
+          rightText={"USD"}
         />
       );
 
@@ -42,6 +56,9 @@ export default function Field({
           ))}
         </div>
       );
+
+    case "monthlyExpensesForm":
+      return <MonthlyExpensesForm />;
 
     default:
       return <></>;
