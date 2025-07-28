@@ -1,4 +1,4 @@
-type FieldType = "inputField" | "numberField" | "choices";
+export type FieldType = "inputField" | "numberField" | "choices";
 
 export const firstOnboardingStep = {
   question: "What’s your current employment status?",
@@ -87,41 +87,29 @@ export const nextOnboardingSteps = {
       ],
     },
     {
-      question: "Any family members or dependents with health/urgent needs?",
+      question: "Can your family help you financially?",
       type: "choices" as FieldType,
       inputField: null,
+      withDependency: true,
       value: "",
       autoNext: true,
       choices: [
         {
           icon: "",
-          label: "None",
-          value: "stable_job",
+          label: "Yes, they can fully support me",
+          value: "family_can_fully_support_me",
         },
         {
           icon: "",
-          label: "Yes, minor needs",
-          value: "okay_job",
+          label: "They can help a little",
+          value: "family_can_help_a_little",
         },
         {
           icon: "",
-          label: "Yes, serious needs",
-          value: "okay_job",
+          label: "No, I have to manage on my own",
+          value: "on_my_own_financially",
         },
       ],
-    },
-    {
-      question: "How much are you willing to allocate for their urgent needs?",
-      type: "numberField" as FieldType,
-      value: "",
-      inputField: {
-        type: "text",
-        required: true,
-        label: "",
-        placeholder: "00.00",
-      },
-      autoNext: false,
-      choices: [],
     },
   ],
   partTime: [
@@ -222,6 +210,55 @@ export const nextOnboardingSteps = {
         },
       ],
     },
+    {
+      question: "How much is your monthly expenses?",
+      type: "monthlyExpensesForm" as FieldType,
+      inputField: null,
+      value: "",
+      autoNext: false,
+      choices: [
+        {
+          icon: "",
+          label: "None",
+          value: "stable_job",
+        },
+        {
+          icon: "",
+          label: "Minor concerns",
+          value: "okay_job",
+        },
+        {
+          icon: "",
+          label: "Serious needs",
+          value: "okay_job",
+        },
+      ],
+    },
+    {
+      question: "Any family members or dependents with health/urgent needs?",
+      type: "choices" as FieldType,
+      inputField: null,
+      withDependency: true,
+      value: "",
+      autoNext: true,
+      choices: [
+        {
+          icon: "",
+          label: "None",
+          value: "none",
+        },
+        {
+          icon: "",
+          label: "Yes, minor needs",
+          value: "yes_minor_needs",
+        },
+        {
+          icon: "",
+          label: "Yes, serious needs",
+          value: "yes_serious_needs",
+        },
+      ],
+    },
   ],
   unemployed: [
     {
@@ -274,6 +311,55 @@ export const nextOnboardingSteps = {
           icon: "",
           label: "None",
           value: "6 to 12 months",
+        },
+      ],
+    },
+    {
+      question: "How much is your monthly expenses?",
+      type: "monthlyExpensesForm" as FieldType,
+      inputField: null,
+      value: "",
+      autoNext: false,
+      choices: [
+        {
+          icon: "",
+          label: "None",
+          value: "stable_job",
+        },
+        {
+          icon: "",
+          label: "Minor concerns",
+          value: "okay_job",
+        },
+        {
+          icon: "",
+          label: "Serious needs",
+          value: "okay_job",
+        },
+      ],
+    },
+    {
+      question: "Any family members or dependents with health/urgent needs?",
+      type: "choices" as FieldType,
+      inputField: null,
+      withDependency: true,
+      value: "",
+      autoNext: true,
+      choices: [
+        {
+          icon: "",
+          label: "None",
+          value: "none",
+        },
+        {
+          icon: "",
+          label: "Yes, minor needs",
+          value: "yes_minor_needs",
+        },
+        {
+          icon: "",
+          label: "Yes, serious needs",
+          value: "yes_serious_needs",
         },
       ],
     },

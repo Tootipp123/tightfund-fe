@@ -7,6 +7,11 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
+
+  const locale = navigator.language; // e.g., "en-US", "en-PH", "en-IN"
+  const countryCode = locale.split("-")[1]; // "US", "PH", "IN"
+  console.log("countryCode: ", countryCode);
+
   return (
     <>
       <Navbar />

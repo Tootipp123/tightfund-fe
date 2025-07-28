@@ -1,38 +1,48 @@
 import { TextInput } from "@/components/ui/TextInput";
+import { useGlobalStore } from "@/store/useGlobalStore";
+import { useOnboardingStore } from "@/store/useOnboardingStore";
 import { formatNumber } from "@/utils/formatNumber";
 import { useState } from "react";
 
-export default function MonthlyExpensesForm() {
+export default function MonthlyExpensesForm({
+  currentStepIndex,
+}: {
+  currentStepIndex: number;
+}) {
+  const { onboardingSteps, setOnboardingSteps } = useOnboardingStore();
+  const { currency: userCurrency } = useGlobalStore();
+  const currency = userCurrency.symbol;
+
   const [expenses, setExpenses] = useState([
     {
       label: "Rent or mortgage",
       subLabel: "",
       value: "",
-      currency: "USD",
+      currency,
     },
     {
       label: "Food and groceries",
       subLabel: "",
       value: "",
-      currency: "USD",
+      currency,
     },
     {
       label: "Utilities",
       subLabel: "(Gas, electricity, water, internet)",
       value: "",
-      currency: "USD",
+      currency,
     },
     {
       label: "Debt",
       subLabel: "(Credit card & other loans)",
       value: "",
-      currency: "USD",
+      currency,
     },
     {
       label: "Dependents",
       subLabel: "(leave blank if none)",
       value: "",
-      currency: "USD",
+      currency,
     },
   ]);
 
@@ -41,6 +51,10 @@ export default function MonthlyExpensesForm() {
     const updated = [...expenses];
     updated[index].value = digitsOnly;
     setExpenses(updated);
+
+    const clonedOnboardingSteps = [...onboardingSteps];
+    clonedOnboardingSteps[currentStepIndex].value = updated;
+    setOnboardingSteps(clonedOnboardingSteps);
   };
 
   return (

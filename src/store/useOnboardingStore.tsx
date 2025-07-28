@@ -6,7 +6,7 @@ export type OnboardingState = {
   setOnboardingSteps: (onboardingSteps: any) => void;
 };
 
-export const useOnboarding = create<OnboardingState>()(
+export const useOnboardingStore = create<OnboardingState>()(
   persist(
     (set) => ({
       onboardingSteps: null,
