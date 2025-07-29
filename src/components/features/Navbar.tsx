@@ -1,29 +1,20 @@
 "use client";
 
-import { logoutUser } from "@/api/User";
-import useMiddleware from "@/hooks/useMiddleware";
+import UserDefaultImage from "@/assets/user-default.jpg";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { RiArrowDropDownFill } from "react-icons/ri";
 import LogoSvg from "../icons/LogoSvg";
 import Button from "../ui/Button";
 
 export default function Navbar() {
+  const session = useSession();
+  console.log("session: ", session);
   const router = useRouter();
-  const currentPath = usePathname();
-  const { accessToken } = useMiddleware();
   const [showUserMenu, setShowUserMenu] = useState(false);
-
-  const signOut = async () => {
-    try {
-      await logoutUser();
-    } catch (err) {
-      console.log("err: ", err);
-    } finally {
-      window.localStorage.removeItem("accessToken");
-      window.location.reload();
-    }
-  };
 
   return (
     <header className="flex items-center justify-between p-6 max-w-7xl mx-auto">
@@ -33,7 +24,7 @@ export default function Navbar() {
           <span className="text-dark-main font-semibold">
             My Emergency Fund
           </span>
-        </Link>{" "}
+        </Link>
       </div>
       <nav className="hidden md:flex space-x-8 text-gray-700">
         <Link href="#problem-and-solution" className="hover:text-gray-900">
@@ -47,13 +38,50 @@ export default function Navbar() {
         </Link>
       </nav>
       <div className="flex items-center gap-2">
-        <Button
-          variant="secondary"
-          onClick={() => router.push("/signin")}
-          size="medium"
-        >
-          <p>Sign In</p>
-        </Button>
+        {session && session?.data?.user ? (
+          <div className="relative">
+            <div
+              className="flex items-center cursor-pointer"
+              onClick={() => setShowUserMenu((prev) => !prev)}
+            >
+              <div
+                className={`w-[45px] h-[45px] p-[3px] relative rounded-full flex items-center justify-center overflow-hidden`}
+              >
+                <Image
+                  src={UserDefaultImage}
+                  alt="Jeff Profile"
+                  className="rounded-full bg-white"
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <RiArrowDropDownFill className="text-lg text-white" />
+            </div>
+            {showUserMenu && (
+              <div
+                id="menu"
+                className="w-[180px] bg-white py-2 rounded-md absolute"
+              >
+                <ul className="text-sm text-dark-main">
+                  <li
+                    onClick={() => signOut()}
+                    className="py-1 px-4 cursor-pointer"
+                  >
+                    Sign out
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        ) : (
+          <Button
+            variant="secondary"
+            onClick={() => router.push("/signin")}
+            size="medium"
+          >
+            <p>Sign In</p>
+          </Button>
+        )}
         <Button
           onClick={() => router.push("/onboarding")}
           className="hidden md:block"

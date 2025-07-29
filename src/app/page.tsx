@@ -1,10 +1,32 @@
+"use client";
+
+import { getFinancialDetails } from "@/api/FinancialDetails";
 import AdviceCard from "@/components/features/AdviceCard";
 import Footer from "@/components/features/Footer";
 import Hero from "@/components/features/Hero";
 import Navbar from "@/components/features/Navbar";
 import HowToSvg from "@/components/icons/HowToSvg";
+import { useSession } from "next-auth/react";
+import { useQuery } from "react-query";
 
 export default function HomePage() {
+  const { data: session, status }: any = useSession();
+
+  // SAMPLE ONLY, REMOVE LATER
+  const {
+    isLoading,
+    isError,
+    data: profile,
+  } = useQuery(
+    "getFinancialDetails",
+    () => getFinancialDetails({}, session?.accessToken),
+    {
+      enabled: status === "authenticated",
+      refetchOnMount: true,
+      retry: 3,
+    }
+  );
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navbar />

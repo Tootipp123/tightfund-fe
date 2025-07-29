@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import LogoSvg from "../icons/LogoSvg";
 
 export default function Footer() {
-  const [email, setEmail] = useState<string>("");
-
   return (
     <footer className="bg-light-main border-t border-t-neutral-300 w-full">
       <div className="w-full flex items-center pb-[80px] flex-col md:flex-row justify-between px-4 md:px-0 md:w-[1200px] mx-auto">

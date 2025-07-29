@@ -13,12 +13,13 @@ import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
  * @param payload - AxiosRequestConfig object containing request details.
  * @returns {Object} An object containing response and error, e.g., { res, err }.
  */
-export const apiRequest = async (payload: AxiosRequestConfig) => {
-  const accessToken =
-    typeof window !== "undefined"
-      ? window.localStorage.getItem("accessToken")
-      : null;
-
+export const apiRequest = async ({
+  payload,
+  accessToken,
+}: {
+  payload: AxiosRequestConfig;
+  accessToken?: string;
+}) => {
   const config: AxiosRequestConfig = {
     ...payload,
     headers: {

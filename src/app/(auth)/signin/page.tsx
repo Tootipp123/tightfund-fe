@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "@/components/features/Navbar";
+import LogoSvg from "@/components/icons/LogoSvg";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
@@ -17,13 +17,19 @@ export default function SignupPage() {
 
   return (
     <>
-      <Navbar />
       <main
         id="signup"
         className="bg-primary-main w-full m-auto overflow-hidden"
       >
-        <div className="flex md:flex-row flex-col items-center justify-between w-full min-h-[90vh]">
-          <section className="md:px-[100px] bg-light-secondary py-[100px] rounded-xl m-auto">
+        <div className="flex flex-col items-center justify-between w-full min-h-[90vh] py-[150px]">
+          <div className="flex items-center gap-2 cursor-pointer">
+            <LogoSvg />
+            <span className="text-dark-main font-bold">
+              MyEmergencyFund
+              <span className="text-dark-main opacity-[0.7]">.com</span>
+            </span>
+          </div>
+          <section className="md:px-[100px] bg-white py-[60px] rounded-xl m-auto">
             <div className="w-full md:w-[400px]">
               <h3 className="text-dark-main md:mt-4 text-2xl font-semibold text-center">
                 Welcome!
@@ -35,12 +41,10 @@ export default function SignupPage() {
                 <button
                   onClick={() =>
                     signIn("google", {
-                      callbackUrl: fromMembershipPage
-                        ? "/membership"
-                        : "/dashboard",
+                      callbackUrl: "/authorizing",
                     })
                   }
-                  className="rounded-md bg-white w-full border border-neutral-300 z-[5] mt-4 relative flex gap-3 hover:opacity-80 text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
+                  className="rounded-md shadow-sm bg-white w-full border border-neutral-300 z-[5] mt-4 relative flex gap-3 hover:opacity-80 text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >
                   <FcGoogle className="text-2xl bg-white rounded-full p-[2px]" />
                   <span className="text-sm text-black">

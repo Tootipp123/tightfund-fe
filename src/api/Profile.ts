@@ -7,7 +7,7 @@ export const getProfile = async () => {
     method: "GET",
   };
 
-  const { res, err }: ResponseData = await apiRequest(payload);
+  const { res, err }: ResponseData = await apiRequest({ payload });
   if (err) {
     throw err?.response?.data;
   }
@@ -21,7 +21,7 @@ export const updateFreeGenerateTriesCount = async () => {
     data: {},
   };
 
-  const { res, err }: ResponseData = await apiRequest(payload);
+  const { res, err }: ResponseData = await apiRequest({ payload });
   if (err) {
     throw err?.response?.data;
   }
@@ -34,7 +34,7 @@ export const getFreeGenerateTriesCount = async () => {
     method: "GET",
   };
 
-  const { res, err }: ResponseData = await apiRequest(payload);
+  const { res, err }: ResponseData = await apiRequest({ payload });
   if (err) {
     throw err?.response?.data;
   }

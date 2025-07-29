@@ -1,38 +1,32 @@
 import { apiRequest } from ".";
+import { ResponseData } from "../types/global";
 
-export const discordLogin = async () => {
+// Not used yet
+// We use login on [...nextauth] to trigger from server
+export const googleLogin = async (data: NonNullable<unknown>) => {
   const payload = {
-    url: `/v1/auth/discord/login`,
+    url: "/auth/google/login",
+    method: "POST",
+    data,
   };
-  const { res, err }: any = await apiRequest(payload);
+
+  const { res, err }: ResponseData = await apiRequest({ payload });
   if (err) {
     throw err?.response?.data;
   }
   return res;
 };
 
-export const discordCallback = async (code: string) => {
+export const deleteAccount = async () => {
   const payload = {
-    url: `/v1/auth/discord/callback?code=${code}`,
+    url: "/auth/delete-account",
+    method: "POST",
+    data: {},
   };
-  const { res, err }: any = await apiRequest(payload);
+
+  const { res, err }: ResponseData = await apiRequest({ payload });
   if (err) {
     throw err?.response?.data;
   }
   return res;
 };
-
-// export const createGuestApi = async (guestId: string) => {
-//   const payload = {
-//     url: `/v1/auth/guest/create`,
-//     method: "POST",
-//     data: {
-//       guestId,
-//     },
-//   };
-//   const { res, err }: any = await apiRequest(payload);
-//   if (err) {
-//     throw err?.response?.data;
-//   }
-//   return res;
-// };
