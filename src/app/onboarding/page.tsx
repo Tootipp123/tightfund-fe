@@ -7,10 +7,12 @@ import useOnboardingDependencies from "@/hooks/useOnboardingDependencies";
 import { useOnboardingStore } from "@/store/useOnboardingStore";
 import { nextOnboardingSteps } from "@/utils/onboarding";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoArrowBackOutline } from "react-icons/io5";
 
 export default function OnboardingPage() {
+  const router = useRouter();
   const { injectExtraOnboardingScreen } = useOnboardingDependencies();
   const [selectedInitialStep, setSelectedInitialStep] = useState<
     "fullTime" | "partTime" | "unemployed" | ""
@@ -123,6 +125,27 @@ export default function OnboardingPage() {
   }
 
   return (
-    <FirstOnboardingStep handleSelectInitialStep={handleSelectInitialStep} />
+    <AnimatePresence mode="wait" custom={direction}>
+      <motion.div
+        key={currentStepIndex}
+        custom={direction}
+        initial={{ x: direction === 1 ? 300 : -300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25 }}
+      >
+        <button
+          onClick={() => {
+            router.push("/");
+          }}
+          className="m-auto justify-center mb-5"
+        >
+          <IoArrowBackOutline className="text-2xl text-dark-main" />
+        </button>
+        <FirstOnboardingStep
+          handleSelectInitialStep={handleSelectInitialStep}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 }

@@ -1,5 +1,12 @@
 export type FieldType = "inputField" | "numberField" | "choices";
 
+export const questionsWithDependencies = {
+  familySupport: "Can your family help you financially?",
+  expenses: "How much is your monthly expenses?",
+  dependentsNeeds: "Any family members or dependents with health/urgent needs?",
+  dependentsAllocation: "How much are you willing to allocate for their needs?",
+};
+
 export const firstOnboardingStep = {
   question: "What’s your current employment status?",
   choices: [

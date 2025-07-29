@@ -7,3 +7,27 @@ textarea:focus,
 select:focus {
   outline: none;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+.circle-texture {
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  /* background: radial-gradient(circle at 30% 30%, #d1fae5, #065f46); */
+  background-color: #a5c8c2;
+  opacity: 1;
+  filter: blur(40px);
+}
+
+.circle-2-texture {
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  /* background: radial-gradient(circle at 30% 30%, #cc98c8, #ff6161); */
+  background-color: #ffb8b8;
+  opacity: 1;
+  filter: blur(40px);
+}

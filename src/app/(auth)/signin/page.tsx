@@ -23,12 +23,15 @@ export default function SignupPage() {
         className="bg-primary-main w-full m-auto overflow-hidden"
       >
         <div className="flex md:flex-row flex-col items-center justify-between w-full min-h-[90vh]">
-          <section className="md:px-[100px] px-5 m-auto">
+          <section className="md:px-[100px] bg-light-secondary py-[100px] rounded-xl m-auto">
             <div className="w-full md:w-[400px]">
               <h3 className="text-dark-main md:mt-4 text-2xl font-semibold text-center">
-                Sign in to Peak Rivals
+                Welcome!
               </h3>
-              <div className="my-5">
+              <p className="text-dark-main text-md font-regular mt-1 text-center">
+                Sign In to see your emergency fund updates
+              </p>
+              <div className="my-7">
                 <button
                   onClick={() =>
                     signIn("google", {
@@ -37,7 +40,7 @@ export default function SignupPage() {
                         : "/dashboard",
                     })
                   }
-                  className="rounded-md bg-white w-full z-[5] mt-4 relative flex gap-3 hover:opacity-80 shadow shadow-lg text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
+                  className="rounded-md bg-white w-full border border-neutral-300 z-[5] mt-4 relative flex gap-3 hover:opacity-80 text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >
                   <FcGoogle className="text-2xl bg-white rounded-full p-[2px]" />
                   <span className="text-sm text-black">
