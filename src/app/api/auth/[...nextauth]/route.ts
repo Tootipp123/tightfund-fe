@@ -1,6 +1,7 @@
 import axios from "axios";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import { parse } from "url";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -61,7 +62,14 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
 
-    async redirect({ url, baseUrl }) {
+    redirect({ url, baseUrl }) {
+      const parsedUrl = parse(url, true);
+      const from = parsedUrl.query.from;
+
+      if (from === "signout") {
+        return `${baseUrl}`;
+      }
+
       return url.startsWith(baseUrl) ? `${url}/dashboard` : baseUrl;
     },
   },

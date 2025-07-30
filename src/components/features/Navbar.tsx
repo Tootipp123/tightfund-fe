@@ -22,7 +22,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <LogoSvg />
           <span className="text-dark-main font-semibold">
-            My Emergency Fund
+            Get Emergency Fund
           </span>
         </Link>
       </div>
@@ -60,12 +60,22 @@ export default function Navbar() {
             {showUserMenu && (
               <div
                 id="menu"
-                className="w-[180px] bg-white py-2 rounded-md absolute"
+                className="w-[180px] bg-white py-2 rounded-md absolute z-[100]"
               >
                 <ul className="text-sm text-dark-main">
                   <li
-                    onClick={() => signOut()}
-                    className="py-1 px-4 cursor-pointer"
+                    onClick={() => router.push("/dashboard")}
+                    className="py-2 px-4 cursor-pointer hover:bg-neutral-100"
+                  >
+                    Dashboard
+                  </li>
+                  <li
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: "/?from=signout",
+                      })
+                    }
+                    className="py-2 px-4 cursor-pointer hover:bg-neutral-100"
                   >
                     Sign out
                   </li>

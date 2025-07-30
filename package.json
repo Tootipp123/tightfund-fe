@@ -22,7 +22,10 @@
     "react-share": "^5.1.0",
     "socket.io-client": "^4.8.1",
     "uuid": "^11.1.0",
-    "zustand": "^5.0.3"
+    "zustand": "^5.0.3",
+    "@azure-rest/ai-inference": "latest",
+    "@azure/core-auth": "latest",
+    "@azure/core-sse": "latest"
   },
   "devDependencies": {
     "@types/node": "^20",

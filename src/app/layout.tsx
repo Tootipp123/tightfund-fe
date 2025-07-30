@@ -25,12 +25,12 @@ const ogImage = {
 };
 
 export const metadata: Metadata = {
-  title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
-  description: "Marvel Rival's Hero Counter Quick Guide",
+  title: "Get Emergency Fund - Know how much emergency fund you need",
+  description: "Know how much emergency fund you really need",
   openGraph: {
     ...ogImage,
-    title: "Peak Rivals - Marvel Rival's Hero Counter Quick Guide",
-    description: "Marvel Rival's Hero Counter Quick Guide",
+    title: "Get Emergency Fund - Know how much emergency fund you need",
+    description: "Know how much emergency fund you really need",
   },
 };
 
