@@ -7,6 +7,10 @@ export const questionsWithDependencies = {
   dependentsAllocation: "How much are you willing to allocate for their needs?",
 };
 
+export const dependencyKeys = {
+  anyDependentsWithUrgentNeeds: "any_dependents_with_urgent_needs",
+};
+
 export const firstOnboardingStep = {
   question: "What’s your current employment status?",
   choices: [
@@ -75,23 +79,6 @@ export const nextOnboardingSteps = {
       inputField: null,
       value: "",
       autoNext: false,
-      choices: [
-        {
-          icon: "",
-          label: "None",
-          value: "stable_job",
-        },
-        {
-          icon: "",
-          label: "Minor concerns",
-          value: "okay_job",
-        },
-        {
-          icon: "",
-          label: "Serious needs",
-          value: "okay_job",
-        },
-      ],
     },
     {
       question: "Can your family help you financially?",
@@ -130,22 +117,22 @@ export const nextOnboardingSteps = {
         {
           icon: "💼",
           label: "Very consistent",
-          value: "stable_job",
+          value: "very_consistent",
         },
         {
           icon: "👍",
           label: "Somewhat consistent",
-          value: "okay_job",
+          value: "somewhat_consistent",
         },
         {
-          icon: "🚩",
+          icon: "👎",
           label: "Moderately inconsistent",
-          value: "risky_work",
+          value: "moderately_inconsistent",
         },
         {
           icon: "🚩",
           label: "Highly inconsistent",
-          value: "risky_work",
+          value: "highly_inconsistent",
         },
       ],
     },
@@ -159,61 +146,62 @@ export const nextOnboardingSteps = {
         {
           icon: "",
           label: "Never had a gap",
-          value: "stable_job",
+          value: "never_had_a_gap",
         },
         {
           icon: "",
           label: "1-2 weeks",
-          value: "okay_job",
+          value: "1-2_weeks",
         },
         {
           icon: "",
           label: "1 month",
-          value: "risky_work",
+          value: "1_month",
         },
         {
           icon: "",
           label: "2-3 months",
-          value: "risky_work",
+          value: "2-3_months",
         },
         {
           icon: "",
           label: "3+ months",
-          value: "risky_work",
+          value: "3plus_months",
         },
       ],
     },
     {
       question: "Do you have safety nets?",
-      type: "choices" as FieldType,
+      type: "multipleSelect" as FieldType,
+      description: "Select all that apply",
       inputField: null,
       value: "",
-      autoNext: true,
+      autoNext: false,
       choices: [
         {
           icon: "",
           label: "Spouse/partner with steady income",
-          value: "stable_job",
+          value: "spouse_or_partner_with_steady_income",
         },
         {
           icon: "",
-          label: "Multiple income streams",
-          value: "okay_job",
+          label: "Some income streams",
+          value: "some_income_streams",
         },
         {
           icon: "",
           label: "Family financial support",
-          value: "risky_work",
+          value: "family_financial_support",
         },
         {
           icon: "",
           label: "Savings from good months",
-          value: "risky_work",
+          value: "savings_from_good_months",
         },
         {
           icon: "",
           label: "None of the above",
-          value: "risky_work",
+          value: "none",
         },
       ],
     },
@@ -223,26 +211,10 @@ export const nextOnboardingSteps = {
       inputField: null,
       value: "",
       autoNext: false,
-      choices: [
-        {
-          icon: "",
-          label: "None",
-          value: "stable_job",
-        },
-        {
-          icon: "",
-          label: "Minor concerns",
-          value: "okay_job",
-        },
-        {
-          icon: "",
-          label: "Serious needs",
-          value: "okay_job",
-        },
-      ],
     },
     {
       question: "Any family members or dependents with health/urgent needs?",
+      key: "any_dependents_with_urgent_needs",
       type: "choices" as FieldType,
       inputField: null,
       withDependency: true,
@@ -294,30 +266,26 @@ export const nextOnboardingSteps = {
     },
     {
       question: "What income/support do you currently have?",
-      type: "choices" as FieldType,
+      type: "multipleSelect" as FieldType,
       inputField: {},
+      description: "Select all that apply. Skip if none.",
       value: "",
-      autoNext: true,
+      autoNext: false,
       choices: [
         {
           icon: "",
           label: "Unemployment benefits",
-          value: "1 to 3 months",
+          value: "unemployment_benefits",
         },
         {
           icon: "",
           label: "Investment income",
-          value: "3 to 6 months",
+          value: "investment_income",
         },
         {
           icon: "",
           label: "Spouse/partner income",
-          value: "6 to 12 months",
-        },
-        {
-          icon: "",
-          label: "None",
-          value: "6 to 12 months",
+          value: "spouse_or_partner_income",
         },
       ],
     },
@@ -347,6 +315,7 @@ export const nextOnboardingSteps = {
     },
     {
       question: "Any family members or dependents with health/urgent needs?",
+      key: "any_dependents_with_urgent_needs",
       type: "choices" as FieldType,
       inputField: null,
       withDependency: true,

@@ -1,8 +1,14 @@
 import { useOnboardingStore } from "@/store/useOnboardingStore";
-import { FieldType, questionsWithDependencies } from "@/utils/onboarding";
+import {
+  dependencyKeys,
+  FieldType,
+  questionsWithDependencies,
+} from "@/utils/onboarding";
 
 export default function useOnboardingDependencies() {
   const { setOnboardingSteps } = useOnboardingStore();
+
+  console.log("here1");
 
   const hasDependents = (steps: any[]) =>
     steps
@@ -11,6 +17,9 @@ export default function useOnboardingDependencies() {
 
   const getAnswer = (steps: any[], question: string) =>
     steps.find((s) => s.question === question)?.value;
+
+  const getKeyAnswer = (steps: any[], key: string) =>
+    steps.find((s) => s.key === key)?.value;
 
   const hasStep = (steps: any[], question: string) =>
     steps.some((s) => s.question === question);
@@ -23,9 +32,9 @@ export default function useOnboardingDependencies() {
       steps,
       questionsWithDependencies.familySupport
     );
-    const dependentsNeeds = getAnswer(
+    const dependentsNeeds = getKeyAnswer(
       steps,
-      questionsWithDependencies.dependentsNeeds
+      dependencyKeys.anyDependentsWithUrgentNeeds
     );
     const hasAllocationStep = hasStep(
       steps,
@@ -70,6 +79,7 @@ export default function useOnboardingDependencies() {
           label: "",
           placeholder: "00.00",
         },
+        withDependency: false,
         autoNext: false,
         choices: [],
       });
@@ -81,6 +91,7 @@ export default function useOnboardingDependencies() {
     }
 
     setOnboardingSteps(updatedSteps);
+    return updatedSteps;
   };
 
   return { injectExtraOnboardingScreen };
