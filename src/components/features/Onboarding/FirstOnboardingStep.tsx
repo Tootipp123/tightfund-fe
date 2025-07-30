@@ -7,7 +7,7 @@ export const FirstOnboardingStep = ({
 }) => {
   return (
     <>
-      <h2 className="text-dark-main font-bold text-[32px] text-center px-5 leading-none">
+      <h2 className="text-dark-main font-bold text-2xl md:text-[32px] text-center px-5 leading-none">
         {firstOnboardingStep.question}
       </h2>
       <div className="flex items-center flex-col gap-y-4 mt-[80px]">

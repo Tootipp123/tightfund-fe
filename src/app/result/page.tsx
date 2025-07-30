@@ -68,10 +68,10 @@ export default function Result() {
       <div className="flex items-center gap-5">
         {/* <!-- Card 1: I have this --> */}
         <div className="bg-light-secondary py-8 px-6 rounded-xl shadow-sm flex flex-col items-center text-center w-full max-w-[240px]">
-          <h3 className="text-xl font-bold text-dark-main mb-4">
+          <h3 className="text-md md:text-xl font-bold text-dark-main mb-4">
             👏 I have this
           </h3>
-          <p className="text-lg text-dark-main mb-6 font-medium">
+          <p className="text-sm md:text-lg text-dark-main mb-6 font-medium">
             See how prepared you really are
           </p>
           <Button
@@ -87,10 +87,10 @@ export default function Result() {
 
         {/* <!-- Card 2: Still building --> */}
         <div className="bg-light-secondary py-8 px-6 rounded-xl shadow-sm flex flex-col items-center text-center w-full max-w-[240px]">
-          <h3 className="text-lg font-bold text-dark-main mb-4">
+          <h3 className="text-md md:text-xl font-bold text-dark-main mb-4">
             📈 Still building
           </h3>
-          <p className="text-lg text-dark-main mb-6 font-medium">
+          <p className="text-sm md:text-lg text-dark-main mb-6 font-medium">
             Get timeline &amp; saving options
           </p>
           <Button

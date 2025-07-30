@@ -72,7 +72,7 @@ export default function OnboardingPage() {
     const step = onboardingSteps[currentStepIndex];
 
     return (
-      <div className="w-full h-screen flex items-center justify-center">
+      <div className="w-full h-screen px-8 md:px-0 flex items-center justify-center">
         <div className="w-[420px] m-auto">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -95,10 +95,10 @@ export default function OnboardingPage() {
               >
                 <IoArrowBackOutline className="text-2xl text-dark-main" />
               </button>
-              <h2 className="text-dark-main font-bold text-[28px] text-center px-5 leading-none">
+              <h2 className="text-dark-main font-bold text-2xl md:text-[32px] text-center px-5 leading-none">
                 {step.question}
               </h2>
-              <p className="text-dark-main font-regular mt-2 opacity-[0.9] text-[16px] text-center px-5 leading-none">
+              <p className="text-dark-main font-regular mt-2 opacity-[0.9] text-sm md:text-[16px] text-center px-5 leading-none">
                 {step.description}
               </p>
               <div className="flex items-center flex-col gap-y-4 mt-[80px]">
@@ -140,7 +140,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-screen px-8 md:px-0 flex items-center justify-center">
       <div className="w-[420px] m-auto">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
