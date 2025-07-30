@@ -23,8 +23,6 @@ export default function UserDashboard() {
   const { data: session, status }: any = useSession();
   const [showUserMenu, setShowUserMenu] = useState(false);
 
-  console.log("session: ", session);
-
   useEffect(() => {
     if (session?.status === "unauthenticated") {
       router.push("/");
@@ -33,20 +31,27 @@ export default function UserDashboard() {
 
   const createFinancialDetailsMutation = useMutation(createFinancialDetails);
 
+  console.log("financialReport: ", financialReport);
+
   const food =
+    financialReport?.totalMonthlyExpenses?.breakdown?.foodAndGroceries ||
     financialReport?.totalMonthlyExpenses?.breakdown?.Food_and_groceries ||
     financialReport?.totalMonthlyExpenses?.breakdown?.food_and_groceries ||
     financialReport?.totalMonthlyExpenses?.breakdown?.["Food and groceries"] *
       0.9;
   const utilities =
-    financialReport?.totalMonthlyExpenses?.breakdown?.Utilities ||
-    financialReport?.totalMonthlyExpenses?.breakdown?.utilities * 0.9;
+    financialReport?.totalMonthlyExpenses?.breakdown?.utilities ||
+    financialReport?.totalMonthlyExpenses?.breakdown?.Utilities * 0.9;
 
   const rent =
+    financialReport?.totalMonthlyExpenses?.breakdown?.rentOrMortgage ||
     financialReport?.totalMonthlyExpenses?.breakdown?.rent_or_mortgage;
   financialReport?.totalMonthlyExpenses?.breakdown?.["Rent or mortgage"] ||
     financialReport?.totalMonthlyExpenses?.breakdown?.Rent_or_mortgage;
+
   const essentialNeeds = food + utilities + rent;
+
+  console.log("essentialNeeds: ", essentialNeeds);
 
   const basicNeeds = essentialNeeds * financialReport?.mainCard?.buffer;
 
@@ -67,23 +72,23 @@ export default function UserDashboard() {
     {
       month: "3",
       title: "3 months",
-      perDay: threeMonthsSavings?.dailyTargetAmount,
-      perWeek: threeMonthsSavings?.monthlyTargetAmount,
-      perMonth: threeMonthsSavings?.monthlyTargetAmount,
+      perDay: threeMonthsSavings?.daily,
+      perWeek: threeMonthsSavings?.weekly,
+      perMonth: threeMonthsSavings?.monthly,
     },
     {
       month: "6",
       title: "6 months",
-      perDay: sixMonthsSavings?.dailyTargetAmount,
-      perWeek: sixMonthsSavings?.monthlyTargetAmount,
-      perMonth: sixMonthsSavings?.monthlyTargetAmount,
+      perDay: sixMonthsSavings?.daily,
+      perWeek: sixMonthsSavings?.weekly,
+      perMonth: sixMonthsSavings?.monthly,
     },
     {
       month: "12",
       title: "12 months",
-      perDay: twelveMonthsSavings?.dailyTargetAmount,
-      perWeek: twelveMonthsSavings?.monthlyTargetAmount,
-      perMonth: twelveMonthsSavings?.monthlyTargetAmount,
+      perDay: twelveMonthsSavings?.daily,
+      perWeek: twelveMonthsSavings?.weekly,
+      perMonth: twelveMonthsSavings?.monthly,
     },
   ]);
 
@@ -176,19 +181,19 @@ export default function UserDashboard() {
           <div className="flex flex-col sm:flex-row items-baseline sm:items-center mb-6">
             <span className="text-6xl sm:text-7xl font-bold text-dark-main mr-4 leading-tight">
               {currency?.symbol}
-              {formatNumber(financialReport?.mainCard?.emergencyFundGoal)}
+              {formatNumber(financialReport?.emergencyFundGoal)}
             </span>
             <span className="text-2xl sm:text-3xl font-medium text-dark-main whitespace-nowrap">
-              for {financialReport?.mainCard?.buffer} months
+              for {financialReport?.buffer} months
             </span>
           </div>
           <p className="text-custom-green text-sm mt-6 max-w-lg">
             <span className="font-semibold">Your Priority:</span> Get to{" "}
             {currency.symbol}
             {formatNumber(basicNeeds.toString())} first (covers basic needs for{" "}
-            {financialReport?.mainCard?.buffer} months), then build to the full{" "}
+            {financialReport?.buffer} months), then build to the full{" "}
             {currency.symbol}
-            {formatNumber(financialReport?.mainCard?.emergencyFundGoal)}.
+            {formatNumber(financialReport?.emergencyFundGoal)}.
           </p>
         </div>
 
