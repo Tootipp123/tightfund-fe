@@ -1,10 +1,10 @@
 import CookieConsentPopup from "@/components/features/CookieConsentPopup";
 import LoadGumroad from "@/components/features/LoadGumroad";
 import Providers from "@/components/features/Providers";
-import VerifyUser from "@/components/features/VerifyUser";
 import QueryProviders from "@/utils/query-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Suspense } from "react";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -45,12 +45,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-light-main`}
       >
         <QueryProviders>
-          <Providers>
-            <VerifyUser />
-            <LoadGumroad />
-            <CookieConsentPopup />
-            {children}
-          </Providers>
+          <Suspense>
+            <Providers>
+              <LoadGumroad />
+              <CookieConsentPopup />
+              {children}
+            </Providers>
+          </Suspense>
         </QueryProviders>
       </body>
     </html>
