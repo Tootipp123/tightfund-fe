@@ -1,43 +1,89 @@
 "use client";
 
+import { createFinancialDetails } from "@/api/FinancialDetails";
 import UserDefaultImage from "@/assets/user-default.jpg";
 import LogoSvg from "@/components/icons/LogoSvg";
 import Button from "@/components/ui/Button";
 import { useFinancialReport } from "@/store/useFinancialReport";
+import { useGlobalStore } from "@/store/useGlobalStore";
 import { formatNumber } from "@/utils/formatNumber";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { RiArrowDropDownFill } from "react-icons/ri";
+import { useMutation } from "react-query";
 
 export default function UserDashboard() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
   const { financialReport } = useFinancialReport();
-  const session = useSession();
+  const { currency } = useGlobalStore();
+  const { data: session, status }: any = useSession();
   const [showUserMenu, setShowUserMenu] = useState(false);
+
+  console.log("session: ", session);
+
+  useEffect(() => {
+    if (session?.status === "unauthenticated") {
+      router.push("/");
+    }
+  }, [session?.status]);
+
+  const createFinancialDetailsMutation = useMutation(createFinancialDetails);
+
+  const food =
+    financialReport?.totalMonthlyExpenses?.breakdown?.Food_and_groceries ||
+    financialReport?.totalMonthlyExpenses?.breakdown?.food_and_groceries ||
+    financialReport?.totalMonthlyExpenses?.breakdown?.["Food and groceries"] *
+      0.9;
+  const utilities =
+    financialReport?.totalMonthlyExpenses?.breakdown?.Utilities ||
+    financialReport?.totalMonthlyExpenses?.breakdown?.utilities * 0.9;
+
+  const rent =
+    financialReport?.totalMonthlyExpenses?.breakdown?.rent_or_mortgage;
+  financialReport?.totalMonthlyExpenses?.breakdown?.["Rent or mortgage"] ||
+    financialReport?.totalMonthlyExpenses?.breakdown?.Rent_or_mortgage;
+  const essentialNeeds = food + utilities + rent;
+
+  const basicNeeds = essentialNeeds * financialReport?.mainCard?.buffer;
+
+  useEffect(() => {
+    if (searchParams.get("from") === "result" && session?.accessToken) {
+      createFinancialDetailsMutation.mutateAsync({
+        data: financialReport,
+        accessToken: session?.accessToken,
+      });
+    }
+  }, [searchParams, session?.accessToken]);
+
+  const threeMonthsSavings = financialReport?.savingsTimeline?.["3_months"];
+  const sixMonthsSavings = financialReport?.savingsTimeline?.["6_months"];
+  const twelveMonthsSavings = financialReport?.savingsTimeline?.["12_months"];
 
   const [buildGoals, setBuildGoals] = useState([
     {
       month: "3",
       title: "3 months",
-      perDay: "125",
-      perWeek: "900",
-      perMonth: "3600",
+      perDay: threeMonthsSavings?.dailyTargetAmount,
+      perWeek: threeMonthsSavings?.monthlyTargetAmount,
+      perMonth: threeMonthsSavings?.monthlyTargetAmount,
     },
     {
       month: "6",
       title: "6 months",
-      perDay: "125",
-      perWeek: "900",
-      perMonth: "3600",
+      perDay: sixMonthsSavings?.dailyTargetAmount,
+      perWeek: sixMonthsSavings?.monthlyTargetAmount,
+      perMonth: sixMonthsSavings?.monthlyTargetAmount,
     },
     {
-      month: "9",
-      title: "9 months",
-      perDay: "125",
-      perWeek: "900",
-      perMonth: "3600",
+      month: "12",
+      title: "12 months",
+      perDay: twelveMonthsSavings?.dailyTargetAmount,
+      perWeek: twelveMonthsSavings?.monthlyTargetAmount,
+      perMonth: twelveMonthsSavings?.monthlyTargetAmount,
     },
   ]);
 
@@ -57,7 +103,7 @@ export default function UserDashboard() {
             </div>
 
             {/* <!-- User Image Placeholder (Blank) --> */}
-            {session && session?.data?.user && (
+            {session?.accessToken && (
               <div className="relative">
                 <div
                   className="flex items-center cursor-pointer"
@@ -111,7 +157,7 @@ export default function UserDashboard() {
       <div className="flex-grow container mx-auto max-w-6xl py-12 sm:px-6">
         {/* <!-- Greeting --> */}
         <h2 className="text-3xl font-semibold text-dark-main mb-8">
-          Hello, CJ
+          Hello, {session?.user?.name}
         </h2>
 
         {/* <!-- Most Recommended Emergency Fund Section --> */}
@@ -129,17 +175,20 @@ export default function UserDashboard() {
           </div>
           <div className="flex flex-col sm:flex-row items-baseline sm:items-center mb-6">
             <span className="text-6xl sm:text-7xl font-bold text-dark-main mr-4 leading-tight">
-              ${financialReport?.mainCard?.emergencyFundGoal}
+              {currency?.symbol}
+              {formatNumber(financialReport?.mainCard?.emergencyFundGoal)}
             </span>
             <span className="text-2xl sm:text-3xl font-medium text-dark-main whitespace-nowrap">
               for {financialReport?.mainCard?.buffer} months
             </span>
           </div>
-          <p className="text-dark-main text-sm mt-6 max-w-lg">
-            <span className="font-semibold">Your Priority:</span> Get to x
-            amount first (covers electricity + food for{" "}
-            {financialReport?.mainCard?.buffer} months), then build to the full
-            x amount.
+          <p className="text-custom-green text-sm mt-6 max-w-lg">
+            <span className="font-semibold">Your Priority:</span> Get to{" "}
+            {currency.symbol}
+            {formatNumber(basicNeeds.toString())} first (covers basic needs for{" "}
+            {financialReport?.mainCard?.buffer} months), then build to the full{" "}
+            {currency.symbol}
+            {formatNumber(financialReport?.mainCard?.emergencyFundGoal)}.
           </p>
         </div>
 
@@ -170,19 +219,22 @@ export default function UserDashboard() {
                     <div>
                       <p className="text-sm text-dark-main">per day</p>
                       <p className="text-lg font-semibold text-dark-main">
-                        ${formatNumber(goal.perDay)}
+                        {currency?.symbol}
+                        {formatNumber(goal.perDay)}
                       </p>
                     </div>
                     <div>
                       <p className="text-sm text-dark-main">per week</p>
                       <p className="text-lg font-semibold text-dark-main">
-                        ${formatNumber(goal.perWeek)}
+                        {currency?.symbol}
+                        {formatNumber(goal.perWeek)}
                       </p>
                     </div>
                     <div>
                       <p className="text-sm text-dark-main">per month</p>
                       <p className="text-lg font-semibold text-dark-main">
-                        ${formatNumber(goal.perMonth)}
+                        {currency?.symbol}
+                        {formatNumber(goal.perMonth)}
                       </p>
                     </div>
                   </div>

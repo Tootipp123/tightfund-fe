@@ -25,11 +25,17 @@ export const getFinancialDetails = async (
   return res;
 };
 
-export const createFinancialDetails = async (accessToken: string) => {
+export const createFinancialDetails = async ({
+  data,
+  accessToken,
+}: {
+  data: any;
+  accessToken: string;
+}) => {
   const payload = {
     url: `${ENDPOINT}/create`,
     method: "POST",
-    data: {},
+    data,
   };
 
   const { res, err }: ResponseData = await apiRequest({

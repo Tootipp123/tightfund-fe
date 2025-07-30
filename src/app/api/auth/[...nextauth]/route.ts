@@ -68,6 +68,8 @@ export const authOptions: NextAuthOptions = {
 
       if (from === "signout") {
         return `${baseUrl}`;
+      } else if (from === "result") {
+        return `${baseUrl}/dashboard?from=result`;
       }
 
       return url.startsWith(baseUrl) ? `${url}/dashboard` : baseUrl;

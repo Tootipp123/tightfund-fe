@@ -151,5 +151,11 @@ export const getCurrencyByLocale = () => {
   const locale = navigator.language; // e.g., "en-US", "en-PH"
   const countryCode = locale.split("-")[1]; // e.g., "US", "PH"
 
-  return currencyMap[countryCode] || { country: "Unknown", currency: "USD" };
+  return (
+    currencyMap[countryCode] || {
+      country: "Unknown",
+      currency: "USD",
+      symbol: "$",
+    }
+  );
 };

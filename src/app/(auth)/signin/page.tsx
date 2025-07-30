@@ -10,7 +10,6 @@ import Modal from "../../../components/ui/Modal";
 export default function SignupPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const fromMembershipPage = searchParams.get("from") === "membership";
 
   const [showTermsAndConditionsModal, setShowTermsAndConditionsModal] =
     useState(false);
@@ -39,11 +38,15 @@ export default function SignupPage() {
               </p>
               <div className="my-7">
                 <button
-                  onClick={() =>
-                    signIn("google", {
-                      callbackUrl: "/authorizing",
-                    })
-                  }
+                  onClick={() => {
+                    if (searchParams.get("from") === "result") {
+                      signIn("google");
+                    } else {
+                      signIn("google", {
+                        callbackUrl: "/?from=result",
+                      });
+                    }
+                  }}
                   className="rounded-md shadow-sm bg-white w-full border border-neutral-300 z-[5] mt-4 relative flex gap-3 hover:opacity-80 text-white bg-main-purple px-8 py-3 w-[300px] items-center justify-center"
                 >
                   <FcGoogle className="text-2xl bg-white rounded-full p-[2px]" />

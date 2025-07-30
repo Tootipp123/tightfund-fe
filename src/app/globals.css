@@ -31,3 +31,60 @@ select:focus {
   opacity: 1;
   filter: blur(40px);
 }
+
+.text-beige {
+  color: #f5f0eb;
+}
+/* Custom green color for the main fund amount */
+.text-custom-green {
+  color: #264d2d;
+}
+.text-custom-opacity-green {
+  color: #a5bcb1;
+}
+.text-custom-dark-green {
+  color: #1a3620;
+}
+/* Custom dark green for the button */
+.bg-custom-dark-green {
+  background-color: #1a3620;
+}
+.hover\:bg-custom-dark-green-hover:hover {
+  background-color: #264d2d; /* Slightly lighter green on hover */
+}
+/* Corrected border color definition */
+.border-custom-dark-green {
+  border-color: #1a3620;
+}
+/* Added hover text color for buttons */
+.hover\:text-beige:hover {
+  color: #f5f0eb;
+}
+/* Custom light beige for card backgrounds */
+.bg-card-beige {
+  background-color: #f5eadc;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+.dot-animation {
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+.dot-animation:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot-animation:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot-animation:nth-child(3) {
+  animation-delay: 0.4s;
+}
