@@ -1,35 +1,36 @@
-import LoadGumroad from '@/components/features/LoadGumroad';
-import Providers from '@/components/features/Providers';
-import QueryProviders from '@/utils/query-provider';
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import { Suspense } from 'react';
-import './globals.css';
+import GlobalTriggers from "@/components/features/GlobalTriggers";
+import LoadGumroad from "@/components/features/LoadGumroad";
+import Providers from "@/components/features/Providers";
+import QueryProviders from "@/utils/query-provider";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { Suspense } from "react";
+import "./globals.css";
 
 const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
 });
 const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
 });
 
 const ogImage = {
   images: [
-    'https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737792113/favicon_ku3rrz.png',
+    "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1737792113/favicon_ku3rrz.png",
   ],
 };
 
 export const metadata: Metadata = {
-  title: 'Get Emergency Fund - Know how much emergency fund you need',
-  description: 'Know how much emergency fund you really need',
+  title: "Get Emergency Fund - Know how much emergency fund you need",
+  description: "Know how much emergency fund you really need",
   openGraph: {
     ...ogImage,
-    title: 'Get Emergency Fund - Know how much emergency fund you need',
-    description: 'Know how much emergency fund you really need',
+    title: "Get Emergency Fund - Know how much emergency fund you need",
+    description: "Know how much emergency fund you really need",
   },
 };
 
@@ -39,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-light-main`}
       >
@@ -47,6 +48,7 @@ export default function RootLayout({
           <Suspense>
             <Providers>
               <LoadGumroad />
+              <GlobalTriggers />
               {children}
             </Providers>
           </Suspense>

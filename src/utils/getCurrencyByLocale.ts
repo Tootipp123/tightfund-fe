@@ -145,17 +145,29 @@ export const currencyMap: Record<
   SR: { country: "Suriname", currency: "SRD", symbol: "$" },
 };
 
-export const getCurrencyByLocale = () => {
+export const getCurrencyByIPGeolocation = async () => {
   if (typeof window === "undefined") return null;
 
-  const locale = navigator.language; // e.g., "en-US", "en-PH"
-  const countryCode = locale.split("-")[1]; // e.g., "US", "PH"
+  try {
+    const response = await fetch("https://ipapi.co/json/"); // Or another reliable free API like https://geolocation-db.com/json/
+    const data = await response.json();
 
-  return (
-    currencyMap[countryCode] || {
+    const countryCode = data.country_code; // For ipapi.co, it's country_code; for geolocation-db.com, it's country_code
+
+    return (
+      currencyMap[countryCode] || {
+        country: "Unknown",
+        currency: "USD",
+        symbol: "$",
+      }
+    );
+  } catch (error) {
+    console.error("Error fetching IP geolocation:", error);
+    // Fallback or default currency if API call fails
+    return {
       country: "Unknown",
       currency: "USD",
       symbol: "$",
-    }
-  );
+    };
+  }
 };
