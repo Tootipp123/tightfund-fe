@@ -13,7 +13,7 @@ export default function Field({
 }: {
   type:
     | "inputField"
-    | "number"
+    | "numberField"
     | "choices"
     | "multipleSelect"
     | "monthlyExpensesForm";
@@ -35,7 +35,7 @@ export default function Field({
         />
       );
 
-    case "number":
+    case "numberField":
       return (
         <TextInput
           placeholder={inputField.placeholder}

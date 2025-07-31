@@ -1,4 +1,4 @@
-export type FieldType = "inputField" | "number" | "choices";
+export type FieldType = "inputField" | "numberField" | "choices";
 
 export const questionsWithDependencies = {
   familySupport: "Can your family help you financially?",
