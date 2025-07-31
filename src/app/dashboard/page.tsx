@@ -23,6 +23,8 @@ export default function UserDashboard() {
   const { currency } = useGlobalStore();
   const { data: session, status }: any = useSession();
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showBufferTooltip, setShowBufferTooltip] = useState(false);
+  const [showFundTooltip, setShowFundTooltip] = useState(false);
 
   useEffect(() => {
     if (session?.status === "unauthenticated") {
@@ -227,12 +229,26 @@ export default function UserDashboard() {
                 {currency.symbol}
                 {formatNumber(financialReport?.emergencyFundGoal)}
               </p>
-              <div className="flex items-center gap-2 mt-4">
+              <div
+                className="flex items-center gap-2 mt-4"
+                onClick={() => setShowFundTooltip((prev) => !prev)}
+              >
                 <MdInfoOutline className="text-dark-main" />
                 <p className="text-dark-main text-sm cursor-pointer font-semibold underline">
                   How did we get this amount?
                 </p>
               </div>
+              {showFundTooltip && (
+                <div
+                  id="menu-2"
+                  onClick={() => setShowFundTooltip(false)}
+                  className="w-[400px] bg-white py-3 px-4 shadow-sm rounded-md absolute z-[100]"
+                >
+                  <p className="text-dark-main text-sm">
+                    {financialReport?.breakdown?.emergencyFundGoal}
+                  </p>
+                </div>
+              )}
             </div>
             <div className="w-[300px] bg-light-secondary px-5 py-5 rounded-lg">
               <p className="text-dark-main text-sm font-semibold">
@@ -240,21 +256,28 @@ export default function UserDashboard() {
               </p>
               <p className="text-dark-main text-2xl font-semibold">
                 {financialReport?.buffer?.label}
-                {/* {financialReport?.breakdown?.emergencyFundGoal} */}
               </p>
-              <div className="flex items-center gap-2 mt-4">
+              <div
+                className="flex items-center gap-2 mt-4"
+                onClick={() => setShowBufferTooltip((prev) => !prev)}
+              >
                 <MdInfoOutline className="text-dark-main" />
                 <p className="text-dark-main text-sm cursor-pointer font-semibold underline">
                   How did we get this?
                 </p>
               </div>
+              {showBufferTooltip && (
+                <div
+                  id="menu"
+                  onClick={() => setShowBufferTooltip(false)}
+                  className="w-[400px] bg-white py-3 px-4 shadow-sm rounded-md absolute z-[100]"
+                >
+                  <p className="text-dark-main text-sm">
+                    {financialReport?.breakdown?.bufferExplanation}
+                  </p>
+                </div>
+              )}
             </div>
-            {/* <div className="w-[400px] bg-light-secondary px-5 py-5 rounded-lg">
-              <p className="text-dark-main text-sm font-semibold">Buffer:</p>
-              <p className="text-dark-main text-sm">
-                {financialReport?.breakdown?.bufferExplanation}
-              </p>
-            </div> */}
           </div>
         </div>
 
