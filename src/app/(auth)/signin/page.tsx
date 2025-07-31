@@ -24,7 +24,7 @@ export default function SignupPage() {
           <div className="flex items-center gap-2 cursor-pointer">
             <LogoSvg width={40} height={40} />
             <span className="text-dark-main font-bold">
-              Get Emergency Fund
+              TightFund
               {/* <span className="text-dark-main opacity-[0.7]">.com</span> */}
             </span>
           </div>

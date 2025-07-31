@@ -10,12 +10,12 @@ export default function Footer() {
           <div className="w-full pt-[60px] flex flex-col items-center justify-between">
             <LogoSvg width={40} height={40} />
             <div className="text-dark-primary font-semibold text-center">
-              Get Emergency Fund
+              TightFund
             </div>
           </div>
           <div className="w-full mx-auto flex justify-between pb-[50px] mt-2 text-center">
             <p className="text-dark-primary opacity-[0.7] text-center">
-              © 2025 Get Emergency Fund
+              © 2025 TightFund
             </p>
           </div>
         </div>

@@ -21,9 +21,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-2">
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <LogoSvg />
-          <span className="text-dark-main font-semibold">
-            Get Emergency Fund
-          </span>
+          <span className="text-dark-main font-semibold">TightFund</span>
         </Link>
       </div>
       <nav className="hidden md:flex space-x-8 text-gray-700">
