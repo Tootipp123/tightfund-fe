@@ -115,8 +115,8 @@ export default function UserDashboard() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-light-main py-4 px-8">
-        <div className="container mx-auto max-w-6xl">
+      <header className="bg-light-main py-4 px-5 md:px-8">
+        <div className="container mx-auto w-full max-w-6xl">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-10">
               <LogoSvg width={40} height={40} />
@@ -180,7 +180,7 @@ export default function UserDashboard() {
       </header>
 
       {/* <!-- Main Content Area --> */}
-      <div className="flex-grow container mx-auto max-w-6xl py-12 sm:px-6">
+      <div className="px-5 flex-grow container mx-auto max-w-6xl py-12 md:px-6">
         {/* <!-- Greeting --> */}
         <h2 className="text-3xl font-semibold text-dark-main mb-8">
           Hello, {session?.user?.name}
@@ -188,19 +188,21 @@ export default function UserDashboard() {
 
         {/* <!-- Most Recommended Emergency Fund Section --> */}
         <div className="mb-16">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-xl font-semibold text-dark-main">
+          <div className="flex flex-col md:flex-row gap-3 justify-between md:items-center md:mb-4">
+            <h1 className="text-sm md:text-xl font-semibold text-dark-main mt-3 md:mt-0">
               Most Recommended Emergency Fund
             </h1>
             <Button
               variant="secondary"
+              size="small"
+              className="order-first md:order-last h-[40px]"
               onClick={() => router.push("/onboarding?from=dashboard")}
             >
               Update your details
             </Button>
           </div>
           <div className="flex flex-col sm:flex-row items-baseline sm:items-center mb-6">
-            <span className="text-6xl sm:text-7xl font-bold text-dark-main mr-4 leading-tight">
+            <span className="text-5xl sm:text-7xl font-bold text-dark-main mr-4 leading-tight">
               {currency?.symbol}
               {formatNumber(financialReport?.emergencyFundGoal)}
             </span>
@@ -220,7 +222,7 @@ export default function UserDashboard() {
               {formatNumber(financialReport?.emergencyFundGoal)}.
             </p>
           </div> */}
-          <div className="details flex items-stretch gap-[30px]">
+          <div className="details flex flex-col lg:flex-row items-stretch gap-[30px]">
             <div className="w-[300px] bg-light-secondary px-5 py-5 rounded-lg">
               <p className="text-dark-main text-sm font-semibold">
                 Recommended Fund Amount:
@@ -286,7 +288,7 @@ export default function UserDashboard() {
           <h2 className="text-xl font-semibold text-dark-main mb-8">
             Build your E.F. goal in:
           </h2>
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             {buildGoals.map((goal, idx: number) => (
               <div
                 key={idx}
@@ -334,11 +336,11 @@ export default function UserDashboard() {
         </div>
 
         <div className="mb-16">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
             <h2 className="text-xl font-semibold text-dark-main">
               Your risk level might have changed
             </h2>
-            <div className="bg-orange-500 text-white font-semibold px-1 rounded-md text-sm">
+            <div className="bg-orange-500 w-fit text-white font-semibold px-1 rounded-md text-sm">
               Coming soon
             </div>
           </div>
@@ -347,15 +349,15 @@ export default function UserDashboard() {
             financial situation. Understand how economic shifts impact your
             emergency fund needs.
           </p>
-          <Button>Join the waitlist</Button>
+          <Button disabled>Join the waitlist</Button>
         </div>
 
         <div className="mb-16">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
             <h2 className="text-xl font-semibold text-dark-main">
               See how many months you're prepared for unemployment
             </h2>
-            <div className="bg-orange-500 text-white font-semibold px-1 rounded-md text-sm">
+            <div className="bg-orange-500 w-fit text-white font-semibold px-1 rounded-md text-sm">
               Coming soon
             </div>
           </div>
@@ -364,7 +366,7 @@ export default function UserDashboard() {
             unemployment. See exactly how many months your current savings can
             cover your expenses if unemployment strikes.
           </p>
-          <Button>Join the waitlist</Button>
+          <Button disabled>Join the waitlist</Button>
         </div>
       </div>
     </div>
