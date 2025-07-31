@@ -40,6 +40,7 @@ export default function MonthlyExpensesForm({
           <div className="relative w-[160px]">
             <TextInput
               placeholder="00.00"
+              type="number"
               value={formatNumber(expense.value)}
               textAlign="left"
               onChange={(val) => handleValueChange(idx, val)}

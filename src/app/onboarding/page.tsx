@@ -60,7 +60,7 @@ export default function OnboardingPage() {
         setOnboardingSteps(updated);
         break;
 
-      case "numberField":
+      case "number":
         const digitsOnly = val.replace(/\D/g, "");
         updated[currentStepIndex as number].value = digitsOnly;
         setOnboardingSteps(updated);

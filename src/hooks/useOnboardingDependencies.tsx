@@ -71,7 +71,7 @@ export default function useOnboardingDependencies() {
     if (dependentsNeeds && dependentsNeeds !== "none" && !hasAllocationStep) {
       updatedSteps.push({
         question: questionsWithDependencies.dependentsAllocation,
-        type: "numberField",
+        type: "number",
         value: "",
         inputField: {
           type: "text",
