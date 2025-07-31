@@ -65,6 +65,7 @@ export default function UserDashboard() {
   }, [searchParams, session?.accessToken]);
 
   const threeMonthsSavings = financialReport?.savingsTimeline?.["3_months"];
+  console.log("threeMonthsSavings.daily: ", threeMonthsSavings?.daily);
   const sixMonthsSavings = financialReport?.savingsTimeline?.["6_months"];
   const twelveMonthsSavings = financialReport?.savingsTimeline?.["12_months"];
 
@@ -72,25 +73,42 @@ export default function UserDashboard() {
     {
       month: "3",
       title: "3 months",
-      perDay: threeMonthsSavings?.daily,
-      perWeek: threeMonthsSavings?.weekly,
-      perMonth: threeMonthsSavings?.monthly,
+      perDay: "",
+      perWeek: "",
+      perMonth: "",
     },
     {
       month: "6",
       title: "6 months",
-      perDay: sixMonthsSavings?.daily,
-      perWeek: sixMonthsSavings?.weekly,
-      perMonth: sixMonthsSavings?.monthly,
+      perDay: "",
+      perWeek: "",
+      perMonth: "",
     },
     {
       month: "12",
       title: "12 months",
-      perDay: twelveMonthsSavings?.daily,
-      perWeek: twelveMonthsSavings?.weekly,
-      perMonth: twelveMonthsSavings?.monthly,
+      perDay: "",
+      perWeek: "",
+      perMonth: "",
     },
   ]);
+
+  useEffect(() => {
+    if (financialReport?.savingsTimeline) {
+      setBuildGoals((prev) =>
+        prev.map((goal) => {
+          const savings =
+            financialReport.savingsTimeline[`${goal.month}_months`];
+          return {
+            ...goal,
+            perDay: savings?.daily ?? goal.perDay,
+            perWeek: savings?.weekly ?? goal.perWeek,
+            perMonth: savings?.monthly ?? goal.perMonth,
+          };
+        })
+      );
+    }
+  }, [financialReport]);
 
   return (
     <div className="min-h-screen flex flex-col">

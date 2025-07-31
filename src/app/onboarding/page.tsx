@@ -1,9 +1,11 @@
 "use client";
 
+import SelectCountry from "@/components/features/CustomForms/SelectCountry";
 import Field from "@/components/features/Onboarding/Field";
 import { FirstOnboardingStep } from "@/components/features/Onboarding/FirstOnboardingStep";
 import Button from "@/components/ui/Button";
 import useOnboardingDependencies from "@/hooks/useOnboardingDependencies";
+import { useGlobalStore } from "@/store/useGlobalStore";
 import { EmploymentType, useOnboardingStore } from "@/store/useOnboardingStore";
 import { nextOnboardingSteps } from "@/utils/onboarding";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,6 +16,7 @@ import { IoArrowBackOutline } from "react-icons/io5";
 export default function OnboardingPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { showCountrySelection } = useGlobalStore();
   const { injectExtraOnboardingScreen } = useOnboardingDependencies();
   const [direction, setDirection] = useState<1 | -1>(1);
   const [currentStepIndex, setCurrentStepIndex] = useState<any>(null);
@@ -205,9 +208,13 @@ export default function OnboardingPage() {
             >
               <IoArrowBackOutline className="text-2xl text-dark-main" />
             </button>
-            <FirstOnboardingStep
-              handleSelectInitialStep={handleSelectInitialStep}
-            />
+            {showCountrySelection ? (
+              <SelectCountry />
+            ) : (
+              <FirstOnboardingStep
+                handleSelectInitialStep={handleSelectInitialStep}
+              />
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

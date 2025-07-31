@@ -1,5 +1,6 @@
 "use client";
 
+import { createFinancialDetails } from "@/api/FinancialDetails";
 import LogoSvg from "@/components/icons/LogoSvg";
 import Button from "@/components/ui/Button";
 import { useFinancialReport } from "@/store/useFinancialReport";
@@ -7,6 +8,8 @@ import { useGlobalStore } from "@/store/useGlobalStore";
 import { formatNumber } from "@/utils/formatNumber";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useMutation } from "react-query";
 
 export default function Result() {
   const router = useRouter();
@@ -14,16 +17,16 @@ export default function Result() {
   const { currency } = useGlobalStore();
   const { financialReport } = useFinancialReport();
 
-  // const createFinancialDetailsMutation = useMutation(createFinancialDetails);
+  const createFinancialDetailsMutation = useMutation(createFinancialDetails);
 
-  // useEffect(() => {
-  //   if (session?.accessToken) {
-  //     createFinancialDetailsMutation.mutateAsync({
-  //       data: financialReport,
-  //       accessToken: session?.accessToken,
-  //     });
-  //   }
-  // }, [session?.accessToken]);
+  useEffect(() => {
+    if (status === "authenticated") {
+      createFinancialDetailsMutation.mutateAsync({
+        data: financialReport,
+        accessToken: session?.accessToken,
+      });
+    }
+  }, [session?.accessToken]);
 
   return (
     <div className="flex-grow container mx-auto max-w-4xl py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
@@ -76,7 +79,11 @@ export default function Result() {
           </p>
           <Button
             onClick={() => {
-              router.push("/signin?from=result");
+              if (status === "authenticated") {
+                router.push("/dashboard");
+              } else {
+                router.push("/signin?from=result");
+              }
             }}
             variant="secondary"
             className="w-full"
@@ -95,7 +102,11 @@ export default function Result() {
           </p>
           <Button
             onClick={() => {
-              router.push("/signin?from=result");
+              if (status === "authenticated") {
+                router.push("/dashboard");
+              } else {
+                router.push("/signin?from=result");
+              }
             }}
             variant="secondary"
             className="w-full"
@@ -112,7 +123,11 @@ export default function Result() {
         </p>
         <Button
           onClick={() => {
-            router.push("/signin?from=result");
+            if (status === "authenticated") {
+              router.push("/dashboard");
+            } else {
+              router.push("/signin?from=result");
+            }
           }}
           className="px-6"
         >

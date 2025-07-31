@@ -48,6 +48,7 @@ export const currencyMap: Record<
   CL: { country: "Chile", currency: "CLP", symbol: "$" },
   CO: { country: "Colombia", currency: "COP", symbol: "$" },
   CZ: { country: "Czech Republic", currency: "CZK", symbol: "Kč" },
+  CN: { country: "China", currency: "CNY", symbol: "¥" },
   DK: { country: "Denmark", currency: "DKK", symbol: "kr" },
   EG: { country: "Egypt", currency: "EGP", symbol: "£" },
   FI: { country: "Finland", currency: "EUR", symbol: "€" },
@@ -143,6 +144,125 @@ export const currencyMap: Record<
   SD: { country: "Sudan", currency: "SDG", symbol: "£" },
   SM: { country: "San Marino", currency: "EUR", symbol: "€" },
   SR: { country: "Suriname", currency: "SRD", symbol: "$" },
+
+  AF: { country: "Afghanistan", currency: "AFN", symbol: "؋" },
+  AX: { country: "Åland Islands", currency: "EUR", symbol: "€" },
+  AI: { country: "Anguilla", currency: "XCD", symbol: "$" },
+  AQ: { country: "Antarctica", currency: "XCD", symbol: "$" }, // Typically no currency, or various depending on research station
+  AS: { country: "American Samoa", currency: "USD", symbol: "$" },
+  AW: { country: "Aruba", currency: "AWG", symbol: "ƒ" },
+  BY: { country: "Belarus", currency: "BYN", symbol: "Br" },
+  BM: { country: "Bermuda", currency: "BMD", symbol: "$" },
+  BQ: {
+    country: "Bonaire, Sint Eustatius and Saba",
+    currency: "USD",
+    symbol: "$",
+  },
+  BV: { country: "Bouvet Island", currency: "NOK", symbol: "kr" }, // Territory of Norway
+  CD: {
+    country: "Congo, Democratic Republic of the",
+    currency: "CDF",
+    symbol: "FC",
+  },
+  CC: { country: "Cocos (Keeling) Islands", currency: "AUD", symbol: "$" },
+  CI: { country: "Côte d'Ivoire", currency: "XOF", symbol: "Fr" },
+  CX: { country: "Christmas Island", currency: "AUD", symbol: "$" },
+  CW: { country: "Curaçao", currency: "ANG", symbol: "ƒ" },
+  EH: { country: "Western Sahara", currency: "MAD", symbol: "د.م." }, // Disputed territory, typically uses Moroccan Dirham
+  FK: { country: "Falkland Islands (Malvinas)", currency: "FKP", symbol: "£" },
+  FO: { country: "Faroe Islands", currency: "DKK", symbol: "kr" },
+  GF: { country: "French Guiana", currency: "EUR", symbol: "€" },
+  GG: { country: "Guernsey", currency: "GBP", symbol: "£" },
+  GP: { country: "Guadeloupe", currency: "EUR", symbol: "€" },
+  GQ: { country: "Equatorial Guinea", currency: "XAF", symbol: "FCFA" },
+  GS: {
+    country: "South Georgia and the South Sandwich Islands",
+    currency: "GBP",
+    symbol: "£",
+  },
+  HM: {
+    country: "Heard Island and McDonald Islands",
+    currency: "AUD",
+    symbol: "$",
+  },
+  HN: { country: "Honduras", currency: "HNL", symbol: "L" },
+  IM: { country: "Isle of Man", currency: "GBP", symbol: "£" },
+  JE: { country: "Jersey", currency: "GBP", symbol: "£" },
+  JM: { country: "Jamaica", currency: "JMD", symbol: "J$" },
+  KG: { country: "Kyrgyzstan", currency: "KGS", symbol: "с" },
+  KM: { country: "Comoros", currency: "KMF", symbol: "CF" },
+  KP: {
+    country: "Korea, Democratic People's Republic of",
+    currency: "KPW",
+    symbol: "₩",
+  },
+  LV: { country: "Latvia", currency: "EUR", symbol: "€" },
+  LB: { country: "Lebanon", currency: "LBP", symbol: "ل.ل" },
+  LY: { country: "Libya", currency: "LYD", symbol: "ل.د" },
+  MD: { country: "Moldova, Republic of", currency: "MDL", symbol: "L" },
+  MP: { country: "Northern Mariana Islands", currency: "USD", symbol: "$" },
+  MS: { country: "Montserrat", currency: "XCD", symbol: "$" },
+  MU: { country: "Mauritius", currency: "MUR", symbol: "₨" },
+  MV: { country: "Maldives", currency: "MVR", symbol: ".ރ" },
+  MW: { country: "Malawi", currency: "MWK", symbol: "MK" },
+  IE: { country: "Ireland", currency: "EUR", symbol: "€" },
+  NF: { country: "Norfolk Island", currency: "AUD", symbol: "$" },
+  NU: { country: "Niue", currency: "NZD", symbol: "$" },
+  PF: { country: "French Polynesia", currency: "XPF", symbol: "₣" },
+  PM: { country: "Saint Pierre and Miquelon", currency: "EUR", symbol: "€" },
+  PN: { country: "Pitcairn", currency: "NZD", symbol: "$" },
+  PR: { country: "Puerto Rico", currency: "USD", symbol: "$" },
+  RE: { country: "Réunion", currency: "EUR", symbol: "€" },
+  RS: { country: "Serbia", currency: "RSD", symbol: "дин" },
+  SJ: { country: "Svalbard and Jan Mayen", currency: "NOK", symbol: "kr" },
+  SL: { country: "Sierra Leone", currency: "SLL", symbol: "Le" },
+  SO: { country: "Somalia", currency: "SOS", symbol: "Sh" },
+  SS: { country: "South Sudan", currency: "SSP", symbol: "£" },
+  ST: { country: "Sao Tome and Principe", currency: "STN", symbol: "Db" }, // Switched from STD to STN
+  SX: { country: "Sint Maarten (Dutch part)", currency: "ANG", symbol: "ƒ" },
+  SY: { country: "Syrian Arab Republic", currency: "SYP", symbol: "£" },
+  TD: { country: "Chad", currency: "XAF", symbol: "FCFA" },
+  TF: { country: "French Southern Territories", currency: "EUR", symbol: "€" },
+  TG: { country: "Togo", currency: "XOF", symbol: "Fr" },
+  TJ: { country: "Tajikistan", currency: "TJS", symbol: "ЅМ" },
+  TK: { country: "Tokelau", currency: "NZD", symbol: "$" },
+  TL: { country: "Timor-Leste", currency: "USD", symbol: "$" },
+  TM: { country: "Turkmenistan", currency: "TMT", symbol: "m" },
+  TO: { country: "Tonga", currency: "TOP", symbol: "T$" },
+  TT: { country: "Trinidad and Tobago", currency: "TTD", symbol: "TT$" },
+  TV: { country: "Tuvalu", currency: "AUD", symbol: "$" },
+  TZ: {
+    country: "Tanzania, United Republic of",
+    currency: "TZS",
+    symbol: "TSh",
+  },
+  UG: { country: "Uganda", currency: "UGX", symbol: "USh" },
+  UM: {
+    country: "United States Minor Outlying Islands",
+    currency: "USD",
+    symbol: "$",
+  },
+  UY: { country: "Uruguay", currency: "UYU", symbol: "$" },
+  UZ: { country: "Uzbekistan", currency: "UZS", symbol: "so'm" },
+  VA: { country: "Holy See", currency: "EUR", symbol: "€" },
+  VC: {
+    country: "Saint Vincent and the Grenadines",
+    currency: "XCD",
+    symbol: "$",
+  },
+  VE: {
+    country: "Venezuela, Bolivarian Republic of",
+    currency: "VES",
+    symbol: "Bs",
+  },
+  VG: { country: "Virgin Islands, British", currency: "USD", symbol: "$" },
+  VI: { country: "Virgin Islands, U.S.", currency: "USD", symbol: "$" },
+  VU: { country: "Vanuatu", currency: "VUV", symbol: "Vt" },
+  WF: { country: "Wallis and Futuna", currency: "XPF", symbol: "₣" },
+  WS: { country: "Samoa", currency: "WST", symbol: "T" },
+  YE: { country: "Yemen", currency: "YER", symbol: "﷼" },
+  ZM: { country: "Zambia", currency: "ZMW", symbol: "ZK" },
+  ZW: { country: "Zimbabwe", currency: "ZWL", symbol: "$" },
 };
 
 export const getCurrencyByIPGeolocation = async () => {
@@ -154,6 +274,12 @@ export const getCurrencyByIPGeolocation = async () => {
 
     const countryCode = data.country_code; // For ipapi.co, it's country_code; for geolocation-db.com, it's country_code
 
+    if (!countryCode) {
+      throw new Error(
+        "No country cound found. Please fallback to country selection screen."
+      );
+    }
+
     return (
       currencyMap[countryCode] || {
         country: "Unknown",
@@ -163,7 +289,6 @@ export const getCurrencyByIPGeolocation = async () => {
     );
   } catch (error) {
     console.error("Error fetching IP geolocation:", error);
-    // Fallback or default currency if API call fails
     return {
       country: "Unknown",
       currency: "USD",
