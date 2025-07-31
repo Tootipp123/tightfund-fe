@@ -7,7 +7,7 @@ export const TextInput = ({
   rightText = "",
 }: {
   placeholder?: string;
-  type?: "text" | "number";
+  type?: "text" | "numberField";
   value?: string;
   textAlign?: "center" | "left";
   onChange?: (value: string) => void;
@@ -17,6 +17,7 @@ export const TextInput = ({
     <p className="text-dark-main opacity-[0.6] text-center">{rightText}</p>
     <input
       type={type}
+      inputMode={type === "numberField" ? "numeric" : undefined}
       placeholder={placeholder}
       value={value}
       onChange={(e) => onChange(e.target.value)}

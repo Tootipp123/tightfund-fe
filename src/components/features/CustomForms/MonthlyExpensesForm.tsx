@@ -42,6 +42,7 @@ export default function MonthlyExpensesForm({
               placeholder="00.00"
               value={formatNumber(expense.value)}
               textAlign="left"
+              type="numberField"
               onChange={(val) => handleValueChange(idx, val)}
               rightText={expense.currency}
             />
