@@ -203,7 +203,7 @@ export default function UserDashboard() {
               {formatNumber(financialReport?.emergencyFundGoal)}
             </span>
             <span className="text-2xl sm:text-3xl font-medium text-dark-main whitespace-nowrap">
-              for {financialReport?.buffer} months
+              for {financialReport?.buffer?.label}
             </span>
           </div>
           {/* <div className="py-5 rounded-lg">
@@ -239,7 +239,7 @@ export default function UserDashboard() {
                 Recommended Buffer:
               </p>
               <p className="text-dark-main text-2xl font-semibold">
-                {financialReport?.buffer} months
+                {financialReport?.buffer?.label}
                 {/* {financialReport?.breakdown?.emergencyFundGoal} */}
               </p>
               <div className="flex items-center gap-2 mt-4">

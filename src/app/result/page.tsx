@@ -53,7 +53,7 @@ export default function Result() {
       </p>
 
       {/* <!-- Confidence Score --> */}
-      <div className="mb-12 flex space-x-2">
+      {/* <div className="mb-12 flex space-x-2">
         <p className="text-xl sm:text-xl font-medium text-dark-main">
           Confidence score:
         </p>
@@ -62,7 +62,7 @@ export default function Result() {
             financialReport?.confidenceScore}
           %
         </p>
-      </div>
+      </div> */}
 
       {/* <!-- Question Section --> */}
       <h2 className="text-xl font-semibold text-dark-main mb-8">
