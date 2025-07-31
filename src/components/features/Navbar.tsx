@@ -33,7 +33,10 @@ export default function Navbar() {
         <Link href="#problem-and-solution" className="hover:text-gray-900">
           Solution
         </Link>
-        <Link href="#how-it-works" className="hover:text-gray-900">
+        <Link
+          href="#how-it-works"
+          className="hidden md:block hover:text-gray-900"
+        >
           How It Works
         </Link>
       </nav>

@@ -11,6 +11,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { MdInfoOutline } from "react-icons/md";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { useMutation } from "react-query";
 
@@ -205,14 +206,56 @@ export default function UserDashboard() {
               for {financialReport?.buffer} months
             </span>
           </div>
-          <p className="text-custom-green text-sm mt-6 max-w-lg">
-            <span className="font-semibold">Your Priority:</span> Get to{" "}
-            {currency.symbol}
-            {formatNumber(basicNeeds.toString())} first (covers basic needs for{" "}
-            {financialReport?.buffer} months), then build to the full{" "}
-            {currency.symbol}
-            {formatNumber(financialReport?.emergencyFundGoal)}.
-          </p>
+          {/* <div className="py-5 rounded-lg">
+            <p className="text-dark-main text-sm">
+              <span className="font-semibold">Your Priority:</span>
+            </p>
+            <p className="text-dark-main text-sm">
+              Get to {currency.symbol}
+              {formatNumber(basicNeeds.toString())} first (covers basic needs
+              for {financialReport?.buffer} months), then build to the full{" "}
+              {currency.symbol}
+              {formatNumber(financialReport?.emergencyFundGoal)}.
+            </p>
+          </div> */}
+          <div className="details flex items-stretch gap-[30px]">
+            <div className="w-[300px] bg-light-secondary px-5 py-5 rounded-lg">
+              <p className="text-dark-main text-sm font-semibold">
+                Recommended Fund Amount:
+              </p>
+              <p className="text-dark-main text-2xl font-semibold">
+                {currency.symbol}
+                {formatNumber(financialReport?.emergencyFundGoal)}
+              </p>
+              <div className="flex items-center gap-2 mt-4">
+                <MdInfoOutline className="text-dark-main" />
+                <p className="text-dark-main text-sm cursor-pointer font-semibold underline">
+                  How did we get this amount?
+                </p>
+              </div>
+            </div>
+            <div className="w-[300px] bg-light-secondary px-5 py-5 rounded-lg">
+              <p className="text-dark-main text-sm font-semibold">
+                Recommended Buffer:
+              </p>
+              <p className="text-dark-main text-2xl font-semibold">
+                {financialReport?.buffer} months
+                {/* {financialReport?.breakdown?.emergencyFundGoal} */}
+              </p>
+              <div className="flex items-center gap-2 mt-4">
+                <MdInfoOutline className="text-dark-main" />
+                <p className="text-dark-main text-sm cursor-pointer font-semibold underline">
+                  How did we get this?
+                </p>
+              </div>
+            </div>
+            {/* <div className="w-[400px] bg-light-secondary px-5 py-5 rounded-lg">
+              <p className="text-dark-main text-sm font-semibold">Buffer:</p>
+              <p className="text-dark-main text-sm">
+                {financialReport?.breakdown?.bufferExplanation}
+              </p>
+            </div> */}
+          </div>
         </div>
 
         {/* <!-- Other Options Section --> */}
@@ -276,8 +319,10 @@ export default function UserDashboard() {
               Coming soon
             </div>
           </div>
-          <p className="text-dark-main mb-5">
-            Get alerts and real-time insights based on your current job market
+          <p className="text-dark-main text-sm mb-5 w-[55%]">
+            Get real-time insights based on your current job market and
+            financial situation. Understand how economic shifts impact your
+            emergency fund needs.
           </p>
           <Button>Join the waitlist</Button>
         </div>
@@ -291,9 +336,10 @@ export default function UserDashboard() {
               Coming soon
             </div>
           </div>
-          <p className="text-dark-main mb-5">
+          <p className="text-dark-main text-sm mb-5 w-[55%]">
             For peace of mind, this is how much your savings can prepare you for
-            unemployment
+            unemployment. See exactly how many months your current savings can
+            cover your expenses if unemployment strikes.
           </p>
           <Button>Join the waitlist</Button>
         </div>

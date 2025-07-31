@@ -116,7 +116,7 @@ export default function DataAnalysis() {
                   - Use "What's the longest you've gone without income?" to adjust buffer duration:
                     - If long income gaps match poor consistency → increase buffer by 1–2 months.
                     - If they contrast (e.g. high consistency, long income gaps), reduce confidenceScore.
-                  - If user has **safety nets**, reduce buffer by 0.5–1 month, but only if justified.
+                  - If user has **safety nets**, reduce buffer by 1-2 month, but only if justified.
                 - For unemployed:
                   - If they have income/support (family, aid), reduce buffer slightly but no less than 3 months.
 
@@ -125,7 +125,7 @@ export default function DataAnalysis() {
 
                 ### 3. MARKET TRENDS:
                 - Research job/gig/stream and adjust buffer duration accordingly.
-                  - If high-risk/seasonal → +0.5 to 1.5 months.
+                  - If high-risk/seasonal → +1 to 2 months.
                   - If stable industry → no change or slight decrease.
                   (Describe reason briefly in confidenceScore notes)
 
@@ -134,9 +134,17 @@ export default function DataAnalysis() {
                 ## OUTPUT FORMAT (JSON):
                 {
                   "emergencyFundGoal": number, // total savings goal in local currency
-                  "buffer": number,            // number of months with decimals, e.g. 6.4
+                  "buffer": {
+                    "months": number, // number of months, minimum value is 3 months, e.g. 6
+                    "weeks": number, // number of weeks minimum value is 2 weeks, e.g. 2
+                    "label": "", // number of months with added weeks buffer. no decimal values, e.g. 6 months and 2 weeks
+                  },
                   "confidenceScore": number,   // as percentage (0–100)
                   "confidenceNotes": "Brief explanation of score (1-2 sentences)",
+                  "breakdown": {
+                    "bufferExplanation": "", // how did you come up with the buffer
+                    "emergencyFundGoal": "", // what's the formula used? and how did you come up with the emergencyFundGoal
+                  },
                   "savingsTimeline": {
                     "3_months": {
                       "monthly": number,
@@ -156,12 +164,8 @@ export default function DataAnalysis() {
                   }
                 }
 
-                NOTES:
-                Keep all numeric values to 1–2 decimal places.
-                
+                NOTES:        
                 Do not return any text outside the JSON structure.
-
-                buffer: The user's recommended emergency fund duration in months. Round to the nearest 0.1 (e.g., 6.1, 6.5, 6.8). Avoid unnecessary precision like 6.19.
 
                 emergencyFundGoal: The final total should be slightly higher than totalMonthlyExpenses × buffer (by 5–10%) to account for uncertainty. Do not make it equal.
                 `,

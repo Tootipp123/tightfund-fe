@@ -35,19 +35,21 @@ export default function Result() {
       </div>
 
       <p className="text-md text-dark-main mb-2 font-medium">
-        We advise you to have
+        We advise you to have at least
       </p>
 
       <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-dark-main leading-tight mb-2">
         {currency?.symbol}
         {formatNumber(
-          financialReport?.mainCard?.emergencyFundGoal ||
-            financialReport?.emergencyFundGoal
+          financialReport?.emergencyFundGoal ||
+            financialReport?.mainCard?.emergencyFundGoal
         )}
       </h1>
       <p className="text-xl sm:text-2xl text-dark-main mb-3">
-        for {financialReport?.mainCard?.buffer || financialReport?.buffer}{" "}
-        months of emergency fund
+        for{" "}
+        {financialReport?.buffer?.label ||
+          financialReport?.mainCard?.buffer.label}{" "}
+        of emergency fund
       </p>
 
       {/* <!-- Confidence Score --> */}

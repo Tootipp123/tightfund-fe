@@ -63,7 +63,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div id="how-it-works" className="py-[130px]">
+      <div id="how-it-works" className="hidden md:block py-[130px]">
         <h4 className="text-dark-main text-center text-2xl font-semibold mb-12">
           How It Works
         </h4>
