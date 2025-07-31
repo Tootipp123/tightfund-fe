@@ -25,11 +25,11 @@ const ogImage = {
 };
 
 export const metadata: Metadata = {
-  title: "Get Emergency Fund - Know how much emergency fund you need",
+  title: "TightFund - Know how much emergency fund you really need",
   description: "Know how much emergency fund you really need",
   openGraph: {
     ...ogImage,
-    title: "Get Emergency Fund - Know how much emergency fund you need",
+    title: "TightFund - Know how much emergency fund you really need",
     description: "Know how much emergency fund you really need",
   },
 };
