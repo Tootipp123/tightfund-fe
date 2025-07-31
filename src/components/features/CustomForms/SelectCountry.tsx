@@ -105,7 +105,7 @@ export default function SelectCountry() {
           </button>
 
           {isDropdownOpen && filteredCountries.length > 0 && (
-            <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
+            <div className="absolute z-10 w-full bg-white border border-gray-300 shadow-lg mt-1 max-h-60 overflow-y-auto">
               {filteredCountries.map((country: any) => (
                 <div
                   key={country.code}
@@ -133,7 +133,7 @@ export default function SelectCountry() {
           {isDropdownOpen &&
             filteredCountries.length === 0 &&
             searchTerm !== "" && (
-              <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-lg mt-1 px-4 py-2 text-gray-500">
+              <div className="absolute z-10 w-full bg-white border border-gray-300 shadow-lg mt-1 px-4 py-2 text-gray-500">
                 No countries found.
               </div>
             )}
