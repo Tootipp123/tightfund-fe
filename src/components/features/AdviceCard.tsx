@@ -1,13 +1,16 @@
+import { useGlobalStore } from "@/store/useGlobalStore";
 import LogoSvg from "../icons/LogoSvg";
 
 export default function AdviceCard({ amount, months, confidenceScore }: any) {
+  const { currency } = useGlobalStore();
   return (
     <div className="relative p-6 py-[40px] rounded-xl bg-light-main flex items-center flex-col overflow-hidden text-white w-72 h-auto rotate-[3deg]">
       <LogoSvg width={40} height={40} />
 
       <p className="text-sm mt-3 mb-2 text-dark-main">We advise you to have</p>
       <p className="text-4xl font-bold mb-4 text-dark-main">
-        ${amount.toLocaleString()}
+        {currency?.symbol || ""}
+        {amount.toLocaleString()}
       </p>
       <p className="text-md text-dark-main">
         for <span className="font-bold text-dark-main">{months} months</span> of

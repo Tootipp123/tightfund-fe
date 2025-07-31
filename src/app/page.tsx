@@ -32,11 +32,10 @@ export default function HomePage() {
       <Navbar />
       <main className="flex flex-col md:flex-row items-center justify-center px-8 md:py-[80px] relative z-10">
         <Hero />
-        <div className="md:absolute bottom-0 md:right-[150px] md:mt-0 z-20">
+        <div className="md:absolute hidden xl:block bottom-0 md:right-[150px] md:mt-0 z-20">
           <AdviceCard amount={30400} months={7.2} confidenceScore={94} />
         </div>
-        <div className="circle-texture absolute z-[2] right-5 bottom-[-150px]"></div>
-        <div className="circle-2-texture absolute z-[2] right-[-50px] bottom-[-200px]"></div>
+        <div className="hidden xl:block circle-texture absolute z-[2] right-5 bottom-[-150px]"></div>
       </main>
       <div
         id="problem-and-solution"

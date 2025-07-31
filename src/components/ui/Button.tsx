@@ -44,7 +44,7 @@ export default function Button({
       type="button"
       disabled={disabled}
       className={[
-        "storybook-button rounded-md font-medium hover:opacity-[0.7] transition ease-in-out delay-[300]",
+        "storybook-button rounded-md font-medium hover:opacity-[0.7] transition ease-in-out delay-[300] disabled:opacity-[0.5]",
         buttonVariants[variant],
         buttonSizes[size],
         className,

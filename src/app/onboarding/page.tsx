@@ -163,6 +163,7 @@ export default function OnboardingPage() {
               {!step.autoNext && (
                 <Button
                   className="w-full mt-10 py-3"
+                  disabled={!step.autoNext && !step.value}
                   onClick={() => {
                     setDirection(1);
                     if (onboardingSteps.length - 1 == currentStepIndex) {

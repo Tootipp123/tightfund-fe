@@ -173,7 +173,7 @@ export const nextOnboardingSteps = {
     {
       question: "Do you have safety nets?",
       type: "multipleSelect" as FieldType,
-      description: "Select all that apply",
+      description: "Select all that apply. Skip if none.",
       inputField: null,
       value: "",
       autoNext: false,
@@ -197,11 +197,6 @@ export const nextOnboardingSteps = {
           icon: "",
           label: "Savings from good months",
           value: "savings_from_good_months",
-        },
-        {
-          icon: "",
-          label: "None of the above",
-          value: "none",
         },
       ],
     },

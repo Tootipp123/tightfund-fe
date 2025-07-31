@@ -22,13 +22,13 @@ export default function SignupPage() {
       >
         <div className="flex flex-col items-center justify-between w-full min-h-[90vh] py-[150px]">
           <div className="flex items-center gap-2 cursor-pointer">
-            <LogoSvg />
+            <LogoSvg width={40} height={40} />
             <span className="text-dark-main font-bold">
-              MyEmergencyFund
-              <span className="text-dark-main opacity-[0.7]">.com</span>
+              Get Emergency Fund
+              {/* <span className="text-dark-main opacity-[0.7]">.com</span> */}
             </span>
           </div>
-          <section className="md:px-[100px] bg-white py-[60px] rounded-xl m-auto">
+          <section className="md:px-[100px] md:bg-white py-[60px] rounded-xl m-auto">
             <div className="w-full md:w-[400px]">
               <h3 className="text-dark-main md:mt-4 text-2xl font-semibold text-center">
                 Welcome!
