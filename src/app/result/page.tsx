@@ -81,11 +81,11 @@ export default function Result() {
           </p>
           <Button
             onClick={() => {
-              if (status === 'authenticated') {
-                router.push('/dashboard');
-              } else {
-                router.push('/signin?from=result');
-              }
+              router.push('/dashboard');
+              // if (status === 'authenticated') {
+              // } else {
+              //   router.push('/signin?from=result');
+              // }
             }}
             variant='secondary'
             className='w-full'
