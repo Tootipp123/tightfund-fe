@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import { useFinancialReport } from "@/store/useFinancialReport";
-import { useGlobalStore } from "@/store/useGlobalStore";
-import { useOnboardingStore } from "@/store/useOnboardingStore";
-import ModelClient from "@azure-rest/ai-inference";
-import { AzureKeyCredential } from "@azure/core-auth";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useFinancialReport } from '@/store/useFinancialReport';
+import { useGlobalStore } from '@/store/useGlobalStore';
+import { useOnboardingStore } from '@/store/useOnboardingStore';
+import ModelClient from '@azure-rest/ai-inference';
+import { AzureKeyCredential } from '@azure/core-auth';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const token: any = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-const endpoint = "https://models.github.ai/inference";
-const model = "openai/gpt-4.1";
+const endpoint = 'https://models.github.ai/inference';
+const model = 'openai/gpt-4.1';
 
 export default function DataAnalysis() {
   const router = useRouter();
-  const { selectedInitialStep, onboardingSteps } = useOnboardingStore();
+  const { selectedInitialStep, onboardingSteps, resetOnboarding } =
+    useOnboardingStore();
   const [loading, setLoading] = useState(false);
   const { currency } = useGlobalStore();
   const { financialReport, setFinancialReport } = useFinancialReport();
@@ -26,21 +27,21 @@ export default function DataAnalysis() {
     // Your existing logic to extract JSON, or if you assume it's just the full string:
     const jsonPart = inputString; // Or your extraction logic here
 
-    console.log("String being parsed by JSON.parse():", jsonPart); // <-- ADD THIS LOG
-    console.log("Length of string being parsed:", jsonPart.length); // <-- ADD THIS LOG
+    console.log('String being parsed by JSON.parse():', jsonPart); // <-- ADD THIS LOG
+    console.log('Length of string being parsed:', jsonPart.length); // <-- ADD THIS LOG
     // Optional: Log character at the reported error position
     // console.log("Char at pos 507:", jsonPart.charCodeAt(506), jsonPart.charAt(506));
 
     try {
       return JSON.parse(jsonPart);
     } catch (error: any) {
-      console.error("Still failed to parse JSON after fixing:", error);
+      console.error('Still failed to parse JSON after fixing:', error);
       throw error; // Re-throw to see the full stack
     }
   }
 
   useEffect(() => {
-    console.log("onboardingSteps: ", onboardingSteps);
+    console.log('onboardingSteps: ', onboardingSteps);
     const filteredQnA = onboardingSteps.map((step: any) => {
       return {
         question: step.question,
@@ -48,13 +49,13 @@ export default function DataAnalysis() {
       };
     });
     filteredQnA.push({
-      question: "What’s your current employment status?",
+      question: 'What’s your current employment status?',
       answer: selectedInitialStep,
     });
 
     const rawMonthlyExpenses = filteredQnA.reduce((total: number, qna: any) => {
       if (
-        qna.question === "How much is your monthly expenses?" &&
+        qna.question === 'How much is your monthly expenses?' &&
         Array.isArray(qna.answer)
       ) {
         return (
@@ -70,10 +71,10 @@ export default function DataAnalysis() {
     // Then, adjust the total based on family financial help
     const totalMonthlyExpenses = filteredQnA.reduce(
       (adjusted: number, qna: any) => {
-        if (qna.question === "Can your family help you financially?") {
-          if (qna.answer === "family_can_fully_support_me") {
+        if (qna.question === 'Can your family help you financially?') {
+          if (qna.answer === 'family_can_fully_support_me') {
             return rawMonthlyExpenses * 0.5;
-          } else if (qna.answer === "family_can_help_a_little") {
+          } else if (qna.answer === 'family_can_help_a_little') {
             return rawMonthlyExpenses * 0.8;
           }
         }
@@ -85,16 +86,16 @@ export default function DataAnalysis() {
     const func = async () => {
       try {
         setLoading(true);
-        const response: any = await client.path("/chat/completions").post({
+        const response: any = await client.path('/chat/completions').post({
           body: {
             messages: [
               {
-                role: "system",
+                role: 'system',
                 content:
-                  "You are a market research analyst and a financial advisor and an economic alayst. You analyze structured filtered data and return answers in JSON.",
+                  'You are a market research analyst and a financial advisor and an economic alayst. You analyze structured filtered data and return answers in JSON.',
               },
               {
-                role: "user",
+                role: 'user',
                 content: `based on the result/values of this qna ${JSON.stringify(
                   filteredQnA
                 )}, create a comprehensive financial emergency fund plan (factor in every data you can that was input by the user) returning content in a JSON object format. Also note to Respond ONLY with valid JSON. Do not explain. Do not include code block formatting (no triple backticks) and no markdown formatting, and ensure commas between all object entries:
@@ -180,14 +181,15 @@ export default function DataAnalysis() {
 
         if (parsedData) {
           setFinancialReport(parsedData);
-          router.push("/result");
+          resetOnboarding();
+          router.push('/result');
           return;
         } else {
-          console.error("Failed to parse and fix JSON block");
+          console.error('Failed to parse and fix JSON block');
         }
       } catch (error: any) {
         console.error(
-          "Error calling OpenAI:",
+          'Error calling OpenAI:',
           error.response?.data || error.message
         );
         setError(true);
@@ -202,26 +204,26 @@ export default function DataAnalysis() {
   return (
     <>
       {loading && !error && (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
-          <div className="text-center">
+        <div className='min-h-screen flex flex-col items-center justify-center p-4 sm:p-8'>
+          <div className='text-center'>
             {/* <!-- Main Loading Text --> */}
-            <h1 className="text-lg md:text-xl font-bold text-dark-main mb-6">
+            <h1 className='text-lg md:text-xl font-bold text-dark-main mb-6'>
               Analyzing your situation
             </h1>
 
             {/* <!-- Simple Dot Animation --> */}
-            <div className="flex justify-center space-x-1">
-              <div className="w-2 h-2 bg-custom-dark-green rounded-full dot-animation"></div>
-              <div className="w-2 h-2 bg-custom-dark-green rounded-full dot-animation"></div>
-              <div className="w-2 h-2 bg-custom-dark-green rounded-full dot-animation"></div>
+            <div className='flex justify-center space-x-1'>
+              <div className='w-2 h-2 bg-custom-dark-green rounded-full dot-animation'></div>
+              <div className='w-2 h-2 bg-custom-dark-green rounded-full dot-animation'></div>
+              <div className='w-2 h-2 bg-custom-dark-green rounded-full dot-animation'></div>
             </div>
           </div>
         </div>
       )}
       {error && (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
-          <div className="text-center">
-            <h1 className="text-lg md:text-xl font-bold text-dark-main mb-6">
+        <div className='min-h-screen flex flex-col items-center justify-center p-4 sm:p-8'>
+          <div className='text-center'>
+            <h1 className='text-lg md:text-xl font-bold text-dark-main mb-6'>
               Too many requests right now. Please try again later.
             </h1>
           </div>
